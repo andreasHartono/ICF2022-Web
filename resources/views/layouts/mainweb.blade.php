@@ -9,14 +9,10 @@
     <meta name="author" content="elemis">
     <title>@yield('title')</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-<<<<<<< HEAD
   <link rel="stylesheet" href="{{ asset('assets/css/plugins.css') }}">
   <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
-=======
-  <link rel="stylesheet" href="{{ asset('css/plugins.css') }}">
-  <link rel="stylesheet" href="{{ asset('css/style.css') }}">
   <link rel="stylesheet" href="{{ asset('css/mainweb.css') }}">
->>>>>>> cf19f73ba4beb4d07ca05d1ebf559617229735c0
+
 </head>
 <body>
 

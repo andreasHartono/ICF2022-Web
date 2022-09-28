@@ -15,7 +15,7 @@
             <div class="offcanvas-body ms-lg-auto d-flex flex-column h-100">
               <ul class="navbar-nav">
                 <li class="nav-item dropdown dropdown-mega">
-                  <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Demos</a>
+                  <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Home</a>
                   <ul class="dropdown-menu mega-menu mega-menu-dark mega-menu-img">
                     <li class="mega-menu-content mega-menu-scroll">
                       <ul class="row row-cols-1 row-cols-lg-6 gx-0 gx-lg-4 gy-lg-2 list-unstyled">
@@ -36,7 +36,7 @@
                   <!--/.dropdown-menu -->
                 </li>
                 <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Pages</a>
+                  <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Competition</a>
                   <ul class="dropdown-menu">
                     <li class="dropdown dropdown-submenu dropend"><a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown">Services</a>
                       <ul class="dropdown-menu">
@@ -51,7 +51,7 @@
                   </ul>
                 </li>
                 <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Projects</a>
+                  <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Workshop</a>
                   <div class="dropdown-menu dropdown-lg">
                     <div class="dropdown-lg-content">
                       <div>
@@ -73,7 +73,7 @@
                   </div>
                 </li>
                 <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Blog</a>
+                  <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">About Us</a>
                   <ul class="dropdown-menu">
                     <li class="nav-item"><a class="dropdown-item" href="#">Blog without Sidebar</a></li>
 
@@ -125,7 +125,7 @@
           <div class="navbar-other w-100 d-flex ms-auto">
             <ul class="navbar-nav flex-row align-items-center ms-auto">
               <li class="nav-item">
-                <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#modal-signin">Sign In</a>
+                <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#modal-signin">LOGIN</a>
               </li>
               <li class="nav-item d-none d-md-block">
                 <a href="#" class="btn btn-sm btn-primary rounded" data-bs-toggle="modal" data-bs-target="#modal-signup">Sign Up</a>

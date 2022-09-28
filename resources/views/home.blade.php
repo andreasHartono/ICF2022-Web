@@ -27,10 +27,10 @@ ICF 2022 - home
     <div class="container pb-14 pb-md-16 mb-lg-21 mb-xl-23">
       <div class="row gx-0 mb-16 mb-mb-20">
         <div class="col-9 col-sm-10 col-lg-9 mx-auto mt-n15 mt-md-n20" data-cues data-group="images" data-delay="1500">
-          <img class="img-fluid mx-auto rounded shadow-lg" data-cue="slideInUp" src="{{asset('images/photos/sa1.jpg')}}" srcset="{{asset('images/photos/sa1@2x.jpg')}}" alt="" />
-          <img class="position-absolute rounded shadow-lg" data-cue="slideInRight" src="./assets/img/photos/sa2.jpg" srcset="./assets/img/photos/sa2@2x.jpg 2x" style="top: 20%; right:-10%; max-width:30%; height: auto;" alt="" />
-          <img class="position-absolute rounded shadow-lg" data-cue="slideInLeft" src="./assets/img/photos/sa3.jpg" srcset="./assets/img/photos/sa3@2x.jpg 2x" style="top: 10%; left:-10%; max-width:30%; height: auto;" alt="" />
-          <img class="position-absolute rounded shadow-lg" data-cue="slideInLeft" src="./assets/img/photos/sa4.jpg" srcset="./assets/img/photos/sa4@2x.jpg 2x" style="bottom: 10%; left:-13%; max-width:30%; height: auto;" alt="" />
+          <img class="img-fluid mx-auto rounded shadow-lg" data-cue="slideInUp" src="{{asset('assets/images/photos/sa1.jpg')}}" srcset="{{asset('assets/images/photos/sa1@2x.jpg')}}" alt="" />
+          <img class="position-absolute rounded shadow-lg" data-cue="slideInRight" src="{{ asset('assets/img/photos/sa2.jpg') }}" srcset="{{ asset('assets/img/photos/sa2@2x.jpg 2x') }}" style="top: 20%; right:-10%; max-width:30%; height: auto;" alt="" />
+          <img class="position-absolute rounded shadow-lg" data-cue="slideInLeft" src="{{ asset('assets/img/photos/sa3.jpg') }}" srcset="{{ asset('assets/img/photos/sa3@2x.jpg 2x') }}" style="top: 10%; left:-10%; max-width:30%; height: auto;" alt="" />
+          <img class="position-absolute rounded shadow-lg" data-cue="slideInLeft" src="{{ asset('assets/img/photos/sa4.jpg') }}" srcset="{{ asset('assets/img/photos/sa4@2x.jpg 2x') }}" style="bottom: 10%; left:-13%; max-width:30%; height: auto;" alt="" />
         </div>
         <!-- /column -->
       </div>
@@ -40,13 +40,13 @@ ICF 2022 - home
           <div class="shape rounded bg-pale-red rellax d-block" data-rellax-speed="0" style="top: 50%; left: 50%; width: 50%; height: 60%; transform: translate(-50%,-50%);z-index:0"></div>
           <div class="row gx-md-5 gy-5 position-relative">
             <div class="col-6">
-              <img class="img-fluid rounded shadow-lg mb-5" data-cue="fadeIn" data-delay="300" src="./assets/img/photos/sa5.jpg" srcset="./assets/img/photos/sa5@2x.jpg 2x" alt="" />
-              <img class="img-fluid rounded shadow-lg d-flex col-10 ms-auto" data-cue="fadeIn" data-delay="600" src="./assets/img/photos/sa6.jpg" srcset="./assets/img/photos/sa6@2x.jpg 2x" alt="" />
+              <img class="img-fluid rounded shadow-lg mb-5" data-cue="fadeIn" data-delay="300" src="{{ asset('assets/img/photos/sa5.jpg') }}" srcset="{{ asset('assets/img/photos/sa5@2x.jpg 2x') }}" alt="" />
+              <img class="img-fluid rounded shadow-lg d-flex col-10 ms-auto" data-cue="fadeIn" data-delay="600" src="{{ asset('assets/img/photos/sa6.jpg') }}" srcset="{{ asset('assets/img/photos/sa6@2x.jpg 2x') }}" alt="" />
             </div>
             <!-- /column -->
             <div class="col-6">
-              <img class="img-fluid rounded shadow-lg my-5" data-cue="fadeIn" data-delay="900" src="./assets/img/photos/sa7.jpg" srcset="./assets/img/photos/sa7@2x.jpg 2x" alt="" />
-              <img class="img-fluid rounded shadow-lg d-flex col-10" data-cue="fadeIn" data-delay="1200" src="./assets/img/photos/sa8.jpg" srcset="./assets/img/photos/sa8@2x.jpg 2x" alt="" />
+              <img class="img-fluid rounded shadow-lg my-5" data-cue="fadeIn" data-delay="900" src="{{ asset('assets/img/photos/sa7.jpg') }}" srcset="{{ asset('assets/img/photos/sa7@2x.jpg 2x') }}" alt="" />
+              <img class="img-fluid rounded shadow-lg d-flex col-10" data-cue="fadeIn" data-delay="1200" src="{{ asset('assets/img/photos/sa8.jpg') }}" srcset="{{ asset('assets/img/photos/sa8@2x.jpg 2x') }}" alt="" />
             </div>
             <!-- /column -->
           </div>
@@ -84,12 +84,12 @@ ICF 2022 - home
                 <div class="row gx-md-5 gy-5 position-relative">
                   <div class="col-5">
                     <img class="img-fluid rounded shadow-lg my-5 d-flex ms-auto" data-cue="fadeIn" data-delay="300" src={{asset('mainweb/images/photos/sa9.jpg')}} srcset="{{asset('mainweb/images/photos/sa9@2x.jpg 2x')}}" alt="" />
-                    <img class="img-fluid rounded shadow-lg d-flex col-10 ms-auto" data-cue="fadeIn" data-delay="600" src={{asset('mainweb/images/photos/sa10.jpg')}} srcset="./assets/img/photos/sa10@2x.jpg 2x" alt="" />
+                    <img class="img-fluid rounded shadow-lg d-flex col-10 ms-auto" data-cue="fadeIn" data-delay="600" src={{asset('mainweb/images/photos/sa10.jpg')}} srcset="{{ asset('assets/') }}img/photos/sa10@2x.jpg 2x" alt="" />
                   </div>
                   <!-- /column -->
                   <div class="col-7">
-                    <img class="img-fluid rounded shadow-lg mb-5" data-cue="fadeIn" data-delay="900" src="{{asset('mainweb/images/photos/sa11.jpg')}}" srcset="./assets/img/photos/sa11@2x.jpg 2x" alt="" />
-                    <img class="img-fluid rounded shadow-lg d-flex col-11" data-cue="fadeIn" data-delay="1200" src={{asset('mainweb/images/photos/sa12.jpg')}} srcset="./assets/img/photos/sa12@2x.jpg 2x" alt="" />
+                    <img class="img-fluid rounded shadow-lg mb-5" data-cue="fadeIn" data-delay="900" src="{{asset('mainweb/images/photos/sa11.jpg')}}" srcset="{{ asset('assets/') }}img/photos/sa11@2x.jpg 2x" alt="" />
+                    <img class="img-fluid rounded shadow-lg d-flex col-11" data-cue="fadeIn" data-delay="1200" src={{asset('mainweb/images/photos/sa12.jpg')}} srcset="{{ asset('assets/') }}img/photos/sa12@2x.jpg 2x" alt="" />
                   </div>
                   <!-- /column -->
                 </div>
@@ -125,12 +125,12 @@ ICF 2022 - home
                 <div class="shape rounded bg-pale-yellow rellax d-block" data-rellax-speed="0" style="top: 50%; left: 50%; width: 50%; height: 60%; transform: translate(-50%,-50%);z-index:0"></div>
                 <div class="row gx-md-5 gy-5 position-relative align-items-center">
                   <div class="col-6">
-                    <img class="img-fluid rounded shadow-lg d-flex ms-auto" data-cue="fadeIn" data-delay="300" src="./assets/img/photos/sa13.jpg" srcset="./assets/img/photos/sa13@2x.jpg 2x" alt="" />
+                    <img class="img-fluid rounded shadow-lg d-flex ms-auto" data-cue="fadeIn" data-delay="300" src="{{ asset('assets/img/photos/sa13.jpg') }}" srcset="{{ asset('assets/img/photos/sa13@2x.jpg 2x') }}" alt="" />
                   </div>
                   <!-- /column -->
                   <div class="col-6">
-                    <img class="img-fluid rounded shadow-lg mb-5" data-cue="fadeIn" data-delay="900" src="./assets/img/photos/sa14.jpg" srcset="./assets/img/photos/sa14@2x.jpg 2x" alt="" />
-                    <img class="img-fluid rounded shadow-lg d-flex col-10" data-cue="fadeIn" data-delay="1200" src="./assets/img/photos/sa15.jpg" srcset="./assets/img/photos/sa15@2x.jpg 2x" alt="" />
+                    <img class="img-fluid rounded shadow-lg mb-5" data-cue="fadeIn" data-delay="900" src="{{ asset('assets/img/photos/sa14.jpg') }}" srcset="{{ asset('assets/img/photos/sa14@2x.jpg 2x') }}" alt="" />
+                    <img class="img-fluid rounded shadow-lg d-flex col-10" data-cue="fadeIn" data-delay="1200" src="{{ asset('assets/img/photos/sa15.jpg') }}" srcset="{{ asset('assets/img/photos/sa15@2x.jpg 2x') }}" alt="" />
                   </div>
                   <!-- /column -->
                 </div>
@@ -172,9 +172,9 @@ ICF 2022 - home
                 <div class="mt-lg-n20 mt-xl-n22 position-relative">
                   <div class="shape bg-dot red rellax w-16 h-18" data-rellax-speed="1" style="top: 1rem; left: -3.9rem;"></div>
                   <div class="shape rounded-circle bg-line primary rellax w-18 h-18" data-rellax-speed="1" style="bottom: 2rem; right: -3rem;"></div>
-                  <video poster="./assets/img/photos/movie.jpg" class="player" playsinline controls preload="none">
-                    <source src="./assets/media/movie.mp4" type="video/mp4">
-                    <source src="./assets/media/movie.webm" type="video/webm">
+                  <video poster="{{ asset('assets/img/photos/movie.jpg') }}" class="player" playsinline controls preload="none">
+                    <source src="{{ asset('assets/media/movie.mp4') }}" type="video/mp4">
+                    <source src="{{ asset('assets/media/movie.webm') }}" type="video/webm">
                   </video>
                 </div>
               </div>
@@ -185,17 +185,17 @@ ICF 2022 - home
               <div class="col-lg-9 mx-auto">
                 <h3 class="display-4 mb-0 text-center px-xl-10 px-xxl-15">Find out everything you need to know about creating a business process model</h3>
                 <div class="row gx-lg-8 gx-xl-12 process-wrapper text-center mt-9" data-cues="slideInUp" data-group="process">
-                  <div class="col-md-4"> <img src="./assets/img/icons/lineal/shield.svg" class="svg-inject icon-svg icon-svg-md text-red mb-3" alt="" />
+                  <div class="col-md-4"> <img src="{{ asset('assets/img/icons/lineal/shield.svg') }}" class="svg-inject icon-svg icon-svg-md text-red mb-3" alt="" />
                     <h4 class="mb-1">1. Secured Transactions</h4>
                     <p>Etiam porta malesuada magna mollis euismod sem.</p>
                   </div>
                   <!--/column -->
-                  <div class="col-md-4"> <img src="./assets/img/icons/lineal/savings.svg" class="svg-inject icon-svg icon-svg-md text-green mb-3" alt="" />
+                  <div class="col-md-4"> <img src="{{ asset('assets/img/icons/lineal/savings.svg') }}" class="svg-inject icon-svg icon-svg-md text-green mb-3" alt="" />
                     <h4 class="mb-1">2. Budget Planning</h4>
                     <p>Etiam porta malesuada magna mollis euismod sem.</p>
                   </div>
                   <!--/column -->
-                  <div class="col-md-4"> <img src="./assets/img/icons/lineal/loading.svg" class="svg-inject icon-svg icon-svg-md text-yellow mb-3" alt="" />
+                  <div class="col-md-4"> <img src="{{ asset('assets/img/icons/lineal/loading.svg') }}" class="svg-inject icon-svg icon-svg-md text-yellow mb-3" alt="" />
                     <h4 class="mb-1">3. Up to Date</h4>
                     <p>Etiam porta malesuada magna mollis euismod sem.</p>
                   </div>
@@ -217,13 +217,13 @@ ICF 2022 - home
                 <div class="shape bg-dot primary rellax w-18 h-18" data-rellax-speed="1" style="top: 0; left: -1.4rem; z-index: 0;"></div>
                 <div class="row gx-md-5 gy-5">
                   <div class="col-md-6" data-cue="fadeIn">
-                    <figure class="rounded mt-md-10 position-relative"><img src="./assets/img/photos/g5.jpg" srcset="./assets/img/photos/g5@2x.jpg 2x" alt=""></figure>
+                    <figure class="rounded mt-md-10 position-relative"><img src="{{ asset('assets/img/photos/g5.jpg') }}" srcset="{{ asset('assets/img/photos/g5@2x.jpg 2x') }}" alt=""></figure>
                   </div>
                   <!--/column -->
                   <div class="col-md-6">
                     <div class="row gx-md-5 gy-5">
                       <div class="col-md-12 order-md-2" data-cue="fadeIn" data-delay="900">
-                        <figure class="rounded"><img src="./assets/img/photos/g6.jpg" srcset="./assets/img/photos/g6@2x.jpg 2x" alt=""></figure>
+                        <figure class="rounded"><img src="{{ asset('assets/img/photos/g6.jpg') }}" srcset="{{ asset('assets/img/photos/g6@2x.jpg 2x') }}" alt=""></figure>
                       </div>
                       <!--/column -->
                       <div class="col-md-10" data-cue="fadeIn" data-delay="300">
@@ -298,27 +298,27 @@ ICF 2022 - home
             <div class="px-lg-5">
               <div class="row gx-0 gx-md-8 gx-xl-12 gy-8 align-items-center">
                 <div class="col-4 col-md-2">
-                  <figure class="px-5 px-md-0 px-lg-2 px-xl-3 px-xxl-4"><img src="./assets/img/brands/c1.png" alt="" /></figure>
+                  <figure class="px-5 px-md-0 px-lg-2 px-xl-3 px-xxl-4"><img src="{{ asset('assets/img/brands/c1.png') }}" alt="" /></figure>
                 </div>
                 <!--/column -->
                 <div class="col-4 col-md-2">
-                  <figure class="px-5 px-md-0 px-lg-2 px-xl-3 px-xxl-4"><img src="./assets/img/brands/c2.png" alt="" /></figure>
+                  <figure class="px-5 px-md-0 px-lg-2 px-xl-3 px-xxl-4"><img src="{{ asset('assets/img/brands/c2.png') }}" alt="" /></figure>
                 </div>
                 <!--/column -->
                 <div class="col-4 col-md-2">
-                  <figure class="px-5 px-md-0 px-lg-2 px-xl-3 px-xxl-4"><img src="./assets/img/brands/c3.png" alt="" /></figure>
+                  <figure class="px-5 px-md-0 px-lg-2 px-xl-3 px-xxl-4"><img src="{{ asset('assets/img/brands/c3.png') }}" alt="" /></figure>
                 </div>
                 <!--/column -->
                 <div class="col-4 col-md-2">
-                  <figure class="px-5 px-md-0 px-lg-2 px-xl-3 px-xxl-4"><img src="./assets/img/brands/c4.png" alt="" /></figure>
+                  <figure class="px-5 px-md-0 px-lg-2 px-xl-3 px-xxl-4"><img src="{{ asset('assets/img/brands/c4.png') }}" alt="" /></figure>
                 </div>
                 <!--/column -->
                 <div class="col-4 col-md-2">
-                  <figure class="px-5 px-md-0 px-lg-2 px-xl-3 px-xxl-4"><img src="./assets/img/brands/c5.png" alt="" /></figure>
+                  <figure class="px-5 px-md-0 px-lg-2 px-xl-3 px-xxl-4"><img src="{{ asset('assets/img/brands/c5.png') }}" alt="" /></figure>
                 </div>
                 <!--/column -->
                 <div class="col-4 col-md-2">
-                  <figure class="px-5 px-md-0 px-lg-2 px-xl-3 px-xxl-4"><img src="./assets/img/brands/c6.png" alt="" /></figure>
+                  <figure class="px-5 px-md-0 px-lg-2 px-xl-3 px-xxl-4"><img src="{{ asset('assets/img/brands/c6.png') }}" alt="" /></figure>
                 </div>
                 <!--/column -->
               </div>
@@ -360,7 +360,7 @@ ICF 2022 - home
                 <div class="col-md-6 col-lg-4">
                   <div class="pricing card shadow-lg text-center">
                     <div class="card-body">
-                      <img src="./assets/img/icons/lineal/shopping-basket.svg" class="svg-inject icon-svg icon-svg-md text-primary mb-3" alt="" />
+                      <img src="{{ asset('assets/img/icons/lineal/shopping-basket.svg') }}" class="svg-inject icon-svg icon-svg-md text-primary mb-3" alt="" />
                       <h4 class="card-title">Basic Plan</h4>
                       <div class="prices text-dark">
                         <div class="price price-show"><span class="price-currency">$</span><span class="price-value">9</span> <span class="price-duration">mo</span></div>
@@ -384,7 +384,7 @@ ICF 2022 - home
                 <div class="col-md-6 col-lg-4 popular">
                   <div class="pricing card shadow-lg text-center">
                     <div class="card-body">
-                      <img src="./assets/img/icons/lineal/home.svg" class="svg-inject icon-svg icon-svg-md text-primary mb-3" alt="" />
+                      <img src="{{ asset('assets/img/icons/lineal/home.svg') }}" class="svg-inject icon-svg icon-svg-md text-primary mb-3" alt="" />
                       <h4 class="card-title">Premium Plan</h4>
                       <div class="prices text-dark">
                         <div class="price price-show"><span class="price-currency">$</span><span class="price-value">19</span> <span class="price-duration">mo</span></div>
@@ -408,7 +408,7 @@ ICF 2022 - home
                 <div class="col-md-6 offset-md-3 col-lg-4 offset-lg-0">
                   <div class="pricing card shadow-lg text-center">
                     <div class="card-body">
-                      <img src="./assets/img/icons/lineal/briefcase-2.svg" class="svg-inject icon-svg icon-svg-md text-primary mb-3" alt="" />
+                      <img src="{{ asset('assets/img/icons/lineal/briefcase-2.svg') }}" class="svg-inject icon-svg icon-svg-md text-primary mb-3" alt="" />
                       <h4 class="card-title">Corporate Plan</h4>
                       <div class="prices text-dark">
                         <div class="price price-show"><span class="price-currency">$</span><span class="price-value">49</span> <span class="price-duration">mo</span></div>
@@ -437,7 +437,7 @@ ICF 2022 - home
           <!-- /.container -->
         </section>
         <!-- /section -->
-        <section class="wrapper image-wrapper bg-auto no-overlay bg-image text-center bg-map" data-image-src="./assets/img/map.png">
+        <section class="wrapper image-wrapper bg-auto no-overlay bg-image text-center bg-map" data-image-src="{{ asset('assets/img/map.png') }}">
           <div class="container pt-0 pb-14 pt-md-18 pb-md-18">
             <div class="row">
               <div class="col-lg-10 col-xl-9 col-xxl-8 mx-auto">
@@ -462,7 +462,7 @@ ICF 2022 - home
           <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
         </svg>
       </div>
-      <script src="./assets/js/plugins.js"></script>
-      <script src="./assets/js/theme.js"></script>
+      <script src="{{ asset('assets/js/plugins.js') }}"></script>
+      <script src="{{ asset('assets/js/theme.js') }}"></script>
       
 @endsection

@@ -9,8 +9,8 @@
     <meta name="author" content="elemis">
     <title>@yield('title')</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-  <link rel="stylesheet" href="{{ asset('css/plugins.css') }}">
-  <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+  <link rel="stylesheet" href="{{ asset('assets/css/plugins.css') }}">
+  <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
 </head>
 <body>
 
@@ -102,6 +102,6 @@
       <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
     </svg>
   </div>
-  <script src="{{ asset('js/plugins.js') }}"></script>
-  <script src="{{ asset('js/theme.js') }}"></script>
+  <script src="{{ asset('assets/js/plugins.js') }}"></script>
+  <script src="{{ asset('assets/js/theme.js') }}"></script>
 </body>

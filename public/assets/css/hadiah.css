@@ -1,0 +1,115 @@
+
+.hadiah-item ::after {
+    box-sizing: border-box;
+}
+
+.hadiah-item ::before {
+    box-sizing: border-box;
+}
+
+.hadiah-item-title {
+    font-family: DM Sans;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 38px;
+    line-height: 128%;
+    color: white;
+    border-radius: 100px;
+    text-align: center;
+    background: navy;
+    padding: 0 48px;
+    position: relative;
+    z-index: 3;
+    width: 300px;
+    margin: auto auto -10px;
+}
+
+@media only screen and (min-width: 600px) and (max-width: 900px){
+
+    .hadiah-item-price {
+        font-size: 10px;
+        padding: 15px 10px;
+      }
+    
+    .align-items-center {
+        align-items: center !important;
+    }
+    .hadiah-item-title {
+        font-size: 30px;
+        padding: 10px 30px;
+      }
+}
+@media only screen and (min-width: 600px) and (max-width: 900px){
+    
+}
+
+
+
+.hadiah-item-price {
+    font-family: DM Sans;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 38px;
+    line-height: 128%;
+    color: navy;
+    border-radius: 100px;
+    background: #8da8af;
+    padding: 20px 32px;
+
+}
+
+.row {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(-1 * var(--bs-gutter-y));
+    margin-right: calc(-.5 * var(--bs-gutter-x));
+    margin-left: calc(-.5 * var(--bs-gutter-x));
+
+}
+
+.justify-content-center {
+    justify-content: center !important;
+}
+
+.d-flex {
+    display: flex !important;
+}
+
+.hadiah {
+    text-align: center;
+    margin-top: 48px;
+    margin-bottom: 48px;
+}
+
+.hadiah-title {
+    font-family: DM Sans;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 128%;
+
+}
+
+.total-hadiah {
+    font-size: 60px;
+    color: #fff;
+    background: navy;
+    border-radius: 100px;
+    padding: 10px;
+}
+
+.hadiah-deskripsi {
+    font-family: DM Sans;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 120%;
+    text-align: center;
+    color: #527077;
+}
+
+.mt-5 {
+    margin-top: 3rem !important;
+}
+

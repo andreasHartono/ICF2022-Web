@@ -154,6 +154,24 @@ ICF 2022 - Home
               <!--/column -->
             </div>
             <!--/.row -->
+            {{-- penjelasan --}}
+            <div class="container pt-10 pb-15 pt-md-14 pb-md-20 text-center">
+              <div class="row">
+                <div class="col-md-10 col-lg-8 col-xl-8 col-xxl-6 mx-auto mb-13" data-cues="slideInDown" data-group="page-title">
+                  <h1 class="display-1 mb-4">Penjelasan</h1>
+                  <p class="lead fs-lg px-xl-12 px-xxl-6 mb-7" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, exercitationem iste sint sed molestiae rerum mollitia unde, officiis vel distinctio
+                     id cupiditate quasi, cumque ex nam? Deserunt eos nesciunt cumque.</p>
+                  <div class="d-flex justify-content-center" data-cues="slideInDown" data-group="page-title-buttons" data-delay="600" >
+                 
+                      <span><a class="btn btn-primary rounded mx-1" style="background-color: navy;height:50px; width:200px; border-radius: 400px !important;">More Info</a></span>
+                  
+                    </div>
+                </div>
+                <!-- /column -->
+              </div>
+              <!-- /.row -->
+            </div>
+            {{-- /penjelasan --}}
             <div class="row gx-lg-8 gx-xl-12 gy-10 align-items-center mb-14 mb-md-18">
               <div class="col-lg-6 position-relative order-lg-2">
                 <div class="shape rounded bg-pale-green rellax d-block" data-rellax-speed="0" style="top: 50%; left: 50%; width: 50%; height: 60%; transform: translate(-50%,-50%);z-index:0"></div>
@@ -241,6 +259,7 @@ ICF 2022 - Home
           <!-- /.container -->
         </section>
         <!-- /section -->
+   
         <section class="wrapper bg-soft-primary">
           <div class="container py-14 pt-md-16 pt-lg-0 pb-md-16">
             <div class="row text-center" data-cue="slideInUp">

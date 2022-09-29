@@ -1,7 +1,7 @@
 @extends('layouts.mainweb')
 
 @section('title')
-ICF 2022 - home
+ICF 2022 - Home
 @endsection
 
 @section('content')
@@ -24,6 +24,7 @@ ICF 2022 - home
     <!-- /.container -->
   </section>
   <!-- /section -->
+
   <section class="wrapper bg-light">
     <div class="container pb-14 pb-md-16 mb-lg-21 mb-xl-23">
       <div class="row gx-0 mb-16 mb-mb-20">
@@ -54,7 +55,60 @@ ICF 2022 - home
           <!-- /.row -->
         </div>
         <!--/column -->
-  
+        
+  {{-- timeline --}}
+  <h1 style="color: navy; margin-top: 1em ; text-align: center; font-family: joyrideextended, Montserrat, sans-serif;"
+  data-aos="zoom-in">Timeline ICF 2022</h1>
+<link rel="stylesheet" href="{{ url('/assets/css/timeline.css') }}">
+<div class="content">
+  <div class="timeline col-lg-6 wow fadeInRight">
+      <ul>
+          <li>
+              <div class="timeline-content">
+                  <h3 class="date" id="timeline-date">16-22 September 2021</h3>
+                  <h1 class="content-timeline">Open Registration </h1>
+              </div>
+          </li>
+          <li>
+              <div class="timeline-content">
+                  <h3  class="date">25 September 2021</h3>
+                  <h1 class="content-timeline">Technical Meeting PKM, PILMAPRES, Video Digital Pendidikan, KTI</h1>
+              </div>
+          </li>
+          <li>
+              <div class="timeline-content">
+                  <h3  class="date">16 Oktober 2021</h3>
+                  <h1 class="content-timeline">Klinik PKM, PILMAPRES, Video Digital Pendidikan, KTI</h1>
+              </div>
+          </li>
+          <li>
+              <div class="timeline-content">
+                  <h3  class="date">18-24 Oktober 2021</h3>
+                  <h1 class="content-timeline">Pengumpulan Proposal untuk di Revisi (PKM, KTI, dan Pilmapres)</h1>
+              </div>
+          </li>
+          <li>
+              <div class="timeline-content">
+                  <h3  class="date">28-29 Oktober 2021</h3>
+                  <h1 class="content-timeline">Pengumpulan Final Proposal (PKM, KTI, dan Pilmapres)</h1>
+              </div>
+          </li>
+          <li>
+              <div class="timeline-content">
+                  <h3  class="date">30 Oktober 2021</h3>
+                  <h1 class="content-timeline">Technical Meeting Debat Indonesia, Debat Inggris, K-MIPA, Poster</h1>
+              </div>
+          </li>
+          <li>
+              <div class="timeline-content">
+                  <h3  class="date">8-12 November 2021</h3>
+                  <h1 class="content-timeline">Acara Perlombaan PIMUS XI</h1>
+              </div>
+          </li>
+      </ul>
+  </div>
+</div>
+{{-- end timeline --}}
               <div class="col-lg-6">
                 <h3 class="display-4 mb-5">We have considered our solutions to support every stage of growth.</h3>
                 <p class="mb-5">Etiam porta sem malesuada magna mollis euismod. Donec ullamcorper nulla non metus auctor fringilla. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Fusce dapibus, tellus ac cursus commodo.</p>

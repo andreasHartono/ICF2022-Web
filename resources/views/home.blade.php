@@ -13,9 +13,10 @@ ICF 2022 - Home
           <p class="lead fs-lg px-xl-12 px-xxl-6 mb-7" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, exercitationem iste sint sed molestiae rerum mollitia unde, officiis vel distinctio
              id cupiditate quasi, cumque ex nam? Deserunt eos nesciunt cumque.</p>
           <div class="d-flex justify-content-center" data-cues="slideInDown" data-group="page-title-buttons" data-delay="600" >
-            <span><a class="btn btn-primary rounded mx-1">Get Started</a></span>
-            <span><a class="btn btn-green rounded mx-1">Free Trial</a></span>
-          </div>
+         
+              <span><a class="btn btn-primary rounded mx-1" style="background-color: navy;height:50px; width:200px; border-radius: 400px !important;">Register Now</a></span>
+          
+            </div>
         </div>
         <!-- /column -->
       </div>
@@ -109,24 +110,44 @@ ICF 2022 - Home
   </div>
 </div>
 {{-- end timeline --}}
-              <div class="col-lg-6">
-                <h3 class="display-4 mb-5">We have considered our solutions to support every stage of growth.</h3>
-                <p class="mb-5">Etiam porta sem malesuada magna mollis euismod. Donec ullamcorper nulla non metus auctor fringilla. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Fusce dapibus, tellus ac cursus commodo.</p>
-                <div class="row gy-3">
-                  <div class="col-xl-6">
-                    <ul class="icon-list bullet-bg bullet-soft-red mb-0">
-                      <li><span><i class="uil uil-check"></i></span><span>Aenean quam ornare curabitur blandit consectetur.</span></li>
-                      <li class="mt-3"><span><i class="uil uil-check"></i></span><span>Nullam quis risus eget urna mollis ornare aenean leo.</span></li>
-                    </ul>
+              <div class="hadiah">
+                <h3 class="display-4 mb-5">Apa yang akan kamu Dapatkan ? </h3>
+                <p class="total-hadiah">Total hadiah senilai Rp 225 Juta</p>
+                <div class="hadiah-deskripsi">Dengan perincian sebagai berikut: </div>
+                <div class="row mt-5">
+                  <div class="col-md-4">
+                    <div class="hadiah-item">
+                      <div class="d-flex justify-content-center align-items-center">
+                        <div class="hadiah-item-title"> Terbaik 1</div>
+                      </div>
+                      <div class="hadiah-item-price">
+                        Rp. 100.000.000
+                      </div>
+                    </div>
+                  </div>
+                    
+                  <!--/column -->
+                  <div class="col-md-4">
+                    <div class="hadiah-item">
+                      <div class="d-flex justify-content-center align-items-center">
+                        <div class="hadiah-item-title"> Terbaik 2</div>
+                      </div>
+                      <div class="hadiah-item-price">
+                        Rp.75.000.000
+                      </div>
+                    </div>
                   </div>
                   <!--/column -->
-                  <div class="col-xl-6">
-                    <ul class="icon-list bullet-bg bullet-soft-red mb-0">
-                      <li><span><i class="uil uil-check"></i></span><span>Etiam porta euismod malesuada mollis nisl ornare.</span></li>
-                      <li class="mt-3"><span><i class="uil uil-check"></i></span><span>Vivamus sagittis lacus augue rutrum maecenas odio.</span></li>
-                    </ul>
+                  <div class="col-md-4">
+                    <div class="hadiah-item">
+                      <div class="d-flex justify-content-center align-items-center">
+                        <div class="hadiah-item-title"> Terbaik 3</div>
+                      </div>
+                      <div class="hadiah-item-price">
+                        Rp.50.000.000
+                      </div>
+                    </div>
                   </div>
-                  <!--/column -->
                 </div>
                 <!--/.row -->
               </div>

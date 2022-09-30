@@ -8,8 +8,19 @@
     <link rel="stylesheet" href="{{ asset('../mainweb/css/faq.css') }}">
 @endsection
 
+
+
 @section('content')
-<h2 class="d-flex justify-content-center my-5 fs-1 mb-4 myTitle text-align-center padding-title">FREQUENTLY ASKED QUESTIONS</h2>
+<header class="full-screen d-lg-flex jumbotron jumbotron-fluid">
+    <div class="container-fluid text-center"> 
+		<div class="wavy">
+		<span style="--i:1;">F</span>
+		<span style="--i:2;">A</span>
+		<span style="--i:3;">Q</span>
+		</div>
+       <p class="lead pb-4 faq-text">Frequently Asked Questions</p>
+    </div>
+</header>
 <div class="container mt-5">
 <div class="accordion" id="accordionPanelsStayOpenExample">
 <div class="accordion-item faq-radialGradient">

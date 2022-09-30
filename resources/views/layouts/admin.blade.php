@@ -29,13 +29,26 @@
     <div class="sidenav-header">
       <i class="fas fa-times p-3 cursor-pointer text-secondary opacity-5 position-absolute end-0 top-0 d-none d-xl-none" aria-hidden="true" id="iconSidenav"></i>
       <a class="navbar-brand m-0" href=" https://demos.creative-tim.com/argon-dashboard/pages/dashboard.html " target="_blank">
-        <img src="{{ asset('argon/assets/img/logo-ct-dark.png') }}" class="navbar-brand-img h-100" alt="main_logo">
+        <img src="{{ asset('logo/logo.png') }}" class="navbar-brand-img h-100" alt="main_logo">
         <span class="ms-1 font-weight-bold">ICF 2022</span>
       </a>
     </div>
     <hr class="horizontal dark mt-0">
-    <div class="collapse navbar-collapse  w-auto " id="sidenav-collapse-main">
+    <div class="collapse navbar-collapse  w-auto ps ps--active-y" id="sidenav-collapse-main">
       <ul class="navbar-nav">
+         <li class="nav-item">
+            <li class="nav-item mt-3">
+               <h6 class="ps-4 ms-2 text-uppercase text-xs font-weight-bolder opacity-6">Daftar Acara</h6>
+            </li>
+         </li>
+         <li class="nav-item">
+          <a class="nav-link" href="#">
+            <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+              <i class="ni ni-email-83 text-primary text-sm opacity-10"></i>
+            </div>
+            <span class="nav-link-text ms-1">List Acara</span>
+          </a>
+        </li>
          <li class="nav-item">
             <li class="nav-item mt-3">
                <h6 class="ps-4 ms-2 text-uppercase text-xs font-weight-bolder opacity-6">Daftar Peserta Workshop</h6>
@@ -84,7 +97,7 @@
             </li>
          </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">
+          <a class="nav-link active" href="#">
             <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
               <i class="ni ni-tv-2 text-primary text-sm opacity-10"></i>
             </div>
@@ -92,7 +105,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" href="#">
+          <a class="nav-link" href="#">
             <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
               <i class="ni ni-calendar-grid-58 text-warning text-sm opacity-10"></i>
             </div>
@@ -100,7 +113,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" href="#">
+          <a class="nav-link" href="#">
             <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
               <i class="ni ni-calendar-grid-58 text-warning text-sm opacity-10"></i>
             </div>
@@ -109,6 +122,17 @@
         </li>
       </ul>
     </div>
+    <div class="sidenav-footer mx-3 ">
+      <div class="card card-plain shadow-none" id="sidenavCard">
+         <img class="w-50 mx-auto" src="{{ asset('argon/assets/img/illustrations/icon-documentation.svg') }}" alt="sidebar_illustration">
+         <div class="card-body text-center p-3 w-100 pt-0">
+            <div class="docs-info">
+               <h6 class="mb-0">Need help?</h6>
+               <p class="text-xs font-weight-bold mb-0">Please contact the ICF 2022 @ Information System</p>
+            </div>
+         </div>
+      </div>
+   </div>
   </aside>
   <main class="main-content position-relative border-radius-lg ">
     <!-- Navbar -->
@@ -119,17 +143,47 @@
           
         </nav>
         <div class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4" id="navbar">
+         <div class="ms-md-auto pe-md-3 d-flex align-items-center">
+            <div class="input-group">
+              <span class="input-group-text text-body"><i class="fas fa-search" aria-hidden="true"></i></span>
+              <input type="text" class="form-control" placeholder="Tidak Dipakai Search....">
+            </div>
+          </div>
           <ul class="navbar-nav  justify-content-end">
-            <li class="nav-item px-3 d-flex align-items-center">
-              <a href="javascript:;" class="nav-link text-white p-0">
-                <i class="fa fa-cog fixed-plugin-button-nav cursor-pointer"></i>
+            <li class="nav-item d-flex align-items-center">
+              <a href="javascript:;" class="nav-link text-white font-weight-bold px-0">
+                <i class="fa fa-user me-sm-1"></i>
+                <span class="d-sm-inline d-none">Welcome Admin</span>
               </a>
             </li>
+            <li class="nav-item d-xl-none ps-3 d-flex align-items-center">
+              <a href="javascript:;" class="nav-link text-white p-0" id="iconNavbarSidenav">
+                <div class="sidenav-toggler-inner">
+                  <i class="sidenav-toggler-line bg-white"></i>
+                  <i class="sidenav-toggler-line bg-white"></i>
+                  <i class="sidenav-toggler-line bg-white"></i>
+                </div>
+              </a>
+            </li>&nbsp;&nbsp;&nbsp;&nbsp;
             <li class="nav-item dropdown pe-2 d-flex align-items-center">
               <a href="javascript:;" class="nav-link text-white p-0" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-                <i class="fa fa-user me-sm-1 cursor-pointer"></i>
+                <i class="fa fa-cog me-sm-1 cursor-pointer"></i>
               </a>
               <ul class="dropdown-menu  dropdown-menu-end  px-2 py-3 me-sm-n4" aria-labelledby="dropdownMenuButton">
+                <li class="mb-2">
+                  <a class="dropdown-item border-radius-md" href="javascript:;">
+                    <div class="d-flex py-1">
+                      <div class="my-auto">
+                        <img src="{{ asset('argon/assets/img/team-2.jpg') }}" class="avatar avatar-sm  me-3 ">
+                      </div>
+                      <div class="d-flex flex-column justify-content-center">
+                        <h6 class="text-sm font-weight-normal mb-1">
+                          <span class="font-weight-bold">Back To Home</span>
+                        </h6>
+                      </div>
+                    </div>
+                  </a>
+                </li>
                 <li class="mb-2">
                   <a class="dropdown-item border-radius-md" href="javascript:;">
                     <div class="d-flex py-1">
@@ -153,22 +207,6 @@
     <!-- End Navbar -->
     <div class="container-fluid py-4">
       @yield('content')
-      <!-- Footer -->
-      <footer class="footer pt-3  ">
-        <div class="container-fluid">
-          <div class="row align-items-center justify-content-lg-between">
-            <div class="col-lg-6 mb-lg-0 mb-4">
-              <div class="copyright text-center text-sm text-muted text-lg-start">
-                © <script>
-                  document.write(new Date().getFullYear())
-                </script>,
-                Information System ICF 2022
-              </div>
-            </div>
-          </div>
-        </div>
-      </footer>
-      <!-- End Footer -->
     </div>
   </main>
   <!--   Core JS Files   -->

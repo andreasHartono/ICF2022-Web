@@ -21,5 +21,7 @@ Route::get('/faq', function () {
     return view('faq');
 });
 // Auth::routes();
-
+Route::get('/dashboardadmin', function () {
+   return view('admin.adminwelcome');
+});
  Route::get('/home', 'HomeController@index')->name('home');

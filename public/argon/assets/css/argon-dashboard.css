@@ -23337,6 +23337,7 @@ hr.horizontal.gray-light {
 .navbar-vertical.bg-white .navbar-nav>.nav-item .nav-link.active {
   background-color: #f6f9fc;
   box-shadow: none;
+  display: block;
 }
 
 .navbar-vertical .navbar-nav .nav-link.active {

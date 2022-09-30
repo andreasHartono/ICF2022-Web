@@ -14,12 +14,16 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('home');
+   return view('home');
 });
 
 Route::get('/faq', function () {
-    return view('faq');
+   return view('faq');
 });
 // Auth::routes();
+Route::get('/dashboardadmin', function () {
+   return view('admin.adminwelcome');
+});
 
- Route::get('/home', 'HomeController@index')->name('home');
+Route::resource('daftarevent', 'EventController');
+Route::get('/home', 'HomeController@index')->name('home');

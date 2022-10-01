@@ -25,5 +25,13 @@ Route::get('/dashboardadmin', function () {
    return view('admin.adminwelcome');
 });
 
+Route::get('/dashboardpeserta', function () {
+   return view('peserta.dashboardpeserta');
+});
+
+Route::get('/tim', function () {
+   return view('peserta.tim');
+});
+
 Route::resource('daftarevent', 'EventController');
 Route::get('/home', 'HomeController@index')->name('home');

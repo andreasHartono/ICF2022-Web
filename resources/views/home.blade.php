@@ -6,7 +6,7 @@ ICF 2022 - Home
 
 @section('content')
 <section class="wrapper bg-soft-primary">
-    <div class="container pt-10 pb-15 pt-md-14 pb-md-20 text-center">
+    <div class="container pt-10 pb-15 pt-md-14 pb-md-10 text-center">
       <div class="row">
         <div class="col-md-10 col-lg-8 col-xl-8 col-xxl-6 mx-auto mb-13" data-cues="slideInDown" data-group="page-title">
           <h1 class="display-1 mb-4">ICF 2022</h1>
@@ -26,40 +26,27 @@ ICF 2022 - Home
   </section>
   <!-- /section -->
 
+  {{-- poster --}}
+  <section id="poster" class="mt-5 pt-5">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-xl-6 col-lg-8 col-md-8">
+                <a href="{{ url('/assets/img/poster.png') }}" target="blank"><img class="img-fluid rounded shadow-lg d-flex ms-auto" data-cue="fadeIn" data-delay="300"  img src="{{ url('/assets/img/poster.png') }}" alt="Scroll" width="100%; height:100%; object-fit: contain;"></a>
+            </div>
+        </div>
+    </div>
+</section>
+{{-- endposter --}}
+
   <section class="wrapper bg-light">
+    
     <div class="container pb-14 pb-md-16 mb-lg-21 mb-xl-23">
       <div class="row gx-0 mb-16 mb-mb-20">
-        <div class="col-9 col-sm-10 col-lg-9 mx-auto mt-n15 mt-md-n20" data-cues data-group="images" data-delay="1500">
-          <img class="img-fluid mx-auto rounded shadow-lg" data-cue="slideInUp" src="{{asset('assets/images/photos/sa1.jpg')}}" srcset="{{asset('assets/images/photos/sa1@2x.jpg')}}" alt="" />
-          <img class="position-absolute rounded shadow-lg" data-cue="slideInRight" src="{{ asset('assets/img/photos/sa2.jpg') }}" srcset="{{ asset('assets/img/photos/sa2@2x.jpg 2x') }}" style="top: 20%; right:-10%; max-width:30%; height: auto;" alt="" />
-          <img class="position-absolute rounded shadow-lg" data-cue="slideInLeft" src="{{ asset('assets/img/photos/sa3.jpg') }}" srcset="{{ asset('assets/img/photos/sa3@2x.jpg 2x') }}" style="top: 10%; left:-10%; max-width:30%; height: auto;" alt="" />
-          <img class="position-absolute rounded shadow-lg" data-cue="slideInLeft" src="{{ asset('assets/img/photos/sa4.jpg') }}" srcset="{{ asset('assets/img/photos/sa4@2x.jpg 2x') }}" style="bottom: 10%; left:-13%; max-width:30%; height: auto;" alt="" />
-        </div>
-        <!-- /column -->
-      </div>
-      <!-- /.row -->
-      <div class="row gx-lg-8 gx-xl-12 gy-10 align-items-center mb-14 mb-md-18">
-        <div class="col-lg-6 position-relative">
-          <div class="shape rounded bg-pale-red rellax d-block" data-rellax-speed="0" style="top: 50%; left: 50%; width: 50%; height: 60%; transform: translate(-50%,-50%);z-index:0"></div>
-          <div class="row gx-md-5 gy-5 position-relative">
-            <div class="col-6">
-              <img class="img-fluid rounded shadow-lg mb-5" data-cue="fadeIn" data-delay="300" src="{{ asset('assets/img/photos/sa5.jpg') }}" srcset="{{ asset('assets/img/photos/sa5@2x.jpg 2x') }}" alt="" />
-              <img class="img-fluid rounded shadow-lg d-flex col-10 ms-auto" data-cue="fadeIn" data-delay="600" src="{{ asset('assets/img/photos/sa6.jpg') }}" srcset="{{ asset('assets/img/photos/sa6@2x.jpg 2x') }}" alt="" />
-            </div>
-            <!-- /column -->
-            <div class="col-6">
-              <img class="img-fluid rounded shadow-lg my-5" data-cue="fadeIn" data-delay="900" src="{{ asset('assets/img/photos/sa7.jpg') }}" srcset="{{ asset('assets/img/photos/sa7@2x.jpg 2x') }}" alt="" />
-              <img class="img-fluid rounded shadow-lg d-flex col-10" data-cue="fadeIn" data-delay="1200" src="{{ asset('assets/img/photos/sa8.jpg') }}" srcset="{{ asset('assets/img/photos/sa8@2x.jpg 2x') }}" alt="" />
-            </div>
-            <!-- /column -->
-          </div>
-          <!-- /.row -->
-        </div>
-        <!--/column -->
-        
   {{-- timeline --}}
+  <div class="row gx-lg-8 gx-xl-12 process-wrapper text-center mt-9" data-cues="slideInUp" data-group="process">
   <h1 style="color: navy; margin-top: 1em ; text-align: center; font-family: joyrideextended, Montserrat, sans-serif;"
   data-aos="zoom-in">Timeline ICF 2022</h1>
+  
 <link rel="stylesheet" href="{{ url('/assets/css/timeline.css') }}">
 <div class="content">
   <div class="timeline col-lg-6 wow fadeInRight">
@@ -109,7 +96,9 @@ ICF 2022 - Home
       </ul>
   </div>
 </div>
+  </div>
 {{-- end timeline --}}
+<div class="row gx-lg-8 gx-xl-12 process-wrapper text-center mt-9" data-cues="slideInUp" data-group="process">
               <div class="hadiah">
                 <h3 class="display-4 mb-5">Apa yang akan kamu Dapatkan ? </h3>
                 <p class="total-hadiah">Total hadiah senilai Rp 225 Juta</p>
@@ -153,67 +142,37 @@ ICF 2022 - Home
               </div>
               <!--/column -->
             </div>
+      </div>
             <!--/.row -->
             {{-- penjelasan --}}
-            <div class="container pt-10 pb-15 pt-md-14 pb-md-20 text-center">
+            <section >
+
+         
+            <div class="container pt-10 pb-10 pt-md-10 pb-md-5 text-center">
               <div class="row">
-                <div class="col-md-10 col-lg-8 col-xl-8 col-xxl-6 mx-auto mb-13" data-cues="slideInDown" data-group="page-title">
+                <div class="col-md-10 col-lg-8 col-xl-8 col-xxl-55 mx-auto mb-13" data-cues="slideInDown" data-group="page-title">
                   <h1 class="display-1 mb-4">Penjelasan</h1>
                   <p class="lead fs-lg px-xl-12 px-xxl-6 mb-7" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, exercitationem iste sint sed molestiae rerum mollitia unde, officiis vel distinctio
                      id cupiditate quasi, cumque ex nam? Deserunt eos nesciunt cumque.</p>
                   <div class="d-flex justify-content-center" data-cues="slideInDown" data-group="page-title-buttons" data-delay="600" >
-                 
-                      <span><a class="btn btn-primary rounded mx-1" style="background-color: navy;height:50px; width:200px; border-radius: 400px !important;">More Info</a></span>
-                  
+                      <span><a class="btn btn-primary rounded mx-1"
+                         style="background-color: navy;height:50px; width:200px; border-radius: 400px !important;">More Info</a></span>
                     </div>
                 </div>
                 <!-- /column -->
               </div>
               <!-- /.row -->
             </div>
+          </section>
             {{-- /penjelasan --}}
-            <div class="row gx-lg-8 gx-xl-12 gy-10 align-items-center mb-14 mb-md-18">
-              <div class="col-lg-6 position-relative order-lg-2">
-                <div class="shape rounded bg-pale-green rellax d-block" data-rellax-speed="0" style="top: 50%; left: 50%; width: 50%; height: 60%; transform: translate(-50%,-50%);z-index:0"></div>
-                <div class="row gx-md-5 gy-5 position-relative">
-                  <div class="col-5">
-                    <img class="img-fluid rounded shadow-lg my-5 d-flex ms-auto" data-cue="fadeIn" data-delay="300" src={{asset('mainweb/images/photos/sa9.jpg')}} srcset="{{asset('mainweb/images/photos/sa9@2x.jpg 2x')}}" alt="" />
-                    <img class="img-fluid rounded shadow-lg d-flex col-10 ms-auto" data-cue="fadeIn" data-delay="600" src={{asset('mainweb/images/photos/sa10.jpg')}} srcset="{{ asset('assets/') }}img/photos/sa10@2x.jpg 2x" alt="" />
-                  </div>
-                  <!-- /column -->
-                  <div class="col-7">
-                    <img class="img-fluid rounded shadow-lg mb-5" data-cue="fadeIn" data-delay="900" src="{{asset('mainweb/images/photos/sa11.jpg')}}" srcset="{{ asset('assets/') }}img/photos/sa11@2x.jpg 2x" alt="" />
-                    <img class="img-fluid rounded shadow-lg d-flex col-11" data-cue="fadeIn" data-delay="1200" src={{asset('mainweb/images/photos/sa12.jpg')}} srcset="{{ asset('assets/') }}img/photos/sa12@2x.jpg 2x" alt="" />
-                  </div>
-                  <!-- /column -->
-                </div>
-                <!-- /.row -->
-              </div>
-              <!--/column -->
-              <div class="col-lg-6">
-                <h3 class="display-4 mb-5">We make spending stress free so you have the perfect control.</h3>
-                <p class="mb-5">Etiam porta sem malesuada magna mollis euismod. Donec ullamcorper nulla non metus auctor fringilla. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Fusce dapibus, tellus ac cursus commodo.</p>
-                <div class="row gy-3">
-                  <div class="col-xl-6">
-                    <ul class="icon-list bullet-bg bullet-soft-green mb-0">
-                      <li><span><i class="uil uil-check"></i></span><span>Aenean quam ornare curabitur blandit consectetur.</span></li>
-                      <li class="mt-3"><span><i class="uil uil-check"></i></span><span>Nullam quis risus eget urna mollis ornare aenean leo.</span></li>
-                    </ul>
-                  </div>
-                  <!--/column -->
-                  <div class="col-xl-6">
-                    <ul class="icon-list bullet-bg bullet-soft-green mb-0">
-                      <li><span><i class="uil uil-check"></i></span><span>Etiam porta euismod malesuada mollis nisl ornare.</span></li>
-                      <li class="mt-3"><span><i class="uil uil-check"></i></span><span>Vivamus sagittis lacus augue rutrum maecenas odio.</span></li>
-                    </ul>
-                  </div>
-                  <!--/column -->
-                </div>
-                <!--/.row -->
-              </div>
-              <!--/column -->
+            {{-- Workshop --}}
+            <div class="container pt-10 pb-15 pt-md-14 pb-md-20 text-center">
+              <div class="row">
+            <div class="col-md-10 col-lg-8 col-xl-8 col-xxl-6 mx-auto mb-13" data-cues="slideInDown" data-group="page-title">
+            <h1 class="display-1 mb-4">Workshop</h1>
             </div>
-            <!--/.row -->
+             {{-- end Workshop --}}
+           
             <div class="row gx-lg-8 gx-xl-12 gy-10 align-items-center">
               <div class="col-lg-6 position-relative">
                 <div class="shape rounded bg-pale-yellow rellax d-block" data-rellax-speed="0" style="top: 50%; left: 50%; width: 50%; height: 60%; transform: translate(-50%,-50%);z-index:0"></div>

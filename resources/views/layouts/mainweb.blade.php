@@ -17,6 +17,8 @@
   <link rel="stylesheet" href="{{ asset('assets/css/mainweb.css') }}">  
   <link rel="shortcut icon" href="{{ asset('assets/img/logo.ico') }}">
 
+  @yield('style')
+
 </head>
 <body>
 
@@ -110,4 +112,5 @@
   </div>
   <script src="{{ asset('assets/js/plugins.js') }}"></script>
   <script src="{{ asset('assets/js/theme.js') }}"></script>
-  </body>
+</body>
+</html>

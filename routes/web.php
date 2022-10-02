@@ -33,6 +33,13 @@ Route::get('/tim', function () {
    return view('peserta.tim');
 });
 
+Route::get('/peserta', function () {
+   return view('peserta.peserta');
+});
+
+Route::get('/soal', function () {
+   return view('peserta.soal');
+});
 
 Route::resource('daftarevent', 'EventController');
 Route::get('/home', 'HomeController@index')->name('home');

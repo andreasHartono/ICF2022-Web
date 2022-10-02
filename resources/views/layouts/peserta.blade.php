@@ -37,7 +37,7 @@
       </a>
     </div>
     <hr class="horizontal dark mt-0">
-    <div class="collapse navbar-collapse  w-auto ps ps--active-y" id="sidenav-collapse-main">
+    <div class="collapse navbar-collapse  h-auto w-auto ps ps--active-y" id="sidenav-collapse-main">
       <ul class="navbar-nav">
          <li class="nav-item">
           <a class="nav-link" href="#">
@@ -71,7 +71,7 @@
         Lomba
       </button>
     </h2>
-    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+    <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
       <div class="accordion-body">
         <p style="color:black">Peserta</p>
         <p style="color:black">Klasemen</p>
@@ -80,7 +80,6 @@
     </div>
   </div>
     </div>
-    
     <div class="sidenav-footer mx-3 ">
       <div class="card card-plain shadow-none" id="sidenavCard">
          <img class="w-50 mx-auto" src="{{ asset('argon/assets/img/illustrations/icon-documentation.svg') }}" alt="sidebar_illustration">
@@ -111,7 +110,7 @@
             <li class="nav-item d-flex align-items-center">
               <a href="javascript:;" class="nav-link text-white font-weight-bold px-0">
                 <i class="fa fa-user me-sm-1"></i>
-                <span class="d-sm-inline d-none">Welcome Admin</span>
+                <span class="d-sm-inline d-none">Welcome Peserta</span>
               </a>
             </li>
             <li class="nav-item d-xl-none ps-3 d-flex align-items-center">

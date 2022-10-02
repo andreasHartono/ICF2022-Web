@@ -2,7 +2,7 @@
 @section('header')
 <ol class="breadcrumb bg-transparent mb-0 pb-0 pt-1 px-0 me-sm-6 me-5">
     <li class="breadcrumb-item text-sm"><a class="opacity-5 text-white" href="javascript:;">Peserta</a></li>
-    <li class="breadcrumb-item text-sm text-white active" aria-current="page">Dashboard</li>
+    <li class="breadcrumb-item text-sm text-white active" aria-current="page">Peserta</li>
 </ol>
 <h6 class="font-weight-bolder text-white mb-0">Welcome Peserta</h6>
 @endsection
@@ -17,14 +17,9 @@
                 <table class="table align-items-center mb-0">
                     <thead>
                         <tr>
-                            <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Author</th>
-                            <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
-                                Function</th>
-                            <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                                Status</th>
-                            <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                                Employed</th>
-                            <th class="text-secondary opacity-7"></th>
+                            <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Nama Kelompok</th>
+                            <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Nama Anggota</th>
+
                         </tr>
                     </thead>
                     <tbody>
@@ -44,18 +39,8 @@
                                 <p class="text-xs font-weight-bold mb-0">Manager</p>
                                 <p class="text-xs text-secondary mb-0">Organization</p>
                             </td>
-                            <td class="align-middle text-center text-sm">
-                                <span class="badge badge-sm bg-gradient-success">Online</span>
-                            </td>
-                            <td class="align-middle text-center">
-                                <span class="text-secondary text-xs font-weight-bold">23/04/18</span>
-                            </td>
-                            <td class="align-middle">
-                                <a href="javascript:;" class="text-secondary font-weight-bold text-xs"
-                                    data-toggle="tooltip" data-original-title="Edit user">
-                                    Edit
-                                </a>
-                            </td>
+                           
+                           
                         </tr>
                         <tr>
                             <td>
@@ -73,18 +58,7 @@
                                 <p class="text-xs font-weight-bold mb-0">Programator</p>
                                 <p class="text-xs text-secondary mb-0">Developer</p>
                             </td>
-                            <td class="align-middle text-center text-sm">
-                                <span class="badge badge-sm bg-gradient-secondary">Offline</span>
-                            </td>
-                            <td class="align-middle text-center">
-                                <span class="text-secondary text-xs font-weight-bold">11/01/19</span>
-                            </td>
-                            <td class="align-middle">
-                                <a href="javascript:;" class="text-secondary font-weight-bold text-xs"
-                                    data-toggle="tooltip" data-original-title="Edit user">
-                                    Edit
-                                </a>
-                            </td>
+                            
                         </tr>
                         <tr>
                             <td>
@@ -102,18 +76,8 @@
                                 <p class="text-xs font-weight-bold mb-0">Executive</p>
                                 <p class="text-xs text-secondary mb-0">Projects</p>
                             </td>
-                            <td class="align-middle text-center text-sm">
-                                <span class="badge badge-sm bg-gradient-success">Online</span>
-                            </td>
-                            <td class="align-middle text-center">
-                                <span class="text-secondary text-xs font-weight-bold">19/09/17</span>
-                            </td>
-                            <td class="align-middle">
-                                <a href="javascript:;" class="text-secondary font-weight-bold text-xs"
-                                    data-toggle="tooltip" data-original-title="Edit user">
-                                    Edit
-                                </a>
-                            </td>
+                           
+                           
                         </tr>
                         <tr>
                             <td>
@@ -131,18 +95,7 @@
                                 <p class="text-xs font-weight-bold mb-0">Programator</p>
                                 <p class="text-xs text-secondary mb-0">Developer</p>
                             </td>
-                            <td class="align-middle text-center text-sm">
-                                <span class="badge badge-sm bg-gradient-success">Online</span>
-                            </td>
-                            <td class="align-middle text-center">
-                                <span class="text-secondary text-xs font-weight-bold">24/12/08</span>
-                            </td>
-                            <td class="align-middle">
-                                <a href="javascript:;" class="text-secondary font-weight-bold text-xs"
-                                    data-toggle="tooltip" data-original-title="Edit user">
-                                    Edit
-                                </a>
-                            </td>
+                         
                         </tr>
                         <tr>
                             <td>
@@ -160,18 +113,7 @@
                                 <p class="text-xs font-weight-bold mb-0">Manager</p>
                                 <p class="text-xs text-secondary mb-0">Executive</p>
                             </td>
-                            <td class="align-middle text-center text-sm">
-                                <span class="badge badge-sm bg-gradient-secondary">Offline</span>
-                            </td>
-                            <td class="align-middle text-center">
-                                <span class="text-secondary text-xs font-weight-bold">04/10/21</span>
-                            </td>
-                            <td class="align-middle">
-                                <a href="javascript:;" class="text-secondary font-weight-bold text-xs"
-                                    data-toggle="tooltip" data-original-title="Edit user">
-                                    Edit
-                                </a>
-                            </td>
+                           
                         </tr>
                         <tr>
                             <td>
@@ -189,18 +131,7 @@
                                 <p class="text-xs font-weight-bold mb-0">Programtor</p>
                                 <p class="text-xs text-secondary mb-0">Developer</p>
                             </td>
-                            <td class="align-middle text-center text-sm">
-                                <span class="badge badge-sm bg-gradient-secondary">Offline</span>
-                            </td>
-                            <td class="align-middle text-center">
-                                <span class="text-secondary text-xs font-weight-bold">14/09/20</span>
-                            </td>
-                            <td class="align-middle">
-                                <a href="javascript:;" class="text-secondary font-weight-bold text-xs"
-                                    data-toggle="tooltip" data-original-title="Edit user">
-                                    Edit
-                                </a>
-                            </td>
+                           
                         </tr>
                     </tbody>
                 </table>
@@ -208,4 +139,31 @@
         </div>
     </div>
 </div>
+
+<footer class="footer pt-3  ">
+    <div class="container-fluid">
+        <div class="row align-items-center justify-content-lg-between">
+            <div class="col-lg-6 mb-lg-0 mb-4"> 
+            </div>
+            <div class="col-lg-6">
+                <ul class="nav nav-footer justify-content-right justify-content-lg-end">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link text-muted" target="_blank">1</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link text-muted"
+                            target="_blank">2</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link text-muted" target="_blank">3</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link pe-0 text-muted"
+                            target="_blank">4</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
 @endsection

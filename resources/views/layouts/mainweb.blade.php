@@ -31,11 +31,11 @@
   <footer class="bg-dark text-inverse mt-5 mt-md-16">
     <div class="container py-13 py-md-15">
       <div class="row gy-6 gy-lg-0">
-        <div class="col-md-4 col-lg-3">
+        {{-- <div class="col-md-4 col-lg-3">
           <div class="widget">
-            <img class="mb-4" src="./assets/img/logo-light.png" srcset="./assets/img/logo-light@2x.png 2x" alt="" />
+            <img class="mb-4" src="./assets/img/logo/logoUtama.png" srcset="./assets/img/logo/logoUtama.png" alt="" />
             <p class="mb-4">© 2022 Sandbox. <br class="d-none d-lg-block" />All rights reserved.</p>
-            <nav class="nav social social-white">
+            {{-- <nav class="nav social social-white">
               <a href="#"><i class="uil uil-twitter"></i></a>
               <a href="#"><i class="uil uil-facebook-f"></i></a>
               <a href="#"><i class="uil uil-dribbble"></i></a>
@@ -45,18 +45,29 @@
             <!-- /.social -->
           </div>
           <!-- /.widget -->
-        </div>
+        </div> --}}
         <!-- /column -->
+        <div class="col-md-4 col-lg-3 align-items-center" >
+          <div class="widget">
+            <h4 class="widget-title text-white mb-3">Social Media</h4>
+            <a href="#"><i class="uil uil-instagram"></i><u>@icfubaya2022</u></a><br>
+            <a href="#"><i class="uil uil-youtube"></i><u>ICF UBAYA 2022</u></a><br>
+            <a href="#"><i class="uil uil-line"></i><u>ICF UBAYA 2022</u></a>
+            <h4 class="widget-title text-white mb-3" style="margin-top: 15px; margin-bottom: 15px">Contact Person</h4>
+            <a href="#"><i class="uil uil-whatsapp"></i>... : <u>08...</u></a><br>
+            <a href="#"><i class="uil uil-whatsapp"></i>... : <u>09...</u></a>
+          </div>
+          <!-- /.widget -->
+        </div>
         <div class="col-md-4 col-lg-3">
           <div class="widget">
-            <h4 class="widget-title text-white mb-3">Get in Touch</h4>
-            <address class="pe-xl-15 pe-xxl-17">Moonshine St. 14/05 Light City, London, United Kingdom</address>
-            <a href="mailto:#">info@email.com</a><br /> 00 (123) 456 78 90
+            <h4 class="widget-title text-white mb-3" style="text-align: center">Our Location</h4>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7689.26769629826!2d112.76750596476232!3d-7.3212739372670725!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x7311b083dc2502a7!2sUBAYA%20(%20UNIVERSITAS%20SURABAYA%20)!5e0!3m2!1sen!2sid!4v1652534141596!5m2!1sen!2sid" width="100%" height="100%" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
           <!-- /.widget -->
         </div>
         <!-- /column -->
-        <div class="col-md-4 col-lg-3">
+        {{-- <div class="col-md-4 col-lg-3">
           <div class="widget">
             <h4 class="widget-title text-white mb-3">Learn More</h4>
             <ul class="list-unstyled  mb-0">
@@ -98,10 +109,14 @@
             <!-- /.newsletter-wrapper -->
           </div>
           <!-- /.widget -->
-        </div>
+        </div> --}}
         <!-- /column -->
       </div>
       <!--/.row -->
+      <div style="align-content: center; text-align: center;">
+        <p style="margin: 0px">Developed by ICF .. Comitee</p>
+        <p>Lapor bug & kendala web hubungi ...@gmail.com</p>
+      </div>
     </div>
     <!-- /.container -->
   </footer>

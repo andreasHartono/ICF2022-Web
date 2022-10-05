@@ -20,6 +20,10 @@ Route::get('/', function () {
 Route::get('/faq', function () {
    return view('faq');
 });
+
+Route::get('/register', function () {
+   return view('peserta.register');
+});
 // Auth::routes();
 Route::get('/dashboardadmin', function () {
    return view('admin.adminwelcome');

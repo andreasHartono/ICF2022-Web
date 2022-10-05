@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="{{ asset('assets/css/hadiah.css') }}">
   <link rel="stylesheet" href="{{ asset('assets/css/faq.css') }}">
   <link rel="stylesheet" href="{{ asset('assets/css/mainweb.css') }}">  
+  <link rel="stylesheet" href="{{ asset('assets/css/register.css') }}">  
   <link rel="shortcut icon" href="{{ asset('assets/img/logo.ico') }}">
 
   @yield('style')

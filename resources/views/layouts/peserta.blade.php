@@ -10,6 +10,7 @@
   <title>
     ICF 2022 - Peserta
   </title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
   <!-- CSS only -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
   <!--     Fonts and icons     -->
@@ -41,41 +42,42 @@
       <ul class="navbar-nav">
          <li class="nav-item">
           <a class="nav-link" href="#">
-            <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+
               <i class="ni ni-single-02 text-dark text-sm opacity-10"></i>
-            </div>
+            
             <span class="nav-link-text ms-1">Profile</span>
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">
-            <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
-              <i class="ni ni-tv-2 text-primary text-sm opacity-10"></i>
-            </div>
+          <a class="nav-link" href="/tim">
+
+          <i class="bi bi-person-lines-fill"></i>
+
             <span class="nav-link-text ms-1">Tim</span>
           </a>
         </li>
         <li class="nav-item">
           <a class="nav-link active" href="#">
-            <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+
               <i class="ni ni-calendar-grid-58 text-warning text-sm opacity-10"></i>
-            </div>
+
             <span class="nav-link-text ms-1">Workshop</span>
           </a>
         </li>
       </ul>
       <div class="accordion" id="accordionExample">
-  <div class="accordion-item">
+  <div style="padding-left:9px;"class="accordion-item">
     <h2 class="accordion-header" id="headingOne">
+      
       <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-        Lomba
+      <i class="ni ni-tv-2 text-primary text-sm opacity-10"></i> &nbsp;   &nbsp; &nbsp; Lomba <i style="position:relative; left:50%;" class="bi bi-arrow-down"></i>
       </button>
     </h2>
     <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
       <div class="accordion-body">
-        <p style="color:black">Peserta</p>
-        <p style="color:black">Klasemen</p>
-        <p style="color:black">Soal</p>
+        <a style="color:black" href="peserta">Peserta</a> <br><br>
+        <a style="color:black" href="#">Lomba</a> <br><br>
+        <a style="color:black" href="soal">Soal</a> <br><br>
       </div>
     </div>
   </div>

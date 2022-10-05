@@ -17,6 +17,8 @@
   <link rel="stylesheet" href="{{ asset('assets/css/mainweb.css') }}">  
   <link rel="stylesheet" href="{{ asset('assets/css/register.css') }}">  
   <link rel="shortcut icon" href="{{ asset('assets/img/logo.ico') }}">
+  <link rel="stylesheet" href="{{ asset('assets/css/cartpeserta.css') }}">  
+  
 
   @yield('style')
 

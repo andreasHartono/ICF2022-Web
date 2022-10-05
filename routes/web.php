@@ -21,6 +21,10 @@ Route::get('/faq', function () {
    return view('faq');
 });
 
+Route::get('/daftar', function () {
+   return view('peserta.daftar');
+});
+
 Route::get('/register', function () {
    return view('peserta.register');
 });

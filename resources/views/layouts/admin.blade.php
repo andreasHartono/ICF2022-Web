@@ -5,7 +5,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="apple-touch-icon" sizes="76x76" href="{{ asset('argon//assets/img/apple-icon.png') }}">
-  
+
   <link rel="shortcut icon" href="{{ asset('assets/img/logo.ico') }}">
   <title>
     ICF 2022 - Admin
@@ -29,7 +29,7 @@
   <aside class="sidenav bg-white navbar navbar-vertical navbar-expand-xs h-auto border-0 border-radius-xl my-3 fixed-start ms-4 " id="sidenav-main">
     <div class="sidenav-header">
       <i class="fas fa-times p-3 cursor-pointer text-secondary opacity-5 position-absolute end-0 top-0 d-none d-xl-none" aria-hidden="true" id="iconSidenav"></i>
-      <a class="navbar-brand m-0" href=" https://demos.creative-tim.com/argon-dashboard/pages/dashboard.html " target="_blank">
+      <a class="navbar-brand m-0" href="{{ url('/dashboardadmin')}}">
         <img src="{{ asset('logo/logo.png') }}" class="navbar-brand-img h-100" alt="main_logo">
         <span class="ms-1 font-weight-bold">ICF 2022</span>
       </a>
@@ -43,7 +43,7 @@
             </li>
          </li>
          <li class="nav-item">
-          <a class="nav-link" href="#">
+          <a class="nav-link" href="{{ url('/daftarevent')}}">
             <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
               <i class="ni ni-email-83 text-primary text-sm opacity-10"></i>
             </div>
@@ -56,19 +56,19 @@
             </li>
          </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">
+          <a class="nav-link" href="{{ url('/pesertaWorkshopHCI')}} ">
             <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
               <i class="ni ni-tv-2 text-primary text-sm opacity-10"></i>
             </div>
-            <span class="nav-link-text ms-1">Workshop A</span>
+            <span class="nav-link-text ms-1">Workshop <br>What is Human <br>Computer Interaction ?</span>
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" href="#">
+          <a class="nav-link" href="{{ url('/pesertaWorkshopUI')}}">
             <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
               <i class="ni ni-calendar-grid-58 text-warning text-sm opacity-10"></i>
             </div>
-            <span class="nav-link-text ms-1">Workshop B</span>
+            <span class="nav-link-text ms-1">Workshop <br>How to Make a Good UI</span>
           </a>
         </li>
          <li class="nav-item">
@@ -77,19 +77,19 @@
             </li>
          </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">
+          <a class="nav-link" href="{{ url('/pesertaSeminarBigData')}}">
             <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
               <i class="ni ni-tv-2 text-primary text-sm opacity-10"></i>
             </div>
-            <span class="nav-link-text ms-1">Seminar A</span>
+            <span class="nav-link-text ms-1">Seminar Utilizing Big Data<br> to Address Global Issues</span>
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" href="#">
+          <a class="nav-link" href="{{ url('/pesertaSeminarMultiverse')}}">
             <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
               <i class="ni ni-calendar-grid-58 text-warning text-sm opacity-10"></i>
             </div>
-            <span class="nav-link-text ms-1">Seminar B</span>
+            <span class="nav-link-text ms-1">Seminar Accessible <br>Multiverse for Everyone</span>
           </a>
         </li>
          <li class="nav-item">
@@ -98,9 +98,17 @@
             </li>
          </li>
         <li class="nav-item">
-          <a class="nav-link active" href="#">
+          <a class="nav-link" href="#">
             <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
               <i class="ni ni-tv-2 text-primary text-sm opacity-10"></i>
+            </div>
+            <span class="nav-link-text ms-1">Hackaton Competition</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">
+            <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+              <i class="ni ni-calendar-grid-58 text-warning text-sm opacity-10"></i>
             </div>
             <span class="nav-link-text ms-1">Mobile Legend Competition</span>
           </a>
@@ -110,7 +118,7 @@
             <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
               <i class="ni ni-calendar-grid-58 text-warning text-sm opacity-10"></i>
             </div>
-            <span class="nav-link-text ms-1">Design Competition</span>
+            <span class="nav-link-text ms-1">Tiktok Challenges<br> Competition</span>
           </a>
         </li>
         <li class="nav-item">
@@ -118,7 +126,7 @@
             <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
               <i class="ni ni-calendar-grid-58 text-warning text-sm opacity-10"></i>
             </div>
-            <span class="nav-link-text ms-1">Coding Competition</span>
+            <span class="nav-link-text ms-1">Comic Strip Competition</span>
           </a>
         </li>
       </ul>
@@ -141,7 +149,7 @@
       <div class="container-fluid py-1 px-3">
         <nav aria-label="breadcrumb">
          @yield('header')
-          
+
         </nav>
         <div class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4" id="navbar">
          <div class="ms-md-auto pe-md-3 d-flex align-items-center">

@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg center-nav transparent navbar-light">
     <div class="container flex-lg-row flex-nowrap align-items-center">
         <div class="navbar-brand w-100">
-            <a href="#">
+            <a href="{{ url('/') }}">
                 <img src="{{ asset('assets/img/logo/logoUtama.png') }}"
                     srcset="{{ asset('assets/img/logo/logoUtama.png') }}" alt=""
                     style="height: 90px; width: 170px" />
@@ -86,7 +86,13 @@
                         </div> --}}
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link" href="#" data-bs-toggle="dropdown">About Us</a>
+                        <a class="nav-link" href="#">About Us</a>
+                        {{-- <ul class="dropdown-menu">
+                            <li class="nav-item"><a class="dropdown-item" href="#">Blog without Sidebar</a></li>
+                        </ul> --}}
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="{{ url('faq')}}">FAQ</a>
                         {{-- <ul class="dropdown-menu">
                             <li class="nav-item"><a class="dropdown-item" href="#">Blog without Sidebar</a></li>
                         </ul> --}}
@@ -145,12 +151,10 @@
         <div class="navbar-other w-100 d-flex ms-auto">
             <ul class="navbar-nav flex-row align-items-center ms-auto">
                 <li class="nav-item">
-                    <a href="#" class="nav-link" data-bs-toggle="modal"
-                        data-bs-target="#modal-signin">LOGIN</a>
+                    <a href="#" class="nav-link">LOGIN</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="btn btn-sm btn-primary rounded" data-bs-toggle="modal"
-                        data-bs-target="#modal-signup">Sign Up</a>
+                    <a href="{{ url('register')}}" class="btn btn-sm btn-primary rounded">Sign Up</a>
                 </li>
                 <li class="nav-item d-lg-none">
                     <button class="hamburger offcanvas-nav-btn"><span></span></button>

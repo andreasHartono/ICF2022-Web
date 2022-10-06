@@ -51,3 +51,7 @@ Route::get('/soal', function () {
 
 Route::resource('daftarevent', 'EventController');
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/pesertaSeminarBigData','AdminController@showPesertaSeminarBigData');
+Route::get('/pesertaSeminarMultiverse','AdminController@showPesertaSeminarMultiverse');
+Route::get('/pesertaWorkshopHCI','AdminController@showPesertaWorkshopHCI');
+Route::get('/pesertaWorkshopUI','AdminController@showPesertaWorkshopUI');

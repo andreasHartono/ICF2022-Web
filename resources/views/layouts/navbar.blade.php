@@ -18,7 +18,7 @@
             <div class="offcanvas-body ms-lg-auto d-flex flex-column h-100">
                 <ul class="navbar-nav">
                     <li class="nav-item  dropdown-mega">
-                        <a class="nav-link" href="#" data-bs-toggle="dropdown">Home</a>
+                        <a class="nav-link" href="{{ url('/')}}">Home</a>
                         <ul class="dropdown-menu mega-menu mega-menu-dark mega-menu-img">
                             <li class="mega-menu-content mega-menu-scroll">
                                 {{-- <ul class="row row-cols-1 row-cols-lg-6 gx-0 gx-lg-4 gy-lg-2 list-unstyled">
@@ -87,6 +87,13 @@
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link" href="#" data-bs-toggle="dropdown">About Us</a>
+                        {{-- <ul class="dropdown-menu">
+                            <li class="nav-item"><a class="dropdown-item" href="#">Blog without Sidebar</a></li>
+                        </ul> --}}
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="{{ url('/faq')}}">FAQ</a>
                         {{-- <ul class="dropdown-menu">
                             <li class="nav-item"><a class="dropdown-item" href="#">Blog without Sidebar</a></li>
                         </ul> --}}

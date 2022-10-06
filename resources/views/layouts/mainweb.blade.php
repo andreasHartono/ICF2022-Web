@@ -18,7 +18,6 @@
   <link rel="stylesheet" href="{{ asset('assets/css/register.css') }}">  
   <link rel="shortcut icon" href="{{ asset('assets/img/logo.ico') }}">
   <link rel="stylesheet" href="{{ asset('assets/css/cartpeserta.css') }}">  
-  npm i bootstrap-icons
   
 
   @yield('style')
@@ -37,7 +36,7 @@
         <div class="row gy-6 gy-lg-0">
           <div class="col-md-4 col-lg-3">
             <div class="widget">
-              <img class="mb-6" src="{{ asset('assets/img/logowhite.png') }}" srcset="{{ asset('assets/img/logowhite.png') }}"" alt="" />
+              <img class="mb-6" src="{{ asset('assets/img/logowhite.png') }}" srcset="{{ asset('assets/img/logowhite.png') }}" alt="" />
               
               <nav class="nav social social-white">
                 <a href="#"><i class="uil uil-twitter"></i></a>
@@ -104,6 +103,13 @@
           <!-- /column -->
         </div>
         <!--/.row -->
+        <div style="align-content: center; text-align: center;">
+          <p style="margin: 0px">Developed by ICF .. Comitee</p>
+          <p>Lapor bug & kendala web hubungi ...@gmail.com</p>
+            <!-- /column -->
+          </div>
+          <!--/.row -->
+        </div>
       </div>
      
       <!-- /.container -->

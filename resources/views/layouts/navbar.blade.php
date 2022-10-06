@@ -1,17 +1,16 @@
+<link rel="stylesheet" href="{{ asset('assets/css/navbar.css') }}">
 <nav class="navbar navbar-expand-lg center-nav transparent navbar-light">
     <div class="container flex-lg-row flex-nowrap align-items-center">
         <div class="navbar-brand w-100">
             <a href="{{ url('/') }}">
-                <img src="{{ asset('assets/img/logo/logoUtama.png') }}"
-                    srcset="{{ asset('assets/img/logo/logoUtama.png') }}" alt=""
-                    style="height: 90px; width: 170px" />
+                <img class="imgWhite" src="{{ asset('assets/img/logo/logoWhiteArtboard 2.png') }}"
+                    srcset="{{ asset('assets/img/logo/logoWhiteArtboard 2.png') }}" alt=""/>
             </a>
         </div>
         <div class="navbar-collapse offcanvas offcanvas-nav offcanvas-start">
-            <div class="offcanvas-header d-lg-none" style="background-color: white">
-                <h3 class="text-white fs-30 mb-0"><img src="{{ asset('assets/img/logo/logoUtama.png') }}"
-                        srcset="{{ asset('assets/img/logo/logoUtama.png') }}" alt=""
-                        style="height: 90px; width: 170px" /></h3>
+            <div class="offcanvas-header d-lg-none">
+                <h3 class="text-white fs-30 mb-0"><img class="imgWhite" src="{{ asset('assets/img/logo/logoWhiteArtboard 2.png') }}"
+                        srcset="{{ asset('assets/img/logo/logoWhiteArtboard 2.png') }}" alt=""/></h3>
                 <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
                     aria-label="Close"></button>
             </div>
@@ -149,7 +148,7 @@
                     <a href="#" class="nav-link">LOGIN</a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{ url('register')}}" class="btn btn-sm btn-primary rounded">Sign Up</a>
+                    <a href="{{ url('register')}}" class="btn btn-sm btn-primary rounded" >Sign Up</a>
                 </li>
                 <li class="nav-item d-lg-none">
                     <button class="hamburger offcanvas-nav-btn"><span></span></button>

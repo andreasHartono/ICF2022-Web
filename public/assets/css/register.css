@@ -12,11 +12,11 @@
   background-color: #eceeca;
   min-height: 1vh;
   padding-top: 70px;
-  color: navy;
+  color: #273242;
 }
 
 #footer {
-  background-color: navy;
+  background-color: #273242;
   margin-top: 150px;
   padding: 20px 0;
   color: whitesmoke;
@@ -46,7 +46,7 @@
   font-size: 3.5em !important;
   letter-spacing: 3px;
   line-height: 60px;
-  color: navy;
+  color: #273242;
   text-align: center;
 }
 
@@ -75,8 +75,8 @@
   display: block;
   margin-bottom: 10px;
   background-color: transparent;
-  border: 2px solid navy;
-  color: navy;
+  border: 2px solid #273242;
+  color: #273242;
   height: 40px;
   border-radius: 10px;
   padding: 0 10px;
@@ -84,7 +84,7 @@
 }
 
 .myTextbox::placeholder {
-  color: navy;
+  color: #273242;
   font-weight: normal;
 }
 
@@ -94,8 +94,8 @@
 
 .myBtn {
   display: block;
-  background-color: navy;
-  color: aliceblue;
+  background-color: #273242;
+  color: #99C8EB;
   border-radius: 15px;
   border: none;
   height: 40px;
@@ -104,18 +104,18 @@
 }
 
 .myBtn:hover {
-  background-color: navy;
-  color: aliceblue;
+  background-color: #273242;
+  color: #99C8EB;
 }
 
 .myBtn.dark {
-  background-color: aliceblue;
-  color: navy;
+  background-color: #99C8EB;
+  color: #273242;
 }
 
 .myBtn.dark:hover {
-  background-color: aliceblue;
-  color:navy;
+  background-color: #99C8EB;
+  color:#273242;
 }
 
 .myChkbox {
@@ -135,12 +135,12 @@
   height: 20px;
   top: 2px;
   left: 8px;
-  border: 2px solid navy;
+  border: 2px solid #273242;
   border-radius: 2px;
 }
 
 .myChkbox:checked ~ .checkmark {
-  background-color: navy;
+  background-color: #273242;
 }
 
 /* Create the checkmark/indicator (hidden when not checked) */
@@ -170,22 +170,22 @@
 
 .chkText {
   display: inline-block;
-  color: navy;
+  color: #273242;
   margin-bottom: 10px;
   background-color: transparent;
 }
 
 .have-account {
-  color: navy;
+  color: #273242;
   font-weight: 600;
 }
 
 .have-account a {
-  color: navy;
+  color: #273242;
 }
 
 .have-account a:hover {
-  color: navy;
+  color: #273242;
 }
 
 .myLabel {
@@ -196,7 +196,7 @@
 .myInputFile {
   height: 40px;
   display: block;
-  border: 2px solid navy;
+  border: 2px solid #273242;
   border-radius: 10px;
   padding: 6px 10px;
 }
@@ -211,7 +211,7 @@
 }
 
 .myInputFile::-webkit-file-upload-button {
-  background-color: navy;
+  background-color: #273242;
   color: #eceeca;
   border-radius: 50px;
   border: none;
@@ -223,7 +223,7 @@
 }
 
 .myInputFile::-webkit-file-upload-button:hover {
-  background-color: navy;
+  background-color: #273242;
 }
 
 @media (max-width: 767px) {

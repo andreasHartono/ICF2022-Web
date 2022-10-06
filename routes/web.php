@@ -26,7 +26,7 @@ Route::get('/daftar', function () {
 });
 
 Route::get('/register', function () {
-   return view('peserta.register');
+   return view('peserta.register1');
 });
 // Auth::routes();
 Route::get('/dashboardadmin', function () {

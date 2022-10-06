@@ -1,146 +1,247 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins',sans-serif;
+@font-face {
+  font-family: 'a_asian_hiroregular';
+  src: url('../fonts/aasianhiro/aasianhiro-webfont.woff2') format('woff2'),
+       url('../fonts/aasianhiro/aasianhiro-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
 }
-.dalam{
-  height: 200vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 10px;
-  background: linear-gradient(135deg, #71b7e6, #9b59b6);
+
+.body-register {
+  font-family: "Montserrat", sans-serif;
+  background-color: #eceeca;
+  min-height: 1vh;
+  padding-top: 70px;
+  color: navy;
 }
-.container-register{
-  max-width: 700px;
-  width: 100%;
-  background-color: #fff;
-  padding: 25px 30px;
-  border-radius: 5px;
-  box-shadow: 0 5px 10px rgba(0,0,0,0.15);
-}
-.container-register .title{
-  font-size: 25px;
-  font-weight: 500;
+
+#footer {
+  background-color: navy;
+  margin-top: 150px;
+  padding: 20px 0;
+  color: whitesmoke;
+  font-weight: 600;
+  font-size: 1.2em;
   position: relative;
 }
-.container-register-register .title::before{
+
+.myIcon {
+  font-size: 1.2em;
+  color: #eceeca;
+}
+
+/* .myIcon:hover {
+  color: #d0d2ad;
+} */
+
+.footer-img {
+  width: 100%;
+  position: absolute;
+  bottom: 450px;
+  z-index: -2;
+}
+
+.myTitle {
+  font-family: "a_asian_hiroregular", Arial, Helvetica, sans-serif;
+  font-size: 3.5em !important;
+  letter-spacing: 3px;
+  line-height: 60px;
+  color: navy;
+  text-align: center;
+}
+
+.wa-num {
+  color: #eceeca;
+  transition: all 0.3s;
+}
+
+.wa-num:hover {
+  color: #d0d2ad;
+}
+
+.width-100 {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.width-90 {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.myTextbox {
+  display: block;
+  margin-bottom: 10px;
+  background-color: transparent;
+  border: 2px solid navy;
+  color: navy;
+  height: 40px;
+  border-radius: 10px;
+  padding: 0 10px;
+  font-weight: 600;
+}
+
+.myTextbox::placeholder {
+  color: navy;
+  font-weight: normal;
+}
+
+.myTextbox:focus {
+  border: inherit;
+}
+
+.myBtn {
+  display: block;
+  background-color: navy;
+  color: aliceblue;
+  border-radius: 15px;
+  border: none;
+  height: 40px;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.myBtn:hover {
+  background-color: navy;
+  color: aliceblue;
+}
+
+.myBtn.dark {
+  background-color: aliceblue;
+  color: navy;
+}
+
+.myBtn.dark:hover {
+  background-color: aliceblue;
+  color:navy;
+}
+
+.myChkbox {
+  display: inline-block;
+  margin-bottom: 10px;
+  width: 20px;
+  height: 20px;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checkmark {
+  z-index: -2;
+  position: absolute;
+  background-color: transparent;
+  width: 20px;
+  height: 20px;
+  top: 2px;
+  left: 8px;
+  border: 2px solid navy;
+  border-radius: 2px;
+}
+
+.myChkbox:checked ~ .checkmark {
+  background-color: navy;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
   content: "";
   position: absolute;
-  left: 0;
-  bottom: 0;
-  height: 3px;
-  width: 30px;
-  border-radius: 5px;
-  background: linear-gradient(135deg, #71b7e6, #9b59b6);
+  display: none;
 }
-.content form .user-details{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin: 20px 0 12px 0;
-}
-form .user-details .input-box{
-  margin-bottom: 15px;
-  width: calc(100% / 2 - 20px);
-}
-form .input-box span.details{
+
+/* Show the checkmark when checked */
+.myChkbox:checked ~ .checkmark:after {
   display: block;
+}
+
+/* Style the checkmark/indicator */
+.checkmark:after {
+  left: 5px;
+  top: 1.5px;
+  width: 6px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.chkText {
+  display: inline-block;
+  color: navy;
+  margin-bottom: 10px;
+  background-color: transparent;
+}
+
+.have-account {
+  color: navy;
+  font-weight: 600;
+}
+
+.have-account a {
+  color: navy;
+}
+
+.have-account a:hover {
+  color: navy;
+}
+
+.myLabel {
   font-weight: 500;
-  margin-bottom: 5px;
+  margin-left: 5%;
 }
-.user-details .input-box input{
-  height: 45px;
-  width: 100%;
-  outline: none;
-  font-size: 16px;
-  border-radius: 5px;
-  padding-left: 15px;
-  border: 1px solid #ccc;
-  border-bottom-width: 2px;
-  transition: all 0.3s ease;
+
+.myInputFile {
+  height: 40px;
+  display: block;
+  border: 2px solid navy;
+  border-radius: 10px;
+  padding: 6px 10px;
 }
-.user-details .input-box input:focus,
-.user-details .input-box input:valid{
-  border-color: #9b59b6;
+
+.text404 h1{
+  font-size: 5em;
 }
- form .gender-details .gender-title{
-  font-size: 20px;
+
+.text404 p {
+  font-size: 1.5em;
   font-weight: 500;
- }
- form .category{
-   display: flex;
-   width: 80%;
-   margin: 14px 0 ;
-   justify-content: space-between;
- }
- form .category label{
-   display: flex;
-   align-items: center;
-   cursor: pointer;
- }
- form .category label .dot{
-  height: 18px;
-  width: 18px;
-  border-radius: 50%;
-  margin-right: 10px;
-  background: #d9d9d9;
-  border: 5px solid transparent;
-  transition: all 0.3s ease;
 }
- #dot-1:checked ~ .category label .one,
- #dot-2:checked ~ .category label .two,
- #dot-3:checked ~ .category label .three{
-   background: #9b59b6;
-   border-color: #d9d9d9;
- }
- form input[type="radio"]{
-   display: none;
- }
- form .button{
-   height: 45px;
-   margin: 35px 0
- }
- form .button input{
-   height: 100%;
-   width: 100%;
-   border-radius: 5px;
-   border: none;
-   color: #fff;
-   font-size: 18px;
-   font-weight: 500;
-   letter-spacing: 1px;
-   cursor: pointer;
-   transition: all 0.3s ease;
-   background: linear-gradient(135deg, #71b7e6, #9b59b6);
- }
- form .button input:hover{
-  /* transform: scale(0.99); */
-  background: linear-gradient(-135deg, #71b7e6, #9b59b6);
-  }
- @media(max-width: 584px){
- .container-register{
-  max-width: 100%;
+
+.myInputFile::-webkit-file-upload-button {
+  background-color: navy;
+  color: #eceeca;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  padding: 0 10px;
+  font-weight: 600;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+      border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
-form .user-details .input-box{
-    margin-bottom: 15px;
-    width: 100%;
+
+.myInputFile::-webkit-file-upload-button:hover {
+  background-color: navy;
+}
+
+@media (max-width: 767px) {
+  .footer-img {
+      bottom: 730px;
   }
-  form .category{
-    width: 100%;
+}
+
+@media (max-width: 511px) {
+  .footer-img {
+      bottom: 720px;
   }
-  .content form .user-details{
-    max-height: 300px;
-    overflow-y: scroll;
+
+  #footer {
+      font-size: 1em;
   }
-  .user-details::-webkit-scrollbar{
-    width: 5px;
-  }
-  }
-  @media(max-width: 459px){
-  .container-register .content .category{
-    flex-direction: column;
+
+  .myTitle {
+      font-size: 3em !important;
   }
 }

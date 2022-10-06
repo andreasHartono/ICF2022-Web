@@ -91,12 +91,7 @@
                             <li class="nav-item"><a class="dropdown-item" href="#">Blog without Sidebar</a></li>
                         </ul> --}}
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link" href="{{ url('faq')}}">FAQ</a>
-                        {{-- <ul class="dropdown-menu">
-                            <li class="nav-item"><a class="dropdown-item" href="#">Blog without Sidebar</a></li>
-                        </ul> --}}
-                    </li>
+              
 
                     <li class="nav-item dropdown">
                         <a class="nav-link" href="{{ url('/faq')}}">FAQ</a>

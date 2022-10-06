@@ -13,9 +13,9 @@ ICF 2022 - Home
           <p class="lead fs-lg px-xl-12 px-xxl-6 mb-7" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, exercitationem iste sint sed molestiae rerum mollitia unde, officiis vel distinctio
              id cupiditate quasi, cumque ex nam? Deserunt eos nesciunt cumque.</p>
           <div class="d-flex justify-content-center" data-cues="slideInDown" data-group="page-title-buttons" data-delay="600" >
-         
+
               <span><a class="btn btn-primary rounded mx-1" style="background-color: navy;height:50px; width:200px; border-radius: 400px !important;">Register Now</a></span>
-          
+
             </div>
         </div>
         <!-- /column -->
@@ -39,14 +39,14 @@ ICF 2022 - Home
 {{-- endposter --}}
 
   <section class="wrapper bg-light">
-    
+
     <div class="container pb-14 pb-md-16 mb-lg-21 mb-xl-23">
       <div class="row gx-0 mb-16 mb-mb-20">
   {{-- timeline --}}
   <div class="row gx-lg-8 gx-xl-12 process-wrapper text-center mt-9" data-cues="slideInUp" data-group="process">
   <h1 style="color: navy; margin-top: 1em ; text-align: center; font-family: joyrideextended, Montserrat, sans-serif;"
   data-aos="zoom-in">Timeline ICF 2022</h1>
-  
+
 <link rel="stylesheet" href="{{ url('/assets/css/timeline.css') }}">
 <div class="content">
   <div class="timeline col-lg-6 wow fadeInRight">
@@ -114,7 +114,7 @@ ICF 2022 - Home
                       </div>
                     </div>
                   </div>
-                    
+
                   <!--/column -->
                   <div class="col-md-4">
                     <div class="hadiah-item">
@@ -147,7 +147,7 @@ ICF 2022 - Home
             {{-- penjelasan --}}
             <section >
 
-         
+
             <div class="container pt-10 pb-10 pt-md-10 pb-md-5 text-center">
               <div class="row">
                 <div class="col-md-10 col-lg-8 col-xl-8 col-xxl-55 mx-auto mb-13" data-cues="slideInDown" data-group="page-title">
@@ -172,7 +172,7 @@ ICF 2022 - Home
             <h1 class="display-1 mb-4">Workshop</h1>
             </div>
              {{-- end Workshop --}}
-           
+
             <div class="row gx-lg-8 gx-xl-12 gy-10 align-items-center">
               <div class="col-lg-6 position-relative">
                 <div class="shape rounded bg-pale-yellow rellax d-block" data-rellax-speed="0" style="top: 50%; left: 50%; width: 50%; height: 60%; transform: translate(-50%,-50%);z-index:0"></div>
@@ -218,7 +218,7 @@ ICF 2022 - Home
           <!-- /.container -->
         </section>
         <!-- /section -->
-   
+
         <section class="wrapper bg-soft-primary">
           <div class="container py-14 pt-md-16 pt-lg-0 pb-md-16">
             <div class="row text-center" data-cue="slideInUp">
@@ -510,7 +510,7 @@ ICF 2022 - Home
         <!-- /section -->
       </div>
       <!-- /.content-wrapper -->
-     
+
       <div class="progress-wrap">
         <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
           <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
@@ -518,5 +518,5 @@ ICF 2022 - Home
       </div>
       <script src="{{ asset('assets/js/plugins.js') }}"></script>
       <script src="{{ asset('assets/js/theme.js') }}"></script>
-      
+
 @endsection

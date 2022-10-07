@@ -21,53 +21,33 @@ ICF 2022 - Register
                   <div class="data-tim">
                       <h5 class="text-center" style="font-weight: 600;">Data Tim</h5>
                       <Label class="myLabel">Nama Tim</Label>
-                      <input type="text" name="team_name" id="txtNamaTim"
-                          class="myTextbox width-90 @error('team_name') is-invalid @enderror" placeholder="Nama Tim"
+                      <input type="text" name="nama_tim" id="txtNamaTim"
+                          class="myTextbox width-90 @error('nama_tim') is-invalid @enderror" placeholder="Nama Tim"
                           >
-                      @error('team_name')
+                      @error('nama_tim')
                           <div class="invalid-feedback text-center">
                               {{ $message }}
                           </div>
                       @enderror
-                      <label class="myLabel">Nama Sekolah</label>
-                      <input type="text" name="school_name" id="txtNamaSekolah"
-                          class="myTextbox width-90 @error('school_name') is-invalid @enderror"
-                          placeholder="Nama Sekolah" >
-                      @error('school_name')
+                      <label class="myLabel">Nama Instansi</label>
+                      <input type="text" name="instansi" id="txtinstansi"
+                          class="myTextbox width-90 @error('instansi') is-invalid @enderror"
+                          placeholder="Nama Instansi" >
+                      @error('instansi')
                           <div class="invalid-feedback text-center">
                               {{ $message }}
                           </div>
                       @enderror
-                      <label class="myLabel">Alamat Lengkap Sekolah</label>
-                      <textarea name="school_address" id="school_address" cols="30" rows="10"
-                          class="myTextbox width-90  @error('school_address') is-invalid @enderror"
-                          placeholder="cth. Jalan Raya Kalirungkut, Surabaya 60293"
-                          style="padding-top: 5px; padding-bottom: 5px; height: 80px; min-height: 40px;"
-                          ></textarea>
-                      @error('school_address')
-                          <div class="invalid-feedback text-center">
-                              {{ $message }}
-                          </div>
-                      @enderror
-                      <label class="myLabel">No. Telepon Sekolah</label>
-                      <input type="text" name="school_number" id="txtNamaSekolah"
-                          class="myTextbox width-90  @error('school_number') is-invalid @enderror"
-                          placeholder="No. Telepon Sekolah" >
-                      @error('school_number')
-                          <div class="invalid-feedback text-center">
-                              {{ $message }}
-                          </div>
-                      @enderror
-                      <label class="myLabel">Username</label>
-                      <input type="text" name="username" id="txtUsername"
-                          class="myTextbox width-90  @error('username') is-invalid @enderror" placeholder="Username"
+                      {{-- <label class="myLabel"></label>
+                      <input type="text" name="email" id="txtemail"
+                          class="myTextbox width-90  @error('email') is-invalid @enderror" placeholder="email"
                           >
-                      @error('username')
+                      @error('email')
                           <div class="invalid-feedback text-center">
                               {{ $message }}
                           </div>
-                      @enderror
-                      <label class="myLabel">Password</label>
+                      @enderror --}}
+                      {{-- <label class="myLabel">Password</label>
                       <input type="password" name="password" id="txtPassword"
                           class="myTextbox width-90 @error('password') is-invalid @enderror" placeholder="Password"
                           >
@@ -80,7 +60,7 @@ ICF 2022 - Register
                           <input type="checkbox" class="myChkbox mx-2" onclick="showPassword()">
                           <span class="checkmark"></span>
                           <span class="chkText">Show Password</span>
-                      </div>
+                      </div> --}}
                   </div>
 
                   <div class="data-anggota ketua">

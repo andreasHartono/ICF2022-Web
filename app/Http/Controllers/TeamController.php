@@ -17,6 +17,17 @@ class TeamController extends Controller
         //
     }
 
+    public function showTimHackaton()
+    {
+        $result = Team::join('teams_detail','teams_detail.teams_id','=','teams.id')
+                    ->where('teams_detail.events_id','=',5)
+                    ->select('teams.id','teams.nama_tim','teams.instansi', 'teams.status','teams.keterangan','teams.tanggal_daftar',
+                        'teams_detail.nama','teams_detail.role','teams_detail.no_hp','teams_detail.email','teams_detail.image')
+                    ->get();
+        dd($result);
+        return view('admin.daftarpeserta.lomba.lombaHackaton',['data' => $result]);
+    }
+
     /**
      * Show the form for creating a new resource.
      *

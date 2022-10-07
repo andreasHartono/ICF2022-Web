@@ -26,7 +26,7 @@ Route::get('/daftar', function () {
 });
 
 Route::get('/register', function () {
-   return view('peserta.register1');
+   return view('peserta.register');
 });
 // Auth::routes();
 Route::get('/dashboardadmin', function () {
@@ -55,3 +55,4 @@ Route::get('/pesertaSeminarBigData','AdminController@showPesertaSeminarBigData')
 Route::get('/pesertaSeminarMultiverse','AdminController@showPesertaSeminarMultiverse');
 Route::get('/pesertaWorkshopHCI','AdminController@showPesertaWorkshopHCI');
 Route::get('/pesertaWorkshopUI','AdminController@showPesertaWorkshopUI');
+Route::get('/timLombaHackaton','TeamController@showTimHackaton');

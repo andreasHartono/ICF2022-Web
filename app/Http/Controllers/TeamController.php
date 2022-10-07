@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Team;
+use App\TeamDetail;
+use Facade\FlareClient\View;
 use Illuminate\Http\Request;
 
 class TeamController extends Controller
@@ -19,13 +21,51 @@ class TeamController extends Controller
 
     public function showTimHackaton()
     {
-        $result = Team::join('teams_detail','teams_detail.teams_id','=','teams.id')
-                    ->where('teams_detail.events_id','=',5)
-                    ->select('teams.id','teams.nama_tim','teams.instansi', 'teams.status','teams.keterangan','teams.tanggal_daftar',
-                        'teams_detail.nama','teams_detail.role','teams_detail.no_hp','teams_detail.email','teams_detail.image')
-                    ->get();
-        dd($result);
+        $result = Team::where('teams.events_id','=',5)->get();
+        // dd($result);
         return view('admin.daftarpeserta.lomba.lombaHackaton',['data' => $result]);
+    }
+    public function showTimMlbb()
+    {
+        $result = Team::where('teams.events_id','=',6)->get();
+        // dd($result);
+        return view('admin.daftarpeserta.lomba.lombaMlbb',['data' => $result]);
+    }
+    public function showTimComic()
+    {
+        $result = Team::where('teams.events_id','=',8)->get();
+        // dd($result);
+        return view('admin.daftarpeserta.lomba.lombaComic',['data' => $result]);
+    }
+
+    public function confirmation(Request $request, Team $team)
+   {
+      //dd($request);
+      // $id = $request->get('id');
+      // $team = Team::find($id);
+      $team->status = $request->get('status');
+      $team->save();
+      // //$result = Team::all();
+      return redirect()->back()->with('success', 'Verifikasi Accepted');
+      //return view('admin.validasiregistrasi.index',compact('result'));
+   }
+
+   public function rejectConfirmation(Request $request, Team $team)
+   {
+      $team->status = $request->get('status');
+      $team->message = $request->get('message');
+      $team->save();
+      return redirect()->back()->with('success', 'Verifikasi Rejected');
+   }
+
+    public function showPesertaLomba($id)
+    {
+        $result = Team::find($id);
+        // dd($result);
+        $nama = $result->nama_tim;
+        $teamdetail = $result->teamDetail;
+        // dd($teamdetail);
+        return View('admin.daftarpeserta.lomba.detailPesertaLomba', compact('nama','teamdetail'));
     }
 
     /**

@@ -8,7 +8,7 @@ class Event extends Model
 {
    protected $table = 'events';
 
-   //relasi 1-1 dengan table jenis 
+   //relasi 1-1 dengan table jenis
    public function jenis()
    {
       return $this->belongsTo('App\Jenis', 'jenis_id');
@@ -20,10 +20,10 @@ class Event extends Model
       return $this->hasMany('App\Images', 'events_id', 'id');
    }
 
-   //relasi 1-1 dengan table teams_detail
-   public function teams_detail()
+   //relasi 1-M dengan table teams
+   public function teams()
    {
-      return $this->belongsTo('App\TeamsDetail', 'team_id');
+      return $this->has_many('App\Team', 'events_id','id');
    }
 
    //relasi M-N dengan table users

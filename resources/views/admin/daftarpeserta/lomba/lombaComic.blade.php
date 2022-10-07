@@ -2,16 +2,16 @@
 @section('header')
     <ol class="breadcrumb bg-transparent mb-0 pb-0 pt-1 px-0 me-sm-6 me-5">
         <li class="breadcrumb-item text-sm"><a class="opacity-5 text-white" href="javascript:;">Admin</a></li>
-        <li class="breadcrumb-item text-sm text-white active" aria-current="page">Tim Lomba Hackaton</li>
+        <li class="breadcrumb-item text-sm text-white active" aria-current="page">Tim Lomba Comic Strip</li>
     </ol>
-    <h6 class="font-weight-bolder text-white mb-0">Hackaton Competition</h6>
+    <h6 class="font-weight-bolder text-white mb-0">Comic Strip Competition</h6>
 @endsection
 @section('content')
 <div class="row">
     <div class="col-12">
       <div class="card mb-4">
         <div class="card-header pb-0">
-          <h6>List Tim Hackaton Competition</h6>
+          <h6>List Tim Comic Strip Competition</h6>
           <div class="card-header border-0">
             <h2 class="mb-0">Verifikasi Team</h2>
             <div class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">

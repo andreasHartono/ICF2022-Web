@@ -181,9 +181,9 @@ ICF 2022 - Register
                           <p style="margin-left: 5%; margin-top: 0;">Format: Nama Tim_Nama</p>
                   </div>
 
-                  <button class="btn myBtn width-90 mt-5" type="submit">Register</button>
+                  <button class="btn myBtn width-90 mt-5 btn-navy" type="submit">Register</button>
                   <div class="row justify-content-center">
-                      <p class="text-center have-account">Already have an account? <a href="{{ url('/login') }}">Login</a></p>
+                      <p class="text-center have-account">Already have an account? <a href="{{ url('/login') }}" class="text-navy">Login</a></p>
                   </div>
               </form>
           </div>

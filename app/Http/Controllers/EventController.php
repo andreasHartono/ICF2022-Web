@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Event;
+use App\Jenis;
 use Illuminate\Http\Request;
 
 class EventController extends Controller
@@ -14,7 +15,7 @@ class EventController extends Controller
      */
     public function index()
     {
-        $query = Event::latest()->paginate(4);
+        $query = Event::all();
 
       //   dd($query);
       return view('admin.daftarevent.index',compact('query'));
@@ -58,9 +59,14 @@ class EventController extends Controller
      * @param  \App\Event  $event
      * @return \Illuminate\Http\Response
      */
-    public function edit(Event $event)
+    public function edit($id)
     {
-        //
+        $event = Event::find($id);
+        // dd($event);
+        // $event = Event::find($id);
+        $jenis = Jenis::all();
+        // dd($jenis);
+        return view('admin.daftarevent.edit',compact('event','jenis'));
     }
 
     /**
@@ -70,9 +76,21 @@ class EventController extends Controller
      * @param  \App\Event  $event
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Event $event)
+    public function updateEvent(Request $request, Event $event)
     {
-        //
+        $event->jenis_id  = $request->get('jenis_id');
+        $event->nama = $request->get('nama');
+        $event->tanggal_start = $request->get('tanggal_start');
+        $event->tanggal_end = $request->get('tanggal_end');
+        $event->deskripsi = $request->get('deskripsi');
+        $event->lokasi = $request->get('lokasi');
+        $event->link_wa = $request->get('link_wa');
+        $event->author = $request->get('author');
+        $event->term_condition = $request->get('term_condition');
+        $event->save();
+
+        // DB::update('update users set votes = 100 where name = ?', ['John']);
+        return redirect('/daftarevent')->with('status', 'Acara berhasil diupdate');
     }
 
     /**

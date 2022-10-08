@@ -50,6 +50,8 @@ Route::get('/soal', function () {
 });
 
 Route::resource('daftarevent', 'EventController');
+Route::get('/daftarevent/edit/{id}','EventController@edit');
+Route::put('/daftarevent/update/{event}','EventController@updateEvent');
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/pesertaSeminarBigData','AdminController@showPesertaSeminarBigData');
 Route::get('/pesertaSeminarMultiverse','AdminController@showPesertaSeminarMultiverse');

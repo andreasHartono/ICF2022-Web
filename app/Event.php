@@ -7,7 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 class Event extends Model
 {
    protected $table = 'events';
-
+    protected $fillable = [
+        'jenis_id', 'nama', 'tanggal_start', 'tanggal_end', 'deskripsi','lokasi','link_wa','author','term_condition'
+    ];
    //relasi 1-1 dengan table jenis
    public function jenis()
    {

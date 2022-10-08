@@ -10,7 +10,7 @@ ICF 2022 - Register
   <div class="container">
       <div class="row justify-content-center">
           <div class="col-lg-6 col-md-8 col-sm-10 col-xs-11">
-              <h2 class="fs-1 myTitle">REGISTRATION</h2>
+              <h2 class="fs-1 myTitle">REGISTRATION Comic Strip Competition</h2>
               <div class="d-flex justify-content-center">
                   <button class="btn myBtn" style="width: 400px; max-width: 90%;" data-bs-toggle="modal"
                       data-bs-target="#modalPendaftaran">Catatan Pendaftaran</button>
@@ -142,49 +142,7 @@ ICF 2022 - Register
                           @enderror
                           <p style="margin-left: 5%; margin-top: 0;">Format: Nama Tim_Nama</p>
                   </div>
-
-                  <div class="data-anggota anggota-2">
-                      <h5 class="text-center mt-5" style="font-weight: 600;">Data Anggota 2</h5>
-                      <label class="myLabel">Nama Anggota 2</label>
-                      <input type="text" name="name2" id="txtNamaAnggota2" class="myTextbox width-90 @error('name2') is-invalid @enderror"
-                          placeholder="Nama Anggota 2">
-                          @error('name2')
-                           <div class="invalid-feedback text-center">
-                              {{ $message }}
-                           </div>
-                          @enderror
-                      <label class="myLabel">Nomor HP</label>
-                      <input type="text" name="phone_number2" id="txtNoHpAnggota2" class="myTextbox width-90 @error('phone_number2') is-invalid @enderror"
-                          placeholder="Nomor HP">
-                           @error('phone_number2')
-                           <div class="invalid-feedback text-center">
-                              {{ $message }}
-                           </div>
-                          @enderror
-                      <label class="myLabel">Email</label>
-                      <input type="email" name="email2" id="txtEmailAnggota2" class="myTextbox width-90 @error('email2') is-invalid @enderror"
-                          placeholder="Email">
-                           @error('email2')
-                           <div class="invalid-feedback text-center">
-                              {{ $message }}
-                           </div>
-                          @enderror
-                      <label class="myLabel">Kartu Pelajar (Max 1 MB)</label>
-                      <input type="file" accept="application/pdf,image/*" name="image2"
-                          id="KartuPelajarAnggota2 formFileMultiple"
-                          class="myInputFile width-90 @error('image2') is-invalid @enderror" style="color:navy;">
-                          @error('image2')
-                           <div class="invalid-feedback text-center">
-                              {{ $message }}
-                           </div>
-                          @enderror
-                          <p style="margin-left: 5%; margin-top: 0;">Format: Nama Tim_Nama</p>
-                  </div>
-
                   <button class="btn myBtn width-90 mt-5 btn-navy" type="submit">Register</button>
-                  <div class="row justify-content-center">
-                      <p class="text-center have-account">Already have an account? <a href="{{ url('/login') }}" class="text-navy">Login</a></p>
-                  </div>
               </form>
           </div>
       </div>

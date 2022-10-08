@@ -13,6 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// Auth::routes();
+
 Route::get('/', function () {
    return view('home');
 });
@@ -24,11 +26,24 @@ Route::get('/faq', function () {
 Route::get('/daftar', function () {
    return view('peserta.daftar');
 });
+Route::get('/login', function () {
+    return view('auth.login');
+})->name('login');
 
-Route::get('/register', function () {
-   return view('peserta.register1');
+Route::get('/register', function() {
+    return view('auth.register');
 });
-// Auth::routes();
+
+Route::get('/registerhackaton', function () {
+   return view('peserta.registerhackaton');
+});
+Route::get('/registercomic', function () {
+   return view('peserta.registercomic');
+});
+Route::get('/registermlbb', function () {
+   return view('peserta.registermlbb');
+});
+
 Route::get('/dashboardadmin', function () {
    return view('admin.adminwelcome');
 });

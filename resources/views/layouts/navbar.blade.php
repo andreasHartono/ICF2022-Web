@@ -90,7 +90,7 @@
                             <li class="nav-item"><a class="dropdown-item" href="#">Blog without Sidebar</a></li>
                         </ul> --}}
                     </li>
-              
+
 
                     <li class="nav-item dropdown">
                         <a class="nav-link" href="{{ url('/faq')}}">FAQ</a>
@@ -145,7 +145,7 @@
         <div class="navbar-other w-100 d-flex ms-auto">
             <ul class="navbar-nav flex-row align-items-center ms-auto">
                 <li class="nav-item">
-                    <a href="#" class="nav-link">LOGIN</a>
+                    <a href="{{ url('login')}}" class="nav-link">LOGIN</a>
                 </li>
                 <li class="nav-item">
                     <a href="{{ url('register')}}" class="btn btn-sm btn-primary rounded" >Sign Up</a>

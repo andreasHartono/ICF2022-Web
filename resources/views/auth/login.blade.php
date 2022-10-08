@@ -1,73 +1,68 @@
-@extends('layouts.app')
-
+@extends('layouts.mainweb')
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Login') }}</div>
+    <section id="login" style="margin: 100px 0">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6 col-md-8 col-sm-10 col-xs-11 text-center">
+                     @if(session('loginError'))
+                        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                           {{ session('loginError') }}
+                        </div>
+                     @endif
+                     {{-- @if(session()->has('registerClosed'))
+                     <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                        {{ session()->get('registerClosed') }}
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                     </div>
+                     @endif --}}
+                     <h2 class="fs-1 myTitle">LOGIN ICF 2022</h2>
 
-                <div class="card-body">
-                    <form method="POST" action="{{ route('login') }}">
+                    <form method="POST" action="{{ url('/login') }}" class="mt-5">
                         @csrf
-
-                        <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
-
-                                @error('email')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
+                        <input type="text" name="username" id="txtUsername"
+                            class="myTextbox width-90 @error('username') is-invalid @enderror" placeholder="Username">
+                        @error('username')
+                            <div class="invalid-feedback">
+                                {{ $message }}
                             </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
-
-                                @error('password')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
+                        @enderror
+                        <input type="password" name="password" id="txtPassword"
+                            class="myTextbox width-90  @error('password') is-invalid @enderror" placeholder="Password">
+                        @error('password')
+                            <div class="invalid-feedback">
+                                {{ $message }}
                             </div>
+                        @enderror
+                        <div class="d-flex align-items-center" style="margin-left: 5%; position: relative;">
+                            <input type="checkbox" class="myChkbox mx-2" onclick="showPassword()">
+                            <span class="checkmark"></span>
+                            <span class="chkText">Show Password</span>
                         </div>
-
-                        <div class="form-group row">
-                            <div class="col-md-6 offset-md-4">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
-
-                                    <label class="form-check-label" for="remember">
-                                        {{ __('Remember Me') }}
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="form-group row mb-0">
-                            <div class="col-md-8 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Login') }}
-                                </button>
-
-                                @if (Route::has('password.request'))
-                                    <a class="btn btn-link" href="{{ route('password.request') }}">
-                                        {{ __('Forgot Your Password?') }}
-                                    </a>
-                                @endif
-                            </div>
-                        </div>
+                        <button class="btn myBtn width-90" type="submit">Login</button>
                     </form>
+                    <div class="row justify-content-center">
+                        <p class="text-center have-account">Don't have an account yet? <a
+                                href="{{ url('/register') }}">Register</a></p>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</div>
+    </section>
+    @if (session('loginError'))
+      <script>toastr.danger("{ !! session('loginError') !! }");</script>
+    @endif
+@endsection
+
+@section('script')
+
+    <script>
+        function showPassword() {
+            let txtPassword = document.getElementById("txtPassword");
+            if (txtPassword.type === "password") {
+                txtPassword.type = "text";
+            } else {
+                txtPassword.type = "password";
+            }
+        }
+    </script>
 @endsection

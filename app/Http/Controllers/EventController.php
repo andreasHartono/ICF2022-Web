@@ -14,7 +14,7 @@ class EventController extends Controller
      */
     public function index()
     {
-        $query = Event::latest()->paginate(6);
+        $query = Event::latest()->paginate(4);
 
       //   dd($query);
       return view('admin.daftarevent.index',compact('query'));

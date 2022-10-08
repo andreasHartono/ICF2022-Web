@@ -36,7 +36,7 @@
                            <td>{{ $query[$i]->tanggal_end }}</td>
                            <td>
                               <a href="#event_{{ $query[$i]->id }}" class="btn btn-block bg-gradient-primary" data-bs-toggle="modal" data-bs-target="#event_{{ $query[$i]->id }}">Show Detail Event</a><br>
-                              <a href="#" class="btn btn-block bg-gradient-warning">Edit Event</a>
+                              <a href="{{ url('daftarevent/'.$query[$i]->id.'/edit')}}" class="btn btn-block bg-gradient-warning">Edit Event</a>
                            </td>
                         </tr>
                            <div class="modal fade" id="event_{{ $query[$i]->id }}" tabindex="-1" role="dialog"
@@ -51,7 +51,7 @@
                                           <p><h6>Deskripsi : </h6>{{ $query[$i]->deskripsi }}</p>
                                           <p><h6>Link WA : </h6><a href="{{ $query[$i]->link_wa }}" class="btn btn-link">Click Me</a></p>
                                           <p><h6>Author : </h6>{{ $query[$i]->author }}</p>
-                                          <p><h6>Syarat & Ketentuan : </h6>{{ $query[$i]->term_condition }}</p>
+                                          <p><h6>Syarat & Ketentuan : </h6><br>{{ $query[$i]->term_condition }}</p>
                                        </div>
                                        <div class="modal-footer">
                                           <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Close</button>

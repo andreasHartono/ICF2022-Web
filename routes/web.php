@@ -59,3 +59,5 @@ Route::get('/timLombaHackaton','TeamController@showTimHackaton');
 Route::get('/timLombaMLBB','TeamController@showTimMlbb');
 Route::get('/timLombaComic','TeamController@showTimComic');
 Route::get('/showpeserta/{id}','TeamController@showPesertaLomba');
+Route::put('lomba/confirm/{team}','TeamController@confirmation');
+Route::put('lomba/reject/{team}','TeamController@rejectConfirmation');

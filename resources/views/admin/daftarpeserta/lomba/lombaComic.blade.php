@@ -29,6 +29,16 @@
                </ul>
             </div>
          </div>
+         @if ( session('status'))
+            <div class="alert alert-success" role="alert">
+                {{ session('status') }}
+            </div>
+         @endif
+         @if ( session('error'))
+            <div class="alert alert-danger" role="alert">
+                {{ session('error') }}
+            </div>
+         @endif
         </div>
         <div class="card-body px-0 pt-0 pb-2">
           <div class="table-responsive p-0">
@@ -61,6 +71,41 @@
                     </td>
                     <td>
                         <a href="{{ url('/showpeserta/'.$data[$i]->id) }}" class="btn bg-gradient-info">Show Detail Peserta</a>
+                        <form method="POST" action="{{ url('/lomba/confirm/'.$data[$i]->id) }}">
+                            @csrf
+                            @method('PUT')
+                            <input type="hidden" name="status" value="accepted">
+                            <button type="submit" class="btn btn-warning" onclick="if(!confirm('apakah anda yakin menerima tim {{$data[$i]->nama_tim}} ini ?')) return false">Accept Tim {{ $data[$i]->nama_tim }}</button><br>
+                         </form>
+                        <a href="#reject_{{$data[$i]->id }}" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#reject_{{$data[$i]->id }}">Reject Tim {{ $data[$i]->nama_tim }}</a>
+                         {{-- Modal --}}
+                         <div class="modal fade" id="reject_{{$data[$i]->id }}" tabindex="-1" role="dialog" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered" role="document">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <h5 class="modal-title">Tolak Verifikasi Tim {{ $data[$i]->nama_tim }}</h5>
+                                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                  </button>
+                                </div>
+                                <div class="modal-body">
+                                    <form method="POST" action="{{ url('/lomba/reject/'.$data[$i]->id) }}">
+                                        @csrf
+                                        @method('PUT')
+                                        <div class="form-group">
+                                           <label class="form-control-label" for="txt-message">Input Keterangan Tolak Verifikasi Tim {{ $data[$i]->nama_tim }}</label>
+                                           <textarea class="form-control" id="txt-message" rows="3" name="keterangan"></textarea>
+                                        </div>
+                                        <input type="hidden" name="status" value="rejected">
+                                        <input type="submit" class="btn btn-danger" id="btn-reject" value="Tolak">
+                                     </form>
+                                </div>
+                                <div class="modal-footer">
+                                  <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Close</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
                     </td>
                 </tr>
                 @endfor

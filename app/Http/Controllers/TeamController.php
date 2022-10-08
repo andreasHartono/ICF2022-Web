@@ -39,24 +39,19 @@ class TeamController extends Controller
     }
 
     public function confirmation(Request $request, Team $team)
-   {
-      //dd($request);
-      // $id = $request->get('id');
-      // $team = Team::find($id);
-      $team->status = $request->get('status');
-      $team->save();
-      // //$result = Team::all();
-      return redirect()->back()->with('success', 'Verifikasi Accepted');
-      //return view('admin.validasiregistrasi.index',compact('result'));
-   }
+    {
+        $team->status = $request->get('status');
+        $team->save();
+        return redirect()->back()->with('success', 'Verifikasi Accepted');
+    }
 
-   public function rejectConfirmation(Request $request, Team $team)
-   {
-      $team->status = $request->get('status');
-      $team->message = $request->get('message');
-      $team->save();
-      return redirect()->back()->with('success', 'Verifikasi Rejected');
-   }
+    public function rejectConfirmation(Request $request, Team $team)
+    {
+        $team->status = $request->get('status');
+        $team->keterangan = $request->get('keterangan');
+        $team->save();
+        return redirect()->back()->with('success', 'Verifikasi Rejected');
+    }
 
     public function showPesertaLomba($id)
     {

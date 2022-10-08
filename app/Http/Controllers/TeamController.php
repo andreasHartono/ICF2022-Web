@@ -6,6 +6,7 @@ use App\Team;
 use App\TeamDetail;
 use Facade\FlareClient\View;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class TeamController extends Controller
 {
@@ -63,6 +64,18 @@ class TeamController extends Controller
         return View('admin.daftarpeserta.lomba.detailPesertaLomba', compact('nama','teamdetail'));
     }
 
+    public function showPesertaTiktok()
+    {
+        $pesertaLombaTiktok = DB::table('user_event')
+        ->join('users','user_event.users_id','=','users.id')
+        ->join('events','user_event.events_id','=','events.id')
+        ->select('users.nama','users.email','users.no_hp','users.akun_tiktok','users.image')
+        ->where('user_event.events_id','=',7)
+        ->orderBy('users.id','asc')
+        ->get();
+
+        return view('admin.daftarpeserta.lomba.pesertaLombaTiktok', ['data' => $pesertaLombaTiktok]);
+    }
     /**
      * Show the form for creating a new resource.
      *

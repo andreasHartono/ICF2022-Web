@@ -57,6 +57,7 @@ Route::get('/pesertaWorkshopHCI','AdminController@showPesertaWorkshopHCI');
 Route::get('/pesertaWorkshopUI','AdminController@showPesertaWorkshopUI');
 Route::get('/timLombaHackaton','TeamController@showTimHackaton');
 Route::get('/timLombaMLBB','TeamController@showTimMlbb');
+Route::get('/pesertaTiktok','TeamController@showPesertaTiktok');
 Route::get('/timLombaComic','TeamController@showTimComic');
 Route::get('/showpeserta/{id}','TeamController@showPesertaLomba');
 Route::put('lomba/confirm/{team}','TeamController@confirmation');

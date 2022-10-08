@@ -64,6 +64,7 @@ Route::get('/soal', function () {
    return view('peserta.soal');
 });
 
+// Route Admin
 Route::resource('daftarevent', 'EventController');
 Route::get('/daftarevent/edit/{id}','EventController@edit');
 Route::put('/daftarevent/update/{event}','EventController@updateEvent');
@@ -79,3 +80,6 @@ Route::get('/timLombaComic','TeamController@showTimComic');
 Route::get('/showpeserta/{id}','TeamController@showPesertaLomba');
 Route::put('lomba/confirm/{team}','TeamController@confirmation');
 Route::put('lomba/reject/{team}','TeamController@rejectConfirmation');
+
+// Route Peserta
+Route::get('/peserta/daftarevents','EventController@front_event');

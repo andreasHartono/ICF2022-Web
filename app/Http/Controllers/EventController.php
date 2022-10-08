@@ -8,6 +8,15 @@ use Illuminate\Http\Request;
 
 class EventController extends Controller
 {
+    public function front_event()
+    {
+        $event = Event::join('jenis','jenis.id','=','events.jenis_id')
+                ->select('events.*','jenis.nama as name')
+                ->where('jenis.id','=',1)
+                ->orWhere('jenis.id','=',2)->get();
+        // dd($event);
+        return view('peserta.daftar',compact('event'));
+    }
     /**
      * Display a listing of the resource.
      *

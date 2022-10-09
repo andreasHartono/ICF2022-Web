@@ -19,9 +19,9 @@
 
                     <form method="POST" action="{{ url('/login') }}" class="mt-5">
                         @csrf
-                        <input type="text" name="username" id="txtUsername"
-                            class="myTextbox width-90 @error('username') is-invalid @enderror" placeholder="Username">
-                        @error('username')
+                        <input type="email" name="email" id="txtEmail"
+                            class="myTextbox width-90 @error('email') is-invalid @enderror" placeholder="example@gmail.com">
+                        @error('email')
                             <div class="invalid-feedback">
                                 {{ $message }}
                             </div>

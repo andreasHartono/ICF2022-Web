@@ -11,6 +11,7 @@ ICF 2022 - Register
       <div class="row justify-content-center">
           <div class="col-lg-6 col-md-8 col-sm-10 col-xs-11">
               <h2 class="fs-1 myTitle">REGISTRATION</h2>
+              <h5 class="fs-1 myTitle">Mobile Legend Competition</h5>
               <div class="d-flex justify-content-center">
                   <button class="btn myBtn" style="width: 400px; max-width: 90%;" data-bs-toggle="modal"
                       data-bs-target="#modalPendaftaran">Catatan Pendaftaran</button>
@@ -38,29 +39,6 @@ ICF 2022 - Register
                               {{ $message }}
                           </div>
                       @enderror
-                      {{-- <label class="myLabel"></label>
-                      <input type="text" name="email" id="txtemail"
-                          class="myTextbox width-90  @error('email') is-invalid @enderror" placeholder="email"
-                          >
-                      @error('email')
-                          <div class="invalid-feedback text-center">
-                              {{ $message }}
-                          </div>
-                      @enderror --}}
-                      {{-- <label class="myLabel">Password</label>
-                      <input type="password" name="password" id="txtPassword"
-                          class="myTextbox width-90 @error('password') is-invalid @enderror" placeholder="Password"
-                          >
-                      @error('password')
-                          <div class="invalid-feedback text-center">
-                              {{ $message }}
-                          </div>
-                      @enderror
-                      <div class="d-flex align-items-center" style="margin-left: 5%; position: relative;">
-                          <input type="checkbox" class="myChkbox mx-2" onclick="showPassword()">
-                          <span class="checkmark"></span>
-                          <span class="chkText">Show Password</span>
-                      </div> --}}
                   </div>
 
                   <div class="data-anggota ketua">
@@ -75,10 +53,10 @@ ICF 2022 - Register
                           </div>
                       @enderror
                       <label class="myLabel">Nomor HP</label>
-                      <input type="text" name="phone_number" id="txtNoHpKetua"
-                          class="myTextbox width-90 @error('phone_number') is-invalid @enderror"
+                      <input type="text" name="no_hp" id="txtNoHpKetua"
+                          class="myTextbox width-90 @error('no_hp') is-invalid @enderror"
                           placeholder="Nomor HP" >
-                      @error('phone_number')
+                      @error('no_hp')
                           <div class="invalid-feedback text-center">
                               {{ $message }}
                           </div>
@@ -103,6 +81,15 @@ ICF 2022 - Register
                           </div>
                       @enderror
                       <p style="margin-left: 5%; margin-top: 0;">Format: Nama Tim_Nama</p>
+                      <label class="myLabel">ID Mobile Legend Ketua</label>
+                      <input type="text" name="idgame" id="txtidgameKetua"
+                          class="myTextbox width-90 @error('idgame') is-invalid @enderror" placeholder="123456789(1234)"
+                          >
+                      @error('idgame')
+                          <div class="invalid-feedback text-center">
+                              {{ $message }}
+                          </div>
+                      @enderror
                   </div>
 
                   <div class="data-anggota anggota-1">
@@ -116,9 +103,9 @@ ICF 2022 - Register
                           </div>
                       @enderror
                       <label class="myLabel">Nomor HP</label>
-                      <input type="text" name="phone_number1" id="txtNoHpAnggota1" class="myTextbox width-90"
+                      <input type="text" name="no_hp1" id="txtNoHpAnggota1" class="myTextbox width-90"
                           placeholder="Nomor HP">
-                          @error('phone_number1')
+                          @error('no_hp1')
                           <div class="invalid-feedback text-center">
                               {{ $message }}
                           </div>
@@ -141,6 +128,15 @@ ICF 2022 - Register
                            </div>
                           @enderror
                           <p style="margin-left: 5%; margin-top: 0;">Format: Nama Tim_Nama</p>
+                          <label class="myLabel">ID Mobile Legend Anggota 1</label>
+                          <input type="text" name="idgame1" id="txtidgameAnggota1"
+                          class="myTextbox width-90 @error('idgame1') is-invalid @enderror" placeholder="123456789(1234)"
+                          >
+                            @error('idgame1')
+                                <div class="invalid-feedback text-center">
+                                    {{ $message }}
+                                </div>
+                            @enderror
                   </div>
 
                   <div class="data-anggota anggota-2">
@@ -154,9 +150,9 @@ ICF 2022 - Register
                            </div>
                           @enderror
                       <label class="myLabel">Nomor HP</label>
-                      <input type="text" name="phone_number2" id="txtNoHpAnggota2" class="myTextbox width-90 @error('phone_number2') is-invalid @enderror"
+                      <input type="text" name="no_hp2" id="txtNoHpAnggota2" class="myTextbox width-90 @error('no_hp2') is-invalid @enderror"
                           placeholder="Nomor HP">
-                           @error('phone_number2')
+                           @error('no_hp2')
                            <div class="invalid-feedback text-center">
                               {{ $message }}
                            </div>
@@ -179,6 +175,155 @@ ICF 2022 - Register
                            </div>
                           @enderror
                           <p style="margin-left: 5%; margin-top: 0;">Format: Nama Tim_Nama</p>
+                          <label class="myLabel">ID Mobile Legend Anggota 2</label>
+                          <input type="text" name="idgame2" id="txtidgameAnggota2"
+                          class="myTextbox width-90 @error('idgame2') is-invalid @enderror" placeholder="123456789(1234)"
+                          >
+                            @error('idgame2')
+                                <div class="invalid-feedback text-center">
+                                    {{ $message }}
+                                </div>
+                            @enderror
+                  </div>
+
+                  <div class="data-anggota anggota-2">
+                      <h5 class="text-center mt-5" style="font-weight: 600;">Data Anggota 3</h5>
+                      <label class="myLabel">Nama Anggota 3</label>
+                      <input type="text" name="name3" id="txtNamaAnggota3" class="myTextbox width-90 @error('name3') is-invalid @enderror"
+                          placeholder="Nama Anggota 3">
+                          @error('name3')
+                           <div class="invalid-feedback text-center">
+                              {{ $message }}
+                           </div>
+                          @enderror
+                      <label class="myLabel">Nomor HP</label>
+                      <input type="text" name="no_hp3" id="txtNoHpAnggota3" class="myTextbox width-90 @error('no_hp3') is-invalid @enderror"
+                          placeholder="Nomor HP">
+                           @error('no_hp3')
+                           <div class="invalid-feedback text-center">
+                              {{ $message }}
+                           </div>
+                          @enderror
+                      <label class="myLabel">Email</label>
+                      <input type="email" name="email3" id="txtEmailAnggota3" class="myTextbox width-90 @error('email3') is-invalid @enderror"
+                          placeholder="Email">
+                           @error('email3')
+                           <div class="invalid-feedback text-center">
+                              {{ $message }}
+                           </div>
+                          @enderror
+                      <label class="myLabel">Kartu Pelajar (Max 1 MB)</label>
+                      <input type="file" accept="application/pdf,image/*" name="image3"
+                          id="KartuPelajarAnggota3 formFileMultiple"
+                          class="myInputFile width-90 @error('image3') is-invalid @enderror" style="color:navy;">
+                          @error('image3')
+                           <div class="invalid-feedback text-center">
+                              {{ $message }}
+                           </div>
+                          @enderror
+                          <p style="margin-left: 5%; margin-top: 0;">Format: Nama Tim_Nama</p>
+                          <label class="myLabel">ID Mobile Legend Anggota 3</label>
+                          <input type="text" name="idgame3" id="txtidgameAnggota3"
+                          class="myTextbox width-90 @error('idgame3') is-invalid @enderror" placeholder="123456789(1234)"
+                          >
+                            @error('idgame3')
+                                <div class="invalid-feedback text-center">
+                                    {{ $message }}
+                                </div>
+                            @enderror
+                  </div>
+                  <div class="data-anggota anggota-2">
+                      <h5 class="text-center mt-5" style="font-weight: 600;">Data Anggota 4</h5>
+                      <label class="myLabel">Nama Anggota 4</label>
+                      <input type="text" name="name4" id="txtNamaAnggota4" class="myTextbox width-90 @error('name4') is-invalid @enderror"
+                          placeholder="Nama Anggota 4">
+                          @error('name4')
+                           <div class="invalid-feedback text-center">
+                              {{ $message }}
+                           </div>
+                          @enderror
+                      <label class="myLabel">Nomor HP</label>
+                      <input type="text" name="no_hp4" id="txtNoHpAnggota4" class="myTextbox width-90 @error('no_hp4') is-invalid @enderror"
+                          placeholder="Nomor HP">
+                           @error('no_hp4')
+                           <div class="invalid-feedback text-center">
+                              {{ $message }}
+                           </div>
+                          @enderror
+                      <label class="myLabel">Email</label>
+                      <input type="email" name="email4" id="txtEmailAnggota4" class="myTextbox width-90 @error('email4') is-invalid @enderror"
+                          placeholder="Email">
+                           @error('email4')
+                           <div class="invalid-feedback text-center">
+                              {{ $message }}
+                           </div>
+                          @enderror
+                      <label class="myLabel">Kartu Pelajar (Max 1 MB)</label>
+                      <input type="file" accept="application/pdf,image/*" name="image4"
+                          id="KartuPelajarAnggota4 formFileMultiple"
+                          class="myInputFile width-90 @error('image4') is-invalid @enderror" style="color:navy;">
+                          @error('image4')
+                           <div class="invalid-feedback text-center">
+                              {{ $message }}
+                           </div>
+                          @enderror
+                          <p style="margin-left: 5%; margin-top: 0;">Format: Nama Tim_Nama</p>
+                          <label class="myLabel">ID Mobile Legend Anggota 4</label>
+                          <input type="text" name="idgame4" id="txtidgameAnggota4"
+                          class="myTextbox width-90 @error('idgame4') is-invalid @enderror" placeholder="123456789(1234)"
+                          >
+                            @error('idgame4')
+                                <div class="invalid-feedback text-center">
+                                    {{ $message }}
+                                </div>
+                            @enderror
+                  </div>
+
+                  <div class="data-anggota anggota-2">
+                      <h5 class="text-center mt-5" style="font-weight: 600;">Data Anggota Cadangan</h5>
+                      <label class="myLabel">Nama Anggota Cadangan</label>
+                      <input type="text" name="namacadangan" id="txtNamaAnggotacadangan" class="myTextbox width-90 @error('namacadangan') is-invalid @enderror"
+                          placeholder="Nama Anggota cadangan">
+                          @error('namacadangan')
+                           <div class="invalid-feedback text-center">
+                              {{ $message }}
+                           </div>
+                          @enderror
+                      <label class="myLabel">Nomor HP</label>
+                      <input type="text" name="no_hpcadangan" id="txtNoHpAnggotacadangan" class="myTextbox width-90 @error('no_hpcadangan') is-invalid @enderror"
+                          placeholder="Nomor HP">
+                           @error('no_hpcadangan')
+                           <div class="invalid-feedback text-center">
+                              {{ $message }}
+                           </div>
+                          @enderror
+                      <label class="myLabel">Email</label>
+                      <input type="email" name="emailcadangan" id="txtEmailAnggotacadangan" class="myTextbox width-90 @error('emailcadangan') is-invalid @enderror"
+                          placeholder="Email">
+                           @error('emailcadangan')
+                           <div class="invalid-feedback text-center">
+                              {{ $message }}
+                           </div>
+                          @enderror
+                      <label class="myLabel">Kartu Pelajar (Max 1 MB)</label>
+                      <input type="file" accept="application/pdf,image/*" name="imagecadangan"
+                          id="KartuPelajarAnggotacadangan formFileMultiple"
+                          class="myInputFile width-90 @error('imagecadangan') is-invalid @enderror" style="color:navy;">
+                          @error('imagecadangan')
+                           <div class="invalid-feedback text-center">
+                              {{ $message }}
+                           </div>
+                          @enderror
+                          <p style="margin-left: 5%; margin-top: 0;">Format: Nama Tim_Nama</p>
+                          <label class="myLabel">ID Mobile Legend Anggota Cadangan</label>
+                          <input type="text" name="idgamecadangan" id="txtidgameAnggotacadangan"
+                          class="myTextbox width-90 @error('idgamecadangan') is-invalid @enderror" placeholder="123456789(1234)"
+                          >
+                            @error('idgamecadangan')
+                                <div class="invalid-feedback text-center">
+                                    {{ $message }}
+                                </div>
+                            @enderror
                   </div>
 
                   <button class="btn myBtn width-90 mt-5 btn-navy" type="submit">Register</button>

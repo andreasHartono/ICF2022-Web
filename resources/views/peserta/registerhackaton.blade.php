@@ -11,6 +11,7 @@ ICF 2022 - Register
       <div class="row justify-content-center">
           <div class="col-lg-6 col-md-8 col-sm-10 col-xs-11">
               <h2 class="fs-1 myTitle">REGISTRATION</h2>
+              <h5 class="fs-1 myTitle">Hackaton Competition</h5>
               <div class="d-flex justify-content-center">
                   <button class="btn myBtn" style="width: 400px; max-width: 90%;" data-bs-toggle="modal"
                       data-bs-target="#modalPendaftaran">Catatan Pendaftaran</button>

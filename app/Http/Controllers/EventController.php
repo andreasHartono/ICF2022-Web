@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Event;
 use App\Jenis;
+use App\Image;
 use Illuminate\Http\Request;
 
 class EventController extends Controller
@@ -11,7 +12,8 @@ class EventController extends Controller
     public function front_event()
     {
         $event = Event::join('jenis','jenis.id','=','events.jenis_id')
-                ->select('events.*','jenis.nama as name')
+                ->join('images','images.events_id','=','events.id')
+                ->select('events.*','jenis.nama as name','image_url as url')
                 ->where('jenis.id','=',1)
                 ->orWhere('jenis.id','=',2)->get();
         // dd($event);

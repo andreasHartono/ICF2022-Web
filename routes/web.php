@@ -30,9 +30,11 @@ Route::get('/login', function () {
     return view('auth.login');
 })->name('login');
 
-Route::get('/register', function() {
-    return view('auth.register');
-});
+Route::post('/login_detail', 'AccountController@authenticate');
+Route::post('/logout', 'AccountController@logout');
+
+Route::get('/register', 'AccountController@registerPage');
+Route::post('/register_detail','AccountController@register');
 
 Route::get('/registerhackaton', function () {
    return view('peserta.registerhackaton');

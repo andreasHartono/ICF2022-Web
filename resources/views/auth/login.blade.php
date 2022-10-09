@@ -17,7 +17,7 @@
                      @endif --}}
                      <h2 class="fs-1 myTitle">LOGIN ICF 2022</h2>
 
-                    <form method="POST" action="{{ url('/login') }}" class="mt-5">
+                    <form method="POST" action="{{ url('/login_detail') }}" class="mt-5">
                         @csrf
                         <input type="email" name="email" id="txtEmail"
                             class="myTextbox width-90 @error('email') is-invalid @enderror" placeholder="example@gmail.com">

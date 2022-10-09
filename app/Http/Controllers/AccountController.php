@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
+use App\User;
+use Illuminate\Support\Facades\DB;
 
 class AccountController extends Controller
 {
@@ -15,8 +18,8 @@ class AccountController extends Controller
 
     public function authenticate(Request $request){
         $credentials = $request->validate([
-            'email' => ['required','string', 'email', 'max:255', 'unique:users','email:dns'],
-            'password' => ['required','string', 'min:8'],
+            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+            'password' => ['required', 'string', 'min:6','max:20'],
         ]);
 
         if(Auth::attempt($credentials)){
@@ -43,5 +46,25 @@ class AccountController extends Controller
         // } else {
             return view('auth.register');
         // }
+    }
+
+    public function register(Request $request)
+    {
+        $request->validate([
+            'nama' => ['required', 'string', 'max:255'],
+            'email' => ['required', 'string', 'email:dns', 'max:255', 'unique:users'],
+            'no_hp' => ['required','string','unique:users'],
+            'password' => ['required', 'string', 'min:6','max:20'],
+        ]);
+
+        // $user = new User()
+        DB::table('users')->insert([
+            'nama' => $request->get('nama'),
+            'email' => $request->get('email'),
+            'no_hp' => $request->get('no_hp'),
+            'sebagai' => 'peserta',
+            'password' => Hash::make($request->get('password')),
+        ]);
+        return redirect('/login');
     }
 }

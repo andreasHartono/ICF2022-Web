@@ -67,19 +67,19 @@ ICF 2022 - Register
                   <div class="data-anggota ketua">
                       <h5 class="text-center mt-5" style="font-weight: 600;">Data Ketua Tim</h5>
                       <label class="myLabel">Nama Ketua Tim</label>
-                      <input type="text" name="name" id="txtNamaKetua"
-                          class="myTextbox width-90 @error('name') is-invalid @enderror" placeholder="Nama Ketua Tim"
+                      <input type="text" name="nama" id="txtNamaKetua"
+                          class="myTextbox width-90 @error('nama') is-invalid @enderror" placeholder="Nama Ketua Tim"
                           >
-                      @error('name')
+                      @error('nama')
                           <div class="invalid-feedback text-center">
                               {{ $message }}
                           </div>
                       @enderror
                       <label class="myLabel">Nomor HP</label>
-                      <input type="text" name="phone_number" id="txtNoHpKetua"
-                          class="myTextbox width-90 @error('phone_number') is-invalid @enderror"
+                      <input type="text" name="no_hp" id="txtNoHpKetua"
+                          class="myTextbox width-90 @error('no_hp') is-invalid @enderror"
                           placeholder="Nomor HP" >
-                      @error('phone_number')
+                      @error('no_hp')
                           <div class="invalid-feedback text-center">
                               {{ $message }}
                           </div>
@@ -109,17 +109,17 @@ ICF 2022 - Register
                   <div class="data-anggota anggota-1">
                       <h5 class="text-center mt-5" style="font-weight: 600;">Data Anggota 1</h5>
                       <label class="myLabel">Nama Anggota 1</label>
-                      <input type="text" name="name1" id="txtNamaAnggota1" class="myTextbox width-90"
+                      <input type="text" name="nama1" id="txtNamaAnggota1" class="myTextbox width-90"
                           placeholder="Nama Anggota 1">
-                      @error('name1')
+                      @error('nama1')
                           <div class="invalid-feedback text-center">
                               {{ $message }}
                           </div>
                       @enderror
                       <label class="myLabel">Nomor HP</label>
-                      <input type="text" name="phone_number1" id="txtNoHpAnggota1" class="myTextbox width-90"
+                      <input type="text" name="no_hp1" id="txtNoHpAnggota1" class="myTextbox width-90"
                           placeholder="Nomor HP">
-                          @error('phone_number1')
+                          @error('no_hp1')
                           <div class="invalid-feedback text-center">
                               {{ $message }}
                           </div>
@@ -147,17 +147,17 @@ ICF 2022 - Register
                   <div class="data-anggota anggota-2">
                       <h5 class="text-center mt-5" style="font-weight: 600;">Data Anggota 2</h5>
                       <label class="myLabel">Nama Anggota 2</label>
-                      <input type="text" name="name2" id="txtNamaAnggota2" class="myTextbox width-90 @error('name2') is-invalid @enderror"
+                      <input type="text" name="nama2" id="txtNamaAnggota2" class="myTextbox width-90 @error('nama2') is-invalid @enderror"
                           placeholder="Nama Anggota 2">
-                          @error('name2')
+                          @error('nama2')
                            <div class="invalid-feedback text-center">
                               {{ $message }}
                            </div>
                           @enderror
                       <label class="myLabel">Nomor HP</label>
-                      <input type="text" name="phone_number2" id="txtNoHpAnggota2" class="myTextbox width-90 @error('phone_number2') is-invalid @enderror"
+                      <input type="text" name="no_hp2" id="txtNoHpAnggota2" class="myTextbox width-90 @error('no_hp2') is-invalid @enderror"
                           placeholder="Nomor HP">
-                           @error('phone_number2')
+                           @error('no_hp2')
                            <div class="invalid-feedback text-center">
                               {{ $message }}
                            </div>

@@ -36,20 +36,6 @@ Route::post('/logout', 'AccountController@logout');
 Route::get('/register', 'AccountController@registerPage');
 Route::post('/register_detail','AccountController@register');
 
-Route::get('/registerhackaton', function () {
-   return view('peserta.registerhackaton');
-});
-Route::get('/registercomic', function () {
-   return view('peserta.registercomic');
-});
-Route::get('/registermlbb', function () {
-   return view('peserta.registermlbb');
-});
-
-Route::get('/dashboardadmin', function () {
-   return view('admin.adminwelcome');
-});
-
 Route::get('/dashboardpeserta', function () {
    return view('peserta.dashboardpeserta');
 });
@@ -65,23 +51,48 @@ Route::get('/peserta', function () {
 Route::get('/soal', function () {
    return view('peserta.soal');
 });
-
 // Route Admin
-Route::resource('daftarevent', 'EventController');
-Route::get('/daftarevent/edit/{id}','EventController@edit');
-Route::put('/daftarevent/update/{event}','EventController@updateEvent');
-Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/pesertaSeminarBigData','AdminController@showPesertaSeminarBigData');
-Route::get('/pesertaSeminarMultiverse','AdminController@showPesertaSeminarMultiverse');
-Route::get('/pesertaWorkshopHCI','AdminController@showPesertaWorkshopHCI');
-Route::get('/pesertaWorkshopUI','AdminController@showPesertaWorkshopUI');
-Route::get('/timLombaHackaton','TeamController@showTimHackaton');
-Route::get('/timLombaMLBB','TeamController@showTimMlbb');
-Route::get('/pesertaTiktok','TeamController@showPesertaTiktok');
-Route::get('/timLombaComic','TeamController@showTimComic');
-Route::get('/showpeserta/{id}','TeamController@showPesertaLomba');
-Route::put('lomba/confirm/{team}','TeamController@confirmation');
-Route::put('lomba/reject/{team}','TeamController@rejectConfirmation');
+Route::group(['middleware'=>'admin'], function() {
+    Route::get('/dashboardadmin', function () {
+        return view('admin.adminwelcome');
+     });
+    Route::resource('daftarevent', 'EventController');
+    Route::get('/daftarevent/edit/{id}','EventController@edit');
+    Route::put('/daftarevent/update/{event}','EventController@updateEvent');
+});
 
-// Route Peserta
-Route::get('/peserta/daftarevents','EventController@front_event');
+Route::group(['middleware'=>'pubreg'], function() {
+    Route::get('/dashboardadmin', function () {
+        return view('admin.adminwelcome');
+    });
+    Route::get('/pesertaSeminarBigData','AdminController@showPesertaSeminarBigData');
+    Route::get('/pesertaSeminarMultiverse','AdminController@showPesertaSeminarMultiverse');
+    Route::get('/pesertaWorkshopHCI','AdminController@showPesertaWorkshopHCI');
+    Route::get('/pesertaWorkshopUI','AdminController@showPesertaWorkshopUI');
+    Route::get('/timLombaHackaton','TeamController@showTimHackaton');
+    Route::get('/timLombaMLBB','TeamController@showTimMlbb');
+    Route::get('/pesertaTiktok','TeamController@showPesertaTiktok');
+    Route::get('/timLombaComic','TeamController@showTimComic');
+    Route::get('/showpeserta/{id}','TeamController@showPesertaLomba');
+    Route::put('lomba/confirm/{team}','TeamController@confirmation');
+    Route::put('lomba/reject/{team}','TeamController@rejectConfirmation');
+});
+
+Route::group(['middleware'=>'auth'], function() {
+    // Route Peserta
+    Route::get('/peserta/daftarevents','EventController@front_event');
+    Route::get('/registerhackaton', function () {
+        return view('peserta.registerhackaton');
+    });
+    Route::get('/registercomic', function () {
+        return view('peserta.registercomic');
+    });
+    Route::get('/registermlbb', function () {
+        return view('peserta.registermlbb');
+    });
+});
+// Route::get('/home', 'HomeController@index')->name('home');
+
+
+
+

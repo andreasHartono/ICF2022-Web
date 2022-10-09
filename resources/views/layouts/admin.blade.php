@@ -37,19 +37,20 @@
     <hr class="horizontal dark mt-0">
     <div class="collapse navbar-collapse  w-auto ps ps--active-y" id="sidenav-collapse-main">
       <ul class="navbar-nav">
-         <li class="nav-item">
+        <li class="nav-item">
             <li class="nav-item mt-3">
-               <h6 class="ps-4 ms-2 text-uppercase text-xs font-weight-bolder opacity-6">Daftar Acara</h6>
+                <h6 class="ps-4 ms-2 text-uppercase text-xs font-weight-bolder opacity-6">Daftar Acara</h6>
             </li>
-         </li>
-         <li class="nav-item">
-          <a class="nav-link" href="{{ url('/daftarevent')}}">
-            <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
-              <i class="ni ni-email-83 text-primary text-sm opacity-10"></i>
-            </div>
-            <span class="nav-link-text ms-1">List Acara</span>
-          </a>
         </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{{ url('/daftarevent')}}">
+                <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+                <i class="ni ni-email-83 text-primary text-sm opacity-10"></i>
+                </div>
+                <span class="nav-link-text ms-1">List Acara</span>
+            </a>
+        </li>
+
          <li class="nav-item">
             <li class="nav-item mt-3">
                <h6 class="ps-4 ms-2 text-uppercase text-xs font-weight-bolder opacity-6">Daftar Peserta Workshop</h6>
@@ -162,7 +163,7 @@
             <li class="nav-item d-flex align-items-center">
               <a href="javascript:;" class="nav-link text-white font-weight-bold px-0">
                 <i class="fa fa-user me-sm-1"></i>
-                <span class="d-sm-inline d-none">Welcome Admin</span>
+                <span class="d-sm-inline d-none">Welcome {{ Auth::user()->nama }}</span>
               </a>
             </li>
             <li class="nav-item d-xl-none ps-3 d-flex align-items-center">
@@ -182,12 +183,12 @@
                 <li class="mb-2">
                   <a class="dropdown-item border-radius-md" href="javascript:;">
                     <div class="d-flex py-1">
-                      <div class="my-auto">
-                        <img src="{{ asset('argon/assets/img/team-2.jpg') }}" class="avatar avatar-sm  me-3 ">
-                      </div>
+                        <div class="my-auto">
+                            <img src="{{ asset('argon/assets/img/team-2.jpg') }}" class="avatar avatar-sm  me-3 ">
+                        </div>
                       <div class="d-flex flex-column justify-content-center">
                         <h6 class="text-sm font-weight-normal mb-1">
-                          <span class="font-weight-bold">Back To Home</span>
+                          <a href="{{ url('/') }}" class="font-weight-bold">Back To Home</a>
                         </h6>
                       </div>
                     </div>
@@ -196,12 +197,15 @@
                 <li class="mb-2">
                   <a class="dropdown-item border-radius-md" href="javascript:;">
                     <div class="d-flex py-1">
-                      <div class="my-auto">
-                        <img src="{{ asset('argon/assets/img/team-2.jpg') }}" class="avatar avatar-sm  me-3 ">
-                      </div>
+                        <div class="my-auto">
+                            <img src="{{ asset('argon/assets/img/team-2.jpg') }}" class="avatar avatar-sm  me-3 ">
+                        </div>
                       <div class="d-flex flex-column justify-content-center">
                         <h6 class="text-sm font-weight-normal mb-1">
-                          <span class="font-weight-bold">Logout</span>
+                            <form action="{{ url('/logout') }}" method="POST">
+                                @csrf
+                                <button type="submit" class="btn btn-link"> Logout</button>
+                            </form>
                         </h6>
                       </div>
                     </div>

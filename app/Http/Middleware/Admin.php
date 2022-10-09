@@ -16,7 +16,7 @@ class Admin
      */
     public function handle($request, Closure $next)
     {
-        if(!Auth::check() || Auth::user()->sebagai != "admin"){
+        if(!Auth::check() || Auth::user()->sebagai === "peserta"){
             abort(403);
         }
         return $next($request);

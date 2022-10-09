@@ -7,6 +7,10 @@ use Illuminate\Support\Facades\DB;
 
 class AdminController extends Controller
 {
+    public function showWelcome()
+    {
+         return view('admin.adminwelcome');
+    }
     public function showPesertaSeminarBigData()
     {
         $pesertaBigData = DB::table('user_event')

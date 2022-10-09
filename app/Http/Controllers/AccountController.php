@@ -18,7 +18,7 @@ class AccountController extends Controller
 
     public function authenticate(Request $request){
         $credentials = $request->validate([
-            'email' => ['required', 'string', 'email:dns', 'max:255'],
+            'email' => ['required', 'string', 'email', 'max:255'],
             'password' => ['required', 'string', 'min:6','max:20'],
         ]);
 

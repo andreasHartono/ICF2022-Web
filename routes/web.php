@@ -53,18 +53,14 @@ Route::get('/soal', function () {
 });
 // Route Admin
 Route::group(['middleware'=>'admin'], function() {
-    Route::get('/dashboardadmin', function () {
-        return view('admin.adminwelcome');
-     });
+    Route::get('/dashboardadmin', 'AdminController@showWelcome');
     Route::resource('daftarevent', 'EventController');
     Route::get('/daftarevent/edit/{id}','EventController@edit');
     Route::put('/daftarevent/update/{event}','EventController@updateEvent');
 });
 
 Route::group(['middleware'=>'pubreg'], function() {
-    Route::get('/dashboardadmin', function () {
-        return view('admin.adminwelcome');
-    });
+    // Route::get('/dashboardadmin', 'AdminController@showWelcome');
     Route::get('/pesertaSeminarBigData','AdminController@showPesertaSeminarBigData');
     Route::get('/pesertaSeminarMultiverse','AdminController@showPesertaSeminarMultiverse');
     Route::get('/pesertaWorkshopHCI','AdminController@showPesertaWorkshopHCI');

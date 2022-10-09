@@ -61,7 +61,7 @@
                             </div>
                         </div>
 
-                        <button class="btn myBtn width-90 mt-5" type="submit">Register</button>
+                        <button class="btn myBtn btn-primary width-90 mt-5" type="submit">Register</button>
                         <div class="row justify-content-center">
                             <p class="text-center have-account">Already have an account? <a href="{{ url('/login') }}">Login</a></p>
                         </div>

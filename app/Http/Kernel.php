@@ -65,5 +65,6 @@ class Kernel extends HttpKernel
         'admin' => \App\Http\Middleware\Admin::class,
         'superadmin' => \App\Http\Middleware\SuperAdmin::class,
         'peserta' => \App\Http\Middleware\Peserta::class,
+        'pubreg' => \App\Http\Middleware\Pubreg::class,
     ];
 }

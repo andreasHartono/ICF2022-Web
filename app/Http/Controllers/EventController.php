@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Event;
 use App\Jenis;
 use App\Image;
+use App\User;
 use Illuminate\Http\Request;
 
 class EventController extends Controller
@@ -72,6 +73,8 @@ class EventController extends Controller
      */
     public function edit($id)
     {
+        // $user = \App\User::class();
+        // $this->authorize('admin-permission',$user);
         $event = Event::find($id);
         // dd($event);
         // $event = Event::find($id);

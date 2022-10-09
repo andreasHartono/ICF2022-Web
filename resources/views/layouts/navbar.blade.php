@@ -144,12 +144,52 @@
         <!-- /.navbar-collapse -->
         <div class="navbar-other w-100 d-flex ms-auto">
             <ul class="navbar-nav flex-row align-items-center ms-auto">
-                <li class="nav-item">
+                @auth
+                    @if(auth()->user()->sebagai == "peserta")
+                        <li class="nav-item">
+                        <a class="nav-link{{ request()->is('dashboard/'.auth()->user()->id) ? ' active' : '' }}" href="{{ url('dashboard/'.auth()->user()->id) }}">History</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link{{ request()->is('workshop') ? ' active' : '' }}" href="{{ url('workshop') }}">Workshop & Seminar</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link{{ request()->is('workshop') ? ' active' : '' }}" href="{{ url('workshop') }}">Lomba</a>
+                        </li>
+                    @endif
+                @endauth
+                <li class="nav-item dropdown">
+                    @auth
+                        @if (auth()->check())
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Welcome {{ auth()->user()->nama }}</a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                @if (auth()->user()->sebagai=="pubreg" || auth()->user()->sebagai=="admin"|| auth()->user()->sebagai=="superadmin")
+                                    <li>
+                                    <a class="dropdown-item" href="{{ url('/dashboardadmin') }}">Dashboard</a>
+                                    </li>
+                                @endif
+                                <li>
+                                    <form action="{{ url('/logout') }}" method="POST">
+                                        @csrf
+                                        <button type="submit" class="dropdown-item"> Logout</button>
+                                    </form>
+                                </li>
+                            </ul>
+
+                    @endauth
+                    @else
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Account</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="{{ url('/login') }}">Login</a></li>
+                            <li><a class="dropdown-item" href="{{ url('/register')}}">Register</a></li>
+                        </ul>
+                    @endif
+                </li>
+                {{-- <li class="nav-item">
                     <a href="{{ url('login')}}" class="nav-link">LOGIN</a>
                 </li>
                 <li class="nav-item">
                     <a href="{{ url('register')}}" class="btn btn-sm btn-primary rounded" >Sign Up</a>
-                </li>
+                </li> --}}
                 <li class="nav-item d-lg-none">
                     <button class="hamburger offcanvas-nav-btn"><span></span></button>
                 </li>

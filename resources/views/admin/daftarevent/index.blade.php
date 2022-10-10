@@ -36,9 +36,9 @@
                            <td>{{ $query[$i]->tanggal_end }}</td>
                            <td>
                               <a href="#event_{{ $query[$i]->id }}" class="btn btn-block bg-gradient-primary" data-bs-toggle="modal" data-bs-target="#event_{{ $query[$i]->id }}">Show Detail Event</a><br>
-                              @can('admin-permission', App\User::class)
-                                <a href="{{ url('daftarevent/edit/'.$query[$i]->id)}}" class="btn btn-block bg-gradient-warning">Edit Event</a>
-                              @endcan
+                              @canany(['superadmin-permission','admin-permission'], App\User::class)
+                                    <a href="{{ url('daftarevent/edit/'.$query[$i]->id)}}" class="btn btn-block bg-gradient-warning">Edit Event</a>
+                              @endcanany
                            </td>
                         </tr>
                            <div class="modal fade" id="event_{{ $query[$i]->id }}" tabindex="-1" role="dialog"

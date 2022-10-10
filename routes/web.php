@@ -26,6 +26,22 @@ Route::get('/faq', function () {
 Route::get('/workshop', function () {
     return view('workshop');
  });
+ Route::get('/cart1', function () {
+    return view('cart-bawaan');
+ });
+
+
+
+
+ Route::get('/cart', function () {
+    return view('cart');
+ });
+ 
+
+ Route::get('/product', function () {
+    return view('product');
+ });
+ 
  
 
 Route::get('/daftar', function () {

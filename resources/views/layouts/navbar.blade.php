@@ -4,20 +4,21 @@
         <div class="navbar-brand w-100">
             <a href="{{ url('/') }}">
                 <img class="imgWhite" src="{{ asset('assets/img/logo/logoWhiteArtboard 2.png') }}"
-                    srcset="{{ asset('assets/img/logo/logoWhiteArtboard 2.png') }}" alt=""/>
+                    srcset="{{ asset('assets/img/logo/logoWhiteArtboard 2.png') }}" alt="" />
             </a>
         </div>
         <div class="navbar-collapse offcanvas offcanvas-nav offcanvas-start">
             <div class="offcanvas-header d-lg-none">
-                <h3 class="text-white fs-30 mb-0"><img class="imgWhite" src="{{ asset('assets/img/logo/logoWhiteArtboard 2.png') }}"
-                        srcset="{{ asset('assets/img/logo/logoWhiteArtboard 2.png') }}" alt=""/></h3>
+                <h3 class="text-white fs-30 mb-0"><img class="imgWhite"
+                        src="{{ asset('assets/img/logo/logoWhiteArtboard 2.png') }}"
+                        srcset="{{ asset('assets/img/logo/logoWhiteArtboard 2.png') }}" alt="" /></h3>
                 <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
                     aria-label="Close"></button>
             </div>
             <div class="offcanvas-body ms-lg-auto d-flex flex-column h-100">
                 <ul class="navbar-nav">
                     <li class="nav-item  dropdown-mega">
-                        <a class="nav-link" href="{{ url('/')}}">Home</a>
+                        <a class="nav-link" href="{{ url('/') }}">Home</a>
                         <ul class="dropdown-menu mega-menu mega-menu-dark mega-menu-img">
                             <li class="mega-menu-content mega-menu-scroll">
                                 {{-- <ul class="row row-cols-1 row-cols-lg-6 gx-0 gx-lg-4 gy-lg-2 list-unstyled">
@@ -37,14 +38,15 @@
                                         </a></li>
                                 </ul> --}}
                                 <!--/.row -->
-                                <span class="d-none d-lg-flex"><i class="uil uil-direction"></i><strong>Scroll to view more</strong></span>
+                                <span class="d-none d-lg-flex"><i class="uil uil-direction"></i><strong>Scroll to view
+                                        more</strong></span>
                             </li>
                             <!--/.mega-menu-content-->
                         </ul>
                         <!--/.dropdown-menu -->
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link" href="{{ url('/workshop')}}" >Workshop</a>
+                        <a class="nav-link" href="{{ url('/workshop') }}">Workshop</a>
                         {{-- <div class="dropdown-menu dropdown-lg">
                             <div class="dropdown-lg-content">
                                 <div>
@@ -66,13 +68,13 @@
                         </div> --}}
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link" href="{{ url('seminar')}}">Seminar</a>
+                        <a class="nav-link" href="{{ url('seminar') }}">Seminar</a>
                         {{-- <ul class="dropdown-menu">
                             <li class="nav-item"><a class="dropdown-item" href="#">Blog without Sidebar</a></li>
                         </ul> --}}
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link" href="{{ url('competition')}}">Competition</a>
+                        <a class="nav-link" href="{{ url('competition') }}">Competition</a>
                         {{-- <ul class="dropdown-menu">
                             <li class="nav-item"><a class="dropdown-item" href="#">Blog without Sidebar</a></li>
                         </ul> --}}
@@ -86,11 +88,60 @@
 
 
                     <li class="nav-item dropdown">
-                        <a class="nav-link" href="{{ url('/faq')}}">FAQ</a>
+                        <a class="nav-link" href="{{ url('/faq') }}">FAQ</a>
                         {{-- <ul class="dropdown-menu">
                             <li class="nav-item"><a class="dropdown-item" href="#">Blog without Sidebar</a></li>
                         </ul> --}}
                     </li>
+                    @auth
+                        @if (auth()->check())
+                            @if (auth()->user()->sebagai == 'peserta')
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ url('dashboard/' . auth()->user()->id) }}">Profile</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ url('peserta/daftarevents') }}">Workshop Seminar</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ url('daftarlomba') }}">Lomba</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Daftar Tim</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Daftar Event</a>
+                                </li>
+                            @endif
+                        @endif
+                    @endauth
+                    @auth
+                        @if (auth()->check())
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Welcome {{ auth()->user()->nama }}</a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                @if (auth()->user()->sebagai=="pubreg" || auth()->user()->sebagai=="admin"|| auth()->user()->sebagai=="superadmin")
+                                    <li>
+                                    <a class="dropdown-item" href="{{ url('/dashboardadmin') }}">Dashboard</a>
+                                    </li>
+                                @endif
+                                <li>
+                                    <form action="{{ url('/logout') }}" method="POST">
+                                        @csrf
+                                        <button type="submit" class="dropdown-item"> Logout</button>
+                                    </form>
+                                </li>
+                            </ul>
+                        </li>
+                    @endauth
+                    @else
+                    <li class="nav-item">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Account</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="{{ url('/login') }}">Login</a></li>
+                            <li><a class="dropdown-item" href="{{ url('/register')}}">Register</a></li>
+                        </ul>
+                    </li>
+                    @endif
                     <li class="nav-item dropdown dropdown-mega">
                         {{-- <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Blocks</a>
                         <ul class="dropdown-menu mega-menu mega-menu-dark mega-menu-img">
@@ -137,9 +188,9 @@
         <!-- /.navbar-collapse -->
         <div class="navbar-other w-100 d-flex ms-auto">
             <ul class="navbar-nav flex-row align-items-center ms-auto">
-                @auth
-                    @if(auth()->check())
-                        @if(auth()->user()->sebagai == "peserta")
+                {{-- @auth
+                    @if (auth()->check())
+                        @if (auth()->user()->sebagai == 'peserta')
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ url('dashboard/'.auth()->user()->id) }}">Profile</a>
                             </li>
@@ -157,13 +208,13 @@
                             </li>
                         @endif
                     @endif
-                @endauth
-                <li class="nav-item dropdown">
-                    @auth
+                @endauth --}}
+                {{-- <li class="nav-item dropdown"> --}}
+                {{-- @auth
                         @if (auth()->check())
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Welcome {{ auth()->user()->nama }}</a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                @if (auth()->user()->sebagai=="pubreg" || auth()->user()->sebagai=="admin"|| auth()->user()->sebagai=="superadmin")
+                                @if (auth()->user()->sebagai == 'pubreg' || auth()->user()->sebagai == 'admin' || auth()->user()->sebagai == 'superadmin')
                                     <li>
                                     <a class="dropdown-item" href="{{ url('/dashboardadmin') }}">Dashboard</a>
                                     </li>
@@ -182,8 +233,8 @@
                             <li><a class="dropdown-item" href="{{ url('/login') }}">Login</a></li>
                             <li><a class="dropdown-item" href="{{ url('/register')}}">Register</a></li>
                         </ul>
-                    @endif
-                </li>
+                    @endif --}}
+                {{-- </li> --}}
                 {{-- <li class="nav-item">
                     <a href="{{ url('login')}}" class="nav-link">LOGIN</a>
                 </li>

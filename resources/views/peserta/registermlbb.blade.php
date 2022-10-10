@@ -16,7 +16,7 @@ ICF 2022 - Register
                   <button class="btn myBtn" style="width: 400px; max-width: 90%;" data-bs-toggle="modal"
                       data-bs-target="#modalPendaftaran">Catatan Pendaftaran</button>
               </div>
-              <form method="POST" action="{{ url('/register') }}" class="mt-5"
+              <form method="POST" action="{{ url('/registermlbb') }}" class="mt-5"
                   enctype="multipart/form-data">
                   @csrf
                   <div class="data-tim">

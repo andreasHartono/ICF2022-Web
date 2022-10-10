@@ -67,7 +67,7 @@ class RegistrationController extends Controller
       $dataMember1->save();
 
       $dataMember2 = new TeamDetail();
-      $dataMember2->team_id = $newIdTeam;
+      $dataMember2->teams_id = $newIdTeam;
       $dataMember2->nama = $request->get('nama1');
       $dataMember2->role = "anggota";
       $dataMember2->no_hp = $request->get('no_hp1');
@@ -82,7 +82,7 @@ class RegistrationController extends Controller
       $dataMember2->save();
 
       $dataMember3 = new TeamDetail();
-      $dataMember3->team_id = $newIdTeam;
+      $dataMember3->teams_id = $newIdTeam;
       $dataMember3->nama = $request->get('nama2');
       $dataMember3->role = "anggota";
       $dataMember3->no_hp = $request->get('no_hp2');
@@ -96,7 +96,7 @@ class RegistrationController extends Controller
 
       $dataMember3->save();
 
-      return redirect('/daftarevent')->with('status','Registrasi Tim Lomba MLBB berhasil, mohon menunggu untuk dikonfirmasi oleh panitia, terima kasih.');
+      return redirect('/peserta/daftarevents')->with('status','Registrasi Tim Lomba MLBB berhasil, mohon menunggu untuk dikonfirmasi oleh panitia, terima kasih.');
    }
 
    public function storeMlbb(Request $request)
@@ -164,7 +164,7 @@ class RegistrationController extends Controller
         $dataMember1->save();
 
         $dataMember2 = new TeamDetail();
-        $dataMember2->team_id = $newIdTeam;
+        $dataMember2->teams_id = $newIdTeam;
         $dataMember2->nama = $request->get('name1');
         $dataMember2->role = "anggota";
         $dataMember2->no_hp = $request->get('no_hp1');
@@ -179,7 +179,7 @@ class RegistrationController extends Controller
         $dataMember2->save();
 
         $dataMember3 = new TeamDetail();
-        $dataMember3->team_id = $newIdTeam;
+        $dataMember3->teams_id = $newIdTeam;
         $dataMember3->nama = $request->get('name2');
         $dataMember3->role = "anggota";
         $dataMember3->no_hp = $request->get('no_hp2');
@@ -194,7 +194,7 @@ class RegistrationController extends Controller
         $dataMember3->save();
 
         $dataMember4 = new TeamDetail();
-        $dataMember4->team_id = $newIdTeam;
+        $dataMember4->teams_id = $newIdTeam;
         $dataMember4->nama = $request->get('name3');
         $dataMember4->role = "anggota";
         $dataMember4->no_hp = $request->get('no_hp3');
@@ -209,7 +209,7 @@ class RegistrationController extends Controller
         $dataMember4->save();
 
         $dataMember5 = new TeamDetail();
-        $dataMember5->team_id = $newIdTeam;
+        $dataMember5->teams_id = $newIdTeam;
         $dataMember5->nama = $request->get('name4');
         $dataMember5->role = "anggota";
         $dataMember5->no_hp = $request->get('no_hp4');
@@ -232,7 +232,7 @@ class RegistrationController extends Controller
         if($namacadangan != null && $no_hpcadangan != null && $emailcadangan != null && $imagecadangan != null && $idgamecadangan != null)
         {
             $dataMember6 = new TeamDetail();
-            $dataMember6->team_id = $newIdTeam;
+            $dataMember6->teams_id = $newIdTeam;
             $dataMember6->nama = $request->get('name4');
             $dataMember6->role = "anggota";
             $dataMember6->no_hp = $request->get('no_hp4');
@@ -247,7 +247,7 @@ class RegistrationController extends Controller
             $dataMember6->save();
         }
 
-        return redirect('/daftarevent')->with('status','Registrasi Tim Lomba MLBB berhasil, mohon menunggu untuk dikonfirmasi oleh panitia, terima kasih.');
+        return redirect('/peserta/daftarevents')->with('status','Registrasi Tim Lomba MLBB berhasil, mohon menunggu untuk dikonfirmasi oleh panitia, terima kasih.');
    }
 
    public function storeComic(Request $request)
@@ -301,7 +301,7 @@ class RegistrationController extends Controller
         $dataMember1->save();
 
         $dataMember2 = new TeamDetail();
-        $dataMember2->team_id = $newIdTeam;
+        $dataMember2->teams_id = $newIdTeam;
         $dataMember2->nama = $request->get('name1');
         $dataMember2->role = "anggota";
         $dataMember2->no_hp = $request->get('phone_number1');
@@ -313,7 +313,7 @@ class RegistrationController extends Controller
         $request->file('image1')->move($imgFolder, $imgFile);
         $dataMember2->image = $imgFile;
 
-        return redirect('/daftarevent')->with('status','Registrasi Tim Lomba MLBB berhasil, mohon menunggu untuk dikonfirmasi oleh panitia, terima kasih.');
+        return redirect('/peserta/daftarevents')->with('status','Registrasi Tim Lomba MLBB berhasil, mohon menunggu untuk dikonfirmasi oleh panitia, terima kasih.');
    }
 
    public function storeTiktok(Request $request)

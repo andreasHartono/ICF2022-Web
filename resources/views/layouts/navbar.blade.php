@@ -151,7 +151,7 @@
                                 <a class="nav-link" href="{{ url('dashboard/'.auth()->user()->id) }}">Profile</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ url('peserta/daftarevents') }}">Workshop & Seminar</a>
+                                <a class="nav-link" href="{{ url('peserta/daftarevents') }}">Workshop Seminar</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ url('peserta/daftarlomba') }}">Lomba</a>
@@ -198,7 +198,7 @@
                     <a href="{{ url('register')}}" class="btn btn-sm btn-primary rounded" >Sign Up</a>
                 </li> --}}
                 <li class="nav-item d-lg-none">
-                    <button class="hamburger offcanvas-nav-btn"><span></span></button>
+                    <button class="nav-link hamburger offcanvas-nav-btn"><span></span></button>
                 </li>
             </ul>
             <!-- /.navbar-nav -->

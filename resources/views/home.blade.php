@@ -14,7 +14,7 @@ ICF 2022 - Home
              id cupiditate quasi, cumque ex nam? Deserunt eos nesciunt cumque.</p>
           <div class="d-flex justify-content-center" data-cues="slideInDown" data-group="page-title-buttons" data-delay="600" >
 
-              <span><a class="btn btn-primary rounded mx-1" style="background-color:  #B7D8F2 !important;height:50px; width:200px; border-radius: 400px !important;">Register Now</a></span>
+              <span><a class="btn btn-primary rounded mx-1" style="background-color:  red !important;height:50px; width:200px; border-radius: 400px !important;">Register Now</a></span>
 
             </div>
         </div>

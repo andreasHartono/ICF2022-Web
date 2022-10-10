@@ -77,6 +77,8 @@ Route::group(['middleware'=>'pubreg'], function() {
 Route::group(['middleware'=>'auth'], function() {
     // Route Peserta
     Route::get('/peserta/daftarevents','EventController@front_event');
+    Route::get('/peserta/add-to-cart/{event}', 'EventController@addToCart');
+    Route::get('/peserta/cart','EventController@cart');
     Route::get('/registerhackaton', function () {
         return view('peserta.registerhackaton');
     });

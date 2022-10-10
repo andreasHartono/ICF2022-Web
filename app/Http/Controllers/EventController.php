@@ -20,6 +20,17 @@ class EventController extends Controller
         // dd($event);
         return view('peserta.daftar',compact('event'));
     }
+
+    public function cart()
+    {
+
+    }
+
+    public function addToCart()
+    {
+        
+    }
+
     /**
      * Display a listing of the resource.
      *

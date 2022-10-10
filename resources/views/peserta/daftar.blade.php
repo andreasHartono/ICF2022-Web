@@ -18,7 +18,7 @@ ICF 2022 - Daftar
     <div class="row">
         @for ($i=0;$i<count($event);$i++)
             <div class="col-lg-4">
-                <img class="img-circle" src="{{ url('/assets/img/'.$event[$i]->url)}}" alt="{{ $event[$i]->url}}">
+                <img class="img-circle" src="{{ url('/assets/img/poster.png')}}" alt="{{ $event[$i]->url}}">
                 <h2>{{ $event[$i]->nama}}</h2>
                 <h5>Kategori : {{ $event[$i]->name}}</h5>
                 <p>{{ $event[$i]->deskripsi }}</p>

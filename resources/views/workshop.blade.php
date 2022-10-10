@@ -5,7 +5,8 @@ ICF 2022 - Workshop
 @endsection
 
 @section('content')
-<div class="workshop-container"></div>
+<div class="d-flex justify-content-center" data-cues="slideInDown" data-group="page-title-buttons" data-delay="600" >
+<div class="workshop-container">
 <div class="row align-items-center">
     <div class="col-lg-6 col-md-6 col-sm-12 mb-3 d-flex justify-content-center workshop-poster">
         <img src="{{ url('/assets/img/poster.png') }}" alt="Poster Workshop" style="width: 80%;">
@@ -40,6 +41,7 @@ ICF 2022 - Workshop
             </form>
         </div>
     </div>
+</div>
 </div>
 </div>
 @endsection

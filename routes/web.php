@@ -23,9 +23,9 @@ Route::get('/faq', function () {
    return view('faq');
 });
 
-Route::get('/workshop', function () {
-    return view('workshop');
- });
+Route::get('/workshop', 'EventController@showWorkshop');
+Route::get('/seminar', 'EventController@showseminar');
+Route::get('/competition', 'EventController@showLomba');
  Route::get('/cart1', function () {
     return view('cart-bawaan');
  });
@@ -36,13 +36,13 @@ Route::get('/workshop', function () {
  Route::get('/cart', function () {
     return view('cart');
  });
- 
+
 
  Route::get('/product', function () {
     return view('product');
  });
- 
- 
+
+
 
 Route::get('/daftar', function () {
    return view('peserta.daftar');

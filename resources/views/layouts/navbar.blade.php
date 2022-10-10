@@ -44,25 +44,6 @@
                         <!--/.dropdown-menu -->
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link" href="#" data-bs-toggle="dropdown">Competition</a>
-                        {{-- <ul class="dropdown-menu">
-                            <li class="dropdown dropdown-submenu dropend"><a class="dropdown-item dropdown-toggle"
-                                    href="#" data-bs-toggle="dropdown">Services</a>
-                                <ul class="dropdown-menu">
-                                    <li class="nav-item"><a class="dropdown-item" href="#">Services I</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="dropdown dropdown-submenu dropend"><a class="dropdown-item dropdown-toggle"
-                                    href="#" data-bs-toggle="dropdown">About</a>
-                                <ul class="dropdown-menu">
-                                    <li class="nav-item"><a class="dropdown-item" href="#">About I</a>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul> --}}
-                    </li>
-                    <li class="nav-item dropdown">
                         <a class="nav-link" href="{{ url('/workshop')}}" >Workshop</a>
                         {{-- <div class="dropdown-menu dropdown-lg">
                             <div class="dropdown-lg-content">
@@ -83,6 +64,18 @@
                             </div>
                             <!-- /auto-column -->
                         </div> --}}
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="{{ url('seminar')}}">Seminar</a>
+                        {{-- <ul class="dropdown-menu">
+                            <li class="nav-item"><a class="dropdown-item" href="#">Blog without Sidebar</a></li>
+                        </ul> --}}
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="{{ url('competition')}}">Competition</a>
+                        {{-- <ul class="dropdown-menu">
+                            <li class="nav-item"><a class="dropdown-item" href="#">Blog without Sidebar</a></li>
+                        </ul> --}}
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link" href="#">About Us</a>

@@ -63,7 +63,7 @@
                         </ul> --}}
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link" href="#" data-bs-toggle="dropdown">Workshop</a>
+                        <a class="nav-link" href="{{ url('/workshop')}}" data-bs-toggle="dropdown">Workshop</a>
                         {{-- <div class="dropdown-menu dropdown-lg">
                             <div class="dropdown-lg-content">
                                 <div>

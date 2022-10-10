@@ -19,7 +19,7 @@
   background-color: #273242;
   margin-top: 150px;
   padding: 20px 0;
-  color: whitesmoke;
+  color: #5784BB;
   font-weight: 600;
   font-size: 1.2em;
   position: relative;
@@ -161,7 +161,7 @@
   top: 1.5px;
   width: 6px;
   height: 10px;
-  border: solid white;
+  border:  #5784BB;
   border-width: 0 3px 3px 0;
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);

@@ -23,6 +23,11 @@ Route::get('/faq', function () {
    return view('faq');
 });
 
+Route::get('/workshop', function () {
+    return view('workshop');
+ });
+ 
+
 Route::get('/daftar', function () {
    return view('peserta.daftar');
 });

@@ -1,0 +1,38 @@
+.workshop-card {
+    color:#5784BB ;
+    /* font-weight: 600; */
+    width: 95%; 
+    padding: 15px; 
+    background-color: #FFFFFF !important;
+    border-radius: 15px;
+}
+/* img{
+margin-top: 1em;
+margin-bottom: 1em;
+} */
+
+.workshop-container {
+    margin-top: 50px;
+}
+
+.workshop-poster {
+    order: 1;
+}
+
+.mb-3{
+    margin-bottom: 1em !important;
+}
+
+.workshop-regis {
+    order: 2;
+}
+
+@media (max-width: 768px) {
+    .workshop-poster {
+        order: 2;
+    }
+
+    .workshop-regis {
+        order: 1;
+    }
+}

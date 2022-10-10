@@ -154,7 +154,7 @@
                                 <a class="nav-link" href="{{ url('peserta/daftarevents') }}">Workshop Seminar</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ url('peserta/daftarlomba') }}">Lomba</a>
+                                <a class="nav-link" href="{{ url('daftarlomba') }}">Lomba</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#">Daftar Tim</a>

@@ -79,15 +79,20 @@ Route::group(['middleware'=>'auth'], function() {
     Route::get('/peserta/daftarevents','EventController@front_event');
     Route::get('/peserta/add-to-cart/{event}', 'EventController@addToCart');
     Route::get('/peserta/cart','EventController@cart');
-    Route::get('/registerhackaton', function () {
+    Route::get('/registerlomba/5', function () {
         return view('peserta.registerhackaton');
     });
-    Route::get('/registercomic', function () {
-        return view('peserta.registercomic');
-    });
-    Route::get('/registermlbb', function () {
+    Route::get('/registerlomba/6', function () {
         return view('peserta.registermlbb');
     });
+    Route::get('/registerlomba/7', function () {
+        return view('peserta.registertiktok');
+    });
+    Route::get('/registerlomba/8', function () {
+        return view('peserta.registercomic');
+    });
+
+    Route::get('/daftarlomba','EventController@front_lomba');
 });
 // Route::get('/home', 'HomeController@index')->name('home');
 

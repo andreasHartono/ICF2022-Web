@@ -10,6 +10,18 @@ use Illuminate\Http\Request;
 
 class EventController extends Controller
 {
+
+    public function front_lomba()
+    {
+        $lomba = Event::join('jenis','jenis.id','=','events.jenis_id')
+            ->join('images','images.events_id','=','events.id')
+            ->select('events.*','jenis.nama as name','image_url as url')
+            ->where('jenis.id','=',3)
+            ->get();
+
+        return view('peserta.showlomba',compact('lomba'));
+    }
+
     public function front_event()
     {
         $event = Event::join('jenis','jenis.id','=','events.jenis_id')
@@ -28,7 +40,7 @@ class EventController extends Controller
 
     public function addToCart()
     {
-        
+
     }
 
     /**

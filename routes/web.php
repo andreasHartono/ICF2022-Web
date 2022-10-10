@@ -98,6 +98,11 @@ Route::group(['middleware'=>'auth'], function() {
     });
 
     Route::get('/daftarlomba','EventController@front_lomba');
+
+    Route::post('/registercomprog','RegistrationController@storeHackaton');
+    Route::post('/registermlbb','RegistrationController@storeMlbb');
+    Route::post('/registertiktok','RegistrationController@storeTiktok');
+    Route::post('/registercomic','RegistrationController@storeComic');
 });
 // Route::get('/home', 'HomeController@index')->name('home');
 

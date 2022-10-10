@@ -19,7 +19,8 @@ ICF 2022 - Register
               <form method="POST" action="{{ url('/registertiktok') }}" class="mt-5"
                   enctype="multipart/form-data">
                   @csrf
-                  @method('PUT')
+                  <input type="hidden" name="tiktokId" value="7">
+                  <input type="hidden" name="userId" value="{{ Auth::user()->id }}">
                   <div class="data-tim">
                       <Label class="myLabel">Tiktok Account</Label>
                       <input type="text" name="akuntiktok" id="txtAkunTiktok"

@@ -1,112 +1,93 @@
 @extends('layouts.mainweb')
 
 @section('title')
-ICF 2022 - Register
+    ICF 2022 - Register
 @endsection
 
 @section('content')
-<section id="register" style="margin: 80px 0 100px;">
+    <section id="register" style="margin: 80px 0 100px;">
 
-  <div class="container">
-      <div class="row justify-content-center">
-          <div class="col-lg-6 col-md-8 col-sm-10 col-xs-11">
-              <h2 class="fs-1 myTitle">REGISTRATION</h2>
-              <h5 class="fs-1 myTitle">Tiktok Challenges ICF 2022</h5>
-              <div class="d-flex justify-content-center">
-                  <button class="btn myBtn" style="width: 400px; max-width: 90%;" data-bs-toggle="modal"
-                      data-bs-target="#modalPendaftaran">Catatan Pendaftaran</button>
-              </div>
-              <form method="POST" action="{{ url('/registertiktok') }}" class="mt-5"
-                  enctype="multipart/form-data">
-                  @csrf
-                  <input type="hidden" name="tiktokId" value="7">
-                  <input type="hidden" name="userId" value="{{ Auth::user()->id }}">
-                  <div class="data-tim">
-                      <Label class="myLabel">Tiktok Account</Label>
-                      <input type="text" name="akuntiktok" id="txtAkunTiktok"
-                          class="myTextbox width-90 @error('akuntiktok') is-invalid @enderror" placeholder="@"
-                          >
-                      @error('akuntiktok')
-                          <div class="invalid-feedback text-center">
-                              {{ $message }}
-                          </div>
-                      @enderror
-                  </div>
-                  <button class="btn myBtn width-90 mt-5 btn-navy" type="submit">Register</button>
-              </form>
-          </div>
-      </div>
-  </div>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6 col-md-8 col-sm-10 col-xs-11">
+                    <h2 class="fs-1 myTitle">REGISTRATION</h2>
+                    <h5 class="fs-1 myTitle">Tiktok Challenges ICF 2022</h5>
+                    <div class="d-flex justify-content-center">
+                        <button class="btn myBtn" style="width: 400px; max-width: 90%;" data-bs-toggle="modal"
+                            data-bs-target="#modalPendaftaran">Catatan Pendaftaran</button>
+                    </div>
+                    <form method="POST" action="{{ url('/registertiktok') }}" class="mt-5" enctype="multipart/form-data">
+                        @csrf
+                        <input type="hidden" name="tiktokId" value="7">
+                        <input type="hidden" name="userId" value="{{ Auth::user()->id }}">
+                        <div class="data-tim">
+                            <Label class="myLabel">Tiktok Account</Label>
+                            <input type="text" name="akuntiktok" id="txtAkunTiktok"
+                                class="myTextbox width-90 @error('akuntiktok') is-invalid @enderror" placeholder="@">
+                            @error('akuntiktok')
+                                <div class="invalid-feedback text-center">
+                                    {{ $message }}
+                                </div>
+                            @enderror
+                        </div>
+                        <button class="btn myBtn width-90 mt-5 btn-navy" type="submit">Register</button>
+                    </form>
+                </div>
+            </div>
+        </div>
 
 
-  <!-- Modal -->
-  <div class="modal fade" id="modalPendaftaran" tabindex="-1" aria-labelledby="modalPendaftaranLabel"
-      aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
-          <div class="modal-content">
-              <div class="modal-header" style="background-color: navy; color: #ECEECA; border: none">
-                  <h5 class="modal-title" id="modalPendaftaranLabel">Catatan Pendaftaran</h5>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
-              <div class="modal-body" style="background-color: #ECEECA; color: navy;">
-                  <div class="container">
-                      <h3 class="text-center">Alur Pendaftaran Online</h3>
-                      <ol>
-                          <li>Peserta melakukan pendaftaran pada website MANIAC XI (<a
-                                  href="https://maniac.ifubaya.id">maniac.ifubaya.id</a>).</li>
-                          <li>
-                              Peserta wajib mengisi kelengkapan data untuk pendaftaran, meng-<i>upload scan</i> kartu
-                              pelajar. <br>
-                              Data-data yang perlu diisi adalah sebagai berikut: <br>
-                              <ul>
-                                  <li>Nama Kelompok</li>
-                                  <li>Asal Sekolah</li>
-                                  <li>Username</li>
-                                  <li>Password</li>
-                                  <li>Alamat Lengkap Sekolah</li>
-                                  <li>No. Telepon Sekolah</li>
-                                  <li>Nama Ketua Kelompok, No. HP (Whatsapp), Email</li>
-                                  <li>Nama Anggota Kelompok, No. HP (Whatsapp), Email</li>
-                                  <li>Scan kartu pelajar per-anggota pada bagian yang sudah disiapkan</li>
-                              </ul>
-                              Apabila belum memiliki kartu pelajar, dapat dilakukan upload scan surat keterangan aktif
-                              dengan mengetahui tanda tangan dari kepala sekolah, berkas harus dalam bentuk PDF dengan
-                              format nama Nama Tim_Nama Anggota.
-                          </li>
-                          <li>Harap perhatikan kelengkapan data yang diperlukan untuk pendaftaran.</li>
-                          <li>Tim akan dikonfirmasi telah terdaftar sebagai peserta MANIAC XI melalui email yang akan
-                              dikirimkan oleh panitia kepada ketua tim dalam jangka waktu maksimal 1 minggu setelah
-                              peserta melakukan pendaftaran di website.</li>
-                          <li>Apabila dalam jangka waktu 1 minggu peserta belum mendapatkan email konfirmasi, maka
-                              dapat menghubungi nomor Whatsapp 087855956985 (Ian Wahyudi)</li>
-                      </ol>
-                      <br>
-
-                      <h3 class="text-center">Persyaratan Peserta MANIAC XI</h3>
-                      <ol>
-                          <li>Satu tim terdiri dari 3 siswa/siswi aktif (maksimal kelas XI di Tahun Ajaran 2021/2022)
-                              Sekolah Menengah Atas (SMA)/Sekolah Menengah Kejuruan (SMK)/sederajat yang berasal dari
-                              sekolah yang sama <b>(boleh berasal dari jenjang dan peminatan yang berbeda).</b></li>
-                          <li>Dikarenakan Babak Final MANIAC XI diadakan secara luring/offline. Peserta diharapkan
-                              untuk bersedia dalam mengikuti seluruh rangkaian acara mulai dari Babak Penyisihan
-                              hingga Babak Final</li>
-                          <li>Registrasi dilakukan oleh salah satu perwakilan TIM.</li>
-                          <li>Tim yang sudah terdaftar dapat mengganti anggota tim <b>paling lambat hingga
-                              2 minggu sebelum diadakannya <i>Technical Meeting</i> Babak Penyisihan.</b></li>
-                          <li>Setiap peserta MANIAC XI harus mempunyai minimal 1 laptop/komputer dan 1 <i>gadget</i>
-                              (<i>smartphone</i>/tablet/laptop/komputer/dan lainnya), dan mempunyai koneksi internet
-                              yang cukup dan memadai. <br> Catatan: <i>Gadget</i> harus memiliki kamera yang dapat
-                              digunakan saat bergabung pada Zoom meeting.</li>
-                          <li>Peserta diwajibkan mengisi data pendaftaran secara lengkap dan sesuai. Pendaftaran
-                              dilakukan secara <i>online</i> melalui <a
-                                  href="https://maniac.ifubaya.id">maniac.ifubaya.id</a>.</li>
-                      </ol>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </div>
-</div>
-</section>
-
+        <!-- Modal -->
+        <div class="modal fade" id="modalPendaftaran" tabindex="-1" aria-labelledby="modalPendaftaranLabel"
+            aria-hidden="true">
+            <link rel="stylesheet" href="{{ asset('assets/css/popup.css') }}">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalPendaftaranLabel">Mekanisme Pendaftaran</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container">
+                            <h3 class="text-center">Alur Pendaftaran Online</h3>
+                            <ol>
+                                <li>Peserta melakukan pendaftaran pada website ICF 2022 (<u><a class="hyperlink"
+                                            href="https://icf2022.com">icfubaya2022.com</a></u>).</li>
+                                <li> Lomba Tiktok ICF 2022 merupakan lomba untuk membuat video tiktok yang bertemakan
+                                    Technology for Humanity.
+                                    Video yang dibuat sesuai dengan kreativitas peserta dan wajib dengan latar belakang
+                                    acara ICF 2022.
+                                    Peserta yang mengikuti lomba ini wajib hadir pada hari Minggu, 6 November 2022 untuk
+                                    pengunguman pemenang.
+                                    Peserta yang menang namun tidak hadir dianggap mengundurkan diri dan hadiah akan
+                                    diberikan kepada peserta lainnya.
+                                    Berikut syarat dan ketentuan lomba Tiktok ICF 2022.
+                                    <ul>
+                                        <li class="ketentuan">Lomba dapat dilakukan secara individu maupun kelompok (maksimal 5 orang).</li>
+                                        <li class="ketentuan">Video harus sesuai dengan tema yang diberikan dan wajib menampilkan background / acara ICF 2022 di dalamnya.</li>
+                                        <li class="ketentuan">Durasi video minimal 1 menit dan maksimal 3 menit.</li>
+                                        <li class="ketentuan">Karya tidak melanggar hak cipta & menyinggung pihak lainnya.</li>
+                                        <li class="ketentuan">Setiap peserta hanya boleh mengirimkan 1 video.</li>
+                                        <li class="ketentuan">Peserta diharapkan membawa perlengkapan masing-masing yang dibutuhkan untuk membuat video.</li>
+                                        <li class="ketentuan">Konten dilarang mengandung unsur SARA, melanggar etika, pornografi, dan politik.</li>
+                                        <li class="ketentuan">Peserta lomba wajib follow akun instagram 
+                                            (<u><a class="hyperlink" href="https://www.instagram.com/icfubaya2022/">@icfubaya2022</a></u>)  dan 
+                                            akun tiktok (<u><a class="hyperlink" href="https://www.tiktok.com/@informatika.ubaya">@informatika.ubaya</a></u>)</li>
+                                        <li class="ketentuan">Peserta wajib upload video tiktok tersebut di akun pribadi dan upload mirror di instagram reels dengan caption 
+                                            berupa ajakan literasi digital atau teknologi jaman now, sertakan juga hashtag #icfubaya2022 #lombavideotiktokubaya dan 
+                                            mention @icfubaya2022 dan @informatik.ubaya</li>
+                                        <li class="ketentuan">Kriteria penilaian: kesesuaian tema, kreativitas, kemenarikan video dan, pemilihan lagu.</li>
+                                        <li class="ketentuan">DKeputusan juri dan panitia tidak dapat diganggu gugat.</li>
+                                        <li class="ketentuan">Peserta yang melakukan kecurangan dalam bentuk apapun akan didiskualifikasi.</li>
+                                        <li class="ketentuan">Peserta diharuskan menaati setiap butir yang ada pada peraturan, 
+                                            panitia dapat menambahkan peraturan sewaktu - waktu jika diperlukan tanpa pemberitahuan, apabila melanggar maka akan diskualifikasi.</li>
+                                    </ul>
+                                </li>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
 @endsection

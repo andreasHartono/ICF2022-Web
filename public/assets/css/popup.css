@@ -1,0 +1,28 @@
+.modal-header{
+    background-color: #273242;
+}
+.modal-title{
+    color: #fff;
+}
+.modal-body{
+    background-color: #fff;
+    color: #273242;
+}
+.text-center{
+    color: #273242;
+}
+.hyperlink{
+    color: #273242;
+}
+.hyperlink{
+    color: #273242;
+}
+.ketentuan{
+    margin: 10px;
+}
+.btn-close{
+    color: #273242;
+}
+.btn-close:before{
+    background-color: white;
+}

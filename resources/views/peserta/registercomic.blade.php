@@ -151,72 +151,59 @@ ICF 2022 - Register
 
 
   <!-- Modal -->
-  <div class="modal fade" id="modalPendaftaran" tabindex="-1" aria-labelledby="modalPendaftaranLabel"
-      aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
-          <div class="modal-content">
-              <div class="modal-header" style="background-color: navy; color: #ECEECA; border: none">
-                  <h5 class="modal-title" id="modalPendaftaranLabel">Catatan Pendaftaran</h5>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
-              <div class="modal-body" style="background-color: #ECEECA; color: navy;">
-                  <div class="container">
-                      <h3 class="text-center">Alur Pendaftaran Online</h3>
-                      <ol>
-                          <li>Peserta melakukan pendaftaran pada website MANIAC XI (<a
-                                  href="https://maniac.ifubaya.id">maniac.ifubaya.id</a>).</li>
-                          <li>
-                              Peserta wajib mengisi kelengkapan data untuk pendaftaran, meng-<i>upload scan</i> kartu
-                              pelajar. <br>
-                              Data-data yang perlu diisi adalah sebagai berikut: <br>
-                              <ul>
-                                  <li>Nama Kelompok</li>
-                                  <li>Asal Sekolah</li>
-                                  <li>Username</li>
-                                  <li>Password</li>
-                                  <li>Alamat Lengkap Sekolah</li>
-                                  <li>No. Telepon Sekolah</li>
-                                  <li>Nama Ketua Kelompok, No. HP (Whatsapp), Email</li>
-                                  <li>Nama Anggota Kelompok, No. HP (Whatsapp), Email</li>
-                                  <li>Scan kartu pelajar per-anggota pada bagian yang sudah disiapkan</li>
-                              </ul>
-                              Apabila belum memiliki kartu pelajar, dapat dilakukan upload scan surat keterangan aktif
-                              dengan mengetahui tanda tangan dari kepala sekolah, berkas harus dalam bentuk PDF dengan
-                              format nama Nama Tim_Nama Anggota.
-                          </li>
-                          <li>Harap perhatikan kelengkapan data yang diperlukan untuk pendaftaran.</li>
-                          <li>Tim akan dikonfirmasi telah terdaftar sebagai peserta MANIAC XI melalui email yang akan
-                              dikirimkan oleh panitia kepada ketua tim dalam jangka waktu maksimal 1 minggu setelah
-                              peserta melakukan pendaftaran di website.</li>
-                          <li>Apabila dalam jangka waktu 1 minggu peserta belum mendapatkan email konfirmasi, maka
-                              dapat menghubungi nomor Whatsapp 087855956985 (Ian Wahyudi)</li>
-                      </ol>
-                      <br>
-
-                      <h3 class="text-center">Persyaratan Peserta MANIAC XI</h3>
-                      <ol>
-                          <li>Satu tim terdiri dari 3 siswa/siswi aktif (maksimal kelas XI di Tahun Ajaran 2021/2022)
-                              Sekolah Menengah Atas (SMA)/Sekolah Menengah Kejuruan (SMK)/sederajat yang berasal dari
-                              sekolah yang sama <b>(boleh berasal dari jenjang dan peminatan yang berbeda).</b></li>
-                          <li>Dikarenakan Babak Final MANIAC XI diadakan secara luring/offline. Peserta diharapkan
-                              untuk bersedia dalam mengikuti seluruh rangkaian acara mulai dari Babak Penyisihan
-                              hingga Babak Final</li>
-                          <li>Registrasi dilakukan oleh salah satu perwakilan TIM.</li>
-                          <li>Tim yang sudah terdaftar dapat mengganti anggota tim <b>paling lambat hingga
-                              2 minggu sebelum diadakannya <i>Technical Meeting</i> Babak Penyisihan.</b></li>
-                          <li>Setiap peserta MANIAC XI harus mempunyai minimal 1 laptop/komputer dan 1 <i>gadget</i>
-                              (<i>smartphone</i>/tablet/laptop/komputer/dan lainnya), dan mempunyai koneksi internet
-                              yang cukup dan memadai. <br> Catatan: <i>Gadget</i> harus memiliki kamera yang dapat
-                              digunakan saat bergabung pada Zoom meeting.</li>
-                          <li>Peserta diwajibkan mengisi data pendaftaran secara lengkap dan sesuai. Pendaftaran
-                              dilakukan secara <i>online</i> melalui <a
-                                  href="https://maniac.ifubaya.id">maniac.ifubaya.id</a>.</li>
-                      </ol>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </div>
+    <div class="modal fade" id="modalPendaftaran" tabindex="-1" aria-labelledby="modalPendaftaranLabel"
+    aria-hidden="true">
+        <link rel="stylesheet" href="{{ asset('assets/css/popup.css') }}">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalPendaftaranLabel">Mekanisme Pendaftaran</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <h3 class="text-center">Alur Pendaftaran Online</h3>
+                        <ol>
+                            <li>Peserta melakukan pendaftaran pada website ICF 2022 (<u><a class="hyperlink"
+                                        href="https://icfubaya2022.com">icfubaya2022.com</a></u>).</li>
+                            <li>
+                                Lomba Comic Strip ICF 2022 merupakan lomba untuk membuat komik yang bertemakan
+                                Technology for Humanity yang diadakan pada hari Minggu, 6 November 2022.
+                                Media komik adalah kertas berukuran A4 dengan template yang sudah disediakan. Berikut
+                                syarat dan ketentuan lomba Tiktok ICF 2022:
+                                <ul>
+                                    <li class="ketentuan">Lomba boleh dilaksanakan secara individu atau berkelompok
+                                        (maksimal 2 orang).</li>
+                                    <li class="ketentuan">Peserta boleh membuat komik sebanyak-banyaknya, namun juga
+                                        harus membuat karya komik paling sedikit 1 lembar.</li>
+                                    <li class="ketentuan">Format pewarnaan komik adalah full colour / BW / Grayscale.
+                                    </li>
+                                    <li class="ketentuan">Kertas yang digunakan adalah kertas A4.</li>
+                                    <li class="ketentuan">Menggunakan kertas template yang berwarna (template akan
+                                        disediakan oleh panitia) dan di cetak serta dibawa saat lomba.</li>
+                                    <li class="ketentuan">Komik yang dibuat dilarang mengandung unsur SARA, melanggar
+                                        etika, pornografi, dan politik.</li>
+                                    <li class="ketentuan">Dialog yang ditulis dengan tangan harap ditulis dengan
+                                        keterbacaan yang baik dan jelas.</li>
+                                    <li class="ketentuan">Dialog sesuai EYD dan tidak disingkat-singkat.</li>
+                                    <li class="ketentuan">Karya tidak mengandung merk dagang, logo, ciptaan yang
+                                        dilindungi hak cipta, atau hak kekayaan intelektual dalam bentuk milik pihak
+                                        lain.</li>
+                                    <li class="ketentuan">Peserta wajib membawa peralatan menggambar sendiri.</li>
+                                    <li class="ketentuan">Dispensasi keterlambatan hanya 15 menit. Lebih dari itu maka
+                                        tim tersebut dianggap mengundurkan diri.</li>
+                                    <li class="ketentuan">Peserta diharuskan menaati setiap butir yang ada pada
+                                        peraturan, panitia dapat menambahkan peraturan sewaktu - waktu jika diperlukan
+                                        tanpa pemberitahuan, apabila melanggar maka akan diskualifikasi.</li>
+                                </ul>
+                            </li>
+                        </ol>
+                        <br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 </section>
 

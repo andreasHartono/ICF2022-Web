@@ -14,7 +14,7 @@ ICF 2022 - Home
              id cupiditate quasi, cumque ex nam? Deserunt eos nesciunt cumque.</p>
           <div class="d-flex justify-content-center" data-cues="slideInDown" data-group="page-title-buttons" data-delay="600" >
 
-              <span><a class="btn btn-primary rounded mx-1" style="background-color: navy;height:50px; width:200px; border-radius: 400px !important;">Register Now</a></span>
+              <span><a class="btn btn-primary rounded mx-1" style="background-color:  #B7D8F2 !important;height:50px; width:200px; border-radius: 400px !important;">Register Now</a></span>
 
             </div>
         </div>
@@ -44,7 +44,7 @@ ICF 2022 - Home
       <div class="row gx-0 mb-16 mb-mb-20">
   {{-- timeline --}}
   <div class="row gx-lg-8 gx-xl-12 process-wrapper text-center mt-9" data-cues="slideInUp" data-group="process">
-  <h1 style="color: navy; margin-top: 1em ; text-align: center; font-family: joyrideextended, Montserrat, sans-serif;"
+  <h1 style="color: #273242; margin-top: 1em ; text-align: center; font-family: joyrideextended, Montserrat, sans-serif;"
   data-aos="zoom-in">Timeline ICF 2022</h1>
 
 <link rel="stylesheet" href="{{ url('/assets/css/timeline.css') }}">
@@ -156,7 +156,7 @@ ICF 2022 - Home
                      id cupiditate quasi, cumque ex nam? Deserunt eos nesciunt cumque.</p>
                   <div class="d-flex justify-content-center" data-cues="slideInDown" data-group="page-title-buttons" data-delay="600" >
                       <span><a class="btn btn-primary rounded mx-1"
-                         style="background-color: navy;height:50px; width:200px; border-radius: 400px !important;">More Info</a></span>
+                         style="background-color: #273242;height:50px; width:200px; border-radius: 400px !important;">More Info</a></span>
                     </div>
                 </div>
                 <!-- /column -->

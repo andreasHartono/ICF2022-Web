@@ -16,7 +16,7 @@
     color: white;
     border-radius: 100px;
     text-align: center;
-    background: navy;
+    background: #273242;
     padding: 0 48px;
     position: relative;
     z-index: 3;
@@ -51,7 +51,7 @@
     font-weight: 700;
     font-size: 38px;
     line-height: 128%;
-    color: navy;
+    color: #273242;
     border-radius: 100px;
     background: #8da8af;
     padding: 20px 32px;
@@ -93,8 +93,8 @@
 
 .total-hadiah {
     font-size: 60px;
-    color: #fff;
-    background: navy;
+    color: white;
+    background: #273242;
     border-radius: 100px;
     padding: 10px;
 }

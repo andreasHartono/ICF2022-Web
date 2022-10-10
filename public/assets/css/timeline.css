@@ -11,7 +11,7 @@
 }
 
 .date {
-    color: navy;
+    color: #273242;
 }
 
 .content-timeline {
@@ -32,7 +32,7 @@
 
 .timeline ul li {
     padding: 20px;
-    background-color: navy;
+    background-color: #273242;
     color: white;
     border-radius: 10px;
     margin-bottom: 20px;
@@ -71,7 +71,7 @@
         transform: translateX(-50%);
         width: 2px;
         height: 93%;
-        background-color: navy;
+        background-color: #273242;
     }
 
     .timeline ul li {
@@ -100,7 +100,7 @@
         height: 20px;
         width: 20px;
         border-radius: 50%;
-        background-color: navy;
+        background-color: #273242;
         top: 0px;
     }
 

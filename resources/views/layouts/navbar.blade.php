@@ -144,6 +144,27 @@
         <!-- /.navbar-collapse -->
         <div class="navbar-other w-100 d-flex ms-auto">
             <ul class="navbar-nav flex-row align-items-center ms-auto">
+                @auth
+                    @if(auth()->check())
+                        @if(auth()->user()->sebagai == "peserta")
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ url('dashboard/'.auth()->user()->id) }}">Profile</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ url('peserta/daftarevents') }}">Workshop & Seminar</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ url('peserta/daftarlomba') }}">Lomba</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Daftar Tim</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Daftar Event</a>
+                            </li>
+                        @endif
+                    @endif
+                @endauth
                 <li class="nav-item dropdown">
                     @auth
                         @if (auth()->check())
@@ -152,22 +173,6 @@
                                 @if (auth()->user()->sebagai=="pubreg" || auth()->user()->sebagai=="admin"|| auth()->user()->sebagai=="superadmin")
                                     <li>
                                     <a class="dropdown-item" href="{{ url('/dashboardadmin') }}">Dashboard</a>
-                                    </li>
-                                @elseif(auth()->user()->sebagai == "peserta")
-                                    <li>
-                                        <a class="dropdown-item" href="{{ url('dashboard/'.auth()->user()->id) }}">Profile</a>
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-item" href="{{ url('peserta/daftarevents') }}">Registrasi Workshop & Seminar</a>
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-item" href="{{ url('peserta/daftarlomba') }}">Registrasi Lomba</a>
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-item" href="#">Daftar Tim</a>
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-item" href="#">Daftar Event</a>
                                     </li>
                                 @endif
                                 <li>

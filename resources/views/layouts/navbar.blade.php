@@ -96,9 +96,9 @@
                     @auth
                         @if (auth()->check())
                             @if (auth()->user()->sebagai == 'peserta')
-                                <li class="nav-item">
+                                {{-- <li class="nav-item">
                                     <a class="nav-link" href="{{ url('dashboard/' . auth()->user()->id) }}">Profile</a>
-                                </li>
+                                </li> --}}
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{ url('peserta/daftarevents') }}">Workshop Seminar</a>
                                 </li>

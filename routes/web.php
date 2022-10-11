@@ -100,6 +100,7 @@ Route::group(['middleware'=>'auth'], function() {
     Route::get('/peserta/daftarevents','EventController@front_event');
     Route::get('/peserta/add-to-cart/{event}', 'EventController@addToCart');
     Route::get('/peserta/cart','EventController@cart');
+    Route::get('/peserta/checkout','EventController@checkout');
     Route::get('/registerlomba/5', function () {
         return view('peserta.registerhackaton');
     });

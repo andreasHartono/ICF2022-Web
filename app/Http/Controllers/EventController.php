@@ -65,14 +65,27 @@ class EventController extends Controller
 
     public function cart()
     {
-
+         return view('peserta.cartevent');
     }
 
-    public function addToCart()
+    public function addToCart($id)
     {
-
+         $e = Event::find($id);
+         $cart = session()->get('cart');
+         if(!isset($cart[$id])){
+            $cart[$id] = [
+               "id" => $e->id,
+               "nama" => $e->nama,
+            ];
+         }
+         session()->put('cart', $cart);
+         return redirect()->back()->with('success','Event berhasil ditambahkan');
     }
 
+    public function checkout()
+    {
+      
+    }
     /**
      * Display a listing of the resource.
      *

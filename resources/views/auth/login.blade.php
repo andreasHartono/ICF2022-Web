@@ -38,7 +38,7 @@
                             <span class="checkmark"></span>
                             <span class="chkText">Show Password</span>
                         </div>
-                        <button class="btn myBtn width-90" type="submit">Login</button>
+                        <button class="btn myBtn width-90" type="submit" style="background-color: red !important;">Login</button>
                     </form>
                     <div class="row justify-content-center">
                         <p class="text-center have-account">Don't have an account yet? <a

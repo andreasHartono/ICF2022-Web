@@ -56,13 +56,74 @@ class EventController extends Controller
     }
     public function front_event()
     {
+         $userid = Auth::user()->id;
+         $disabled = false;
+         $idevent = 0;
+         // dd($userid);
+         $cek = DB::table('user_event')
+               ->join('users', 'users.id','=','user_event.users_id')
+               ->join('events', 'events.id','=','user_event.events_id')
+               ->select('user_event.events_id as acara')
+               ->where('users.id', $userid)
+               ->get();
+
+
         $event = Event::join('jenis','jenis.id','=','events.jenis_id')
                 ->join('images','images.events_id','=','events.id')
                 ->select('events.*','jenis.nama as name','image_url as url')
                 ->where('jenis.id','=',1)
                 ->orWhere('jenis.id','=',2)->get();
-        // dd($event);
-        return view('peserta.daftar',compact('event'));
+
+         // foreach ($event as $e) {
+         //    if($e->id === 1) {
+         //       $test = DB::table('user_event')
+         //          ->whereExists(function ($q) {
+         //             $q->select('events.id')->from('events')->where('events.id', 1)->where('events.id', 'user_event.events_id');
+         //          })->whereExists(function ($query) {
+         //             $query->select('users.id')->from('users')->where('users.id', Auth::user()->id)->where('users.id', 'user_event.users_id');
+         //          })->get();
+         //    } elseif ($e->id === 2) {
+         //       $test = DB::table('user_event')
+         //          ->whereExists(function ($q) {
+         //             $q->select('events.id')->from('events')->where('events.id', 2)->where('events.id', 'user_event.events_id');
+         //          })->whereExists(function ($query) {
+         //             $query->select('users.id')->from('users')->where('users.id', Auth::user()->id)->where('users.id', 'user_event.users_id');
+         //          })->get();
+         //    } elseif ($e->id === 3) {
+         //       $test = DB::table('user_event')
+         //          ->whereExists(function ($q) {
+         //             $q->select('events.id')->from('events')->where('events.id', 3)->where('events.id', 'user_event.events_id');
+         //          })->whereExists(function ($query) {
+         //             $query->select('users.id')->from('users')->where('users.id', Auth::user()->id)->where('users.id', 'user_event.users_id');
+         //          })->get();
+         //    } elseif ($e->id === 4) {
+         //       $test = DB::table('user_event')
+         //          ->whereExists(function ($q) {
+         //             $q->select('events.id')->from('events')->where('events.id', 4)->where('events.id','user_event.events_id');
+         //          })->whereExists(function ($query) {
+         //             $query->select('users.id')->from('users')->where('users.id', Auth::user()->id)->where('users.id', 'user_event.users_id');
+         //          })->get();
+         //    }
+         // dd($test);
+
+         // }
+         // for($i=0;$i<count($event);$i++)
+         // {
+         //    for($j=0;$j<count($cek);$j++) {
+         //       // dd($cek);
+         //       if($event[$i]->id == $cek[$i]->acara) {
+         //          $disabled = true;
+         //       }
+         //       else {
+         //          $disabled = false;
+         //       }
+         //       // dd($disabled);
+         //    }
+         //    // dd($disabled);
+         // }
+         // dd($disabled);
+      //   dd($cek);
+        return view('peserta.daftar',compact('event','disabled'));
     }
 
     public function cart()

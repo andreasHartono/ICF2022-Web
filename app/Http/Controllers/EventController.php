@@ -7,6 +7,8 @@ use App\Jenis;
 use App\Image;
 use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class EventController extends Controller
 {
@@ -84,8 +86,23 @@ class EventController extends Controller
 
     public function checkout()
     {
-      
+      // $this->authorize('checkpeserta');
+
+      $cart = session()->get('cart');
+      $user = Auth::user();
+      foreach($cart as $detail) {
+         // dd($detail['id']);
+         DB::table('user_event')
+         ->updateOrInsert([
+            'users_id' => $user->id,
+            'events_id' => $detail['id'],
+         ]);
+      }
+      session()->forget('cart');
+      return redirect('/peserta/daftarevents')->with('success','Pendaftaran Seminar atau 
+                  Workshop berhasil, silahkan join ke Whatsapp Group untuk informasi lebih lanjut');      
     }
+
     /**
      * Display a listing of the resource.
      *
@@ -170,7 +187,7 @@ class EventController extends Controller
         $event->save();
 
         // DB::update('update users set votes = 100 where name = ?', ['John']);
-        return redirect('/daftarevent')->with('status', 'Acara berhasil diupdate');
+        return redirect('/daftarevent')->with('success', 'Acara berhasil diupdate');
     }
 
     /**

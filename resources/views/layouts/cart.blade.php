@@ -153,7 +153,7 @@
 
                      <div class="row">
                            <div class="col-lg-12 col-sm-12 col-12 text-center checkout">
-                              <a href="{{ url('cart') }}" class="btn btn-primary btn-block">View all</a>
+                              <a href="{{ url('peserta/cart') }}" class="btn btn-primary btn-block">View all</a>
                            </div>
                      </div>
                   </div>
@@ -161,6 +161,17 @@
          </div>
       </div>
    <div class="container page">
+         @if (session()->has('success'))
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                {{ session()->get('success') }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+         @elseif(session()->has('error'))
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                {{ session()->get('error') }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        @endif
       @yield('content')
    </div>
 </div>

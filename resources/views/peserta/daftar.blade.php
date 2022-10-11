@@ -17,7 +17,12 @@ ICF 2022 - Daftar
 <div class="body-cart">
    <div class="container">
       <div class="container page">
-
+                 @if (session()->has('success'))
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                {{ session()->get('success') }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        @endif
             <div class="row">
                @for ($i=0;$i<count($event);$i++)
 
@@ -34,7 +39,7 @@ ICF 2022 - Daftar
                                     <li><a class="btn-holder text-center" href="{{ $event[$i]->link_wa }}" role="button" style="background-color: #fff !important;">Link WA Group</a></li>
                                  </ul>
 
-                                 <p><a class="btn btn-soft-dark nav-link" href="{{ url('peserta/add-to-cart/'.$event[$i]->id) }}" role="button" style="background-color: red !important">Pilih Event</a></p>
+                                 <p><a class="btn btn-lg btn-block text-light" href="{{ url('peserta/add-to-cart/'.$event[$i]->id) }}" role="button" style="background-color: red !important; ">Pilih Event</a></p>
                            </div>
                         </div>
                      </div>

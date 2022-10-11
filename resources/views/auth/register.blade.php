@@ -6,6 +6,17 @@
 
 @section('content')
     <section id="register" style="margin: 80px 0 100px;">
+         @if (session()->has('success'))
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                {{ session()->get('success') }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+         @elseif(session()->has('error'))
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                {{ session()->get('error') }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        @endif
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-6 col-md-8 col-sm-10 col-xs-11">
@@ -61,9 +72,9 @@
                             </div>
                         </div>
 
-                        <button class="btn myBtn btn-primary width-90 mt-5" type="submit">Register</button>
+                        <button class="btn myBtn btn-primary width-90 mt-5 nav-link" type="submit" style="background:red !important;">Register</button>
                         <div class="row justify-content-center">
-                            <p class="text-center have-account">Already have an account? <a href="{{ url('/login') }}">Login</a></p>
+                            <p class="text-center have-account">Already have an account? <a href="{{ url('/login') }}" class="btn-link">Login</a></p>
                         </div>
                     </form>
                 </div>

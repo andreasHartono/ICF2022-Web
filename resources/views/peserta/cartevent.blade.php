@@ -18,8 +18,8 @@ ICF 2022 - Daftar
             @if (session('cart'))
                @foreach (session('cart') as $id => $details)
                   <tr>
-                     <td data-th="Price">{{ $details['id'] }}</td>
-                     <td data-th="Product">
+                     <td data-th="Id">{{ $details['id'] }}</td>
+                     <td data-th="Nama">
                         <div class="row">
                            <div class="col-sm-3 hidden-xs"><img src="{{ url('/assets/img/poster.png')}}" height="200" width="150" alt="..." class="img-responsive"/></div>
                            <div class="col-sm-9">
@@ -33,9 +33,9 @@ ICF 2022 - Daftar
         </tbody>
         <tfoot>
             <tr>
-               <td><a href="{{ url('/') }}" class="btn" style="background: #F8EF01 !important"><i class="fa fa-angle-left"></i> Daftar Event</a></td>
+               <td><a href="{{ url('/peserta/daftarevents') }}" class="btn text-light" style="background: #273242 !important"><i class="fa fa-angle-left"></i> Daftar Event</a></td>
                <td colspan="2" class="hidden-xs"></td>
-               <td><a href="{{ url('/peserta/checkout') }}" class="btn" style="background: red !important;"><i class="fa fa-angle-right"></i> Checkout</a></td>
+               <td><a href="{{ url('/peserta/checkout') }}" class="btn text-light" style="background: red !important;"><i class="fa fa-angle-right"></i> Checkout</a></td>
             </tr>
         </tfoot>
     </table>

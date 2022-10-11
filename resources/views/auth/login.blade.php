@@ -1,6 +1,17 @@
 @extends('layouts.mainweb')
 @section('content')
     <section id="login" style="margin: 100px 0">
+         @if (session()->has('success'))
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                {{ session()->get('success') }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+         @elseif(session()->has('error'))
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                {{ session()->get('error') }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        @endif
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-6 col-md-8 col-sm-10 col-xs-11 text-center">
@@ -38,11 +49,11 @@
                             <span class="checkmark"></span>
                             <span class="chkText">Show Password</span>
                         </div>
-                        <button class="btn myBtn width-90" type="submit" style="background-color: red !important;">Login</button>
+                        <button class="btn myBtn width-90 nav-link" type="submit" style="background-color: red !important;">Login</button>
                     </form>
                     <div class="row justify-content-center">
                         <p class="text-center have-account">Don't have an account yet? <a
-                                href="{{ url('/register') }}">Register</a></p>
+                                href="{{ url('/register') }}" class="btn-link">Register</a></p>
                     </div>
                 </div>
             </div>

@@ -23,14 +23,14 @@
                         <div class="data-tim">
                             <Label class="myLabel">Tiktok Account</Label>
                             <input type="text" name="akuntiktok" id="txtAkunTiktok"
-                                class="myTextbox width-90 @error('akuntiktok') is-invalid @enderror" placeholder="@">
+                                class="myTextbox width-90 @error('akuntiktok') is-invalid @enderror" placeholder="@exampleaa" value="{{ old('akuntiktok') }}">
                             @error('akuntiktok')
                                 <div class="invalid-feedback text-center">
                                     {{ $message }}
                                 </div>
                             @enderror
                         </div>
-                        <button class="btn myBtn width-90 mt-5 btn-navy" type="submit">Register</button>
+                        <button class="btn myBtn width-90 mt-5 text-light" style="background: #red !important;" type="submit">Register</button>
                     </form>
                 </div>
             </div>

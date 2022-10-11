@@ -23,7 +23,7 @@ ICF 2022 - Daftar
                 <h5>Kategori : {{ $event[$i]->name}}</h5>
                 <p>{{ $event[$i]->deskripsi }}</p>
                 <p>Mulai : {{ $event[$i]->tanggal_start }}<br> Akhir : {{ $event[$i]->tanggal_end}}</p>
-                <p><a class="btn btn-soft-dark" href="#" role="button">Pilih Event</a></p>
+                <p><a class="btn btn-soft-dark" href="#" role="button" style="background-color: red !important">Pilih Event</a></p>
             </div><!-- /.col-lg-4 -->
         @endfor
     </div><!-- /.row -->

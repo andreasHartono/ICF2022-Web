@@ -14,7 +14,7 @@ ICF 2022 - Register
               <h5 class="fs-1 myTitle">Competitive programming</h5>
               <div class="d-flex justify-content-center">
                   <button class="btn myBtn" style="width: 400px; max-width: 90%; background: #273242 !important; color: white !important;" data-bs-toggle="modal"
-                      data-bs-target="#modalPendaftaran">Catatan Pendaftaran</button>
+                      data-bs-target="#modalPendaftarancomprog">Catatan Pendaftaran</button>
               </div>
               <form method="POST" action="{{ url('/registercomprog') }}" class="mt-5"
                   enctype="multipart/form-data">
@@ -167,7 +167,7 @@ ICF 2022 - Register
 
 
   <!-- Modal -->
-    <div class="modal fade" id="modalPendaftaran" tabindex="-1" aria-labelledby="modalPendaftaranLabel"
+    {{-- <div class="modal fade" id="modalPendaftaran" tabindex="-1" aria-labelledby="modalPendaftaranLabel"
         aria-hidden="true">
         <link rel="stylesheet" href="{{ asset('assets/css/popup.css') }}">
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
@@ -238,7 +238,7 @@ ICF 2022 - Register
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
 </div>
 </section>
 

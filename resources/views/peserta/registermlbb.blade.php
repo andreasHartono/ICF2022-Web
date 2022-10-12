@@ -13,8 +13,9 @@
                     <h2 class="fs-1 myTitle">REGISTRATION</h2>
                     <h5 class="fs-1 myTitle">Mobile Legend Competition</h5>
                     <div class="d-flex justify-content-center">
-                        <button class="btn myBtn" style="width: 400px; max-width: 90%;background: #273242 !important; color: white !important;" data-bs-toggle="modal"
-                            data-bs-target="#modalPendaftaran">Catatan Pendaftaran</button>
+                        <button class="btn myBtn"
+                            style="width: 400px; max-width: 90%;background: #273242 !important; color: white !important;"
+                            data-bs-toggle="modal" data-bs-target="#modalPendaftaranmlbb">Catatan Pendaftaran</button>
                     </div>
                     <form method="POST" action="{{ url('/registermlbb') }}" class="mt-5" enctype="multipart/form-data">
                         @csrf
@@ -22,7 +23,8 @@
                             <h5 class="text-center" style="font-weight: 600;">Data Tim</h5>
                             <Label class="myLabel">Nama Tim</Label>
                             <input type="text" name="nama_tim" id="txtNamaTim"
-                                class="myTextbox width-90 @error('nama_tim') is-invalid @enderror" placeholder="Nama Tim" value="{{ old('nama_tim') }}">
+                                class="myTextbox width-90 @error('nama_tim') is-invalid @enderror" placeholder="Nama Tim"
+                                value="{{ old('nama_tim') }}">
                             @error('nama_tim')
                                 <div class="invalid-feedback text-center">
                                     {{ $message }}
@@ -43,7 +45,8 @@
                             <h5 class="text-center mt-5" style="font-weight: 600;">Data Ketua Tim</h5>
                             <label class="myLabel">Nama Ketua Tim</label>
                             <input type="text" name="name" id="txtNamaKetua"
-                                class="myTextbox width-90 @error('name') is-invalid @enderror" placeholder="Nama Ketua Tim" value="{{ old('name') }}">
+                                class="myTextbox width-90 @error('name') is-invalid @enderror" placeholder="Nama Ketua Tim"
+                                value="{{ old('name') }}">
                             @error('name')
                                 <div class="invalid-feedback text-center">
                                     {{ $message }}
@@ -51,7 +54,8 @@
                             @enderror
                             <label class="myLabel">Nomor HP</label>
                             <input type="text" name="no_hp" id="txtNoHpKetua"
-                                class="myTextbox width-90 @error('no_hp') is-invalid @enderror" placeholder="Nomor HP" value="{{ old('no_hp') }}">
+                                class="myTextbox width-90 @error('no_hp') is-invalid @enderror" placeholder="Nomor HP"
+                                value="{{ old('no_hp') }}">
                             @error('no_hp')
                                 <div class="invalid-feedback text-center">
                                     {{ $message }}
@@ -59,7 +63,8 @@
                             @enderror
                             <label class="myLabel">Email</label>
                             <input type="email" name="email" id="txtEmailKetua"
-                                class="myTextbox width-90 @error('email') is-invalid @enderror" placeholder="Email" value="{{ old('email') }}">
+                                class="myTextbox width-90 @error('email') is-invalid @enderror" placeholder="Email"
+                                value="{{ old('email') }}">
                             @error('email')
                                 <div class="invalid-feedback text-center">
                                     {{ $message }}
@@ -146,7 +151,8 @@
                             @enderror
                             <label class="myLabel">Nomor HP</label>
                             <input type="text" name="no_hp2" id="txtNoHpAnggota2"
-                                class="myTextbox width-90 @error('no_hp2') is-invalid @enderror" placeholder="081123456789" value="{{ old('no_hp2') }}">
+                                class="myTextbox width-90 @error('no_hp2') is-invalid @enderror"
+                                placeholder="081123456789" value="{{ old('no_hp2') }}">
                             @error('no_hp2')
                                 <div class="invalid-feedback text-center">
                                     {{ $message }}
@@ -154,7 +160,8 @@
                             @enderror
                             <label class="myLabel">Email</label>
                             <input type="email" name="email2" id="txtEmailAnggota2"
-                                class="myTextbox width-90 @error('email2') is-invalid @enderror" placeholder="Email" value="{{ old('email2') }}">
+                                class="myTextbox width-90 @error('email2') is-invalid @enderror" placeholder="Email"
+                                value="{{ old('email2') }}">
                             @error('email2')
                                 <div class="invalid-feedback text-center">
                                     {{ $message }}
@@ -194,7 +201,8 @@
                             @enderror
                             <label class="myLabel">Nomor HP</label>
                             <input type="text" name="no_hp3" id="txtNoHpAnggota3"
-                                class="myTextbox width-90 @error('no_hp3') is-invalid @enderror" placeholder="081123456789" value="{{ old('no_hp3') }}">
+                                class="myTextbox width-90 @error('no_hp3') is-invalid @enderror"
+                                placeholder="081123456789" value="{{ old('no_hp3') }}">
                             @error('no_hp3')
                                 <div class="invalid-feedback text-center">
                                     {{ $message }}
@@ -202,7 +210,8 @@
                             @enderror
                             <label class="myLabel">Email</label>
                             <input type="email" name="email3" id="txtEmailAnggota3"
-                                class="myTextbox width-90 @error('email3') is-invalid @enderror" placeholder="Email" value="{{ old('email3') }}">
+                                class="myTextbox width-90 @error('email3') is-invalid @enderror" placeholder="Email"
+                                value="{{ old('email3') }}">
                             @error('email3')
                                 <div class="invalid-feedback text-center">
                                     {{ $message }}
@@ -241,7 +250,8 @@
                             @enderror
                             <label class="myLabel">Nomor HP</label>
                             <input type="text" name="no_hp4" id="txtNoHpAnggota4"
-                                class="myTextbox width-90 @error('no_hp4') is-invalid @enderror" placeholder="081123456789" value="{{ old('no_hp4') }}">
+                                class="myTextbox width-90 @error('no_hp4') is-invalid @enderror"
+                                placeholder="081123456789" value="{{ old('no_hp4') }}">
                             @error('no_hp4')
                                 <div class="invalid-feedback text-center">
                                     {{ $message }}
@@ -249,7 +259,8 @@
                             @enderror
                             <label class="myLabel">Email</label>
                             <input type="email" name="email4" id="txtEmailAnggota4"
-                                class="myTextbox width-90 @error('email4') is-invalid @enderror" placeholder="Email" value="{{ old('email4') }}">
+                                class="myTextbox width-90 @error('email4') is-invalid @enderror" placeholder="Email"
+                                value="{{ old('email4') }}">
                             @error('email4')
                                 <div class="invalid-feedback text-center">
                                     {{ $message }}
@@ -327,7 +338,8 @@
                             @enderror
                         </div>
 
-                        <button class="btn myBtn width-90 mt-5 text-light" style="background: red !important; color: white !important;" type="submit">Register</button>
+                        <button class="btn myBtn width-90 mt-5 text-light"
+                            style="background: red !important; color: white !important;" type="submit">Register</button>
                     </form>
                 </div>
             </div>
@@ -335,7 +347,7 @@
 
 
         <!-- Modal -->
-        <div class="modal fade" id="modalPendaftaran" tabindex="-1" aria-labelledby="modalPendaftaranLabel"
+        {{-- <div class="modal fade" id="modalPendaftaran" tabindex="-1" aria-labelledby="modalPendaftaranLabel"
             aria-hidden="true">
             <link rel="stylesheet" href="{{ asset('assets/css/popup.css') }}">
             <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
@@ -403,7 +415,7 @@
                                                 Pertandingan akan disiarkan secara langsung di layar besar (?).</li>
                                         </ol>
                                         <li class="ketentuan">
-                                            Final Match [ BO5 ]  [ Hari H ]</li>
+                                            Final Match [ BO5 ] [ Hari H ]</li>
                                         <ol>
                                             <li class="ketentuan">Pada tahap ini, peserta datang ke acara offline dan
                                                 bertanding disana.
@@ -455,6 +467,6 @@
                 </div>
             </div>
         </div>
-        </div>
+      </div> --}}
     </section>
 @endsection

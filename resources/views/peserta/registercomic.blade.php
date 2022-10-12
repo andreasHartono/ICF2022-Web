@@ -14,7 +14,7 @@ ICF 2022 - Register
               <h5 class="fs-1 myTitle">Comic Strip Competition</h5>
               <div class="d-flex justify-content-center">
                   <button class="btn myBtn" style="width: 400px; max-width: 90%; background: #273242 !important; color: white !important;" data-bs-toggle="modal"
-                      data-bs-target="#modalPendaftaran">Catatan Pendaftaran</button>
+                      data-bs-target="#modalPendaftarancomic">Catatan Pendaftaran</button>
               </div>
               <form method="POST" action="{{ url('/registercomic') }}" class="mt-5"
                   enctype="multipart/form-data">

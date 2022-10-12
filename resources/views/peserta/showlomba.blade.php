@@ -13,15 +13,16 @@ ICF 2022 - Daftar
          <div class="col-lg-4">
             <img class="img-circle" src="{{ url('/assets/img/poster.png')}}" alt="{{ $comp->url}}">
             <h2>{{ $comp->nama}}</h2>
-            <h5>Kategori : {{ $comp->name}}</h5>
             <p style="text-align: justify;">{{ $comp->deskripsi }}</p>
+            @php
+               $date1 = date_create($comp->tanggal_start);
+               $date2 = date_create($comp->tanggal_end);
+            @endphp
+            <h6>Tanggal Acara</h6>
+            <p style="text-align: center;"> {{ date_format($date1, 'd F Y') }} - {{ date_format($date2, 'd F Y') }}<br>Pukul :
+            {{ date_format($date1, 'H:i') }} - {{ date_format($date2, 'H:i') }}</p>
             <ul>
-               @php
-                  $date1 = date_create($comp->tanggal_start);
-                  $date2 = date_create($comp->tanggal_end);
-               @endphp
-               <li>Tanggal: {{ date_format($date1, 'd F Y') }}<br>Pukul :
-                  {{ date_format($date1, 'H:i') }} - {{ date_format($date2, 'H:i') }}</li>
+
                @if($registered[$key] == 1)
                   <li><a class="btn-holder text-center" href="{{ $comp->link_wa }}"
                         role="button" style="background-color: #fff !important;">Link WA Group</a>

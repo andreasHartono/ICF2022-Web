@@ -78,7 +78,7 @@ ICF 2022 - Register
                       <label class="myLabel">Nomor HP</label>
                       <input type="text" name="phone_number" id="txtNoHpKetua"
                           class="myTextbox width-90 @error('phone_number') is-invalid @enderror"
-                          placeholder="Nomor HP" value="{{ old('phone_number') }}">
+                          placeholder="081123456789" value="{{ old('phone_number') }}">
                       @error('phone_number')
                           <div class="invalid-feedback text-center">
                               {{ $message }}
@@ -118,7 +118,7 @@ ICF 2022 - Register
                       @enderror
                       <label class="myLabel">Nomor HP</label>
                       <input type="text" name="phone_number1" id="txtNoHpAnggota1" class="myTextbox width-90"
-                          placeholder="08919124914" value="{{ old('phone_number1') }}">
+                          placeholder="089121345678" value="{{ old('phone_number1') }}">
                           @error('phone_number1')
                           <div class="invalid-feedback text-center">
                               {{ $message }}

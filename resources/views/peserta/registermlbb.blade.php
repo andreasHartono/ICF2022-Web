@@ -98,7 +98,7 @@
                             @enderror
                             <label class="myLabel">Nomor HP</label>
                             <input type="text" name="no_hp1" id="txtNoHpAnggota1" class="myTextbox width-90"
-                                placeholder="Nomor HP" value="{{ old('no_hp1') }}">
+                                placeholder="081123456789" value="{{ old('no_hp1') }}">
                             @error('no_hp1')
                                 <div class="invalid-feedback text-center">
                                     {{ $message }}
@@ -146,7 +146,7 @@
                             @enderror
                             <label class="myLabel">Nomor HP</label>
                             <input type="text" name="no_hp2" id="txtNoHpAnggota2"
-                                class="myTextbox width-90 @error('no_hp2') is-invalid @enderror" placeholder="Nomor HP" value="{{ old('no_hp2') }}">
+                                class="myTextbox width-90 @error('no_hp2') is-invalid @enderror" placeholder="081123456789" value="{{ old('no_hp2') }}">
                             @error('no_hp2')
                                 <div class="invalid-feedback text-center">
                                     {{ $message }}
@@ -194,7 +194,7 @@
                             @enderror
                             <label class="myLabel">Nomor HP</label>
                             <input type="text" name="no_hp3" id="txtNoHpAnggota3"
-                                class="myTextbox width-90 @error('no_hp3') is-invalid @enderror" placeholder="Nomor HP" value="{{ old('no_hp3') }}">
+                                class="myTextbox width-90 @error('no_hp3') is-invalid @enderror" placeholder="081123456789" value="{{ old('no_hp3') }}">
                             @error('no_hp3')
                                 <div class="invalid-feedback text-center">
                                     {{ $message }}
@@ -241,7 +241,7 @@
                             @enderror
                             <label class="myLabel">Nomor HP</label>
                             <input type="text" name="no_hp4" id="txtNoHpAnggota4"
-                                class="myTextbox width-90 @error('no_hp4') is-invalid @enderror" placeholder="Nomor HP" value="{{ old('no_hp4') }}">
+                                class="myTextbox width-90 @error('no_hp4') is-invalid @enderror" placeholder="081123456789" value="{{ old('no_hp4') }}">
                             @error('no_hp4')
                                 <div class="invalid-feedback text-center">
                                     {{ $message }}
@@ -290,7 +290,7 @@
                             <label class="myLabel">Nomor HP</label>
                             <input type="text" name="no_hpcadangan" id="txtNoHpAnggotacadangan"
                                 class="myTextbox width-90 @error('no_hpcadangan') is-invalid @enderror"
-                                placeholder="Nomor HP" value="{{ old('no_hpcadangan') }}">
+                                placeholder="081123456789" value="{{ old('no_hpcadangan') }}">
                             @error('no_hpcadangan')
                                 <div class="invalid-feedback text-center">
                                     {{ $message }}

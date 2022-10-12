@@ -39,29 +39,6 @@ ICF 2022 - Register
                               {{ $message }}
                           </div>
                       @enderror
-                      {{-- <label class="myLabel"></label>
-                      <input type="text" name="email" id="txtemail"
-                          class="myTextbox width-90  @error('email') is-invalid @enderror" placeholder="email"
-                          >
-                      @error('email')
-                          <div class="invalid-feedback text-center">
-                              {{ $message }}
-                          </div>
-                      @enderror --}}
-                      {{-- <label class="myLabel">Password</label>
-                      <input type="password" name="password" id="txtPassword"
-                          class="myTextbox width-90 @error('password') is-invalid @enderror" placeholder="Password"
-                          >
-                      @error('password')
-                          <div class="invalid-feedback text-center">
-                              {{ $message }}
-                          </div>
-                      @enderror
-                      <div class="d-flex align-items-center" style="margin-left: 5%; position: relative;">
-                          <input type="checkbox" class="myChkbox mx-2" onclick="showPassword()">
-                          <span class="checkmark"></span>
-                          <span class="chkText">Show Password</span>
-                      </div> --}}
                   </div>
 
                   <div class="data-anggota ketua">

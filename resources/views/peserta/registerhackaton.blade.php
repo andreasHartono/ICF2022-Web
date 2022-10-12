@@ -78,7 +78,7 @@ ICF 2022 - Register
                       <label class="myLabel">Nomor HP</label>
                       <input type="text" name="no_hp" id="txtNoHpKetua"
                           class="myTextbox width-90 @error('no_hp') is-invalid @enderror"
-                          placeholder="Nomor HP" value="{{ old('no_hp') }}">
+                          placeholder="081123456789" value="{{ old('no_hp') }}">
                       @error('no_hp')
                           <div class="invalid-feedback text-center">
                               {{ $message }}
@@ -110,7 +110,7 @@ ICF 2022 - Register
                       <h5 class="text-center mt-5" style="font-weight: 600;">Data Anggota 1</h5>
                       <label class="myLabel">Nama Anggota 1</label>
                       <input type="text" name="nama1" id="txtNamaAnggota1" class="myTextbox width-90"
-                          placeholder="Nama Anggota 1" value="{{ old('nama1') }}>
+                          placeholder="Nama Anggota 1" value="{{ old('nama1') }}">
                       @error('nama1')
                           <div class="invalid-feedback text-center">
                               {{ $message }}
@@ -118,7 +118,7 @@ ICF 2022 - Register
                       @enderror
                       <label class="myLabel">Nomor HP</label>
                       <input type="text" name="no_hp1" id="txtNoHpAnggota1" class="myTextbox width-90"
-                          placeholder="Nomor HP" value="{{ old('no_hp1') }}">
+                          placeholder="081123456789" value="{{ old('no_hp1') }}">
                           @error('no_hp1')
                           <div class="invalid-feedback text-center">
                               {{ $message }}
@@ -156,7 +156,7 @@ ICF 2022 - Register
                           @enderror
                       <label class="myLabel">Nomor HP</label>
                       <input type="text" name="no_hp2" id="txtNoHpAnggota2" class="myTextbox width-90 @error('no_hp2') is-invalid @enderror"
-                          placeholder="Nomor HP" value="{{ old('no_hp2') }}">
+                          placeholder="081123456789" value="{{ old('no_hp2') }}">
                            @error('no_hp2')
                            <div class="invalid-feedback text-center">
                               {{ $message }}

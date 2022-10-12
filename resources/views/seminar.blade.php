@@ -5,7 +5,7 @@ ICF 2022 - Workshop
 @endsection
 
 @section('content')
-@for($i=0;$i<count($seminar);$i++)
+@foreach ($seminar as $k => $s)
     <div class="d-flex justify-content-center" data-cues="slideInDown" data-group="page-title-buttons" data-delay="600" >
         <div class="workshop-container">
             <div class="row align-items-center">
@@ -14,20 +14,20 @@ ICF 2022 - Workshop
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-12 mb-7 workshop-regis">
                     <div class="card mx-auto workshop-card" style="">
-                        <h4>{{ $seminar[$i]->nama }}</h4>
-                        <p style="text-align: justify;">{{ $seminar[$i]->deskripsi }}</p>
-                        <p>Lokasi Acara : {{ $seminar[$i]->lokasi }}</p>
-                        <p style="text-align: justify;">Syarat & Ketentuan <br> {{ $seminar[$i]->term_condition }}</p>
+                        <h3 class="text-center">{{ $s->nama }}</h3>
                         <ul>
-                            @php $date1 = date_create($seminar[$i]->tanggal_start);  $date2 = date_create($seminar[$i]->tanggal_end); @endphp
-                            <li>Tanggal: {{ date_format($date1, "d F Y") }}<br>Pukul : {{ date_format($date1, "H:i")}} - {{ date_format($date2, "H:i")}}</li>
+                            <li style="list-style: none;"><p style="color: black;">{{ $s->deskripsi }}</p></li>
+                            <li style="list-style: none;"><p style="text-align: justify;"><h6>Lokasi Acara</h6> {{ $s->lokasi }}</p></li>
+                            @php $date1 = date_create($s->tanggal_start);  $date2 = date_create($s->tanggal_end); @endphp
+                            <li style="list-style: none;"><h6>Tanggal Acara</h6>{{ date_format($date1, "d F Y") }}<br>Pukul : {{ date_format($date1, "H:i")}} - {{ date_format($date2, "H:i")}}</li>
+                            <li style="list-style: none;"><p style="text-align: justify;"><h6>Syarat & Ketentuan</h6> {{ $s->term_condition }}</p></li>
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-@endfor
+@endforeach
 </div>
 </div>
 @endsection

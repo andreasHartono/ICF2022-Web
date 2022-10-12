@@ -13,7 +13,7 @@
                     <h2 class="fs-1 myTitle">REGISTRATION</h2>
                     <h5 class="fs-1 myTitle">Mobile Legend Competition</h5>
                     <div class="d-flex justify-content-center">
-                        <button class="btn myBtn" style="width: 400px; max-width: 90%;" data-bs-toggle="modal"
+                        <button class="btn myBtn" style="width: 400px; max-width: 90%;background: #273242 !important; color: white !important;" data-bs-toggle="modal"
                             data-bs-target="#modalPendaftaran">Catatan Pendaftaran</button>
                     </div>
                     <form method="POST" action="{{ url('/registermlbb') }}" class="mt-5" enctype="multipart/form-data">

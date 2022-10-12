@@ -10,15 +10,13 @@ ICF 2022 - Daftar
     <table id="cart" class="table table-hover table-condensed">
         <thead>
             <tr>
-               <th style="width:8%">#</th>
-               <th style="width:60%">Your's Event</th>
+               <th style="width:80%">Your's Event</th>
             </tr>
         </thead>
         <tbody>
             @if (session('cart'))
                @foreach (session('cart') as $id => $details)
                   <tr>
-                     <td data-th="Id">{{ $details['id'] }}</td>
                      <td data-th="Nama">
                         <div class="row">
                            <div class="col-sm-3 hidden-xs"><img src="{{ url('/assets/img/poster.png')}}" height="200" width="150" alt="..." class="img-responsive"/></div>

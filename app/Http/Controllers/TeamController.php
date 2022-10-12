@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Team;
 use App\TeamDetail;
+use App\User;
 use Facade\FlareClient\View;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -76,6 +77,24 @@ class TeamController extends Controller
 
         return view('admin.daftarpeserta.lomba.pesertaLombaTiktok', ['data' => $pesertaLombaTiktok]);
     }
+
+   public function TeamDisplay(User $user, Event $event) 
+   {
+      if (Auth::user()->id != $user->id) {
+         $team = Team::where('users_id', Auth::user()->id)
+               ->where('events_id', $event->id)
+               ->first();
+         dd($team);
+         return view('teams.dashboard', compact('team'));
+      } else {
+         $team = Team::where('users_id', $user->id)
+            ->where('events_id', $event->id)
+            ->first();
+         dd($team);
+         return view('teams.dashboard', compact('team'));
+      }
+   }
+
     /**
      * Show the form for creating a new resource.
      *

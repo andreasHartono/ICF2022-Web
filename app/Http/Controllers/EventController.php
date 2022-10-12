@@ -66,7 +66,7 @@ class EventController extends Controller
                ->select('user_event.events_id as acara')
                ->where('users.id', $userid)
                ->get();
-
+    
 
         $event = Event::join('jenis','jenis.id','=','events.jenis_id')
                 ->join('images','images.events_id','=','events.id')
@@ -74,6 +74,27 @@ class EventController extends Controller
                 ->where('jenis.id','=',1)
                 ->orWhere('jenis.id','=',2)->get();
 
+
+        $user = User::find($userid);
+        $regist = $user->events()->get();
+        $registered = [];
+
+        foreach($event as $e){
+            $valid = 0;
+            foreach($regist as $r){
+                if($e->id == $r->id){
+                    $valid = 1;
+                }
+            }
+
+            if($valid == 1){
+                array_push($registered, 1);
+            }
+            else{
+                array_push($registered, 0);
+            }    
+        }
+        
          // foreach ($event as $e) {
          //    if($e->id === 1) {
          //       $test = DB::table('user_event')
@@ -123,7 +144,7 @@ class EventController extends Controller
          // }
          // dd($disabled);
       //   dd($cek);
-        return view('peserta.daftar',compact('event','disabled'));
+        return view('peserta.daftar',compact('event','disabled', 'registered'));
     }
 
     public function cart()

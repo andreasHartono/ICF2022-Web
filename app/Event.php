@@ -31,6 +31,6 @@ class Event extends Model
    //relasi M-N dengan table users
    public function users()
    {
-      return $this->belongsToMany('App\Users', 'user_event', 'events_id', 'user_id');
+      return $this->belongsToMany('App\Users', 'user_event', 'events_id', 'users_id');
    }
 }

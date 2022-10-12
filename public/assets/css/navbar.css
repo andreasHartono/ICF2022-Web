@@ -13,8 +13,8 @@
     background-color: #273242;
 }
 .btn{
-    background: #FFFF !important;
-    border-color: #FFFF !important;
+    background: red !important;
+    border-color: red !important;
     color: #273242 !important;
 }
 .navbar{

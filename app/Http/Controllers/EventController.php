@@ -57,7 +57,7 @@ class EventController extends Controller
         $lomba = Event::join('jenis','jenis.id','=','events.jenis_id')
             ->join('images','images.events_id','=','events.id')
             ->select('events.*','jenis.nama as name','image_url as url')
-            ->where('jenis.id','=',3)
+            ->where('jenis.nama','=','Lomba')
             ->get();
 
       $user = User::find($userid);
@@ -97,8 +97,8 @@ class EventController extends Controller
         $event = Event::join('jenis','jenis.id','=','events.jenis_id')
                 ->join('images','images.events_id','=','events.id')
                 ->select('events.*','jenis.nama as name','image_url as url')
-                ->where('jenis.id','=',1)
-                ->orWhere('jenis.id','=',2)->get();
+                ->where('jenis.nama','=','Seminar')
+                ->orWhere('jenis.nama','=','Workshop')->get();
 
 
         $user = User::find($userid);
@@ -161,6 +161,15 @@ class EventController extends Controller
                   Workshop berhasil, silahkan join ke Whatsapp Group untuk informasi lebih lanjut');      
     }
 
+
+    public function historyEvents() 
+    {
+      $userid = Auth::user()->id;
+      $user = User::find($userid); 
+      $events = $user->events()->get();
+      // dd($events);
+      return view('peserta.historyevent',compact('events'));
+    }
     /**
      * Display a listing of the resource.
      *

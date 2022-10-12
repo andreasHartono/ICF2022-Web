@@ -1,7 +1,7 @@
 @extends('layouts.mainweb')
 
 @section('title')
-ICF 2022 - Daftar
+ICF 2022 - Daftar Competition
 @endsection
 
 @section('content')

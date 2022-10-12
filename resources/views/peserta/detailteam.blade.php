@@ -1,7 +1,7 @@
 @extends('layouts.mainweb')
 
 @section('title')
-    Dashboard
+   ICF 2022 - Detail Team {{ $team->nama_tim }}
 @endsection
 
 @section('style')

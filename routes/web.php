@@ -33,9 +33,12 @@ Route::get('/competition', 'EventController@showLomba');
 
 
 
- Route::get('/cart', function () {
-    return view('cart');
- });
+//  Route::get('/cart', function () {
+//     return view('peserta.daftarevents');
+//  });
+//  Route::get('/chek', function () {
+//     return view('peserta.tescart');
+//  });
 
 
  Route::get('/product', function () {

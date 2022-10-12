@@ -327,7 +327,7 @@
                             @enderror
                         </div>
 
-                        <button class="btn myBtn width-90 mt-5 text-light" style="background: red !important;" type="submit">Register</button>
+                        <button class="btn myBtn width-90 mt-5 text-light" style="background: red !important; color: white !important;" type="submit">Register</button>
                     </form>
                 </div>
             </div>

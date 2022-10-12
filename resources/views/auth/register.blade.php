@@ -1,89 +1,118 @@
 @extends('layouts.mainweb')
+@section('style')
+<style>
+    .wavy {
+        -webkit-box-reflect:below -30px linear-gradient(transparent,rgba(94, 211, 160, 0.3));
+        position: relative;
+        display: inline-block;
+        color: #273242;
+        font-size: 2rem;
+        text-transform: uppercase;
+        animation: animate 1s ease-in-out infinite;
+        animation-delay: calc(0.1s * var(--i));
+        font-weight: bold;
+    }
 
+</style>
+@endsection
 @section('title')
-    Register
+Register
 @endsection
 
 @section('content')
-    <section id="register" style="margin: 80px 0 100px;">
-         @if (session()->has('success'))
-            <div class="alert alert-success alert-dismissible fade show" role="alert">
-                {{ session()->get('success') }}
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-            </div>
-         @elseif(session()->has('error'))
-            <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                {{ session()->get('error') }}
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-            </div>
-        @endif
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-6 col-md-8 col-sm-10 col-xs-11">
-                    <h2 class="fs-1 myTitle">REGISTRATION</h2>
-                    <div class="d-flex justify-content-center">
-                        <button class="btn myBtn" style="width: 400px; max-width: 90%;" data-bs-toggle="modal"
-                            data-bs-target="#modalPendaftaran">Catatan Pendaftaran</button>
-                    </div>
-                    <form method="POST" action="{{ url('/register_detail') }}" class="mt-5">
-                        @csrf
-                        <div class="data-anggota">
-                            <h5 class="text-center mt-5" style="font-weight: 600;">Register Account ICF</h5>
-                            <label class="myLabel">Nama</label>
-                            <input type="text" name="nama" id="txtNama"
-                                class="myTextbox width-90 @error('nama') is-invalid @enderror" placeholder="Input Nama Anda"
-                                >
-                            @error('nama')
-                                <div class="invalid-feedback text-center">
-                                    {{ $message }}
-                                </div>
-                            @enderror
-                            <label class="myLabel">Nomor HP</label>
-                            <input type="text" name="no_hp" id="txtNoHp"
-                                class="myTextbox width-90 @error('no_hp') is-invalid @enderror"
-                                placeholder="081123456789" >
-                            @error('no_hp')
-                                <div class="invalid-feedback text-center">
-                                    {{ $message }}
-                                </div>
-                            @enderror
-                            <label class="myLabel">Email</label>
-                            <input type="email" name="email" id="txtEmailKetua"
-                                class="myTextbox width-90 @error('email') is-invalid @enderror" placeholder="example@gmail.com"
-                                >
-                            @error('email')
-                                <div class="invalid-feedback text-center">
-                                    {{ $message }}
-                                </div>
-                            @enderror
-                            <label class="myLabel">Password</label>
-                            <input type="password" name="password" id="txtPassword"
-                                class="myTextbox width-90 @error('password') is-invalid @enderror" placeholder="Password"
-                                >
-                            @error('password')
-                                <div class="invalid-feedback text-center">
-                                    {{ $message }}
-                                </div>
-                            @enderror
-                            <div class="d-flex align-items-center" style="margin-left: 5%; position: relative;">
-                                <input type="checkbox" class="myChkbox mx-2" onclick="showPassword()">
-                                <span class="checkmark"></span>
-                                <span class="chkText">Show Password</span>
-                            </div>
-                        </div>
-
-                        <button class="btn myBtn btn-primary width-90 mt-5 nav-link" type="submit" style="background:red !important;">Register</button>
-                        <div class="row justify-content-center">
-                            <p class="text-center have-account">Already have an account? <a href="{{ url('/login') }}" class="btn-link">Login</a></p>
-                        </div>
-                    </form>
+<section id="register" style="margin: 80px 0 100px;">
+    @if (session()->has('success'))
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+        {{ session()->get('success') }}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    @elseif(session()->has('error'))
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        {{ session()->get('error') }}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    @endif
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-6 col-md-8 col-sm-10 col-xs-11">
+                <div style="text-align:center;">
+                    <span class="wavy" style="--i:1;">R</span>
+                    <span class="wavy" style="--i:2;">E</span>
+                    <span class="wavy" style="--i:3;">G</span>
+                    <span class="wavy" style="--i:4;">I</span>
+                    <span class="wavy" style="--i:5;">S</span>
+                    <span class="wavy" style="--i:6;">T</span>
+                    <span class="wavy" style="--i:7;">R</span>
+                    <span class="wavy" style="--i:8;">A</span>
+                    <span class="wavy" style="--i:9;">T</span>
+                    <span class="wavy" style="--i:10;">I</span>
+                    <span class="wavy" style="--i:11;">O</span>
+                    <span class="wavy" style="--i:12;">N</span>
+                    
                 </div>
+                <div class="d-flex justify-content-center">
+                    <!--<button class="btn-primary-outline myBtn " style="width: 400px; background-color:transparent; max-width: 90%;" data-bs-toggle="modal"
+                        data-bs-target="#modalPendaftaran">Catatan Pendaftaran</button> -->
+                </div>
+                <form method="POST" action="{{ url('/register_detail') }}" class="mt-5">
+                    @csrf
+                    <div class="data-anggota">
+                        <h5 class="text-center mt-5" style="font-weight: 600;">Register Account ICF</h5>
+                        <label class="myLabel">Nama</label>
+                        <input type="text" name="nama" id="txtNama"
+                            class="myTextbox width-90 @error('nama') is-invalid @enderror"
+                            placeholder="Input Nama Anda">
+                        @error('nama')
+                        <div class="invalid-feedback text-center">
+                            {{ $message }}
+                        </div>
+                        @enderror
+                        <label class="myLabel">Nomor HP</label>
+                        <input type="text" name="no_hp" id="txtNoHp"
+                            class="myTextbox width-90 @error('no_hp') is-invalid @enderror" placeholder="081123456789">
+                        @error('no_hp')
+                        <div class="invalid-feedback text-center">
+                            {{ $message }}
+                        </div>
+                        @enderror
+                        <label class="myLabel">Email</label>
+                        <input type="email" name="email" id="txtEmailKetua"
+                            class="myTextbox width-90 @error('email') is-invalid @enderror"
+                            placeholder="example@gmail.com">
+                        @error('email')
+                        <div class="invalid-feedback text-center">
+                            {{ $message }}
+                        </div>
+                        @enderror
+                        <label class="myLabel">Password</label>
+                        <input type="password" name="password" id="txtPassword"
+                            class="myTextbox width-90 @error('password') is-invalid @enderror" placeholder="Password">
+                        @error('password')
+                        <div class="invalid-feedback text-center">
+                            {{ $message }}
+                        </div>
+                        @enderror
+                        <div class="d-flex align-items-center" style="margin-left: 5%; position: relative;">
+                            <input type="checkbox" class="myChkbox mx-2" onclick="showPassword()">
+                            <span class="checkmark"></span>
+                            <span class="chkText">Show Password</span>
+                        </div>
+                    </div>
+
+                    <button class="btn myBtn btn-primary width-90 mt-5 nav-link" type="submit"
+                        style="background:red !important;">Register</button>
+                    <div class="row justify-content-center">
+                        <p class="text-center have-account">Already have an account? <a href="{{ url('/login') }}"
+                                class="btn-link">Login</a></p>
+                    </div>
+                </form>
             </div>
         </div>
+    </div>
 
 
-        <!-- Modal -->
-        {{-- <div class="modal fade" id="modalPendaftaran" tabindex="-1" aria-labelledby="modalPendaftaranLabel"
+    <!-- Modal -->
+    {{-- <div class="modal fade" id="modalPendaftaran" tabindex="-1" aria-labelledby="modalPendaftaranLabel"
             aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
                 <div class="modal-content">
@@ -149,18 +178,19 @@
                 </div>
             </div>
         </div> --}}
-    </section>
+</section>
 @endsection
 
 @section('script')
-    <script>
-        function showPassword() {
-            let txtPassword = document.getElementById("txtPassword");
-            if (txtPassword.type === "password") {
-                txtPassword.type = "text";
-            } else {
-                txtPassword.type = "password";
-            }
+<script>
+    function showPassword() {
+        let txtPassword = document.getElementById("txtPassword");
+        if (txtPassword.type === "password") {
+            txtPassword.type = "text";
+        } else {
+            txtPassword.type = "password";
         }
-    </script>
+    }
+
+</script>
 @endsection

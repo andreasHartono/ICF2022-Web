@@ -65,32 +65,26 @@ ICF 2022 - Home
           </li>
           <li>
               <div class="timeline-content">
-                  <h3  class="date">16 Oktober 2021</h3>
-                  <h1 class="content-timeline">Klinik PKM, PILMAPRES, Video Digital Pendidikan, KTI</h1>
+                  <h3  class="date">Day 1 (4 November 2022)</h3>
+                  <h1 class="content-timeline">Machine vs Human,
+Data for the Future,
+Competitive Programming</h1>
               </div>
           </li>
           <li>
               <div class="timeline-content">
-                  <h3  class="date">18-24 Oktober 2021</h3>
-                  <h1 class="content-timeline">Pengumpulan Proposal untuk di Revisi (PKM, KTI, dan Pilmapres)</h1>
+                  <h3  class="date">Day 2 (5 November 2022)</h3>
+                  <h1 class="content-timeline">Human Computer Interaction in Everyday Life,
+Mobile Legends: BangBang Competition </h1>
               </div>
           </li>
           <li>
               <div class="timeline-content">
-                  <h3  class="date">28-29 Oktober 2021</h3>
-                  <h1 class="content-timeline">Pengumpulan Final Proposal (PKM, KTI, dan Pilmapres)</h1>
-              </div>
-          </li>
-          <li>
-              <div class="timeline-content">
-                  <h3  class="date">30 Oktober 2021</h3>
-                  <h1 class="content-timeline">Technical Meeting Debat Indonesia, Debat Inggris, K-MIPA, Poster</h1>
-              </div>
-          </li>
-          <li>
-              <div class="timeline-content">
-                  <h3  class="date">8-12 November 2021</h3>
-                  <h1 class="content-timeline">Acara Perlombaan PIMUS XI</h1>
+                  <h3  class="date">Day 3 (6 November 2022)</h3>
+                  <h1 class="content-timeline">Toward Metaverse: Challenge and Opportunities,
+Augmented Reality vs Virtual Reality,
+Comic Strip Competition,
+Tiktok Competition Announcement</h1>
               </div>
           </li>
       </ul>

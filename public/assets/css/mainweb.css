@@ -1,6 +1,6 @@
 .mb-6 {
     margin-bottom: 2.5rem !important;
-    width: 252px !important;
+    width: 200px !important;
   }
   .fs-6 {
     font-size: 1rem !important;
@@ -12,4 +12,6 @@
   .btn-daftar{
     background-color: red!important;
   }
-
+  .nav{
+    margin-left: 7%;
+  }

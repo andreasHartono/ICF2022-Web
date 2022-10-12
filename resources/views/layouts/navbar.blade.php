@@ -3,8 +3,10 @@
     <div class="container flex-lg-row flex-nowrap align-items-center">
         <div class="navbar-brand w-100">
             <a href="{{ url('/') }}">
-                <img class="imgWhite" src="{{ asset('assets/img/logoicf.png') }}"
-                    srcset="{{ asset('assets/img/logoicf.png') }}" alt="" />
+                <img class="imgWhite" src="{{ asset('assets/img/logo/logo-ubaya.png') }}"
+                    srcset="{{ asset('assets/img/logo/logo-ubaya.png') }}" alt="" />
+                <img class="img" src="{{ asset('assets/img/logo/LOGO ICF (2).png') }}"
+                    srcset="{{ asset('assets/img/logo/LOGO ICF (2).png') }}" alt="" />
             </a>
         </div>
         <div class="navbar-collapse offcanvas offcanvas-nav offcanvas-start">

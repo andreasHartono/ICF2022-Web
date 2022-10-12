@@ -15,9 +15,9 @@ ICF 2022 - Workshop
                 <div class="col-lg-6 col-md-6 col-sm-12 mb-7 workshop-regis">
                     <div class="card mx-auto workshop-card" style="">
                         <h4>{{ $seminar[$i]->nama }}</h4>
-                        <p>{{ $seminar[$i]->deskripsi }}</p>
+                        <p style="text-align: justify;">{{ $seminar[$i]->deskripsi }}</p>
                         <p>Lokasi Acara : {{ $seminar[$i]->lokasi }}</p>
-                        <p>Syarat & Ketentuan <br> {{ $seminar[$i]->term_condition }}</p>
+                        <p style="text-align: justify;">Syarat & Ketentuan <br> {{ $seminar[$i]->term_condition }}</p>
                         <ul>
                             @php $date1 = date_create($seminar[$i]->tanggal_start);  $date2 = date_create($seminar[$i]->tanggal_end); @endphp
                             <li>Tanggal: {{ date_format($date1, "d F Y") }}<br>Pukul : {{ date_format($date1, "H:i")}} - {{ date_format($date2, "H:i")}}</li>

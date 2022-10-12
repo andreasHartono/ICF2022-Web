@@ -46,13 +46,39 @@ class EventController extends Controller
 
     public function front_lomba()
     {
+      $userid = Auth::user()->id;
+      $cek = DB::table('user_event')
+      ->join('users', 'users.id', '=', 'user_event.users_id')
+      ->join('events', 'events.id', '=', 'user_event.events_id')
+      ->select('user_event.events_id as acara')
+      ->where('users.id', $userid)
+         ->get();
+
         $lomba = Event::join('jenis','jenis.id','=','events.jenis_id')
             ->join('images','images.events_id','=','events.id')
             ->select('events.*','jenis.nama as name','image_url as url')
             ->where('jenis.id','=',3)
             ->get();
 
-        return view('peserta.showlomba',compact('lomba'));
+      $user = User::find($userid);
+      $regist = $user->events()->get();
+      $registered = [];
+
+      foreach ($lomba as $e) {
+         $valid = 0;
+         foreach ($regist as $r) {
+            if ($e->id == $r->id) {
+               $valid = 1;
+            }
+         }
+
+         if ($valid == 1) {
+            array_push($registered, 1);
+         } else {
+            array_push($registered, 0);
+         }
+      }
+        return view('peserta.showlomba',compact('lomba','registered'));
     }
     public function front_event()
     {
@@ -94,56 +120,6 @@ class EventController extends Controller
                 array_push($registered, 0);
             }    
         }
-        
-         // foreach ($event as $e) {
-         //    if($e->id === 1) {
-         //       $test = DB::table('user_event')
-         //          ->whereExists(function ($q) {
-         //             $q->select('events.id')->from('events')->where('events.id', 1)->where('events.id', 'user_event.events_id');
-         //          })->whereExists(function ($query) {
-         //             $query->select('users.id')->from('users')->where('users.id', Auth::user()->id)->where('users.id', 'user_event.users_id');
-         //          })->get();
-         //    } elseif ($e->id === 2) {
-         //       $test = DB::table('user_event')
-         //          ->whereExists(function ($q) {
-         //             $q->select('events.id')->from('events')->where('events.id', 2)->where('events.id', 'user_event.events_id');
-         //          })->whereExists(function ($query) {
-         //             $query->select('users.id')->from('users')->where('users.id', Auth::user()->id)->where('users.id', 'user_event.users_id');
-         //          })->get();
-         //    } elseif ($e->id === 3) {
-         //       $test = DB::table('user_event')
-         //          ->whereExists(function ($q) {
-         //             $q->select('events.id')->from('events')->where('events.id', 3)->where('events.id', 'user_event.events_id');
-         //          })->whereExists(function ($query) {
-         //             $query->select('users.id')->from('users')->where('users.id', Auth::user()->id)->where('users.id', 'user_event.users_id');
-         //          })->get();
-         //    } elseif ($e->id === 4) {
-         //       $test = DB::table('user_event')
-         //          ->whereExists(function ($q) {
-         //             $q->select('events.id')->from('events')->where('events.id', 4)->where('events.id','user_event.events_id');
-         //          })->whereExists(function ($query) {
-         //             $query->select('users.id')->from('users')->where('users.id', Auth::user()->id)->where('users.id', 'user_event.users_id');
-         //          })->get();
-         //    }
-         // dd($test);
-
-         // }
-         // for($i=0;$i<count($event);$i++)
-         // {
-         //    for($j=0;$j<count($cek);$j++) {
-         //       // dd($cek);
-         //       if($event[$i]->id == $cek[$i]->acara) {
-         //          $disabled = true;
-         //       }
-         //       else {
-         //          $disabled = false;
-         //       }
-         //       // dd($disabled);
-         //    }
-         //    // dd($disabled);
-         // }
-         // dd($disabled);
-      //   dd($cek);
         return view('peserta.daftar',compact('event','disabled', 'registered'));
     }
 

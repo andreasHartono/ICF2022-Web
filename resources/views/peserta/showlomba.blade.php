@@ -1,7 +1,7 @@
 @extends('layouts.mainweb')
 
 @section('title')
-ICF 2022 - Daftar
+ICF 2022 - Daftar Competition
 @endsection
 
 @section('content')
@@ -9,17 +9,47 @@ ICF 2022 - Daftar
    <div class="container marketing">
 
     <div class="row">
-        @for ($i=0;$i<count($lomba);$i++)
-            <div class="col-lg-4">
-                <img class="img-circle" src="{{ url('/assets/img/poster.png')}}" alt="{{ $lomba[$i]->url}}">
-                <h2>{{ $lomba[$i]->nama}}</h2>
-                <h5>Kategori : {{ $lomba[$i]->name}}</h5>
-                <p>{{ $lomba[$i]->deskripsi }}</p>
-                <p>Mulai : {{ $lomba[$i]->tanggal_start }}<br> Akhir : {{ $lomba[$i]->tanggal_end}}</p>
-                <p>Link WA : <a href="{{ $lomba[$i]->link_wa }}" class="btn">Click Me</a></p>
-                <p><a class="btn btn-soft-dark" href="{{ url('registerlomba/'.$lomba[$i]->id) }}" role="button">Register</a></p>
-            </div><!-- /.col-lg-4 -->
-        @endfor
+      @foreach ($lomba as $key => $comp)
+         <div class="col-lg-4">
+            <img class="img-circle" src="{{ url('/assets/img/poster.png')}}" alt="{{ $comp->url}}">
+            <h2>{{ $comp->nama}}</h2>
+            <p style="text-align: justify;">{{ $comp->deskripsi }}</p>
+            @php
+               $date1 = date_create($comp->tanggal_start);
+               $date2 = date_create($comp->tanggal_end);
+            @endphp
+            <h6>Tanggal Acara</h6>
+            <p style="text-align: center;"> {{ date_format($date1, 'd F Y') }} - {{ date_format($date2, 'd F Y') }}<br>Pukul :
+            {{ date_format($date1, 'H:i') }} - {{ date_format($date2, 'H:i') }}</p>
+            <ul>
+
+               @if($registered[$key] == 1)
+                  <li><a class="btn-holder text-center" href="{{ $comp->link_wa }}"
+                        role="button" style="background-color: #fff !important;">Link WA Group</a>
+                  </li>
+               @else
+                  <li style ="display:none;"><a class="btn-holder text-center" href="{{ $comp->link_wa }}"
+                     role="button" style="background-color: #fff !important; ">Link WA Group</a>
+                  </li>
+               @endif
+            </ul>
+            @if($registered[$key] == 1)
+                  <p class="disabled">
+                     <a class="btn btn-lg btn-block text-light " href="#" role="button" 
+                     style="background-color: red !important;cursor: not-allowed !important;
+                     opacity: 0.5;!important" disabled="true">
+                     Registered
+                     </a>
+                  </p>
+            @else
+               <p>
+                  <a class="btn btn-soft-dark text-light" href="{{ url('registerlomba/'.$comp->id) }}" role="button" 
+                     style="background: red !important; color: white !important ">Register</a>
+               </p>
+            @endif
+
+         </div><!-- /.col-lg-4 -->
+      @endforeach
     </div><!-- /.row -->
   </div>
 </div>

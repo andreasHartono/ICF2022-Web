@@ -57,7 +57,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" href="#">
+          <a class="nav-link " href="#">
 
               <i class="ni ni-calendar-grid-58 text-warning text-sm opacity-10"></i>
 

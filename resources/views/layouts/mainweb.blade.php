@@ -26,6 +26,12 @@
 <body>
 
     @include('layouts.navbar')
+    <!-- Modal Pop Up-->
+    @include('modals.term-cond-comprog')
+    @include('modals.term-cond-mlbb')
+    @include('modals.term-cond-comic')
+    @include('modals.term-cond-tiktok')
+
     @yield('content')
 
 

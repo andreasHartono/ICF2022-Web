@@ -47,6 +47,6 @@ class User extends Authenticatable
    //relasi M-N dengan table events
    public function events()
    {
-      return $this->belongsToMany('App\Events', 'user_event', 'users_id', 'events_id');
+      return $this->belongsToMany('App\Event', 'user_event', 'users_id', 'events_id');
    }
 }

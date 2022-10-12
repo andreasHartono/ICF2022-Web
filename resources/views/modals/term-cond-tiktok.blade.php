@@ -1,53 +1,11 @@
-@extends('layouts.mainweb')
-
-@section('title')
-    ICF 2022 - Register
-@endsection
-
-@section('content')
-    <section id="register" style="margin: 80px 0 100px;">
-
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-6 col-md-8 col-sm-10 col-xs-11">
-                    <h2 class="fs-1 myTitle">REGISTRATION</h2>
-                    <h5 class="fs-1 myTitle">Tiktok Challenges ICF 2022</h5>
-                    <div class="d-flex justify-content-center">
-                        <button class="btn myBtn"
-                            style="width: 400px; max-width: 90%; background: #273242 !important; color: white !important;"
-                            data-bs-toggle="modal" data-bs-target="#modalPendaftarantiktok">Catatan Pendaftaran</button>
-                    </div>
-                    <form method="POST" action="{{ url('/registertiktok') }}" class="mt-5" enctype="multipart/form-data">
-                        @csrf
-                        <input type="hidden" name="tiktokId" value="7">
-                        <input type="hidden" name="userId" value="{{ Auth::user()->id }}">
-                        <div class="data-tim">
-                            <Label class="myLabel">Tiktok Account</Label>
-                            <input type="text" name="akuntiktok" id="txtAkunTiktok"
-                                class="myTextbox width-90 @error('akuntiktok') is-invalid @enderror"
-                                placeholder="@exampleaa" value="{{ old('akuntiktok') }}">
-                            @error('akuntiktok')
-                                <div class="invalid-feedback text-center">
-                                    {{ $message }}
-                                </div>
-                            @enderror
-                        </div>
-                        <button class="btn myBtn width-90 mt-5 text-light"
-                            style="background: red !important; color: white !important;" type="submit">Register</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-
-
-        {{-- <!-- Modal -->
-        <div class="modal fade" id="modalPendaftaran" tabindex="-1" aria-labelledby="modalPendaftaranLabel"
+        <!-- Modal -->
+        <div class="modal fade" id="modalPendaftarantiktok" tabindex="-1" aria-labelledby="modalPendaftaranLabel"
             aria-hidden="true">
             <link rel="stylesheet" href="{{ asset('assets/css/popup.css') }}">
             <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="modalPendaftaranLabel">Mekanisme Pendaftaran</h5>
+                        <h5 class="modal-title" id="modalPendaftaranLabel">Mekanisme Pendaftaran ICF 2022 Tiktok Challenge Competition</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
@@ -71,8 +29,8 @@
                                         <li class="ketentuan">Video harus sesuai dengan tema yang diberikan dan wajib
                                             menampilkan background / acara ICF 2022 di dalamnya.</li>
                                         <li class="ketentuan">Durasi video minimal 1 menit dan maksimal 3 menit.</li>
-                                        <li class="ketentuan">Karya tidak melanggar hak cipta & menyinggung pihak lainnya.
-                                        </li>
+                                        <li class="ketentuan">Karya tidak melanggar hak cipta & menyinggung pihak
+                                            lainnya.</li>
                                         <li class="ketentuan">Setiap peserta hanya boleh mengirimkan 1 video.</li>
                                         <li class="ketentuan">Peserta diharapkan membawa perlengkapan masing-masing yang
                                             dibutuhkan untuk membuat video.</li>
@@ -85,14 +43,15 @@
                                             akun tiktok (<u><a class="hyperlink"
                                                     href="https://www.tiktok.com/@informatika.ubaya">@informatika.ubaya</a></u>)
                                         </li>
-                                        <li class="ketentuan">Peserta wajib upload video tiktok tersebut di akun pribadi dan
-                                            upload mirror di instagram reels dengan caption
-                                            berupa ajakan literasi digital atau teknologi jaman now, sertakan juga hashtag
-                                            #icfubaya2022 #lombavideotiktokubaya dan
+                                        <li class="ketentuan">Peserta wajib upload video tiktok tersebut di akun pribadi
+                                            dan upload mirror di instagram reels dengan caption
+                                            berupa ajakan literasi digital atau teknologi jaman now, sertakan juga
+                                            hashtag #icfubaya2022 #lombavideotiktokubaya dan
                                             mention @icfubaya2022 dan @informatik.ubaya</li>
-                                        <li class="ketentuan">Kriteria penilaian: kesesuaian tema, kreativitas, kemenarikan
-                                            video dan, pemilihan lagu.</li>
-                                        <li class="ketentuan">DKeputusan juri dan panitia tidak dapat diganggu gugat.</li>
+                                        <li class="ketentuan">Kriteria penilaian: kesesuaian tema, kreativitas,
+                                            kemenarikan video dan, pemilihan lagu.</li>
+                                        <li class="ketentuan">DKeputusan juri dan panitia tidak dapat diganggu gugat.
+                                        </li>
                                         <li class="ketentuan">Peserta yang melakukan kecurangan dalam bentuk apapun akan
                                             didiskualifikasi.</li>
                                         <li class="ketentuan">Peserta diharuskan menaati setiap butir yang ada pada
@@ -105,7 +64,4 @@
                     </div>
                 </div>
             </div>
-        </div> --}}
-      </div>
-    </section>
-@endsection
+        </div>

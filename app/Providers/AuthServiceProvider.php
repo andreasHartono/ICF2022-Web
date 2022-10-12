@@ -32,6 +32,12 @@ class AuthServiceProvider extends ServiceProvider
         Gate::define('superadmin-permission', function($user) {
             return ($user->sebagai =='superadmin');
         });
+
+      //   Gate::define('checkmember', function($user) {
+      //       return ($user->sebagai == 'peserta');
+      //   });
+
+        Gate::define('checkpeserta','App\Policies\PesertaPolicy@checkpeserta');
         //
     }
 }

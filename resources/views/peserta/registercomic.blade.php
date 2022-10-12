@@ -13,8 +13,8 @@ ICF 2022 - Register
               <h2 class="fs-1 myTitle">REGISTRATION</h2>
               <h5 class="fs-1 myTitle">Comic Strip Competition</h5>
               <div class="d-flex justify-content-center">
-                  <button class="btn myBtn" style="width: 400px; max-width: 90%;" data-bs-toggle="modal"
-                      data-bs-target="#modalPendaftaran">Catatan Pendaftaran</button>
+                  <button class="btn myBtn" style="width: 400px; max-width: 90%; background: #273242 !important; color: white !important;" data-bs-toggle="modal"
+                      data-bs-target="#modalPendaftarancomic">Catatan Pendaftaran</button>
               </div>
               <form method="POST" action="{{ url('/registercomic') }}" class="mt-5"
                   enctype="multipart/form-data">
@@ -23,7 +23,7 @@ ICF 2022 - Register
                       <h5 class="text-center" style="font-weight: 600;">Data Tim</h5>
                       <Label class="myLabel">Nama Tim</Label>
                       <input type="text" name="nama_tim" id="txtNamaTim"
-                          class="myTextbox width-90 @error('nama_tim') is-invalid @enderror" placeholder="Nama Tim"
+                          class="myTextbox width-90 @error('nama_tim') is-invalid @enderror" placeholder="Nama Tim" value="{{ old('nama_tim') }}"
                           >
                       @error('nama_tim')
                           <div class="invalid-feedback text-center">
@@ -33,42 +33,19 @@ ICF 2022 - Register
                       <label class="myLabel">Nama Instansi</label>
                       <input type="text" name="instansi" id="txtinstansi"
                           class="myTextbox width-90 @error('instansi') is-invalid @enderror"
-                          placeholder="Nama Instansi" >
+                          placeholder="Nama Instansi" value="{{ old('instansi') }}">
                       @error('instansi')
                           <div class="invalid-feedback text-center">
                               {{ $message }}
                           </div>
                       @enderror
-                      {{-- <label class="myLabel"></label>
-                      <input type="text" name="email" id="txtemail"
-                          class="myTextbox width-90  @error('email') is-invalid @enderror" placeholder="email"
-                          >
-                      @error('email')
-                          <div class="invalid-feedback text-center">
-                              {{ $message }}
-                          </div>
-                      @enderror --}}
-                      {{-- <label class="myLabel">Password</label>
-                      <input type="password" name="password" id="txtPassword"
-                          class="myTextbox width-90 @error('password') is-invalid @enderror" placeholder="Password"
-                          >
-                      @error('password')
-                          <div class="invalid-feedback text-center">
-                              {{ $message }}
-                          </div>
-                      @enderror
-                      <div class="d-flex align-items-center" style="margin-left: 5%; position: relative;">
-                          <input type="checkbox" class="myChkbox mx-2" onclick="showPassword()">
-                          <span class="checkmark"></span>
-                          <span class="chkText">Show Password</span>
-                      </div> --}}
                   </div>
 
                   <div class="data-anggota ketua">
                       <h5 class="text-center mt-5" style="font-weight: 600;">Data Ketua Tim</h5>
                       <label class="myLabel">Nama Ketua Tim</label>
                       <input type="text" name="name" id="txtNamaKetua"
-                          class="myTextbox width-90 @error('name') is-invalid @enderror" placeholder="Nama Ketua Tim"
+                          class="myTextbox width-90 @error('name') is-invalid @enderror" placeholder="Nama Ketua Tim" value="{{ old('name') }}"
                           >
                       @error('name')
                           <div class="invalid-feedback text-center">
@@ -78,7 +55,7 @@ ICF 2022 - Register
                       <label class="myLabel">Nomor HP</label>
                       <input type="text" name="phone_number" id="txtNoHpKetua"
                           class="myTextbox width-90 @error('phone_number') is-invalid @enderror"
-                          placeholder="Nomor HP" >
+                          placeholder="081123456789" value="{{ old('phone_number') }}">
                       @error('phone_number')
                           <div class="invalid-feedback text-center">
                               {{ $message }}
@@ -86,7 +63,7 @@ ICF 2022 - Register
                       @enderror
                       <label class="myLabel">Email</label>
                       <input type="email" name="email" id="txtEmailKetua"
-                          class="myTextbox width-90 @error('email') is-invalid @enderror" placeholder="Email"
+                          class="myTextbox width-90 @error('email') is-invalid @enderror" placeholder="Email" value="{{ old('email') }}"
                           >
                       @error('email')
                           <div class="invalid-feedback text-center">
@@ -110,7 +87,7 @@ ICF 2022 - Register
                       <h5 class="text-center mt-5" style="font-weight: 600;">Data Anggota 1</h5>
                       <label class="myLabel">Nama Anggota 1</label>
                       <input type="text" name="name1" id="txtNamaAnggota1" class="myTextbox width-90"
-                          placeholder="Nama Anggota 1">
+                          placeholder="Nama Anggota 1" value="{{ old('name1') }}">
                       @error('name1')
                           <div class="invalid-feedback text-center">
                               {{ $message }}
@@ -118,7 +95,7 @@ ICF 2022 - Register
                       @enderror
                       <label class="myLabel">Nomor HP</label>
                       <input type="text" name="phone_number1" id="txtNoHpAnggota1" class="myTextbox width-90"
-                          placeholder="Nomor HP">
+                          placeholder="089121345678" value="{{ old('phone_number1') }}">
                           @error('phone_number1')
                           <div class="invalid-feedback text-center">
                               {{ $message }}
@@ -126,7 +103,7 @@ ICF 2022 - Register
                           @enderror
                       <label class="myLabel">Email</label>
                       <input type="email" name="email1" id="txtEmailAnggota1" class="myTextbox width-90"
-                          placeholder="Email">
+                          placeholder="Email" value="{{ old('email1') }}">
                           @error('email1')
                           <div class="invalid-feedback text-center">
                               {{ $message }}
@@ -143,7 +120,7 @@ ICF 2022 - Register
                           @enderror
                           <p style="margin-left: 5%; margin-top: 0;">Format: Nama Tim_Nama</p>
                   </div>
-                  <button class="btn myBtn width-90 mt-5 btn-navy" type="submit">Register</button>
+                  <button class="btn myBtn width-90 mt-5 text-light" style="background: red !important; color: white !important;" type="submit">Register</button>
               </form>
           </div>
       </div>

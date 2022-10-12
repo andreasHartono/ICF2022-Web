@@ -23,9 +23,9 @@ Route::get('/faq', function () {
    return view('faq');
 });
 
-Route::get('/workshop', function () {
-    return view('workshop');
- });
+Route::get('/workshop', 'EventController@showWorkshop');
+Route::get('/seminar', 'EventController@showseminar');
+Route::get('/competition', 'EventController@showLomba');
  Route::get('/cart1', function () {
     return view('cart-bawaan');
  });
@@ -36,13 +36,13 @@ Route::get('/workshop', function () {
  Route::get('/cart', function () {
     return view('cart');
  });
- 
+
 
  Route::get('/product', function () {
     return view('product');
  });
- 
- 
+
+
 
 Route::get('/daftar', function () {
    return view('peserta.daftar');
@@ -100,6 +100,7 @@ Route::group(['middleware'=>'auth'], function() {
     Route::get('/peserta/daftarevents','EventController@front_event');
     Route::get('/peserta/add-to-cart/{event}', 'EventController@addToCart');
     Route::get('/peserta/cart','EventController@cart');
+    Route::get('/peserta/checkout','EventController@checkout');
     Route::get('/registerlomba/5', function () {
         return view('peserta.registerhackaton');
     });
@@ -119,6 +120,10 @@ Route::group(['middleware'=>'auth'], function() {
     Route::post('/registermlbb','RegistrationController@storeMlbb');
     Route::post('/registertiktok','RegistrationController@storeTiktok');
     Route::post('/registercomic','RegistrationController@storeComic');
+    
+    Route::get('/showteam/{users}/{event}', 'TeamController@TeamDisplay');
+    Route::get('/updatekartuteam/{team}', 'TeamController@updateKartuPeserta');
+    Route::get('/historyevents','EventController@historyEvents');
 });
 // Route::get('/home', 'HomeController@index')->name('home');
 

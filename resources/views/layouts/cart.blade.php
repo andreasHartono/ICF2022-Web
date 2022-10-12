@@ -6,7 +6,7 @@
 
     <title>@yield('title')</title>
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/frontend.css') }}">
 
@@ -17,12 +17,12 @@
 </head>
 <body>
 
-<div class="container">
+{{-- <div class="container"> --}}
 
-<nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+{{-- <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    {{-- {{ config('app.name', 'Laravel') }} --}}
+                    {{-- {{ config('app.name', 'Laravel') }}
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -35,9 +35,9 @@
                     </ul>
 
                     <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ml-auto">
+                    <ul class="navbar-nav ml-auto"> 
                         <!-- Authentication Links -->
-                        {{-- @guest
+                        @guest
                             <li class="nav-item">
                                 {{-- <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a> 
                             </li>
@@ -64,12 +64,12 @@
                                     </form>
                                 </div>
                             </li>
-                        @endguest --}}
+                        @endguest
                     </ul>
                 </div>
             </div>
-        </nav>
-    <div class="row">
+        </nav> 
+    {{-- <div class="row">
         <div class="col-lg-12 col-sm-12 col-12 main-section">
             <div class="dropdown">
                 <button type="button" class="btn btn-info" data-toggle="dropdown">
@@ -119,12 +119,65 @@
                 </div>
             </div>
         </div>
-    </div>
-</div>
+    </div> --}}
+{{-- </div> --}}
+<div class="container">
+         <div class="row">
+            <div class="col-lg-12 col-sm-12 col-12">
+               <div class="dropdown">
+                  <button type="button text-white" class="btn btn-info" data-toggle="dropdown" style="background-color: rgb(250, 173, 7) !important">
+                     <i class="fa fa-shopping-cart" aria-hidden="true"></i> &nbsp;Cart
+                  </button>
+                  <div class="dropdown-menu">
+                     <div class="row total-header-section">
+                        <div class="col-lg-6 col-sm-6 col-6">
+                           <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                        </div>
+                        <div class="col-lg-6 col-sm-6 col-6 total-section text-right">
+                           <p>Cart Event</p>
+                        </div>
+                     </div>
 
-<div class="container page">
-    @yield('content')
+                     @if (session('cart'))
+                         @foreach (session('cart') as $id=>$details)
+                              <div class="row cart-detail">
+                                 <div class="col-lg-4 col-sm-4 col-4 cart-detail-img">
+                                    <img src="{{ url('/assets/img/poster.png')}}">
+                                 </div>
+                                 <div class="col-lg-8 col-sm-8 col-8 cart-detail-product">
+                                    <p>{{ $details['nama'] }}</p>
+                                 </div>
+                              </div>
+                         @endforeach
+                     @endif
+
+                     <div class="row">
+                           <div class="col-lg-12 col-sm-12 col-12 text-center checkout">
+                              <a href="{{ url('peserta/cart') }}" class="btn btn-primary btn-block">View all</a>
+                           </div>
+                     </div>
+                  </div>
+            </div>
+         </div>
+      </div>
+   <div class="container page">
+         @if (session()->has('success'))
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                {{ session()->get('success') }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+         @elseif(session()->has('error'))
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                {{ session()->get('error') }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        @endif
+      @yield('content')
+   </div>
 </div>
+{{-- <div class="container page"> --}}
+    
+{{-- </div> --}}
 
 
 @yield('scripts')

@@ -42,7 +42,7 @@ ICF 2022 - Daftar Competition
                            </td>
                            <td>
                               @if($e->jenis_id === 3) 
-                                 <a class="btn" href="{{ url('showteam/'.Auth::user()->id.'/'.$e->id) }}" style="background-color: red !important; color: #fff !important;">
+                                 <a class="btn" href="{{ url('showteam/'. Auth::user()->id .'/'. $e->id) }}" style="background-color: red !important; color: #fff !important;">
                                     View Detail your Team
                                  </a>
                               @else

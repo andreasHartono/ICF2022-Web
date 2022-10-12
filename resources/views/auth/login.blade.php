@@ -9,11 +9,12 @@ ICF 2022 - LOGIN
         position: relative;
         display: inline-block;
         color: #273242;
-        font-size: 4rem;
+        font-size: 3rem;
         text-transform: uppercase;
         animation: animate 1s ease-in-out infinite;
         animation-delay: calc(0.1s * var(--i));
         font-weight: bold;
+        -webkit-box-reflect:below -60px linear-gradient(transparent,rgba(94, 211, 160, 0.1));
     }
 </style>
 @endsection

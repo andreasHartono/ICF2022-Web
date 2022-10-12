@@ -2,7 +2,7 @@
 @section('style')
 <style>
     .wavy {
-        -webkit-box-reflect:below -30px linear-gradient(transparent,rgba(94, 211, 160, 0.3));
+        -webkit-box-reflect:below -30px linear-gradient(transparent,rgba(94, 211, 160, 0.1));
         position: relative;
         display: inline-block;
         color: #273242;

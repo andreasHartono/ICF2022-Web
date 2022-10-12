@@ -9,7 +9,7 @@ ICF 2022 - Workshop
 <div class="workshop-container">
 <div class="row align-items-center">
     <div class="col-lg-6 col-md-6 col-sm-12 mb-3 d-flex justify-content-center workshop-poster">
-        <img src="{{ url('/assets/img/poster.png') }}" alt="Poster Workshop" style="width: 80%;">
+        <img src="{{ url('/assets/img/poster.png') }}" alt="Poster Workshop" style="width: 70%;">
     </div>
     <div class="col-lg-6 col-md-6 col-sm-12 mb-7 workshop-regis">
         <div class="card mx-auto workshop-card" style="">

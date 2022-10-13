@@ -10,8 +10,7 @@ ICF 2022 - Home
       <div class="row">
         <div class="col-md-10 col-lg-8 col-xl-8 col-xxl-6 mx-auto mb-13" data-cues="slideInDown" data-group="page-title">
           <h1 class="display-1 mb-4">ICF 2022</h1>
-          <p class="lead fs-lg px-xl-12 px-xxl-6 mb-7" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, exercitationem iste sint sed molestiae rerum mollitia unde, officiis vel distinctio
-             id cupiditate quasi, cumque ex nam? Deserunt eos nesciunt cumque.</p>
+          <p class="lead fs-lg px-xl-12 px-xxl-6 mb-7" >ICF (Informatics Creative Festival) adalah sebuah festival yang memamerkan hasil-hasil karya mahasiswa dari Informatika Universitas Surabaya. Tiap tahunnya, ICF mengenalkan desain dan pemrograman melalui pameran karya-karya mahasiswa akhir teknik informatika UBAYA. Selain itu, ICF juga ada berbagai macam seminar dan lomba untuk menambah pengetahuan dan mengasah kemampuan para peserta sesuai dengan perkembangan teknologi.</p>
           <div class="d-flex justify-content-center" data-cues="slideInDown" data-group="page-title-buttons" data-delay="600" >
 
               <span><a class="btn btn-primary rounded mx-1" style="background-color:  red !important;color:#fff !important; height:50px; width:200px; border-radius: 400px !important;">Register Now</a></span>
@@ -139,7 +138,7 @@ Tiktok Competition Announcement</h1>
       </div>
             <!--/.row -->
             {{-- penjelasan --}}
-            <section >
+            {{-- <section >
 
 
             <div class="container pt-10 pb-10 pt-md-10 pb-md-5 text-center">
@@ -157,34 +156,34 @@ Tiktok Competition Announcement</h1>
               </div>
               <!-- /.row -->
             </div>
-          </section>
+          </section> --}}
             {{-- /penjelasan --}}
             {{-- Workshop --}}
-            <div class="container pt-10 pb-15 pt-md-14 pb-md-20 text-center">
+            {{-- <div class="container pt-10 pb-15 pt-md-14 pb-md-20 text-center">
               <div class="row">
             <div class="col-md-10 col-lg-8 col-xl-8 col-xxl-6 mx-auto mb-13" data-cues="slideInDown" data-group="page-title">
             <h1 class="display-1 mb-4">Workshop</h1>
-            </div>
+            </div> --}}
              {{-- end Workshop --}}
 
             <div class="row gx-lg-8 gx-xl-12 gy-10 align-items-center">
               <div class="col-lg-6 position-relative">
                 <div class="shape rounded bg-pale-yellow rellax d-block" data-rellax-speed="0" style="top: 50%; left: 50%; width: 50%; height: 60%; transform: translate(-50%,-50%);z-index:0"></div>
                 <div class="row gx-md-5 gy-5 position-relative align-items-center">
-                  <div class="col-6">
+                  {{-- <div class="col-6">
                     <img class="img-fluid rounded shadow-lg d-flex ms-auto" data-cue="fadeIn" data-delay="300" src="{{ asset('assets/img/photos/sa13.jpg') }}" srcset="{{ asset('assets/img/photos/sa13@2x.jpg 2x') }}" alt="" />
-                  </div>
+                  </div> --}}
                   <!-- /column -->
-                  <div class="col-6">
+                  {{-- <div class="col-6">
                     <img class="img-fluid rounded shadow-lg mb-5" data-cue="fadeIn" data-delay="900" src="{{ asset('assets/img/photos/sa14.jpg') }}" srcset="{{ asset('assets/img/photos/sa14@2x.jpg 2x') }}" alt="" />
                     <img class="img-fluid rounded shadow-lg d-flex col-10" data-cue="fadeIn" data-delay="1200" src="{{ asset('assets/img/photos/sa15.jpg') }}" srcset="{{ asset('assets/img/photos/sa15@2x.jpg 2x') }}" alt="" />
-                  </div>
+                  </div> --}}
                   <!-- /column -->
                 </div>
                 <!-- /.row -->
               </div>
               <!--/column -->
-              <div class="col-lg-6">
+              {{-- <div class="col-lg-6">
                 <h3 class="display-4 mb-5">We bring solutions to manage your finance the way works best.</h3>
                 <p class="mb-5">Etiam porta sem malesuada magna mollis euismod. Donec ullamcorper nulla non metus auctor fringilla. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Fusce dapibus, tellus ac cursus commodo.</p>
                 <div class="row gy-3">
@@ -204,7 +203,7 @@ Tiktok Competition Announcement</h1>
                   <!--/column -->
                 </div>
                 <!--/.row -->
-              </div>
+              </div> --}}
               <!--/column -->
             </div>
             <!--/.row -->
@@ -232,27 +231,6 @@ Tiktok Competition Announcement</h1>
             </div>
             <!--/.row -->
             <div class="row text-center mt-12">
-              <div class="col-lg-9 mx-auto">
-                <h3 class="display-4 mb-0 text-center px-xl-10 px-xxl-15">Find out everything you need to know about creating a business process model</h3>
-                <div class="row gx-lg-8 gx-xl-12 process-wrapper text-center mt-9" data-cues="slideInUp" data-group="process">
-                  <div class="col-md-4"> <img src="{{ asset('assets/img/icons/lineal/shield.svg') }}" class="svg-inject icon-svg icon-svg-md text-red mb-3" alt="" />
-                    <h4 class="mb-1">1. Secured Transactions</h4>
-                    <p>Etiam porta malesuada magna mollis euismod sem.</p>
-                  </div>
-                  <!--/column -->
-                  <div class="col-md-4"> <img src="{{ asset('assets/img/icons/lineal/savings.svg') }}" class="svg-inject icon-svg icon-svg-md text-green mb-3" alt="" />
-                    <h4 class="mb-1">2. Budget Planning</h4>
-                    <p>Etiam porta malesuada magna mollis euismod sem.</p>
-                  </div>
-                  <!--/column -->
-                  <div class="col-md-4"> <img src="{{ asset('assets/img/icons/lineal/loading.svg') }}" class="svg-inject icon-svg icon-svg-md text-yellow mb-3" alt="" />
-                    <h4 class="mb-1">3. Up to Date</h4>
-                    <p>Etiam porta malesuada magna mollis euismod sem.</p>
-                  </div>
-                  <!--/column -->
-                </div>
-                <!--/.row -->
-              </div>
               <!-- /column -->
             </div>
             <!-- /.row -->
@@ -260,7 +238,7 @@ Tiktok Competition Announcement</h1>
           <!-- /.container -->
         </section>
         <!-- /section -->
-        <section class="wrapper bg-light">
+        {{-- <section class="wrapper bg-light">
           <div class="container py-14 py-md-17">
             <div class="row gx-lg-8 gx-xl-12 gy-6 mb-14 align-items-center">
               <div class="col-lg-7 position-relative">
@@ -502,7 +480,7 @@ Tiktok Competition Announcement</h1>
             </div>
           </div>
           <!-- /.container -->
-        </section>
+        </section> --}}
         <!-- /section -->
       </div>
       <!-- /.content-wrapper -->

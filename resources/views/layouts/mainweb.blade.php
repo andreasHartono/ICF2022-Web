@@ -42,7 +42,7 @@
         <div class="row gy-6 gy-lg-0">
           <div class="col-md-4 col-lg-3">
             <div class="widget">
-              <img class="mb-6" src="{{ asset('assets/img/logowhite.png') }}" srcset="{{ asset('assets/img/logowhite.png') }}" alt="" />
+              <img class="mb-6" src="{{ asset('logo/logoicf2.png') }}" srcset="{{ asset('logo/logoicf2.png') }}" alt="" />
 
               <nav class="nav social social-white">
                 <a href="#"><i class="uil uil-twitter"></i></a>
@@ -110,8 +110,8 @@
         </div>
         <!--/.row -->
         <div style="align-content: center; text-align: center;">
-          <p style="margin: 0px">Developed by ICF .. Comitee</p>
-          <p>Lapor bug & kendala web hubungi ...@gmail.com</p>
+          <p style="margin: 0px">Developed by ICF2022 Comitee</p>
+          <p>Lapor bug & kendala web hubungi icf@event.ubaya.ac.id</p>
             <!-- /column -->
           </div>
           <!--/.row -->

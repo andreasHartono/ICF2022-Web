@@ -7,8 +7,20 @@ ICF 2022 - Daftar Competition
 @section('content')
 <div class="body-cart">
    <div class="container marketing">
-
+   
     <div class="row">
+      @if(session()->has("success"))
+         <div class="alert alert-success alert-dismissible fade show" role="alert">
+            <strong>{{ session()->get("success") }}</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+         </div>
+      @endif
+      @if(session()->has("error"))
+         <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            <strong>{{ session()->get("error") }}</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+         </div>
+      @endif
       @foreach ($lomba as $key => $comp)
          <div class="col-lg-4">
             <img class="img-circle" src="{{ url('/assets/img/poster.png')}}" alt="{{ $comp->url}}">

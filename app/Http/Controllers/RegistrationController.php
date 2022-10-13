@@ -96,7 +96,7 @@ class RegistrationController extends Controller
 
       $dataMember3->save();
 
-      return redirect('daftarlomba')->with('status','Registrasi Tim Lomba MLBB berhasil, mohon menunggu untuk dikonfirmasi oleh panitia, terima kasih.');
+      return redirect('daftarlomba')->with('status','Registrasi Tim Lomba Competitive Programming berhasil, mohon menunggu untuk dikonfirmasi oleh panitia, terima kasih.');
    }
 
    public function storeMlbb(Request $request)
@@ -313,7 +313,7 @@ class RegistrationController extends Controller
         $request->file('image1')->move($imgFolder, $imgFile);
         $dataMember2->image = $imgFile;
 
-        return redirect('daftarlomba')->with('status','Registrasi Tim Lomba MLBB berhasil, mohon menunggu untuk dikonfirmasi oleh panitia, terima kasih.');
+        return redirect('daftarlomba')->with('status','Registrasi Tim Lomba Comic Strip berhasil, mohon menunggu untuk dikonfirmasi oleh panitia, terima kasih.');
    }
 
    public function storeTiktok(Request $request)

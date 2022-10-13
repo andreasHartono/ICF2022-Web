@@ -6,6 +6,18 @@
     <div class="content-wrapper">
         <section class="wrapper bg-gray">
             <div class="container py-3 py-5">
+               @if(session()->has("success"))
+                  <div class="alert alert-success alert-dismissible fade show" role="alert">
+                     <strong>{{ session()->get("success") }}</strong>
+                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                  </div>
+               @endif
+               @if(session()->has("error"))
+                  <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                     <strong>{{ session()->get("error") }}</strong>
+                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                  </div>
+               @endif
                 <a data-bs-toggle="offcanvas" data-bs-target="#offcanvas-cart" class="btn"
                     style="background: rgb(250, 173, 7) !important; color: #ffffff !important;">
                     <i class="uil uil-shopping-cart"></i> Your's Events

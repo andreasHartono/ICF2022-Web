@@ -9,6 +9,7 @@ use App\User;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+
 class RegistrationController extends Controller
 {
    public function storeHackaton(Request $request)
@@ -28,17 +29,19 @@ class RegistrationController extends Controller
          'nama' => ['required','max:45'],
          'no_hp' => ['required','max:45'],
          'email' => ['required','max:45'],
-         'image' => ['required','max:1024'],
+         'image' => ['required','mimes:pdf,jpg,png,jpeg','max:1024'],
          'nama1' => ['required','max:45'],
          'no_hp1' => ['required','max:45'],
          'email1' => ['required','max:45'],
-         'image1' => ['required','max:1024'],
+         'image1' => ['required','mimes:pdf,jpg,png,jpeg','max:1024'],
          'nama2' => ['required','max:45'],
          'no_hp2' => ['required','max:45'],
          'email2' => ['required','max:45'],
-         'image2' => ['required','max:1024']
+         'image2' => ['required','mimes:pdf,jpg,png,jpeg','max:1024']
       ]);
 
+      $comprog_id = $request->get('comprogId');
+      $user_id = $request->get('userId');
 
       $dataTeam = new Team();
 
@@ -96,7 +99,9 @@ class RegistrationController extends Controller
 
       $dataMember3->save();
 
-      return redirect('daftarlomba')->with('status','Registrasi Tim Lomba MLBB berhasil, mohon menunggu untuk dikonfirmasi oleh panitia, terima kasih.');
+      DB::table('user_event')->updateOrInsert(['users_id'=> $user_id , 'events_id'=> $comprog_id]);
+
+      return redirect('daftarlomba')->with('status','Registrasi Tim Lomba Competitive Programming berhasil, mohon menunggu untuk dikonfirmasi oleh panitia, terima kasih.');
    }
 
    public function storeMlbb(Request $request)
@@ -109,33 +114,36 @@ class RegistrationController extends Controller
             'name' => ['required','max:45'],
             'no_hp' => ['required','max:45'],
             'email' => ['required','max:45','email:dns'],
-            'image' => ['required','max:1024'],
+            'image' => ['required','mimes:pdf,jpg,png,jpeg','max:1024'],
             'idgame' => ['required'],
             'name1' => ['required','max:45'],
             'no_hp1' => ['required','max:45'],
             'email1' => ['required','max:45'],
-            'image1' => ['required','max:1024'],
+            'image1' => ['required','mimes:pdf,jpg,png,jpeg','max:1024'],
             'idgame1' => ['required'],
             'name2' => ['required','max:45'],
             'no_hp2' => ['required','max:45'],
             'email2' => ['required','max:45'],
-            'image2' => ['required','max:1024'],
+            'image2' => ['required','mimes:pdf,jpg,png,jpeg','max:1024'],
             'idgame2' => ['required'],
             'name3' => ['required','max:45'],
             'no_hp3' => ['required','max:45'],
             'email3' => ['required','max:45'],
-            'image3' => ['required','max:1024'],
+            'image3' => ['required','mimes:pdf,jpg,png,jpeg','max:1024'],
             'idgame3' => ['required'],
             'name4' => ['required','max:45'],
             'no_hp4' => ['required','max:45'],
             'email4' => ['required','max:45'],
-            'image4' => ['required','max:1024'],
+            'image4' => ['required','mimes:pdf,jpg,png,jpeg','max:1024'],
             'idgame4' => ['required'],
             'namacadangan' => ['max:45'],
             'no_hpcadangan' => ['max:45'],
             'emailcadangan' => ['max:45'],
             'idgamecadangan' => ['max:45'],
         ]);
+
+        $idmlbb = $request->get('idmlbb');
+        $user_id = $request->get('userId');
 
         $dataTeam = new Team();
 
@@ -247,6 +255,8 @@ class RegistrationController extends Controller
             $dataMember6->save();
         }
 
+         DB::table('user_event')->updateOrInsert(['users_id' => $user_id, 'events_id' => $idmlbb]);
+
         return redirect('daftarlomba')->with('status','Registrasi Tim Lomba MLBB berhasil, mohon menunggu untuk dikonfirmasi oleh panitia, terima kasih.');
    }
 
@@ -267,12 +277,15 @@ class RegistrationController extends Controller
             'name' => ['required','max:45'],
             'no_hp' => ['required','max:45'],
             'email' => ['required','max:45'],
-            'image' => ['required','max:1024'],
+            'image' => ['required','mimes:pdf,jpg,png,jpeg','max:1024'],
             'name1' => ['required','max:45'],
             'no_hp1' => ['required','max:45'],
             'email1' => ['required','max:45'],
-            'image1' => ['required','max:1024'],
+            'image1' => ['required','mimes:pdf,jpg,png,jpeg','max:1024'],
         ]);
+
+        $comic_id = $request->get('comicId');
+        $user_id = $request->get('userId');
 
         $dataTeam = new Team();
 
@@ -312,8 +325,11 @@ class RegistrationController extends Controller
         $imgFile = "ICF2022Foto_" . $request->file('image1')->getClientOriginalName();
         $request->file('image1')->move($imgFolder, $imgFile);
         $dataMember2->image = $imgFile;
+        
+         
+        DB::table('user_event')->updateOrInsert(['users_id' => $user_id, 'events_id' => $comic_id]);
 
-        return redirect('daftarlomba')->with('status','Registrasi Tim Lomba MLBB berhasil, mohon menunggu untuk dikonfirmasi oleh panitia, terima kasih.');
+        return redirect('daftarlomba')->with('status','Registrasi Tim Lomba Comic Strip berhasil, mohon menunggu untuk dikonfirmasi oleh panitia, terima kasih.');
    }
 
    public function storeTiktok(Request $request)
@@ -325,7 +341,7 @@ class RegistrationController extends Controller
         $user_id = $request->get('userId');
         $akuntiktok = $request->get('akuntiktok');
         DB::table('user_event')->updateOrInsert(['users_id'=>$user_id, 'events_id'=>$tiktok_id]);
-        DB::table('user_event')->where('id', '=',$user_id)->update(['akun_tiktok' => $akuntiktok]);
+        DB::table('users')->where('id', '=',$user_id)->update(['akun_tiktok' => $akuntiktok]);
    }
 
 }

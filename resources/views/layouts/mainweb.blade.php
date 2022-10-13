@@ -89,7 +89,7 @@
           <div class="col-md-3 col-lg-5">
             <div class="widget">
               <div class="col-12 mt-3">Our Location</div>
-              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15829.212720723352!2d112.7681119!3d-7.3198009!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x7536c23b4453a79!2sUniversity%20of%20Surabaya!5e0!3m2!1sen!2sid!4v1665068122899!5m2!1sen!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15829.212720723352!2d112.7681119!3d-7.3198009!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x7536c23b4453a79!2sUniversity%20of%20Surabaya!5e0!3m2!1sen!2sid!4v1665068122899!5m2!1sen!2sid" width="600" height="256" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                       <div id="mce-responses2" class="clear">
                         <div class="response" id="mce-error-response2" style="display:none"></div>
                         <div class="response" id="mce-success-response2" style="display:none"></div>

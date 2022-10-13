@@ -3,8 +3,10 @@
     <div class="container flex-lg-row flex-nowrap align-items-center">
         <div class="navbar-brand w-100">
             <a href="{{ url('/') }}">
-                <img class="imgWhite" src="{{ asset('assets/img/logoicf.png') }}"
-                    srcset="{{ asset('assets/img/logoicf.png') }}" alt="" />
+                <img class="imgWhite" src="{{ asset('assets/img/logo/logo-ubaya.png') }}"
+                    srcset="{{ asset('assets/img/logo/logo-ubaya.png') }}" alt="" />
+                <img class="img" src="{{ asset('assets/img/logo/LOGO ICF (2).png') }}"
+                    srcset="{{ asset('assets/img/logo/LOGO ICF (2).png') }}" alt="" />
             </a>
         </div>
         <div class="navbar-collapse offcanvas offcanvas-nav offcanvas-start">
@@ -95,34 +97,6 @@
                     </li>
                     @auth
                         @if (auth()->check())
-                             @if (auth()->user()->sebagai == 'peserta')
-                                 {{-- <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Welcome {{ auth()->user()->nama }}</a>
-                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-
-                                    </ul>
-                                 </li> --}}
-
-                                {{-- <li class="nav-item">
-                                    <a class="nav-link" href="{{ url('dashboard/' . auth()->user()->id) }}">Profile</a>
-                                </li> --}}
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ url('peserta/daftarevents') }}">Workshop Seminar</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ url('daftarlomba') }}">Lomba</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Daftar Tim</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Daftar Event</a>
-                                </li>
-                              @endif
-                        @endif
-                    @endauth
-                    @auth
-                        @if (auth()->check())
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Welcome {{ auth()->user()->nama }}</a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -139,10 +113,7 @@
                                           <a class="dropdown-item" href="{{ url('daftarlomba') }}">Lomba</a>
                                     </li>
                                     <li>
-                                          <a class="dropdown-item" href="#">Daftar Tim</a>
-                                    </li>
-                                    <li>
-                                          <a class="dropdown-item" href="#">Daftar Event</a>
+                                          <a class="dropdown-item" href="{{ url('historyevents') }}">History Event</a>
                                     </li>
                                 @endif
                                 <li>

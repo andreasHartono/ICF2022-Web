@@ -120,12 +120,12 @@ class EventController extends Controller
                 array_push($registered, 0);
             }    
         }
-        return view('peserta.daftar',compact('event','disabled', 'registered'));
+        return view('peserta.daftarevents',compact('event','disabled', 'registered'));
     }
 
     public function cart()
     {
-         return view('peserta.cartevent');
+         return view('peserta.tescart');
     }
 
     public function addToCart($id)

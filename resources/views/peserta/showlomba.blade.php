@@ -7,8 +7,20 @@ ICF 2022 - Daftar Competition
 @section('content')
 <div class="body-cart">
    <div class="container marketing">
-
+   
     <div class="row">
+      @if(session()->has("success"))
+         <div class="alert alert-success alert-dismissible fade show" role="alert">
+            <strong>{{ session()->get("success") }}</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+         </div>
+      @endif
+      @if(session()->has("error"))
+         <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            <strong>{{ session()->get("error") }}</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+         </div>
+      @endif
       @foreach ($lomba as $key => $comp)
          <div class="col-lg-4">
             <img class="img-circle" src="{{ url('/assets/img/poster.png')}}" alt="{{ $comp->url}}">
@@ -28,16 +40,16 @@ ICF 2022 - Daftar Competition
                         role="button" style="background-color: #fff !important;">Link WA Group</a>
                   </li>
                @else
-                  <li style ="display:none;"><a class="btn-holder text-center" href="{{ $comp->link_wa }}"
-                     role="button" style="background-color: #fff !important; ">Link WA Group</a>
+                  <li style ="display:none;"><a class="btn btn-primary text-center" href="{{ $comp->link_wa }}"
+                     role="button" style="background-color: #fff !important; color: red !important; border: 1px solid red !important;">Link WA Group</a>
                   </li>
                @endif
             </ul>
             @if($registered[$key] == 1)
                   <p class="disabled">
-                     <a class="btn btn-lg btn-block text-light " href="#" role="button" 
+                     <a class="btn btn-primary text-light " href="#" role="button" 
                      style="background-color: red !important;cursor: not-allowed !important;
-                     opacity: 0.5;!important" disabled="true">
+                     opacity: 0.5 !important; color: #fff !important;" disabled="true">
                      Registered
                      </a>
                   </p>

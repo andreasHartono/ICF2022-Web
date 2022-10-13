@@ -33,9 +33,12 @@ Route::get('/competition', 'EventController@showLomba');
 
 
 
- Route::get('/cart', function () {
-    return view('cart');
- });
+//  Route::get('/cart', function () {
+//     return view('peserta.daftarevents');
+//  });
+//  Route::get('/chek', function () {
+//     return view('peserta.tescart');
+//  });
 
  Route::get('/aboutus', function () {
    return view('aboutus');
@@ -126,8 +129,8 @@ Route::group(['middleware'=>'auth'], function() {
     Route::post('/registertiktok','RegistrationController@storeTiktok');
     Route::post('/registercomic','RegistrationController@storeComic');
     
-    Route::get('/showteam/{users}/{event}', 'TeamController@TeamDisplay');
-    Route::get('/updatekartuteam/{team}', 'TeamController@updateKartuPeserta');
+    Route::get('/showteam/{iduser}/{idevent}', 'TeamController@TeamDisplay');
+    Route::get('/updateteam/{team}', 'TeamController@updateKartuPeserta');
     Route::get('/historyevents','EventController@historyEvents');
 });
 // Route::get('/home', 'HomeController@index')->name('home');

@@ -9,7 +9,7 @@ ICF 2022 - Daftar Competition
    <div class="container marketing">
     <div class="row">
          <div class="col-lg-12">
-            <h2 class="text-center">Riwayat Acara Peserta {{ Auth::user()->nama }}</h2>
+            <h2 class="text-center">Riwayat Acara Yang Telah Dipilih {{ Auth::user()->nama }}</h2>
                <table class="table table-hover">
                   <thead>
                      <tr>
@@ -42,11 +42,11 @@ ICF 2022 - Daftar Competition
                            </td>
                            <td>
                               @if($e->jenis_id === 3) 
-                                 <a class="btn" href="{{ url('showteam/'.Auth::user()->id.'/'.$e->id) }}" style="background-color: red !important; color: #fff !important;">
+                                 <a class="btn" href="{{ url('showteam/'. Auth::user()->id .'/'. $e->id) }}" style="background-color: red !important; color: #fff !important;">
                                     View Detail your Team
                                  </a>
                               @else
-                                 <a href="{{ $e->link_wa }}" class="btn btn-link" style="border: 1px solid red !important; color: black !important;">Link Group Whatsapp</a>
+                                 <a href="{{ $e->link_wa }}" class="btn btn-link" style="border: 1px solid red !important; color: red !important; background: #fff !important;">Link Group Whatsapp</a>
                               @endif
                            </td>
 

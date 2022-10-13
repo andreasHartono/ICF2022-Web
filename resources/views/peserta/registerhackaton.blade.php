@@ -19,6 +19,8 @@ ICF 2022 - Register
               <form method="POST" action="{{ url('/registercomprog') }}" class="mt-5"
                   enctype="multipart/form-data">
                   @csrf
+                  <input type="hidden" name="comprogId" value="5">
+                  <input type="hidden" name="userId" value="{{ Auth::user()->id }}">
                   <div class="data-tim">
                       <h5 class="text-center" style="font-weight: 600;">Data Tim</h5>
                       <Label class="myLabel">Nama Tim</Label>

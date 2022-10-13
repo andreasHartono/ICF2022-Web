@@ -1,0 +1,28 @@
+.px-xl-0 {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+
+  }
+
+  .py-md-17{
+    padding-left: 8em !important;
+  }
+  .pb-10 {
+    padding-bottom: 2.5rem !important;
+  }
+  .pt-6 {
+    padding-top: 1.5rem !important;
+  }
+  .container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+    width: 100%;
+    padding-right: var(--bs-gutter-x,.75rem);
+    padding-left: var(--bs-gutter-x,.75rem);
+    margin-right: auto;
+    margin-left: auto;
+  }
+  * {
+    word-spacing: normal !important;
+  }
+  *, ::after, ::before {
+    box-sizing: border-box;
+  }

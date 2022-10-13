@@ -220,10 +220,12 @@ Tiktok Competition Announcement</h1>
                 <div class="mt-lg-n20 mt-xl-n22 position-relative">
                   <div class="shape bg-dot red rellax w-16 h-18" data-rellax-speed="1" style="top: 1rem; left: -3.9rem;"></div>
                   <div class="shape rounded-circle bg-line primary rellax w-18 h-18" data-rellax-speed="1" style="bottom: 2rem; right: -3rem;"></div>
-                  <video poster="{{ asset('assets/img/photos/movie.jpg') }}" class="player" playsinline controls preload="none">
-                    <source src="{{ asset('assets/media/movie.mp4') }}" type="video/mp4">
-                    <source src="{{ asset('assets/media/movie.webm') }}" type="video/webm">
-                  </video>
+                  {{-- <video poster="{{ asset('assets/img/photos/movie.jpg') }}" class="player" playsinline controls preload="none"> --}}
+                    <iframe width="777" height="437" src="https://www.youtube.com/embed/aK33uXl_qzo"
+                     title="Informatics Creative Festival 2021" frameborder="0" allow="accelerometer;
+                     autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                  {{-- </video> --}}
                 </div>
               </div>
               <!--/column -->

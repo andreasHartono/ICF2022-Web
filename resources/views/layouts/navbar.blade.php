@@ -113,7 +113,7 @@
                                           <a class="dropdown-item" href="{{ url('daftarlomba') }}">Lomba</a>
                                     </li>
                                     <li>
-                                          <a class="dropdown-item" href="{{ url('historyevents') }}">Daftar Event</a>
+                                          <a class="dropdown-item" href="{{ url('historyevents') }}">History Event</a>
                                     </li>
                                 @endif
                                 <li>

@@ -36,8 +36,9 @@ ICF 2022 - Daftar Competition
             <ul>
 
                @if($registered[$key] == 1)
-                  <li><a class="btn-holder text-center" href="{{ $comp->link_wa }}"
-                        role="button" style="background-color: #fff !important;">Link WA Group</a>
+                  <li>
+                     <a class="btn btn-primary text-center" href="{{ $comp->link_wa }}"
+                        role="button" style="background-color: #fff !important; color: red !important; border: 1px solid red !important;">Link WA Group</a>
                   </li>
                @else
                   <li style ="display:none;"><a class="btn btn-primary text-center" href="{{ $comp->link_wa }}"

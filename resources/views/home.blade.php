@@ -52,14 +52,14 @@ ICF 2022 - Home
       <ul>
           <li>
               <div class="timeline-content">
-                  <h3 class="date" id="timeline-date">16-22 September 2021</h3>
+                  <h3 class="date" id="timeline-date">16-30 Oktober 2022</h3>
                   <h1 class="content-timeline">Open Registration </h1>
               </div>
           </li>
           <li>
               <div class="timeline-content">
-                  <h3  class="date">25 September 2021</h3>
-                  <h1 class="content-timeline">Technical Meeting PKM, PILMAPRES, Video Digital Pendidikan, KTI</h1>
+                  <h3  class="date">31 Oktober 2022</h3>
+                  <h1 class="content-timeline">Technical Meeting All Competition</h1>
               </div>
           </li>
           <li>

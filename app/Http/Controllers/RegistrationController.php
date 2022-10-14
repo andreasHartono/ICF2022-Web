@@ -124,6 +124,13 @@ class RegistrationController extends Controller
    {
         $currentTime = Carbon::now();
 
+        date_default_timezone_set("Asia/Jakarta");
+         $endDate = "23 Oktober 2022";
+         $endDateTimestamp = strtotime($endDate);
+         if (time() >= $endDateTimestamp) {
+               return redirect('/daftarlomba')->with('registerClosed', 'Pendaftaran telah ditutup, sampai jumpa di Lomba lainnya di ICF 2023');
+         }
+
         $request->validate([
             'nama_tim' => ['required','max:45'],
             'instansi' => ['required','max:45'],
@@ -293,12 +300,12 @@ class RegistrationController extends Controller
             'instansi' => ['required','max:45'],
             'name' => ['required','max:45'],
             'phone_number' => ['required','max:45'],
-            'email' => ['required','max:45'],
+            'email' => ['required','max:45'],   
             'image' => ['required','mimes:pdf,jpg,png,jpeg','max:1024'],
-            'name1' => ['required','max:45'],
-            'phone_number1' => ['required','max:45'],
-            'email1' => ['required','max:45'],
-            'image1' => ['required','mimes:pdf,jpg,png,jpeg','max:1024'],
+            'name1' => ['max:45'],
+            'phone_number1' => ['max:45'],
+            'email1' => ['max:45'],
+            'image1' => ['mimes:pdf,jpg,png,jpeg','max:1024'],
         ]);
 
         $comic_id = $request->get('comicId');
@@ -362,11 +369,14 @@ class RegistrationController extends Controller
         $request->validate([
             'akuntiktok' => ['required','max:45'],
         ]);
+
         $tiktok_id = $request->get('tiktokId');
         $user_id = $request->get('userId');
         $akuntiktok = $request->get('akuntiktok');
         DB::table('user_event')->updateOrInsert(['users_id'=>$user_id, 'events_id'=>$tiktok_id]);
         DB::table('users')->where('id', '=',$user_id)->update(['akun_tiktok' => $akuntiktok]);
+
+        return redirect('daftarlomba')->with('status', 'Registrasi Tim Lomba Tiktok berhasil, mohon menunggu untuk dikonfirmasi oleh panitia, terima kasih.');
    }
 
 }

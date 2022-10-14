@@ -112,9 +112,7 @@ Route::group(['middleware'=>'auth'], function() {
     Route::get('/registerlomba/5', function () {
         return view('peserta.registerhackaton');
     });
-    Route::get('/registerlomba/6', function () {
-        return view('peserta.registermlbb');
-    });
+    Route::get('/registerlomba/6', 'AccountController@registerPageMLBB');
     Route::get('/registerlomba/7', function () {
         return view('peserta.registertiktok');
     });

@@ -48,6 +48,18 @@ class AccountController extends Controller
         // }
     }
 
+    public function registerPageMLBB()
+    {
+         date_default_timezone_set("Asia/Jakarta");
+         $endDate = "23 Oktober 2022";
+         $endDateTimestamp = strtotime($endDate);
+         if (time() >= $endDateTimestamp) {;
+               return redirect('/daftarlomba')->with('registerClosed', 'Pendaftaran telah ditutup, sampai jumpa di Lomba lainnya di ICF 2023');
+         } else {
+            return view('peserta.registermlbb');
+         }
+    }
+
     public function register(Request $request)
     {
         $request->validate([

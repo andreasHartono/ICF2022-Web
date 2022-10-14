@@ -30,10 +30,10 @@ class RegistrationController extends Controller
          'no_hp' => ['required','max:45'],
          'email' => ['required','max:45'],
          'image' => ['required','mimes:pdf,jpg,png,jpeg','max:1024'],
-         'nama1' => ['max:45'],
-         'no_hp1' => ['max:45'],
-         'email1' => ['max:45'],
-         'image1' => ['mimes:pdf,jpg,png,jpeg','max:1024'],
+         'nama1' => ['required','max:45'],
+         'no_hp1' => ['required','max:45'],
+         'email1' => ['required','max:45'],
+         'image1' => ['required','mimes:pdf,jpg,png,jpeg','max:1024'],
          'nama2' => ['max:45'],
          'no_hp2' => ['max:45'],
          'email2' => ['max:45'],
@@ -74,23 +74,23 @@ class RegistrationController extends Controller
       $email1 = $request->get('email1');
       $image1 = $request->file('image1');
 
-      if ($nama1 != null && $no_hp1 != null && $email1 != null && $image1 != null) 
-      {
-         $dataMember2 = new TeamDetail();
-         $dataMember2->teams_id = $newIdTeam;
-         $dataMember2->nama = $nama1;
-         $dataMember2->role = "anggota";
-         $dataMember2->no_hp = $no_hp1;
-         $dataMember2->email = $email1;
+      // if ($nama1 != null && $no_hp1 != null && $email1 != null && $image1 != null) 
+      // {
+      $dataMember2 = new TeamDetail();
+      $dataMember2->teams_id = $newIdTeam;
+      $dataMember2->nama = $nama1;
+      $dataMember2->role = "anggota";
+      $dataMember2->no_hp = $no_hp1;
+      $dataMember2->email = $email1;
 
-         //Image
-         $imgFolder = "files";
-         $imgFile = "ICF2022Foto_" . $image1->getClientOriginalName();
-         $image1->move($imgFolder, $imgFile);
-         $dataMember2->image = $imgFile;
+      //Image
+      $imgFolder = "files";
+      $imgFile = "ICF2022Foto_" . $image1->getClientOriginalName();
+      $image1->move($imgFolder, $imgFile);
+      $dataMember2->image = $imgFile;
 
-         $dataMember2->save();
-      }
+      $dataMember2->save();
+      // }
 
       $nama2 = $request->get('nama2');
       $no_hp2 = $request->get('no_hp2');

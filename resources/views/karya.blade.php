@@ -2,7 +2,7 @@
 <link rel="stylesheet" href="{{ asset('assets/css/workshop.css') }}">
 @section('title')
 ICF 2022 - Daftar Karya Pameran
-@endsection
+@e ndsection
 
 @section('content')
 {{-- @foreach ($workshop as $k => $w)

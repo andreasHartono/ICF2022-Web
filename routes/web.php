@@ -55,6 +55,12 @@ Route::get('/competition', 'EventController@showLomba');
 Route::get('/daftar', function () {
    return view('peserta.daftar');
 });
+
+Route::get('/karya', function () {
+    return view('karya');
+ });
+
+
 Route::get('/login', function () {
     return view('auth.login');
 })->name('login');
@@ -126,7 +132,7 @@ Route::group(['middleware'=>'auth'], function() {
     Route::post('/registermlbb','RegistrationController@storeMlbb');
     Route::post('/registertiktok','RegistrationController@storeTiktok');
     Route::post('/registercomic','RegistrationController@storeComic');
-    
+
     Route::get('/showteam/{iduser}/{idevent}', 'TeamController@TeamDisplay');
     Route::get('/updateteam/{team}', 'TeamController@updateKartuPeserta');
     Route::get('/historyevents','EventController@historyEvents');

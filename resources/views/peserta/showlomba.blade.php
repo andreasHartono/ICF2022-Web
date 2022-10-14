@@ -33,7 +33,7 @@ ICF 2022 - Daftar Competition
             <h6>Tanggal Acara</h6>
             <p style="text-align: center;"> {{ date_format($date1, 'd F Y') }} - {{ date_format($date2, 'd F Y') }}<br>Pukul :
             {{ date_format($date1, 'H:i') }} - {{ date_format($date2, 'H:i') }}</p>
-            <ul>
+            <ul style="list-style: none;">
 
                @if($registered[$key] == 1)
                   <li>

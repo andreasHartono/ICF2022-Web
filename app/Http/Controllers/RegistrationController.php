@@ -30,14 +30,14 @@ class RegistrationController extends Controller
          'no_hp' => ['required','max:45'],
          'email' => ['required','max:45'],
          'image' => ['required','mimes:pdf,jpg,png,jpeg','max:1024'],
-         'nama1' => ['required','max:45'],
-         'no_hp1' => ['required','max:45'],
-         'email1' => ['required','max:45'],
-         'image1' => ['required','mimes:pdf,jpg,png,jpeg','max:1024'],
-         'nama2' => ['required','max:45'],
-         'no_hp2' => ['required','max:45'],
-         'email2' => ['required','max:45'],
-         'image2' => ['required','mimes:pdf,jpg,png,jpeg','max:1024']
+         'nama1' => ['max:45'],
+         'no_hp1' => ['max:45'],
+         'email1' => ['max:45'],
+         'image1' => ['mimes:pdf,jpg,png,jpeg','max:1024'],
+         'nama2' => ['max:45'],
+         'no_hp2' => ['max:45'],
+         'email2' => ['max:45'],
+         'image2' => ['mimes:pdf,jpg,png,jpeg','max:1024']
       ]);
 
       $comprog_id = $request->get('comprogId');
@@ -69,35 +69,51 @@ class RegistrationController extends Controller
 
       $dataMember1->save();
 
-      $dataMember2 = new TeamDetail();
-      $dataMember2->teams_id = $newIdTeam;
-      $dataMember2->nama = $request->get('nama1');
-      $dataMember2->role = "anggota";
-      $dataMember2->no_hp = $request->get('no_hp1');
-      $dataMember2->email = $request->get('email1');
+      $nama1 = $request->get('nama1');
+      $no_hp1 = $request->get('no_hp1');
+      $email1 = $request->get('email1');
+      $image1 = $request->file('image1');
 
-      //Image
-      $imgFolder = "files";
-      $imgFile = "ICF2022Foto_" . $request->file('image1')->getClientOriginalName();
-      $request->file('image1')->move($imgFolder, $imgFile);
-      $dataMember2->image = $imgFile;
+      if ($nama1 != null && $no_hp1 != null && $email1 != null && $image1 != null) 
+      {
+         $dataMember2 = new TeamDetail();
+         $dataMember2->teams_id = $newIdTeam;
+         $dataMember2->nama = $nama1;
+         $dataMember2->role = "anggota";
+         $dataMember2->no_hp = $no_hp1;
+         $dataMember2->email = $email1;
 
-      $dataMember2->save();
+         //Image
+         $imgFolder = "files";
+         $imgFile = "ICF2022Foto_" . $image1->getClientOriginalName();
+         $image1->move($imgFolder, $imgFile);
+         $dataMember2->image = $imgFile;
 
-      $dataMember3 = new TeamDetail();
-      $dataMember3->teams_id = $newIdTeam;
-      $dataMember3->nama = $request->get('nama2');
-      $dataMember3->role = "anggota";
-      $dataMember3->no_hp = $request->get('no_hp2');
-      $dataMember3->email = $request->get('email2');
+         $dataMember2->save();
+      }
 
-      //Image
-      $imgFolder = "files";
-      $imgFile = "ICF2022Foto_" . $request->file('image2')->getClientOriginalName();
-      $request->file('image2')->move($imgFolder, $imgFile);
-      $dataMember3->image = $imgFile;
+      $nama2 = $request->get('nama2');
+      $no_hp2 = $request->get('no_hp2');
+      $email2 = $request->get('email2');
+      $image2 = $request->file('image2');
 
-      $dataMember3->save();
+      if ($nama2 != null && $no_hp2 != null && $email2 != null && $image2 != null) 
+      {
+         $dataMember3 = new TeamDetail();
+         $dataMember3->teams_id = $newIdTeam;
+         $dataMember3->nama = $nama2;
+         $dataMember3->role = "anggota";
+         $dataMember3->no_hp = $no_hp2;
+         $dataMember3->email = $email2;
+
+         //Image
+         $imgFolder = "files";
+         $imgFile = "ICF2022Foto_" . $image2->getClientOriginalName();
+         $image2->move($imgFolder, $imgFile);
+         $dataMember3->image = $imgFile;
+
+         $dataMember3->save();
+      }
 
       DB::table('user_event')->updateOrInsert(['users_id'=> $user_id , 'events_id'=> $comprog_id]);
 
@@ -139,6 +155,7 @@ class RegistrationController extends Controller
             'namacadangan' => ['max:45'],
             'no_hpcadangan' => ['max:45'],
             'emailcadangan' => ['max:45'],
+            'imagecadangan' => ['mimes:pdf,jpg,png,jpeg', 'max:1024'],
             'idgamecadangan' => ['max:45'],
         ]);
 
@@ -162,7 +179,7 @@ class RegistrationController extends Controller
         $dataMember1->role = "ketua";
         $dataMember1->no_hp = $request->get('no_hp');
         $dataMember1->email = $request->get('email');
-
+        $dataMember1->idgame = $request->get('idgame');
         //Image
         $imgFolder = "files";
         $imgFile = "ICF2022Foto_" . $request->file('image')->getClientOriginalName();
@@ -174,10 +191,10 @@ class RegistrationController extends Controller
         $dataMember2 = new TeamDetail();
         $dataMember2->teams_id = $newIdTeam;
         $dataMember2->nama = $request->get('name1');
-        $dataMember2->role = "anggota";
+        $dataMember2->role = "pemain 1";
         $dataMember2->no_hp = $request->get('no_hp1');
         $dataMember2->email = $request->get('email1');
-
+       $dataMember2->idgame = $request->get('idgame1');
         //Image
         $imgFolder = "files";
         $imgFile = "ICF2022Foto_" . $request->file('image1')->getClientOriginalName();
@@ -189,10 +206,10 @@ class RegistrationController extends Controller
         $dataMember3 = new TeamDetail();
         $dataMember3->teams_id = $newIdTeam;
         $dataMember3->nama = $request->get('name2');
-        $dataMember3->role = "anggota";
+        $dataMember3->role = "pemain 2";
         $dataMember3->no_hp = $request->get('no_hp2');
         $dataMember3->email = $request->get('email2');
-
+        $dataMember3->idgame = $request->get('idgame2');
         //Image
         $imgFolder = "files";
         $imgFile = "ICF2022Foto_" . $request->file('image2')->getClientOriginalName();
@@ -204,10 +221,10 @@ class RegistrationController extends Controller
         $dataMember4 = new TeamDetail();
         $dataMember4->teams_id = $newIdTeam;
         $dataMember4->nama = $request->get('name3');
-        $dataMember4->role = "anggota";
+        $dataMember4->role = "pemain 3";
         $dataMember4->no_hp = $request->get('no_hp3');
         $dataMember4->email = $request->get('email3');
-
+         $dataMember4->idgame = $request->get('idgame3');       
         //Image
         $imgFolder = "files";
         $imgFile = "ICF2022Foto_" . $request->file('image3')->getClientOriginalName();
@@ -219,10 +236,10 @@ class RegistrationController extends Controller
         $dataMember5 = new TeamDetail();
         $dataMember5->teams_id = $newIdTeam;
         $dataMember5->nama = $request->get('name4');
-        $dataMember5->role = "anggota";
+        $dataMember5->role = "pemain 4";
         $dataMember5->no_hp = $request->get('no_hp4');
         $dataMember5->email = $request->get('email4');
-
+         $dataMember5->idgame = $request->get('idgame4');
         //Image
         $imgFolder = "files";
         $imgFile = "ICF2022Foto_" . $request->file('image4')->getClientOriginalName();
@@ -235,21 +252,21 @@ class RegistrationController extends Controller
         $no_hpcadangan = $request->get('no_hpcadangan');
         $emailcadangan = $request->get('emailcadangan');
         $imagecadangan = $request->get('imagecadangan');
-        $idgamecadangan  = $request->get('idgamecadangan');
+        $idgamecadangan  = $request->file('idgamecadangan');
 
         if($namacadangan != null && $no_hpcadangan != null && $emailcadangan != null && $imagecadangan != null && $idgamecadangan != null)
         {
             $dataMember6 = new TeamDetail();
             $dataMember6->teams_id = $newIdTeam;
-            $dataMember6->nama = $request->get('name4');
-            $dataMember6->role = "anggota";
-            $dataMember6->no_hp = $request->get('no_hp4');
-            $dataMember6->email = $request->get('email4');
-
+            $dataMember6->nama = $namacadangan;
+            $dataMember6->role = "pemain cadangan";
+            $dataMember6->no_hp = $no_hpcadangan;
+            $dataMember6->email = $emailcadangan;
+            $dataMember6->idgame = $idgamecadangan;
             //Image
             $imgFolder = "files";
-            $imgFile = "ICF2022Foto_" . $request->file('image4')->getClientOriginalName();
-            $request->file('image4')->move($imgFolder, $imgFile);
+            $imgFile = "ICF2022Foto_" . $imagecadangan->getClientOriginalName();
+            $imagecadangan->move($imgFolder, $imgFile);
             $dataMember6->image = $imgFile;
 
             $dataMember6->save();
@@ -275,11 +292,11 @@ class RegistrationController extends Controller
             'nama_tim' => ['required','max:45'],
             'instansi' => ['required','max:45'],
             'name' => ['required','max:45'],
-            'no_hp' => ['required','max:45'],
+            'phone_number' => ['required','max:45'],
             'email' => ['required','max:45'],
             'image' => ['required','mimes:pdf,jpg,png,jpeg','max:1024'],
             'name1' => ['required','max:45'],
-            'no_hp1' => ['required','max:45'],
+            'phone_number1' => ['required','max:45'],
             'email1' => ['required','max:45'],
             'image1' => ['required','mimes:pdf,jpg,png,jpeg','max:1024'],
         ]);
@@ -313,19 +330,27 @@ class RegistrationController extends Controller
 
         $dataMember1->save();
 
-        $dataMember2 = new TeamDetail();
-        $dataMember2->teams_id = $newIdTeam;
-        $dataMember2->nama = $request->get('name1');
-        $dataMember2->role = "anggota";
-        $dataMember2->no_hp = $request->get('phone_number1');
-        $dataMember2->email = $request->get('email1');
+         $nama1 = $request->get('name1');
+         $no_hp1 = $request->get('phone_number1');
+         $email1 = $request->get('email1');
+         $image1 = $request->file('image1');
 
-         //Image
-        $imgFolder = "files";
-        $imgFile = "ICF2022Foto_" . $request->file('image1')->getClientOriginalName();
-        $request->file('image1')->move($imgFolder, $imgFile);
-        $dataMember2->image = $imgFile;
-        
+         if ($nama1 != null && $no_hp1 != null && $email1 != null && $image1 != null) 
+         {
+            $dataMember2 = new TeamDetail();
+            $dataMember2->teams_id = $newIdTeam;
+            $dataMember2->nama = $nama1;
+            $dataMember2->role = "anggota";
+            $dataMember2->no_hp = $no_hp1;
+            $dataMember2->email = $email1;
+
+            //Image
+            $imgFolder = "files";
+            $imgFile = "ICF2022Foto_" . $image1->getClientOriginalName();
+            $image1->move($imgFolder, $imgFile);
+            $dataMember2->image = $imgFile;
+            $dataMember2->save();
+         }
          
         DB::table('user_event')->updateOrInsert(['users_id' => $user_id, 'events_id' => $comic_id]);
 

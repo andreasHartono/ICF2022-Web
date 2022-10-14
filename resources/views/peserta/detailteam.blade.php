@@ -46,7 +46,7 @@
                               </div>
                               <div class="row justify-content-between">
                                  <div class="col-5">Nama</div>
-                                 <div class="col-7">{{ $item->name }}</div>
+                                 <div class="col-7">{{ $item->nama }}</div>
                               </div>
                               <div class="row justify-content-between">
                                  <div class="col-5">No HP</div>

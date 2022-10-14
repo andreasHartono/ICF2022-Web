@@ -475,6 +475,11 @@
 
 
                                 <div class="timeline-wrapper">
+                                    <div class="timeline-yr">
+
+                                        <span>4</span>
+
+                                    </div>
 
                                     <div class="timeline-info">
 
@@ -486,7 +491,7 @@
                                                     type="button" data-bs-toggle="collapse"
                                                     data-bs-target="#collapseNineBelas" aria-expanded="false"
                                                     aria-controls="collapseNineBelas">
-                                                    Siapa saja yang dapat berpartisipasi dalam lomba Hackaton ? 
+                                                    Siapa saja yang dapat berpartisipasi dalam lomba Hackaton ?
                                                 </button>
                                             </h2>
                                             <div id="collapseNineBelas" class="accordion-collapse collapse"
@@ -520,7 +525,7 @@
                                                     type="button" data-bs-toggle="collapse"
                                                     data-bs-target="#collapseNineBelasDua" aria-expanded="false"
                                                     aria-controls="collapseNineBelasDua">
-                                                    Bagaimana metode kompetisi lomba Competitive Programming ? 
+                                                    Bagaimana metode kompetisi lomba Competitive Programming ?
                                                 </button>
                                             </h2>
                                             <div id="collapseNineBelasDua" class="accordion-collapse collapse"
@@ -568,6 +573,12 @@
                                 </div>
                                 <div class="timeline-wrapper">
 
+                                    <div class="timeline-yr">
+
+                                        <span>5</span>
+
+                                    </div>
+
                                     <div class="timeline-info">
 
                                         <h3><span>Comic Strip Competition</span></h3>
@@ -596,7 +607,7 @@
                                                     type="button" data-bs-toggle="collapse"
                                                     data-bs-target="#collapseTwentyLima" aria-expanded="false"
                                                     aria-controls="collapseTwentyLima">
-                                                    Apa format warna yang digunakan dalam lomba comicstrip ? 
+                                                    Apa format warna yang digunakan dalam lomba comicstrip ?
                                                 </button>
                                             </h2>
                                             <div id="collapseTwentyLima" class="accordion-collapse collapse"
@@ -677,6 +688,11 @@
                                     </div>
                                 </div>
                                 <div class="timeline-wrapper">
+                                    <div class="timeline-yr">
+
+                                        <span>6</span>
+
+                                    </div>
 
                                     <div class="timeline-info">
 

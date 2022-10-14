@@ -56,7 +56,7 @@ Route::get('/daftar', function () {
    return view('peserta.daftar');
 });
 
-Route::get('/karya', function () {
+Route::get('/pameran', function () {
     return view('karya');
  });
 

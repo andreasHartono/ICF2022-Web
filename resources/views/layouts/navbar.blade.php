@@ -47,6 +47,12 @@
                         </ul>
                         <!--/.dropdown-menu -->
                     </li>
+                     <li class="nav-item dropdown">
+                        <a class="nav-link" href="{{ url('aboutus') }}">About Us</a>
+                        {{-- <ul class="dropdown-menu">
+                            <li class="nav-item"><a class="dropdown-item" href="#">Blog without Sidebar</a></li>
+                        </ul> --}}
+                    </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link" href="{{ url('/workshop') }}">Workshop</a>
                         {{-- <div class="dropdown-menu dropdown-lg">
@@ -69,6 +75,7 @@
                             <!-- /auto-column -->
                         </div> --}}
                     </li>
+
                     <li class="nav-item dropdown">
                         <a class="nav-link" href="{{ url('seminar') }}">Seminar</a>
                         {{-- <ul class="dropdown-menu">
@@ -81,14 +88,12 @@
                             <li class="nav-item"><a class="dropdown-item" href="#">Blog without Sidebar</a></li>
                         </ul> --}}
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link" href="{{ url('aboutus') }}">About Us</a>
+                     <li class="nav-item dropdown">
+                        <a class="nav-link" href="{{ url('pameran') }}">Pameran</a>
                         {{-- <ul class="dropdown-menu">
                             <li class="nav-item"><a class="dropdown-item" href="#">Blog without Sidebar</a></li>
                         </ul> --}}
                     </li>
-
-
                     <li class="nav-item dropdown">
                         <a class="nav-link" href="{{ url('/faq') }}">FAQ</a>
                         {{-- <ul class="dropdown-menu">

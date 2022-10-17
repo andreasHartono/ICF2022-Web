@@ -54,7 +54,7 @@
                         </ul> --}}
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link" href="{{ url('/workshop') }}">Workshop</a>
+                        {{-- <a class="nav-link" href="{{ url('/workshop') }}">Workshop</a> --}}
                         {{-- <div class="dropdown-menu dropdown-lg">
                             <div class="dropdown-lg-content">
                                 <div>
@@ -112,7 +112,7 @@
                                  @else
                                     {{-- Jangan dihapus dulu, lagi testing --}}
                                     <li>
-                                          <a class="dropdown-item" href="{{ url('peserta/daftarevents') }}">Workshop Seminar</a>
+                                          <a class="dropdown-item" href="{{ url('peserta/daftarevents') }}">Seminar</a>
                                     </li>
                                     <li>
                                           <a class="dropdown-item" href="{{ url('daftarlomba') }}">Lomba</a>

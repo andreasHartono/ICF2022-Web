@@ -160,8 +160,9 @@
                                                             <div
                                                                 class="accordion-body color-inside-faq faq-radialGradient-inside">
                                                                 <p>
-                                                                    Terdapat seminar-seminar tentang teknologi dan juga
-                                                                    lomba-lomba seru
+                                                                    Acaranya banyak, ada seminar teknologi, lomba nya juga
+                                                                    seru-seru, dan banyak hadiah menarik. Dan kamu bisa ikut
+                                                                    secara gratis
                                                                 </p>
                                                             </div>
                                                         </div>
@@ -185,10 +186,11 @@
                                                                 class="accordion-body color-inside-faq faq-radialGradient-inside">
                                                                 <p>
                                                                     Kamu akan dapat banyak ilmu terkait teknologi Artificial
-                                                                    Intelligence, Data, Cyber security. Selain itu kamu juga
-                                                                    bisa seru-seruan dengan ikut berbagai lomba-lomba yang
-                                                                    tersedia seperti MLBB, Hackaton, Tiktok, dan juga
-                                                                    comicstrip
+                                                                    Intelligence, Data, Human Computer Interaction, dan
+                                                                    masih banyak lagi. Selain itu kamu juga bisa seru-seruan
+                                                                    dengan ikut berbagai lomba-lomba yang tersedia seperti
+                                                                    Mobile Legends: Bang Bang Competition, Competitive
+                                                                    Programming, Tiktok, dan juga Comic Strip
                                                                 </p>
                                                             </div>
                                                         </div>
@@ -212,7 +214,7 @@
 
                                     <div class="timeline-info">
 
-                                        <h3><span>Seminar & Workshop</span></h3>
+                                        <h3><span>Seminar</span></h3>
                                         <p><b>
                                                 <div class="accordion-item faq-radialGradient">
                                                     <h2 class="accordion-header" id="headingSeven">
@@ -249,7 +251,7 @@
                                                         aria-labelledby="headingEight" data-bs-parent="#accordionExample">
                                                         <div
                                                             class="accordion-body color-inside-faq faq-radialGradient-inside">
-                                                            <p>Kamu bisa daftar sebelum tanggal 4 november ya</p>
+                                                            <p>Untuk seminar, pendaftaran terakhir tanggal 3 November ya</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -268,7 +270,13 @@
                                                         aria-labelledby="headingNine" data-bs-parent="#accordionExample">
                                                         <div
                                                             class="accordion-body color-inside-faq faq-radialGradient-inside">
-                                                            <p>Kamu bisa daftar sebelum tanggal 4 november ya</p>
+                                                            <p>
+                                                                Untuk seminar dan juga lomba (Mobile Legends: Bang Bang
+                                                                Competition, Tiktok, dan juga Comic Strip), dapat diikuti
+                                                                oleh peserta secara umum. Sedangkan khusus untuk lomba
+                                                                Competitive Programming hanya boleh diikuti oleh siswa SMA
+                                                                (atau sederajat) aktif yang akan menjadi perwakilan sekolah.
+                                                            </p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -333,7 +341,7 @@
                                                                 “Machine vs Human” dan “Data for the Future”, dalam bidang
                                                                 UI/UX ada” Human Computer Interaction in Everyday Live”, dan
                                                                 dalam bidang multimedia ada “Toward Metaverse: Challenge and
-                                                                Opportunities” serta Augmented Reality vs Virtual Reality
+                                                                Opportunities” serta “Augmented Reality vs Virtual Reality”
                                                             </p>
                                                         </div>
                                                     </div>
@@ -371,7 +379,8 @@
                                                 aria-labelledby="headingTigaBelas" data-bs-parent="#accordionExample">
                                                 <div class="accordion-body color-inside-faq faq-radialGradient-inside">
                                                     Lomba MLBB dilaksanakan terlebih dahulu karena terdapat beberapa tahapan
-                                                    seleksi awal
+                                                    seleksi awal, sehingga terdapat 4 tim yang akan maju sebagai semifinalis
+                                                    dan akan lomba secara offline.
                                                 </div>
                                             </div>
                                         </div>
@@ -403,13 +412,15 @@
                                                     type="button" data-bs-toggle="collapse"
                                                     data-bs-target="#collapseLimaBelas" aria-expanded="false"
                                                     aria-controls="collapseLimaBelas">
-                                                    Berapa jumlah orang dalam satu tim ?
+                                                    Siapa saja yang dapat berpartisipasi dalam lomba MLBB?
                                                 </button>
                                             </h2>
                                             <div id="collapseLimaBelas" class="accordion-collapse collapse"
                                                 aria-labelledby="headingLimaBelas" data-bs-parent="#accordionExample">
                                                 <div class="accordion-body color-inside-faq faq-radialGradient-inside">
-                                                    <p>Satu tim berjumlah 6 orang, dan diperbolehkan tambahan 1 orang lagi sebagai cadangan/coach.</p>
+                                                    <p>Lomba MLBB ini dapat diikuti oleh peserta secara umum, pelajar dan
+                                                        mahasiswa juga dapat berpartisipasi mengikuti lomba MLBB ini
+                                                    </p>
                                                 </div>
                                             </div>
                                         </div>
@@ -421,13 +432,13 @@
                                                     type="button" data-bs-toggle="collapse"
                                                     data-bs-target="#collapseEnamBelas" aria-expanded="false"
                                                     aria-controls="collapseEnamBelas">
-                                                    Bagaimana metode kompetisi lomba MLBB ?
+                                                    Bagaimana cara mendaftar lomba MLBB ?
                                                 </button>
                                             </h2>
                                             <div id="collapseEnamBelas" class="accordion-collapse collapse"
                                                 aria-labelledby="headingEnamBelas" data-bs-parent="#accordionExample">
                                                 <div class="accordion-body color-inside-faq faq-radialGradient-inside">
-                                                    <p>Lomba MLBB menggunakan metode multi slot, setiap tim yang mengaktifkan multi slot akan mendapatkan kesempatan untuk bertanding sekali lagi di bracket berbeda (Setiap tim dapat bermain 2x dengan biaya pendaftaran 2x juga)</p>
+                                                    <p>Pendaftaran dapat dilakukan melalui Website ICF 2022.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -439,13 +450,15 @@
                                                     type="button" data-bs-toggle="collapse"
                                                     data-bs-target="#collapseTujuhBelas" aria-expanded="false"
                                                     aria-controls="collapseTujuhBelas">
-                                                    Bagaimana tahapan kompetisi lomba MLBB ?
+                                                    Berapa jumlah orang dalam satu tim?
                                                 </button>
                                             </h2>
                                             <div id="collapseTujuhBelas" class="accordion-collapse collapse"
                                                 aria-labelledby="headingTujuhBelas" data-bs-parent="#accordionExample">
                                                 <div class="accordion-body color-inside-faq faq-radialGradient-inside">
-                                                    <p>Peserta lomba MLBB akan mengikut rangkaian tahapan kompetisi mulai dari babak penyisihan, semifinal dan juga final.</p>
+                                                    <p>Satu tim berjumlah 5 orang, dan diperbolehkan tambahan 1 orang lagi
+                                                        sebagai cadangan/coach.
+                                                    </p>
                                                 </div>
                                             </div>
                                         </div>
@@ -457,13 +470,78 @@
                                                     type="button" data-bs-toggle="collapse"
                                                     data-bs-target="#collapseDelapanBelas" aria-expanded="false"
                                                     aria-controls="collapseDelapanBelas">
-                                                    Seperti apa hadiah bagi pemenang lomba MLBB ?
+                                                    Bagaimana tahapan kompetisi lomba MLBB?
                                                 </button>
                                             </h2>
                                             <div id="collapseDelapanBelas" class="accordion-collapse collapse"
                                                 aria-labelledby="headingDelapanBelas" data-bs-parent="#accordionExample">
                                                 <div class="accordion-body color-inside-faq faq-radialGradient-inside">
-                                                    <p>Terdapat total hadiah jutaan rupiah bagi pemenang lomba MLBB dan juga sertifikat pemenang</p>
+                                                    <p>Peserta lomba MLBB akan mengikut rangkaian tahapan kompetisi mulai
+                                                        dari babak penyisihan, seminal dan juga final.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <br>
+                                        <div class="accordion-item faq-radialGradient">
+                                            <h2 class="accordion-header" id="headingDelapanBelasSatu">
+                                                <button
+                                                    class="accordion-button collapsed color-title-faq faq-radialGradient-title"
+                                                    type="button" data-bs-toggle="collapse"
+                                                    data-bs-target="#collapseDelapanBelasSatu" aria-expanded="false"
+                                                    aria-controls="collapseDelapanBelasSatu">
+                                                    Seperti apa hadiah bagi pemenang lomba MLBB ?
+                                                </button>
+                                            </h2>
+                                            <div id="collapseDelapanBelasSatu" class="accordion-collapse collapse"
+                                                aria-labelledby="headingDelapanBelasSatu"
+                                                data-bs-parent="#accordionExample">
+                                                <div class="accordion-body color-inside-faq faq-radialGradient-inside">
+                                                    <p>Terdapat total hadiah jutaan rupiah bagi pemenang lomba MLBB dan juga
+                                                        sertifikat pemenang
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <br>
+                                        <div class="accordion-item faq-radialGradient">
+                                            <h2 class="accordion-header" id="headingDelapanBelasDua">
+                                                <button
+                                                    class="accordion-button collapsed color-title-faq faq-radialGradient-title"
+                                                    type="button" data-bs-toggle="collapse"
+                                                    data-bs-target="#collapseDelapanBelasDua" aria-expanded="false"
+                                                    aria-controls="collapseDelapanBelasDua">
+                                                    Apa saja hal yang dapat membuat peserta didiskualifikasi ?
+                                                </button>
+                                            </h2>
+                                            <div id="collapseDelapanBelasDua" class="accordion-collapse collapse"
+                                                aria-labelledby="headingDelapanBelasDua"
+                                                data-bs-parent="#accordionExample">
+                                                <div class="accordion-body color-inside-faq faq-radialGradient-inside">
+                                                    <p>Melakukan kecurangan dalam bentuk apapun, tidak hadir tepat waktu
+                                                        pada jadwal lomba yang sudah ditentukan panitia, melakukan SARA dan
+                                                        ujaran kebencian dalam bentuk apapun, dan melanggar tata tertib/
+                                                        peraturan lomba (tertera pada modul).
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <br>
+                                        <div class="accordion-item faq-radialGradient">
+                                            <h2 class="accordion-header" id="headingDelapanBelasTiga">
+                                                <button
+                                                    class="accordion-button collapsed color-title-faq faq-radialGradient-title"
+                                                    type="button" data-bs-toggle="collapse"
+                                                    data-bs-target="#collapseDelapanBelasTiga" aria-expanded="false"
+                                                    aria-controls="collapseDelapanBelasTiga">
+                                                    Siapa yang dapat saya hubungi jika masih memiliki pertanyaan ?
+                                                </button>
+                                            </h2>
+                                            <div id="collapseDelapanBelasTiga" class="accordion-collapse collapse"
+                                                aria-labelledby="headingDelapanBelasTiga"
+                                                data-bs-parent="#accordionExample">
+                                                <div class="accordion-body color-inside-faq faq-radialGradient-inside">
+                                                    <p>Bisa hubungi di nomor 082228860862 a.n. Ansa
+                                                    </p>
                                                 </div>
                                             </div>
                                         </div>
@@ -484,88 +562,194 @@
                                     <div class="timeline-info">
 
                                         <h3><span>Competitive Programming Competition</span></h3>
-                                          <div class="accordion-item faq-radialGradient">
+                                        <div class="accordion-item faq-radialGradient">
                                             <h2 class="accordion-header" id="headingNineBelas">
                                                 <button
                                                     class="accordion-button collapsed color-title-faq faq-radialGradient-title"
                                                     type="button" data-bs-toggle="collapse"
                                                     data-bs-target="#collapseNineBelas" aria-expanded="false"
                                                     aria-controls="collapseNineBelas">
-                                                    Siapa saja yang dapat berpartisipasi dalam lomba Hackaton ?
+                                                    Siapa saja yang dapat berpartisipasi dalam lomba Competitive Programming
+                                                    ?
                                                 </button>
                                             </h2>
                                             <div id="collapseNineBelas" class="accordion-collapse collapse"
                                                 aria-labelledby="headingNineBelas" data-bs-parent="#accordionExample">
                                                 <div class="accordion-body color-inside-faq faq-radialGradient-inside">
-                                                    <p>Lomba hackaton dapat di ikuti hanya oleh Pelajar SMA/Sederajat yang masih Aktif </p>
+                                                    <p>Lomba Competitive Programming hanya dapat diikuti oleh Pelajar
+                                                        SMA/Sederajat yang masih aktif
+                                                    </p>
                                                 </div>
                                             </div>
                                         </div><br>
-                                          <div class="accordion-item faq-radialGradient">
+                                        <div class="accordion-item faq-radialGradient">
                                             <h2 class="accordion-header" id="headingNineBelasSatu">
                                                 <button
                                                     class="accordion-button collapsed color-title-faq faq-radialGradient-title"
                                                     type="button" data-bs-toggle="collapse"
                                                     data-bs-target="#collapseNineBelasSatu" aria-expanded="false"
                                                     aria-controls="collapseNineBelasSatu">
-                                                    Berapa jumlah orang dalam satu tim ?
+                                                    Bagaimana cara mendaftar lomba Competitive Programming?
                                                 </button>
                                             </h2>
                                             <div id="collapseNineBelasSatu" class="accordion-collapse collapse"
                                                 aria-labelledby="headingNineBelasSatu" data-bs-parent="#accordionExample">
                                                 <div class="accordion-body color-inside-faq faq-radialGradient-inside">
-                                                    <p>Setiap tim dapat berjumlah maksimal 3 orang dan minimal 1 orang</p>
+                                                    <p>Pendaftaran dapat dilakukan melalui Website ICF 2022.
+                                                    </p>
                                                 </div>
                                             </div>
                                         </div><br>
-                                          <div class="accordion-item faq-radialGradient">
+                                        <div class="accordion-item faq-radialGradient">
                                             <h2 class="accordion-header" id="headingNineBelasDua">
                                                 <button
                                                     class="accordion-button collapsed color-title-faq faq-radialGradient-title"
                                                     type="button" data-bs-toggle="collapse"
                                                     data-bs-target="#collapseNineBelasDua" aria-expanded="false"
                                                     aria-controls="collapseNineBelasDua">
-                                                    Bagaimana metode kompetisi lomba Competitive Programming ?
+                                                    Berapa jumlah orang dalam satu tim?
                                                 </button>
                                             </h2>
                                             <div id="collapseNineBelasDua" class="accordion-collapse collapse"
                                                 aria-labelledby="headingNineBelasDua" data-bs-parent="#accordionExample">
                                                 <div class="accordion-body color-inside-faq faq-radialGradient-inside">
-                                                    <p>Peserta akan melakukan lomba competitive programming secara offline dalam acara dengan soal competitive programming yang telah disediakan panitia.</p>
+                                                    <p>Setiap tim dapat berjumlah maksimal 3 orang dan minimal 2 orang
+                                                    </p>
                                                 </div>
                                             </div>
                                         </div><br>
-                                          <div class="accordion-item faq-radialGradient">
+                                        <div class="accordion-item faq-radialGradient">
                                             <h2 class="accordion-header" id="headingNineBelasTiga">
                                                 <button
                                                     class="accordion-button collapsed color-title-faq faq-radialGradient-title"
                                                     type="button" data-bs-toggle="collapse"
                                                     data-bs-target="#collapseNineBelasTiga" aria-expanded="false"
                                                     aria-controls="collapseNineBelasTiga">
-                                                    Seperti apa hadiah bagi pemenang lomba Hackaton ?
+                                                    Apabila 1 tim hanya terdiri dari 1 orang, apakah bisa berpartisipasi ?
                                                 </button>
                                             </h2>
                                             <div id="collapseNineBelasTiga" class="accordion-collapse collapse"
                                                 aria-labelledby="headingNineBelasTiga" data-bs-parent="#accordionExample">
                                                 <div class="accordion-body color-inside-faq faq-radialGradient-inside">
-                                                    <p>Pemenang lomba hackaton akan mendapatkan total hadiah jutaan rupiah dan sertifikat pemenang</p>
+                                                    <p>Tidak bisa ya, jumlah anggota tiap tim minimal 2 orang
+                                                    </p>
                                                 </div>
                                             </div>
                                         </div><br>
-                                          <div class="accordion-item faq-radialGradient">
+                                        <div class="accordion-item faq-radialGradient">
                                             <h2 class="accordion-header" id="headingDuaTiga">
                                                 <button
                                                     class="accordion-button collapsed color-title-faq faq-radialGradient-title"
                                                     type="button" data-bs-toggle="collapse"
                                                     data-bs-target="#collapseDuaTiga" aria-expanded="false"
                                                     aria-controls="collapseDuaTiga">
-                                                    Apa saja kriteria penilaian untuk lomba Hackaton ?
+                                                    Bagaimana metode kompetisi lomba Competitive Programming ?
                                                 </button>
                                             </h2>
                                             <div id="collapseDuaTiga" class="accordion-collapse collapse"
                                                 aria-labelledby="headingDuaTiga" data-bs-parent="#accordionExample">
                                                 <div class="accordion-body color-inside-faq faq-radialGradient-inside">
-                                                    <p>Kriteria penilaian dalam lomba hackaton: kesesuaian output yang di inginkan, ketepatan jawaban dan kecepatan waktu pengerjaan</p>
+                                                    <p>Lomba akan dilaksanakan secara offline pada jadwal yang sudah
+                                                        ditentukan
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div><br>
+                                        <div class="accordion-item faq-radialGradient">
+                                            <h2 class="accordion-header" id="headingDuaTigaSatu">
+                                                <button
+                                                    class="accordion-button collapsed color-title-faq faq-radialGradient-title"
+                                                    type="button" data-bs-toggle="collapse"
+                                                    data-bs-target="#collapseDuaTigaSatu" aria-expanded="false"
+                                                    aria-controls="collapseDuaTigaSatu">
+                                                    Apa bahasa pemrograman yang digunakan dalam lomba Competitive
+                                                    Programming ?
+                                                </button>
+                                            </h2>
+                                            <div id="collapseDuaTigaSatu" class="accordion-collapse collapse"
+                                                aria-labelledby="headingDuaTigaSatu" data-bs-parent="#accordionExample">
+                                                <div class="accordion-body color-inside-faq faq-radialGradient-inside">
+                                                    <p>Tidak ada batasan dalam menggunakan bahasa pemrograman dalam
+                                                        menyelesaikan soal, jadi bebas ya
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div><br>
+                                        <div class="accordion-item faq-radialGradient">
+                                            <h2 class="accordion-header" id="headingDuaTigaDua">
+                                                <button
+                                                    class="accordion-button collapsed color-title-faq faq-radialGradient-title"
+                                                    type="button" data-bs-toggle="collapse"
+                                                    data-bs-target="#collapseDuaTigaDua" aria-expanded="false"
+                                                    aria-controls="collapseDuaTigaDua">
+                                                    Seperti apa hadiah bagi pemenang lomba Competitive Programming ?
+                                                </button>
+                                            </h2>
+                                            <div id="collapseDuaTigaDua" class="accordion-collapse collapse"
+                                                aria-labelledby="headingDuaTigaDua" data-bs-parent="#accordionExample">
+                                                <div class="accordion-body color-inside-faq faq-radialGradient-inside">
+                                                    <p>Pemenang lomba Competitive Programming akan mendapatkan total hadiah
+                                                        jutaan rupiah dan sertifikat pemenang
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div><br>
+                                        <div class="accordion-item faq-radialGradient">
+                                            <h2 class="accordion-header" id="headingDuaTigaTiga">
+                                                <button
+                                                    class="accordion-button collapsed color-title-faq faq-radialGradient-title"
+                                                    type="button" data-bs-toggle="collapse"
+                                                    data-bs-target="#collapseDuaTigaTiga" aria-expanded="false"
+                                                    aria-controls="collapseDuaTigaTiga">
+                                                    Apa saja hal yang dapat membuat peserta didiskualifikasi ?
+                                                </button>
+                                            </h2>
+                                            <div id="collapseDuaTigaTiga" class="accordion-collapse collapse"
+                                                aria-labelledby="headingDuaTigaTiga" data-bs-parent="#accordionExample">
+                                                <div class="accordion-body color-inside-faq faq-radialGradient-inside">
+                                                    <p>Melakukan kecurangan dalam bentuk apapun, tidak hadir tepat waktu
+                                                        pada jadwal lomba yang sudah ditentukan panitia, melakukan SARA dan
+                                                        ujaran kebencian dalam bentuk apapun, dan melanggar tata tertib/
+                                                        peraturan lomba (tertera pada modul).
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div><br>
+                                        <div class="accordion-item faq-radialGradient">
+                                            <h2 class="accordion-header" id="headingDuaTigaEmpat">
+                                                <button
+                                                    class="accordion-button collapsed color-title-faq faq-radialGradient-title"
+                                                    type="button" data-bs-toggle="collapse"
+                                                    data-bs-target="#collapseDuaTigaEmpat" aria-expanded="false"
+                                                    aria-controls="collapseDuaTigaEmpat">
+                                                    Apa saja kriteria penilaian untuk lomba Competitive Programming ?
+                                                </button>
+                                            </h2>
+                                            <div id="collapseDuaTigaEmpat" class="accordion-collapse collapse"
+                                                aria-labelledby="headingDuaTigaEmpat" data-bs-parent="#accordionExample">
+                                                <div class="accordion-body color-inside-faq faq-radialGradient-inside">
+                                                    <p>Kriteria penilaian dalam lomba Competitive Programming: kesesuaian
+                                                        output yang di inginkan, ketepatan jawaban dan kecepatan waktu
+                                                        pengerjaan
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div><br>
+                                        <div class="accordion-item faq-radialGradient">
+                                            <h2 class="accordion-header" id="headingDuaTigaLima">
+                                                <button
+                                                    class="accordion-button collapsed color-title-faq faq-radialGradient-title"
+                                                    type="button" data-bs-toggle="collapse"
+                                                    data-bs-target="#collapseDuaTigaLima" aria-expanded="false"
+                                                    aria-controls="collapseDuaTigaLima">
+                                                    Siapa yang dapat saya hubungi jika masih memiliki pertanyaan ?
+                                                </button>
+                                            </h2>
+                                            <div id="collapseDuaTigaLima" class="accordion-collapse collapse"
+                                                aria-labelledby="headingDuaTigaLima" data-bs-parent="#accordionExample">
+                                                <div class="accordion-body color-inside-faq faq-radialGradient-inside">
+                                                    <p>Bisa hubungi di nomor 081235655927 a.n. Andrew
+                                                    </p>
                                                 </div>
                                             </div>
                                         </div><br>
@@ -583,108 +767,213 @@
 
                                         <h3><span>Comic Strip Competition</span></h3>
 
-                                          <div class="accordion-item faq-radialGradient">
+                                        <div class="accordion-item faq-radialGradient">
                                             <h2 class="accordion-header" id="headingTwentyEmpat">
                                                 <button
                                                     class="accordion-button collapsed color-title-faq faq-radialGradient-title"
                                                     type="button" data-bs-toggle="collapse"
                                                     data-bs-target="#collapseTwentyEmpat" aria-expanded="false"
                                                     aria-controls="collapseTwentyEmpat">
-                                                    Berapa jumlah maksimal peserta dalam 1 tim ?
+                                                    Siapa saja yang dapat berpartisipasi dalam lomba Comic Strip ?
                                                 </button>
                                             </h2>
                                             <div id="collapseTwentyEmpat" class="accordion-collapse collapse"
                                                 aria-labelledby="headingTwentyEmpat" data-bs-parent="#accordionExample">
                                                 <div class="accordion-body color-inside-faq faq-radialGradient-inside">
-                                                    <p>Satu tim maksimal 2 orang</p>
+                                                    <p>Lomba Comic Strip dapat diikuti oleh peserta secara umum
+                                                    </p>
                                                 </div>
                                             </div>
-                                          </div><br>
-                                          <div class="accordion-item faq-radialGradient">
+                                        </div><br>
+                                        <div class="accordion-item faq-radialGradient">
                                             <h2 class="accordion-header" id="headingTwentyLima">
                                                 <button
                                                     class="accordion-button collapsed color-title-faq faq-radialGradient-title"
                                                     type="button" data-bs-toggle="collapse"
                                                     data-bs-target="#collapseTwentyLima" aria-expanded="false"
                                                     aria-controls="collapseTwentyLima">
-                                                    Apa format warna yang digunakan dalam lomba comicstrip ?
+                                                    Bagaimana cara mendaftar lomba Comicstrip ?
                                                 </button>
                                             </h2>
                                             <div id="collapseTwentyLima" class="accordion-collapse collapse"
                                                 aria-labelledby="headingTwentyLima" data-bs-parent="#accordionExample">
                                                 <div class="accordion-body color-inside-faq faq-radialGradient-inside">
-                                                    <p>colour / BW / grayscale</p>
+                                                    <p>Pendaftaran dapat dilakukan melalui Website ICF 2022.</p>
                                                 </div>
                                             </div>
-                                          </div><br>
-                                          <div class="accordion-item faq-radialGradient">
+                                        </div><br>
+                                        <div class="accordion-item faq-radialGradient">
                                             <h2 class="accordion-header" id="headingTwentyEnam">
                                                 <button
                                                     class="accordion-button collapsed color-title-faq faq-radialGradient-title"
                                                     type="button" data-bs-toggle="collapse"
                                                     data-bs-target="#collapseTwentyEnam" aria-expanded="false"
                                                     aria-controls="collapseTwentyEnam">
-                                                    Kertas gambar apa yang akan digunakan ?
+                                                    Berapa jumlah maksimal peserta dalam 1 tim ?
                                                 </button>
                                             </h2>
                                             <div id="collapseTwentyEnam" class="accordion-collapse collapse"
                                                 aria-labelledby="headingTwentyEnam" data-bs-parent="#accordionExample">
                                                 <div class="accordion-body color-inside-faq faq-radialGradient-inside">
-                                                    <p>Kertas A4</p>
+                                                    <p>Satu tim maksimal 2 orang
+                                                    </p>
                                                 </div>
                                             </div>
-                                          </div><br>
-                                          <div class="accordion-item faq-radialGradient">
+                                        </div><br>
+                                        <div class="accordion-item faq-radialGradient">
                                             <h2 class="accordion-header" id="headingTwentyTujuh">
                                                 <button
                                                     class="accordion-button collapsed color-title-faq faq-radialGradient-title"
                                                     type="button" data-bs-toggle="collapse"
                                                     data-bs-target="#collapseTwentyTujuh" aria-expanded="false"
                                                     aria-controls="collapseTwentyTujuh">
-                                                    Peralatan apa saja yang disediakan panitia untuk lomba Comicstrip ?
+                                                    Apabila 1 tim hanya terdiri dari 1 orang, apakah bisa berpartisipasi?
                                                 </button>
                                             </h2>
                                             <div id="collapseTwentyTujuh" class="accordion-collapse collapse"
                                                 aria-labelledby="headingTwentyTujuh" data-bs-parent="#accordionExample">
                                                 <div class="accordion-body color-inside-faq faq-radialGradient-inside">
-                                                    <p>Pantia tidak menyediakan peralatan menggambar, termasuk kertas untuk media komik. Panitia akan menyediakan template file yang harus di print oleh setiap peserta untuk mempermudah pembuatan komik di tempat.</p>
+                                                    <p>Bisa, lomba bisa dilakukan secara individu
+                                                    </p>
                                                 </div>
                                             </div>
-                                          </div><br>
-                                          <div class="accordion-item faq-radialGradient">
+                                        </div><br>
+                                        <div class="accordion-item faq-radialGradient">
                                             <h2 class="accordion-header" id="headingTwentyDelapan">
                                                 <button
                                                     class="accordion-button collapsed color-title-faq faq-radialGradient-title"
                                                     type="button" data-bs-toggle="collapse"
                                                     data-bs-target="#collapseTwentyDelapan" aria-expanded="false"
                                                     aria-controls="collapseTwentyDelapan">
-                                                    Bagaimana metode kompetisi lomba Comicstrip ?
+                                                    Apa format warna yang digunakan dalam lomba Comic Strip?
                                                 </button>
                                             </h2>
                                             <div id="collapseTwentyDelapan" class="accordion-collapse collapse"
                                                 aria-labelledby="headingTwentyDelapan" data-bs-parent="#accordionExample">
                                                 <div class="accordion-body color-inside-faq faq-radialGradient-inside">
-                                                    <p>Lomba comicstrip akan dilakukan secara offline di tempat dengan dispensasi keterlmabtan waktu 15 menit. Setiap hasil karya diharapkan memiliki dialog yang jelas dan tidak mengandung hak cipta serta SARA.</p>
+                                                    <p>color/ BW/ grayscale</p>
                                                 </div>
                                             </div>
-                                          </div><br>
-                                          <div class="accordion-item faq-radialGradient">
+                                        </div><br>
+                                        <div class="accordion-item faq-radialGradient">
                                             <h2 class="accordion-header" id="headingTwentySembilan">
                                                 <button
                                                     class="accordion-button collapsed color-title-faq faq-radialGradient-title"
                                                     type="button" data-bs-toggle="collapse"
                                                     data-bs-target="#collapseTwentySembilan" aria-expanded="false"
                                                     aria-controls="collapseTwentySembilan">
-                                                    Seperti apa hadiah bagi pemenang lomba Comicstrip ?
+                                                    Peralatan apa saja yang disediakan panitia untuk lomba Comic Strip ?
                                                 </button>
                                             </h2>
                                             <div id="collapseTwentySembilan" class="accordion-collapse collapse"
-                                                aria-labelledby="headingTwentySembilan" data-bs-parent="#accordionExample">
+                                                aria-labelledby="headingTwentySembilan"
+                                                data-bs-parent="#accordionExample">
                                                 <div class="accordion-body color-inside-faq faq-radialGradient-inside">
-                                                    <p>Pemenang lomba hackaton akan mendapatkan total hadiah jutaan rupiah dan sertifikat pemenang</p>
+                                                    <p>Panitia tidak menyediakan peralatan menggambar, termasuk kertas untuk
+                                                        media komik. Panitia akan menyediakan template file yang <b>harus di
+                                                            print</b> oleh setiap peserta pada kertas A4. </p>
                                                 </div>
                                             </div>
-                                          </div><br>
+                                        </div><br>
+                                        <div class="accordion-item faq-radialGradient">
+                                            <h2 class="accordion-header" id="headingTwentySembilanSatu">
+                                                <button
+                                                    class="accordion-button collapsed color-title-faq faq-radialGradient-title"
+                                                    type="button" data-bs-toggle="collapse"
+                                                    data-bs-target="#collapseTwentySembilanSatu" aria-expanded="false"
+                                                    aria-controls="collapseTwentySembilanSatu">
+                                                    Bagaimana metode kompetisi lomba Comic Strip?
+                                                </button>
+                                            </h2>
+                                            <div id="collapseTwentySembilanSatu" class="accordion-collapse collapse"
+                                                aria-labelledby="headingTwentySembilanSatu"
+                                                data-bs-parent="#accordionExample">
+                                                <div class="accordion-body color-inside-faq faq-radialGradient-inside">
+                                                    <p>Lomba Comic Strip akan dilakukan secara offline. Selain membuat
+                                                        komik, peserta juga akan mempresentasikan hasil karyanya di depan
+                                                        juri. Setiap hasil karya diharapkan memiliki dialog yang jelas dan
+                                                        sesuai dengan tata tertib (peraturan lomba) yang sudah ditentukan..
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div><br>
+                                        <div class="accordion-item faq-radialGradient">
+                                            <h2 class="accordion-header" id="headingTwentySembilanDua">
+                                                <button
+                                                    class="accordion-button collapsed color-title-faq faq-radialGradient-title"
+                                                    type="button" data-bs-toggle="collapse"
+                                                    data-bs-target="#collapseTwentySembilanDua" aria-expanded="false"
+                                                    aria-controls="collapseTwentySembilanDua">
+                                                    Seperti apa hadiah bagi pemenang lomba Comic Strip ?
+                                                </button>
+                                            </h2>
+                                            <div id="collapseTwentySembilanDua" class="accordion-collapse collapse"
+                                                aria-labelledby="headingTwentySembilanDua"
+                                                data-bs-parent="#accordionExample">
+                                                <div class="accordion-body color-inside-faq faq-radialGradient-inside">
+                                                    <p>Pemenang lomba Comic Strip akan mendapatkan total hadiah jutaan
+                                                        rupiah dan sertifikat pemenang
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div><br>
+                                        <div class="accordion-item faq-radialGradient">
+                                            <h2 class="accordion-header" id="headingTwentySembilanTiga">
+                                                <button
+                                                    class="accordion-button collapsed color-title-faq faq-radialGradient-title"
+                                                    type="button" data-bs-toggle="collapse"
+                                                    data-bs-target="#collapseTwentySembilanTiga" aria-expanded="false"
+                                                    aria-controls="collapseTwentySembilanTiga">
+                                                    Apa saja hal yang dapat membuat peserta didiskualifikasi ?
+                                                </button>
+                                            </h2>
+                                            <div id="collapseTwentySembilanTiga" class="accordion-collapse collapse"
+                                                aria-labelledby="headingTwentySembilanTiga"
+                                                data-bs-parent="#accordionExample">
+                                                <div class="accordion-body color-inside-faq faq-radialGradient-inside">
+                                                    <p>Melanggar tata tertib yang sudah ditetapkan
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div><br>
+                                        <div class="accordion-item faq-radialGradient">
+                                            <h2 class="accordion-header" id="headingTwentySembilanEmpat">
+                                                <button
+                                                    class="accordion-button collapsed color-title-faq faq-radialGradient-title"
+                                                    type="button" data-bs-toggle="collapse"
+                                                    data-bs-target="#collapseTwentySembilanEmpat" aria-expanded="false"
+                                                    aria-controls="collapseTwentySembilanEmpat">
+                                                    Apa saja kriteria penilaian untuk lomba Comic Strip ?
+                                                </button>
+                                            </h2>
+                                            <div id="collapseTwentySembilanEmpat" class="accordion-collapse collapse"
+                                                aria-labelledby="headingTwentySembilanEmpat"
+                                                data-bs-parent="#accordionExample">
+                                                <div class="accordion-body color-inside-faq faq-radialGradient-inside">
+                                                    <p>Kesesuaian Tema, Kerapian, dan Kemenarikan sesuai alur cerita.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div><br>
+                                        <div class="accordion-item faq-radialGradient">
+                                            <h2 class="accordion-header" id="headingTwentySembilanLima">
+                                                <button
+                                                    class="accordion-button collapsed color-title-faq faq-radialGradient-title"
+                                                    type="button" data-bs-toggle="collapse"
+                                                    data-bs-target="#collapseTwentySembilanLima" aria-expanded="false"
+                                                    aria-controls="collapseTwentySembilanLima">
+                                                    Siapa yang dapat saya hubungi jika masih memiliki pertanyaan ?
+                                                </button>
+                                            </h2>
+                                            <div id="collapseTwentySembilanLima" class="accordion-collapse collapse"
+                                                aria-labelledby="headingTwentySembilanLima"
+                                                data-bs-parent="#accordionExample">
+                                                <div class="accordion-body color-inside-faq faq-radialGradient-inside">
+                                                    <p>Bisa hubungi di nomor 08525139788 a.n. Jennie
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div><br>
                                     </div>
                                 </div>
                                 <div class="timeline-wrapper">
@@ -698,7 +987,7 @@
 
                                         <h3><span>Tiktok Challenges Competition</span></h3>
 
-                                          <div class="accordion-item faq-radialGradient">
+                                        <div class="accordion-item faq-radialGradient">
                                             <h2 class="accordion-header" id="headingThrity">
                                                 <button
                                                     class="accordion-button collapsed color-title-faq faq-radialGradient-title"
@@ -714,8 +1003,25 @@
                                                     <p>Lomba tiktok dapat di ikuti oleh umum</p>
                                                 </div>
                                             </div>
-                                          </div><br>
-                                          <div class="accordion-item faq-radialGradient">
+                                        </div><br>
+                                        <div class="accordion-item faq-radialGradient">
+                                            <h2 class="accordion-header" id="headingThrityOne">
+                                                <button
+                                                    class="accordion-button collapsed color-title-faq faq-radialGradient-title"
+                                                    type="button" data-bs-toggle="collapse"
+                                                    data-bs-target="#collapseThrityOne" aria-expanded="false"
+                                                    aria-controls="collapseThrityOne">
+                                                    Bagaimana cara mendaftar lomba Tiktok ?
+                                                </button>
+                                            </h2>
+                                            <div id="collapseThrityOne" class="accordion-collapse collapse"
+                                                aria-labelledby="headingThrityOne" data-bs-parent="#accordionExample">
+                                                <div class="accordion-body color-inside-faq faq-radialGradient-inside">
+                                                    <p>Pendaftaran dapat dilakukan melalui Website ICF 2022.</p>
+                                                </div>
+                                            </div>
+                                        </div><br>
+                                        <div class="accordion-item faq-radialGradient">
                                             <h2 class="accordion-header" id="headingThrity">
                                                 <button
                                                     class="accordion-button collapsed color-title-faq faq-radialGradient-title"
@@ -731,8 +1037,8 @@
                                                     <p>Technology for humanity</p>
                                                 </div>
                                             </div>
-                                          </div><br>
-                                          <div class="accordion-item faq-radialGradient">
+                                        </div><br>
+                                        <div class="accordion-item faq-radialGradient">
                                             <h2 class="accordion-header" id="headingThritySatu">
                                                 <button
                                                     class="accordion-button collapsed color-title-faq faq-radialGradient-title"
@@ -748,8 +1054,8 @@
                                                     <p>Setiap tim dapat berjumlah 1-5 orang</p>
                                                 </div>
                                             </div>
-                                          </div><br>
-                                          <div class="accordion-item faq-radialGradient">
+                                        </div><br>
+                                        <div class="accordion-item faq-radialGradient">
                                             <h2 class="accordion-header" id="headingThrityDua">
                                                 <button
                                                     class="accordion-button collapsed color-title-faq faq-radialGradient-title"
@@ -762,11 +1068,12 @@
                                             <div id="collapseThrityDua" class="accordion-collapse collapse"
                                                 aria-labelledby="headingThrityDua" data-bs-parent="#accordionExample">
                                                 <div class="accordion-body color-inside-faq faq-radialGradient-inside">
-                                                    <p>Setiap tim hanya boleh mengirim 1 video dengan durasi minimum 1 menit dan maksimum 3 menit</p>
+                                                    <p>Setiap tim hanya boleh mengirim 1 video dengan durasi minimum 1 menit
+                                                        dan maksimum 3 menit</p>
                                                 </div>
                                             </div>
-                                          </div><br>
-                                          <div class="accordion-item faq-radialGradient">
+                                        </div><br>
+                                        <div class="accordion-item faq-radialGradient">
                                             <h2 class="accordion-header" id="headingThrityTiga">
                                                 <button
                                                     class="accordion-button collapsed color-title-faq faq-radialGradient-title"
@@ -779,11 +1086,15 @@
                                             <div id="collapseThrityTiga" class="accordion-collapse collapse"
                                                 aria-labelledby="headingThrityTiga" data-bs-parent="#accordionExample">
                                                 <div class="accordion-body color-inside-faq faq-radialGradient-inside">
-                                                    <p>Peserta wajib upload video tiktok di akun pribadi dan upload mirror di instagram reels dengan caption berupa ajakan literasi digital atau teknologi jaman now, sertakan juga hashtag #icfubaya2022 #lombavideotiktokubaya dan mention @icfubaya2022 dan @informatika.ubaya</p>
+                                                    <p>Peserta wajib upload video tiktok di akun pribadi dan upload mirror
+                                                        di instagram reels dengan caption berupa ajakan literasi digital
+                                                        atau teknologi jaman now, sertakan juga hashtag #icfubaya2022
+                                                        #lombavideotiktokubaya dan mention @icfubaya2022 dan
+                                                        @informatika.ubaya</p>
                                                 </div>
                                             </div>
-                                          </div><br>
-                                          <div class="accordion-item faq-radialGradient">
+                                        </div><br>
+                                        <div class="accordion-item faq-radialGradient">
                                             <h2 class="accordion-header" id="headingThrityEmpat">
                                                 <button
                                                     class="accordion-button collapsed color-title-faq faq-radialGradient-title"
@@ -796,17 +1107,83 @@
                                             <div id="collapseThrityEmpat" class="accordion-collapse collapse"
                                                 aria-labelledby="headingThrityEmpat" data-bs-parent="#accordionExample">
                                                 <div class="accordion-body color-inside-faq faq-radialGradient-inside">
-                                                    <p>Pemenang lomba hackaton akan mendapatkan total hadiah jutaan rupiah dan sertifikat pemenang</p>
+                                                    <p>Pemenang lomba hackaton akan mendapatkan total hadiah jutaan rupiah
+                                                        dan sertifikat pemenang</p>
                                                 </div>
                                             </div>
-                                          </div><br>
+                                        </div><br>
+                                        <div class="accordion-item faq-radialGradient">
+                                            <h2 class="accordion-header" id="headingThrityLima">
+                                                <button
+                                                    class="accordion-button collapsed color-title-faq faq-radialGradient-title"
+                                                    type="button" data-bs-toggle="collapse"
+                                                    data-bs-target="#collapseThrityLima" aria-expanded="false"
+                                                    aria-controls="collapseThrityLima">
+                                                    Apa saja hal yang dapat membuat peserta didiskualifikasi ?
+                                                </button>
+                                            </h2>
+                                            <div id="collapseThrityLima" class="accordion-collapse collapse"
+                                                aria-labelledby="headingThrityLima" data-bs-parent="#accordionExample">
+                                                <div class="accordion-body color-inside-faq faq-radialGradient-inside">
+                                                    <p>Melakukan kecurangan dalam bentuk apapun, tidak hadir tepat waktu
+                                                        pada jadwal lomba yang sudah ditentukan panitia, melakukan SARA dan
+                                                        ujaran kebencian dalam bentuk apapun, dan melanggar tata tertib/
+                                                        peraturan lomba (tertera pada modul).</p>
+                                                </div>
+                                            </div>
+                                        </div><br>
+                                        <div class="accordion-item faq-radialGradient">
+                                            <h2 class="accordion-header" id="headingThrityEnam">
+                                                <button
+                                                    class="accordion-button collapsed color-title-faq faq-radialGradient-title"
+                                                    type="button" data-bs-toggle="collapse"
+                                                    data-bs-target="#collapseThrityEnam" aria-expanded="false"
+                                                    aria-controls="collapseThrityEnam">
+                                                    Apa saja kriteria penilaian untuk lomba TikTok ?
+                                                </button>
+                                            </h2>
+                                            <div id="collapseThrityEnam" class="accordion-collapse collapse"
+                                                aria-labelledby="headingThrityEnam" data-bs-parent="#accordionExample">
+                                                <div class="accordion-body color-inside-faq faq-radialGradient-inside">
+                                                    <ul>
+                                                        <li>Kreativitas konten video</li>
+                                                        <li>Orisinalitas konten video</li>
+                                                        <li>Pengambilan angle. momen, dan pencahayaan</li>
+                                                        <li>Kesesuaian tema</li>
+                                                        <li>Kekuatan pesan dari video tiktok tersebut</li>
+                                                        <li>Kompleksitas konten video menggunakan fitur di tiktok</li>
+                                                        <li>Banyaknya like dan comment akan menjadi pertimbangan dari dewan
+                                                            juri</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div><br>
+                                        <div class="accordion-item faq-radialGradient">
+                                            <h2 class="accordion-header" id="headingThrityTujuh">
+                                                <button
+                                                    class="accordion-button collapsed color-title-faq faq-radialGradient-title"
+                                                    type="button" data-bs-toggle="collapse"
+                                                    data-bs-target="#collapseThrityTujuh" aria-expanded="false"
+                                                    aria-controls="collapseThrityTujuh">
+                                                    Apa saja kriteria penilaian untuk lomba TikTok ?
+                                                </button>
+                                            </h2>
+                                            <div id="collapseThrityTujuh" class="accordion-collapse collapse"
+                                                aria-labelledby="headingThrityTujuh" data-bs-parent="#accordionExample">
+                                                <div class="accordion-body color-inside-faq faq-radialGradient-inside">
+                                                    <p>
+                                                        Bisa hubungi di nomor 082253749916 a.n. Jennie
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div><br>
                                     </div>
-                                 </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-         </div>
+            </div>
     </section>
     </div>
 @endsection

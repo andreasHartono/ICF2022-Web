@@ -14,11 +14,7 @@ class EventController extends Controller
 {
     public function showseminar()
     {
-        $seminar = Event::join('jenis','jenis.id','=','events.jenis_id')
-            ->join('images','images.events_id','=','events.id')
-            ->select('events.*','jenis.nama as name','image_url as url')
-            ->where('jenis.nama','=','Seminar')
-            ->get();
+        $seminar = $seminar = Event::where('jenis_id', 1)->get();
       //   dd($seminar);
         return view('seminar',compact('seminar'));
     }

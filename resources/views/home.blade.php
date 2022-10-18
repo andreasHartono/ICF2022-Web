@@ -1,141 +1,174 @@
 @extends('layouts.mainweb')
 
 @section('title')
-ICF 2022 - Home
+    ICF 2022 - Home
 @endsection
 
 @section('content')
-<section class="wrapper bg-soft-primary">
-    <div class="container pt-10 pb-15 pt-md-14 pb-md-10 text-center">
-      <div class="row">
-        <div class="col-md-10 col-lg-8 col-xl-8 col-xxl-6 mx-auto mb-13" data-cues="slideInDown" data-group="page-title">
-          <h1 class="display-1 mb-4">ICF 2022</h1>
-          <p class="lead fs-lg px-xl-12 px-xxl-6 mb-7" >ICF (Informatics Creative Festival) adalah sebuah festival yang memamerkan hasil-hasil karya mahasiswa dari Informatika Universitas Surabaya. Tiap tahunnya, ICF mengenalkan desain dan pemrograman melalui pameran karya-karya mahasiswa akhir teknik informatika UBAYA. Selain itu, ICF juga ada berbagai macam seminar dan lomba untuk menambah pengetahuan dan mengasah kemampuan para peserta sesuai dengan perkembangan teknologi.</p>
-          <div class="d-flex justify-content-center" data-cues="slideInDown" data-group="page-title-buttons" data-delay="600" >
+    <section class="wrapper bg-soft-primary">
+        <div class="container pt-10 pb-15 pt-md-14 pb-md-10 text-center">
+            <div class="row">
+                <div class="col-md-10 col-lg-8 col-xl-8 col-xxl-6 mx-auto mb-13" data-cues="slideInDown"
+                    data-group="page-title">
+                    <h1 class="display-1 mb-4">ICF 2022</h1>
+                    <p class="lead fs-lg px-xl-12 px-xxl-6 mb-7">ICF (Informatics Creative Festival) adalah sebuah festival
+                        yang memamerkan hasil-hasil karya mahasiswa dari Informatika Universitas Surabaya. Tiap tahunnya,
+                        ICF mengenalkan desain dan pemrograman melalui pameran karya-karya mahasiswa akhir teknik
+                        informatika UBAYA. Selain itu, ICF juga ada berbagai macam seminar dan lomba untuk menambah
+                        pengetahuan dan mengasah kemampuan para peserta sesuai dengan perkembangan teknologi.</p>
+                    <div class="d-flex justify-content-center" data-cues="slideInDown" data-group="page-title-buttons"
+                        data-delay="600">
 
-              <span><a class="btn btn-primary rounded mx-1" style="background-color:  red !important;color:#fff !important; height:50px; width:200px; border-radius: 400px !important;">Register Now</a></span>
+                        <span><a class="btn btn-primary rounded mx-1"
+                                style="background-color:  red !important;color:#fff !important; height:50px; width:200px; border-radius: 400px !important;">Register
+                                Now</a></span>
 
-            </div>
-        </div>
-        <!-- /column -->
-      </div>
-      <!-- /.row -->
-    </div>
-    <!-- /.container -->
-  </section>
-  <!-- /section -->
-
-  {{-- poster --}}
-  <section id="poster" class="mt-5 pt-5">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-xl-6 col-lg-8 col-md-8">
-                <a href="{{ url('/assets/img/poster.png') }}" target="blank"><img class="img-fluid rounded shadow-lg d-flex ms-auto" data-cue="fadeIn" data-delay="300"  img src="{{ url('/assets/img/poster.png') }}" alt="Scroll" width="100%; height:100%; object-fit: contain;"></a>
-            </div>
-        </div>
-    </div>
-</section>
-{{-- endposter --}}
-
-  <section class="wrapper bg-light">
-
-    <div class="container pb-14 pb-md-16 mb-lg-21 mb-xl-23">
-      <div class="row gx-0 mb-16 mb-mb-20">
-  {{-- timeline --}}
-  <div class="row gx-lg-8 gx-xl-12 process-wrapper text-center mt-9" data-cues="slideInUp" data-group="process">
-  <h1 style="color: #273242; margin-top: 1em ; text-align: center; font-family: joyrideextended, Montserrat, sans-serif;"
-  data-aos="zoom-in">Timeline ICF 2022</h1>
-
-<link rel="stylesheet" href="{{ url('/assets/css/timeline.css') }}">
-<div class="content">
-  <div class="timeline col-lg-6 wow fadeInRight">
-      <ul>
-          <li>
-              <div class="timeline-content">
-                  <h3 class="date" id="timeline-date">16-30 Oktober 2022</h3>
-                  <h1 class="content-timeline">Open Registration </h1>
-              </div>
-          </li>
-          <li>
-              <div class="timeline-content">
-                  <h3  class="date">31 Oktober 2022</h3>
-                  <h1 class="content-timeline">Technical Meeting All Competition</h1>
-              </div>
-          </li>
-          <li>
-              <div class="timeline-content">
-                  <h3  class="date">Day 1 (4 November 2022)</h3>
-                  <h1 class="content-timeline">Machine vs Human,
-Data for the Future,
-Competitive Programming</h1>
-              </div>
-          </li>
-          <li>
-              <div class="timeline-content">
-                  <h3  class="date">Day 2 (5 November 2022)</h3>
-                  <h1 class="content-timeline">Human Computer Interaction in Everyday Life,
-Mobile Legends: BangBang Competition </h1>
-              </div>
-          </li>
-          <li>
-              <div class="timeline-content">
-                  <h3  class="date">Day 3 (6 November 2022)</h3>
-                  <h1 class="content-timeline">Toward Metaverse: Challenge and Opportunities,
-Augmented Reality vs Virtual Reality,
-Comic Strip Competition,
-Tiktok Competition Announcement</h1>
-              </div>
-          </li>
-      </ul>
-  </div>
-</div>
-  </div>
-{{-- end timeline --}}
-<div class="row gx-lg-8 gx-xl-12 process-wrapper text-center mt-9" data-cues="slideInUp" data-group="process">
-              <div class="hadiah">
-                <h3 class="display-4 mb-5">Apa yang akan kamu Dapatkan ? </h3>
-                <p class="total-hadiah">Total hadiah senilai Rp 225 Juta</p>
-                <div class="hadiah-deskripsi">Dengan perincian sebagai berikut: </div>
-                <div class="row mt-5">
-                  <div class="col-md-4">
-                    <div class="hadiah-item">
-                      <div class="d-flex justify-content-center align-items-center">
-                        <div class="hadiah-item-title"> Terbaik 1</div>
-                      </div>
-                      <div class="hadiah-item-price">
-                        Rp. 100.000.000
-                      </div>
                     </div>
-                  </div>
-
-                  <!--/column -->
-                  <div class="col-md-4">
-                    <div class="hadiah-item">
-                      <div class="d-flex justify-content-center align-items-center">
-                        <div class="hadiah-item-title"> Terbaik 2</div>
-                      </div>
-                      <div class="hadiah-item-price">
-                        Rp.75.000.000
-                      </div>
-                    </div>
-                  </div>
-                  <!--/column -->
-                  <div class="col-md-4">
-                    <div class="hadiah-item">
-                      <div class="d-flex justify-content-center align-items-center">
-                        <div class="hadiah-item-title"> Terbaik 3</div>
-                      </div>
-                      <div class="hadiah-item-price">
-                        Rp.50.000.000
-                      </div>
-                    </div>
-                  </div>
                 </div>
-                <!--/.row -->
-              </div>
-              <!--/column -->
+                <!-- /column -->
             </div>
-      </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+    </section>
+    <!-- /section -->
+
+    {{-- poster --}}
+    <section id="poster" class="mt-5 pt-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-xl-6 col-lg-8 col-md-8">
+                    <a href="{{ url('/assets/img/poster.png') }}" target="blank"><img
+                            class="img-fluid rounded shadow-lg d-flex ms-auto" data-cue="fadeIn" data-delay="300" img
+                            src="{{ url('/assets/img/poster.png') }}" alt="Scroll"
+                            width="100%; height:100%; object-fit: contain;"></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    {{-- endposter --}}
+
+    <section class="wrapper bg-light">
+
+        <div class="container pb-14 pb-md-16 mb-lg-21 mb-xl-23">
+            <div class="row gx-0 mb-16 mb-mb-20">
+                {{-- timeline --}}
+                <div class="row gx-lg-8 gx-xl-12 process-wrapper text-center mt-9" data-cues="slideInUp"
+                    data-group="process">
+                    <h1 style="color: #273242; margin-top: 1em ; text-align: center; font-family: joyrideextended, Montserrat, sans-serif;"
+                        data-aos="zoom-in">Timeline ICF 2022</h1>
+
+                    <link rel="stylesheet" href="{{ url('/assets/css/timeline.css') }}">
+                    <div class="content">
+                        <div class="timeline col-lg-6 wow fadeInRight">
+                            <ul>
+                                <li>
+                                    <div class="timeline-content">
+                                        <h3 class="date" id="timeline-date">16-30 Oktober 2022</h3>
+                                        <h1 class="content-timeline">Open Registration
+                                            <h1 class="content-timeline" style="color: white; font-size: 20px">
+                                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sunt ullam,
+                                                repudiandae eveniet enim incidunt dolore quod autem aperiam corrupti
+                                                molestias at officia veritatis minima unde quisquam dicta. Consequuntur, cum
+                                                molestiae.
+                                            </h1>
+                                        </h1>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="timeline-content">
+                                        <h3 class="date">31 Oktober 2022</h3>
+                                        <h1 class="content-timeline">Technical Meeting All Competition
+                                            <h1 class="content-timeline" style="color: white; font-size: 20px">
+                                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sunt ullam,
+                                                repudiandae eveniet enim incidunt dolore quod autem aperiam corrupti
+                                                molestias at officia veritatis minima unde quisquam dicta. Consequuntur, cum
+                                                molestiae.
+                                            </h1>
+                                        </h1>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="timeline-content">
+                                        <h3 class="date">Day 1 (4 November 2022)</h3>
+                                        <h1 class="content-timeline">Machine vs Human, Data for the Future, Competitive Programming
+                                          <h1 class="content-timeline" style="color: white; font-size: 20px">
+                                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sunt ullam, repudiandae eveniet enim incidunt dolore quod autem aperiam corrupti molestias at officia veritatis minima unde quisquam dicta. Consequuntur, cum molestiae.
+                                          </h1>
+                                        </h1>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="timeline-content">
+                                        <h3 class="date">Day 2 (5 November 2022)</h3>
+                                        <h1 class="content-timeline">Human Computer Interaction in Everyday Life, Mobile Legends: BangBang Competition
+                                          <h1 class="content-timeline" style="color: white; font-size: 20px">
+                                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sunt ullam, repudiandae eveniet enim incidunt dolore quod autem aperiam corrupti molestias at officia veritatis minima unde quisquam dicta. Consequuntur, cum molestiae.
+                                          </h1>
+                                        </h1>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="timeline-content">
+                                        <h3 class="date">Day 3 (6 November 2022)</h3>
+                                        <h1 class="content-timeline">Toward Metaverse: Challenge and Opportunities, Augmented Reality vs Virtual Reality, Comic Strip Competition, Tiktok Competition Announcement
+                                          <h1 class="content-timeline" style="color: white; font-size: 20px">
+                                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sunt ullam, repudiandae eveniet enim incidunt dolore quod autem aperiam corrupti molestias at officia veritatis minima unde quisquam dicta. Consequuntur, cum molestiae.
+                                          </h1>
+                                        </h1>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                {{-- end timeline --}}
+                <div class="row gx-lg-8 gx-xl-12 process-wrapper text-center mt-9" data-cues="slideInUp"
+                    data-group="process">
+                    <div class="hadiah">
+                        <h3 class="display-4 mb-5">Apa yang akan kamu Dapatkan ? </h3>
+                        <p class="total-hadiah">Total hadiah senilai Rp 225 Juta</p>
+                        <div class="hadiah-deskripsi">Dengan perincian sebagai berikut: </div>
+                        <div class="row mt-5">
+                            <div class="col-md-4">
+                                <div class="hadiah-item">
+                                    <div class="d-flex justify-content-center align-items-center">
+                                        <div class="hadiah-item-title"> Terbaik 1</div>
+                                    </div>
+                                    <div class="hadiah-item-price">
+                                        Rp. 100.000.000
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--/column -->
+                            <div class="col-md-4">
+                                <div class="hadiah-item">
+                                    <div class="d-flex justify-content-center align-items-center">
+                                        <div class="hadiah-item-title"> Terbaik 2</div>
+                                    </div>
+                                    <div class="hadiah-item-price">
+                                        Rp.75.000.000
+                                    </div>
+                                </div>
+                            </div>
+                            <!--/column -->
+                            <div class="col-md-4">
+                                <div class="hadiah-item">
+                                    <div class="d-flex justify-content-center align-items-center">
+                                        <div class="hadiah-item-title"> Terbaik 3</div>
+                                    </div>
+                                    <div class="hadiah-item-price">
+                                        Rp.50.000.000
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--/.row -->
+                    </div>
+                    <!--/column -->
+                </div>
+            </div>
             <!--/.row -->
             {{-- penjelasan --}}
             {{-- <section >
@@ -164,26 +197,28 @@ Tiktok Competition Announcement</h1>
             <div class="col-md-10 col-lg-8 col-xl-8 col-xxl-6 mx-auto mb-13" data-cues="slideInDown" data-group="page-title">
             <h1 class="display-1 mb-4">Workshop</h1>
             </div> --}}
-             {{-- end Workshop --}}
+            {{-- end Workshop --}}
 
             <div class="row gx-lg-8 gx-xl-12 gy-10 align-items-center">
-              <div class="col-lg-6 position-relative">
-                <div class="shape rounded bg-pale-yellow rellax d-block" data-rellax-speed="0" style="top: 50%; left: 50%; width: 50%; height: 60%; transform: translate(-50%,-50%);z-index:0"></div>
-                <div class="row gx-md-5 gy-5 position-relative align-items-center">
-                  {{-- <div class="col-6">
+                <div class="col-lg-6 position-relative">
+                    <div class="shape rounded bg-pale-yellow rellax d-block" data-rellax-speed="0"
+                        style="top: 50%; left: 50%; width: 50%; height: 60%; transform: translate(-50%,-50%);z-index:0">
+                    </div>
+                    <div class="row gx-md-5 gy-5 position-relative align-items-center">
+                        {{-- <div class="col-6">
                     <img class="img-fluid rounded shadow-lg d-flex ms-auto" data-cue="fadeIn" data-delay="300" src="{{ asset('assets/img/photos/sa13.jpg') }}" srcset="{{ asset('assets/img/photos/sa13@2x.jpg 2x') }}" alt="" />
                   </div> --}}
-                  <!-- /column -->
-                  {{-- <div class="col-6">
+                        <!-- /column -->
+                        {{-- <div class="col-6">
                     <img class="img-fluid rounded shadow-lg mb-5" data-cue="fadeIn" data-delay="900" src="{{ asset('assets/img/photos/sa14.jpg') }}" srcset="{{ asset('assets/img/photos/sa14@2x.jpg 2x') }}" alt="" />
                     <img class="img-fluid rounded shadow-lg d-flex col-10" data-cue="fadeIn" data-delay="1200" src="{{ asset('assets/img/photos/sa15.jpg') }}" srcset="{{ asset('assets/img/photos/sa15@2x.jpg 2x') }}" alt="" />
                   </div> --}}
-                  <!-- /column -->
+                        <!-- /column -->
+                    </div>
+                    <!-- /.row -->
                 </div>
-                <!-- /.row -->
-              </div>
-              <!--/column -->
-              {{-- <div class="col-lg-6">
+                <!--/column -->
+                {{-- <div class="col-lg-6">
                 <h3 class="display-4 mb-5">We bring solutions to manage your finance the way works best.</h3>
                 <p class="mb-5">Etiam porta sem malesuada magna mollis euismod. Donec ullamcorper nulla non metus auctor fringilla. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Fusce dapibus, tellus ac cursus commodo.</p>
                 <div class="row gy-3">
@@ -204,41 +239,44 @@ Tiktok Competition Announcement</h1>
                 </div>
                 <!--/.row -->
               </div> --}}
-              <!--/column -->
+                <!--/column -->
             </div>
             <!--/.row -->
-          </div>
-          <!-- /.container -->
-        </section>
-        <!-- /section -->
+        </div>
+        <!-- /.container -->
+    </section>
+    <!-- /section -->
 
-        <section class="wrapper bg-soft-primary">
-          <div class="container py-14 pt-md-16 pt-lg-0 pb-md-16">
+    <section class="wrapper bg-soft-primary">
+        <div class="container py-14 pt-md-16 pt-lg-0 pb-md-16">
             <div class="row text-center" data-cue="slideInUp">
-              <div class="col-lg-10 mx-auto">
-                <div class="mt-lg-n20 mt-xl-n22 position-relative">
-                  <div class="shape bg-dot red rellax w-16 h-18" data-rellax-speed="1" style="top: 1rem; left: -3.9rem;"></div>
-                  <div class="shape rounded-circle bg-line primary rellax w-18 h-18" data-rellax-speed="1" style="bottom: 2rem; right: -3rem;"></div>
-                  {{-- <video poster="{{ asset('assets/img/photos/movie.jpg') }}" class="player" playsinline controls preload="none"> --}}
-                    <iframe width="777" height="437" src="https://www.youtube.com/embed/aK33uXl_qzo"
-                     title="Informatics Creative Festival 2021" frameborder="0" allow="accelerometer;
+                <div class="col-lg-10 mx-auto">
+                    <div class="mt-lg-n20 mt-xl-n22 position-relative">
+                        <div class="shape bg-dot red rellax w-16 h-18" data-rellax-speed="1"
+                            style="top: 1rem; left: -3.9rem;"></div>
+                        <div class="shape rounded-circle bg-line primary rellax w-18 h-18" data-rellax-speed="1"
+                            style="bottom: 2rem; right: -3rem;"></div>
+                        {{-- <video poster="{{ asset('assets/img/photos/movie.jpg') }}" class="player" playsinline controls preload="none"> --}}
+                        <iframe width="777" height="437" src="https://www.youtube.com/embed/aK33uXl_qzo"
+                            title="Informatics Creative Festival 2021" frameborder="0"
+                            allow="accelerometer;
                      autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe>
-                  {{-- </video> --}}
+                            allowfullscreen></iframe>
+                        {{-- </video> --}}
+                    </div>
                 </div>
-              </div>
-              <!--/column -->
+                <!--/column -->
             </div>
             <!--/.row -->
             <div class="row text-center mt-12">
-              <!-- /column -->
+                <!-- /column -->
             </div>
             <!-- /.row -->
-          </div>
-          <!-- /.container -->
-        </section>
-        <!-- /section -->
-        {{-- <section class="wrapper bg-light">
+        </div>
+        <!-- /.container -->
+    </section>
+    <!-- /section -->
+    {{-- <section class="wrapper bg-light">
           <div class="container py-14 py-md-17">
             <div class="row gx-lg-8 gx-xl-12 gy-6 mb-14 align-items-center">
               <div class="col-lg-7 position-relative">
@@ -481,16 +519,15 @@ Tiktok Competition Announcement</h1>
           </div>
           <!-- /.container -->
         </section> --}}
-        <!-- /section -->
-      </div>
-      <!-- /.content-wrapper -->
+    <!-- /section -->
+    </div>
+    <!-- /.content-wrapper -->
 
-      <div class="progress-wrap">
+    <div class="progress-wrap">
         <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
-          <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
         </svg>
-      </div>
-      <script src="{{ asset('assets/js/plugins.js') }}"></script>
-      <script src="{{ asset('assets/js/theme.js') }}"></script>
-
+    </div>
+    <script src="{{ asset('assets/js/plugins.js') }}"></script>
+    <script src="{{ asset('assets/js/theme.js') }}"></script>
 @endsection

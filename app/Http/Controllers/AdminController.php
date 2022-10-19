@@ -24,7 +24,7 @@ class AdminController extends Controller
         return view('admin.daftarpeserta.seminar.seminarBigData', ['data' => $pesertaBigData]);
     }
 
-    public function showPesertaSeminarMultiverse()
+    public function showPesertaSeminarMachine()
     {
         $pesertaMultiverse = DB::table('user_event')
                         ->join('users','user_event.users_id','=','users.id')
@@ -46,7 +46,7 @@ class AdminController extends Controller
                         ->orderBy('users.id','asc')
                         ->get();
         // dd($pesertaMultiverse);
-        return view('admin.daftarpeserta.seminar.seminarMultiverse', ['data' => $pesertaMultiverse]);
+        return view('admin.daftarpeserta.workshop.workshopHCI', ['data' => $pesertaMultiverse]);
     }
     public function showPesertaWorkshopUI()
     {
@@ -58,7 +58,19 @@ class AdminController extends Controller
                         ->orderBy('users.id','asc')
                         ->get();
         // dd($pesertaMultiverse);
-        return view('admin.daftarpeserta.seminar.seminarMultiverse', ['data' => $pesertaMultiverse]);
+        return view('admin.daftarpeserta.workshop.workshopUI', ['data' => $pesertaMultiverse]);
+    }
+    public function showPesertaARVR()
+    {
+        $pesertaMultiverse = DB::table('user_event')
+                        ->join('users','user_event.users_id','=','users.id')
+                        ->join('events','user_event.events_id','=','events.id')
+                        ->select('users.nama','users.email','users.no_hp')
+                        ->where('user_event.events_id','=',9)
+                        ->orderBy('users.id','asc')
+                        ->get();
+        // dd($pesertaMultiverse);
+        return view('admin.daftarpeserta.seminar.seminararvr', ['data' => $pesertaMultiverse]);
     }
     /**
      * Display a listing of the resource.

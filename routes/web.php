@@ -97,9 +97,10 @@ Route::group(['middleware'=>'admin'], function() {
 Route::group(['middleware'=>'pubreg'], function() {
     // Route::get('/dashboardadmin', 'AdminController@showWelcome');
     Route::get('/pesertaSeminarBigData','AdminController@showPesertaSeminarBigData');
-    Route::get('/pesertaSeminarMultiverse','AdminController@showPesertaSeminarMultiverse');
-    Route::get('/pesertaWorkshopHCI','AdminController@showPesertaWorkshopHCI');
-    Route::get('/pesertaWorkshopUI','AdminController@showPesertaWorkshopUI');
+    Route::get('/pesertaSeminarMachine','AdminController@showPesertaSeminarMachine');
+    Route::get('/pesertaSeminarARVR','AdminController@showPesertaARVR');
+    Route::get('/pesertaSeminarHCI','AdminController@showPesertaWorkshopHCI');
+    Route::get('/pesertaSeminarMultiverse','AdminController@showPesertaWorkshopUI');
     Route::get('/timLombaHackaton','TeamController@showTimHackaton');
     Route::get('/timLombaMLBB','TeamController@showTimMlbb');
     Route::get('/pesertaTiktok','TeamController@showPesertaTiktok');

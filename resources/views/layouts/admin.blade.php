@@ -50,39 +50,33 @@
                 <span class="nav-link-text ms-1">List Acara</span>
             </a>
         </li>
-
-         <li class="nav-item">
-            <li class="nav-item mt-3">
-               <h6 class="ps-4 ms-2 text-uppercase text-xs font-weight-bolder opacity-6">Daftar Peserta Workshop</h6>
-            </li>
-         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="{{ url('/pesertaWorkshopHCI')}} ">
-            <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
-              <i class="ni ni-tv-2 text-primary text-sm opacity-10"></i>
-            </div>
-            <span class="nav-link-text ms-1">Workshop <br>What is Human <br>Computer Interaction ?</span>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="{{ url('/pesertaWorkshopUI')}}">
-            <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
-              <i class="ni ni-calendar-grid-58 text-warning text-sm opacity-10"></i>
-            </div>
-            <span class="nav-link-text ms-1">Workshop <br>How to Make a Good UI</span>
-          </a>
-        </li>
          <li class="nav-item">
             <li class="nav-item mt-3">
                <h6 class="ps-4 ms-2 text-uppercase text-xs font-weight-bolder opacity-6">Daftar Peserta Seminar</h6>
             </li>
          </li>
         <li class="nav-item">
-          <a class="nav-link" href="{{ url('/pesertaSeminarBigData')}}">
+          <a class="nav-link" href="{{ url('/pesertaSeminarMachine')}}">
             <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
               <i class="ni ni-tv-2 text-primary text-sm opacity-10"></i>
             </div>
-            <span class="nav-link-text ms-1">Seminar Utilizing Big Data<br> to Address Global Issues</span>
+            <span class="nav-link-text ms-1">Seminar Machine vs<br>Human</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{ url('/pesertaSeminarBigData')}}">
+            <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+              <i class="ni ni-calendar-grid-58 text-warning text-sm opacity-10"></i>
+            </div>
+            <span class="nav-link-text ms-1">Seminar <br>Data for the Future</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{ url('/pesertaSeminarHCI')}} ">
+            <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+              <i class="ni ni-tv-2 text-primary text-sm opacity-10"></i>
+            </div>
+            <span class="nav-link-text ms-1">Seminar  <br>Human Computer <br>Interaction in Everyday Life</span>
           </a>
         </li>
         <li class="nav-item">
@@ -90,7 +84,15 @@
             <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
               <i class="ni ni-calendar-grid-58 text-warning text-sm opacity-10"></i>
             </div>
-            <span class="nav-link-text ms-1">Seminar Accessible <br>Multiverse for Everyone</span>
+            <span class="nav-link-text ms-1">Seminar Toward <br>Metaverse : Challenge & Opportunities</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{ url('/pesertaSeminarARVR')}}">
+            <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+              <i class="ni ni-calendar-grid-58 text-warning text-sm opacity-10"></i>
+            </div>
+            <span class="nav-link-text ms-1">Seminar Augmented Reality<br>vs Virtual Reality</span>
           </a>
         </li>
          <li class="nav-item">

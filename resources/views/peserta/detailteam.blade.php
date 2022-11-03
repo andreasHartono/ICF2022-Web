@@ -64,7 +64,7 @@
                                 <div class="col-5">Email</div>
                                 <div class="col-7">{{ $item->email }}</div>
                             </div>
-                            @if ($team->events_id === 6)
+                            @if ($team->events_id == 6)
                                 <div class="row justify-content-between">
                                     <div class="col-5">ID Mobile Legend</div>
                                     <div class="col-7">{{ $item->idgame }}</div>
@@ -105,7 +105,7 @@
                     </div>
                 </div>
             </form>
-            @if ($team->events_id === 5)
+            @if ($team->events_id == 5 && $team->status == 'accepted')
                 <a href="#upload_{{ $team->id }}" class="btn myBtn dark d-grid gap-5" data-bs-toggle="modal"
                     style="width: 80%; margin: 0 auto; color: #fff !important;">Upload
                     File Jawaban</a>

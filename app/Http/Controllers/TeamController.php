@@ -29,13 +29,7 @@ class TeamController extends Controller
       // dd($result);
       return view('admin.daftarpeserta.lomba.lombaHackaton', ['data' => $result]);
    }
-
-   // public function showFileJawaban($id) 
-   // {
-   //    $result = Team::find($id);
-   //    $file_jawaban = $result->file_jawaban;
-   //    return view('admin.daftarpeserta.lomba.lombaHackaton', ['file_jawaban' => $file_jawaban]);
-   // }
+   
    public function showTimMlbb()
    {
       $result = Team::where('teams.events_id', '=', 6)->get();

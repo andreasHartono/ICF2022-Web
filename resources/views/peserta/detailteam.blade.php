@@ -20,6 +20,7 @@
                     date_default_timezone_set('Asia/Jakarta');
                     $startDate = $event->tanggal_start;
                     $endDate = $event->tanggal_end;
+                    $startDateTimestamp = strtotime($startDate);
                     $endDateTimestamp = strtotime($endDate);
                 @endphp
 
@@ -105,7 +106,7 @@
                     </div>
                 </div>
             </form>
-            @if ($team->events_id == 5 && $team->status == 'accepted')
+            @if ($team->events_id == 5 && $team->status == 'accepted' && time() >= $startDateTimestamp && time() <= $endDateTimestamp)
                 <a href="#upload_{{ $team->id }}" class="btn myBtn dark d-grid gap-5" data-bs-toggle="modal"
                     style="width: 80%; margin: 0 auto; color: #fff !important;">Upload
                     File Jawaban</a>

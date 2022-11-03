@@ -7,7 +7,13 @@ ICF 2022 - Daftar Competition
 @section('content')
 <div class="body-cart">
    <div class="container marketing">
-   
+   @php
+      $date1 = date_create($comp->tanggal_start);
+      $date2 = date_create($comp->tanggal_end);
+      date_default_timezone_set("Asia/Jakarta");
+      $endDate = "02 November 2022";
+      $endDateTimestamp = strtotime($endDate);
+   @endphp
     <div class="row">
       @if(session()->has("success"))
          <div class="alert alert-success alert-dismissible fade show" role="alert">
@@ -32,13 +38,7 @@ ICF 2022 - Daftar Competition
             <img class="img-circle" src="{{ url('/assets/img/poster.png')}}" alt="{{ $comp->url}}">
             <h2>{{ $comp->nama}}</h2>
             <p style="text-align: justify;">{{ $comp->deskripsi }}</p>
-            @php
-               $date1 = date_create($comp->tanggal_start);
-               $date2 = date_create($comp->tanggal_end);
-               date_default_timezone_set("Asia/Jakarta");
-               $endDate = "02 November 2022";
-               $endDateTimestamp = strtotime($endDate);
-            @endphp
+            
             <h6>Tanggal Acara</h6>
             <p style="text-align: center;"> {{ date_format($date1, 'd F Y') }} - {{ date_format($date2, 'd F Y') }}<br>Pukul :
             {{ date_format($date1, 'H:i') }} - {{ date_format($date2, 'H:i') }}</p>

@@ -27,11 +27,10 @@
                   Daftar Pameran Tugas Akhir Mahasiswa Informatika Universitas Surabaya
             </h3>
         </div>
-        <div style="overflow-x:auto;">
             <table class="table table-bordered table-hover" style="text-align: center; vertical-align: middle;border-radius: 8px;">
                 <thead>
                     <tr>
-                        <th scope="col">No</th>
+                        <th scope="col">NO</th>
                         <th scope="col">Judul Pameran TA</th>
                         <th scope="col">Nama </th>
                         <th scope="col">Jurusan</th>
@@ -613,7 +612,6 @@
                     </tr>
                 </tfoot>
             </table>
-        </div>  
         </div>
     </div>
 @endsection

@@ -70,7 +70,7 @@
                             <span class="badge bg-primary text-white text-center">{{ $data[$i]->status }}</span>
                         @endif
                     </td>
-                    <td><a href="{{ $data[$i]->file_jawaban}}" target="_blank" class="btn btn-info">File Jawaban Tim {{ $data[$i]->nama_tim }} Disini</a></td>
+                    <td><a href="files/{{ $data[$i]->file_jawaban}}" target="_blank" class="btn btn-info">File Jawaban Tim {{ $data[$i]->nama_tim }} Disini</a></td>
                     <td>
                         <a href="{{ url('/showpeserta/'.$data[$i]->id) }}" class="btn bg-gradient-info">Show Detail Peserta</a><br>
                         <form method="POST" action="{{ url('/lomba/confirm/'.$data[$i]->id) }}">

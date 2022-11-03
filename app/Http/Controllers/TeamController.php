@@ -29,6 +29,13 @@ class TeamController extends Controller
       // dd($result);
       return view('admin.daftarpeserta.lomba.lombaHackaton', ['data' => $result]);
    }
+
+   // public function showFileJawaban($id) 
+   // {
+   //    $result = Team::find($id);
+   //    $file_jawaban = $result->file_jawaban;
+   //    return view('admin.daftarpeserta.lomba.lombaHackaton', ['file_jawaban' => $file_jawaban]);
+   // }
    public function showTimMlbb()
    {
       $result = Team::where('teams.events_id', '=', 6)->get();
@@ -83,17 +90,19 @@ class TeamController extends Controller
    public function TeamDisplay($iduser, $idevent)
    {
       if (Auth::user()->id != $iduser) {
+         $event = Event::find($idevent);
          $team = Team::where('users_id', Auth::user()->id)
             ->where('events_id', $idevent)
             ->first();
          // dd($team);
-         return view('peserta.detailteam', compact('team'));
+         return view('peserta.detailteam', compact('team', 'event'));
       } else {
+         $event = Event::find($idevent);
          $team = Team::where('users_id', $iduser)
             ->where('events_id', $idevent)
             ->first();
-         // dd($team);
-         return view('peserta.detailteam', compact('team'));
+         // dd($event);
+         return view('peserta.detailteam', compact('team', 'event'));
       }
    }
 
@@ -161,15 +170,15 @@ class TeamController extends Controller
                return redirect()->back();
             } else {
                //ImageMember2
-               $idMember2 = $request->get('idAnggota3');
-               $member2 = TeamDetail::find($idMember2);
-               unlink('files/' . $member2->image);
+               $idMember3 = $request->get('idAnggota3');
+               $member3 = TeamDetail::find($idMember3);
+               unlink('files/' . $member3->image);
 
                $imgFile = 'ICF2022FOTO_' . "_" . $request->file('imgAnggota3')->getClientOriginalName();
                $request->file('imgAnggota3')->move($imgFolder, $imgFile);
-               $member2->image = $imgFile;
+               $member3->image = $imgFile;
 
-               $member2->save();
+               $member3->save();
             }
          }
          if ($request->hasFile('imgAnggota4')) {
@@ -178,15 +187,15 @@ class TeamController extends Controller
                return redirect()->back();
             } else {
                //ImageMember2
-               $idMember2 = $request->get('idAnggota4');
-               $member2 = TeamDetail::find($idMember2);
-               unlink('files/' . $member2->image);
+               $idMember4 = $request->get('idAnggota4');
+               $member4 = TeamDetail::find($idMember4);
+               unlink('files/' . $member4->image);
 
                $imgFile = 'ICF2022FOTO_' . "_" . $request->file('imgAnggota4')->getClientOriginalName();
                $request->file('imgAnggota4')->move($imgFolder, $imgFile);
-               $member2->image = $imgFile;
+               $member4->image = $imgFile;
 
-               $member2->save();
+               $member4->save();
             }
          }
          if ($request->hasFile('imgAnggota5')) {
@@ -195,15 +204,15 @@ class TeamController extends Controller
                return redirect()->back();
             } else {
                //ImageMember2
-               $idMember2 = $request->get('idAnggota5');
-               $member2 = TeamDetail::find($idMember2);
-               unlink('files/' . $member2->image);
+               $idMember5 = $request->get('idAnggota5');
+               $member5 = TeamDetail::find($idMember5);
+               unlink('files/' . $member5->image);
 
                $imgFile = 'ICF2022FOTO_' . "_" . $request->file('imgAnggota5')->getClientOriginalName();
                $request->file('imgAnggota5')->move($imgFolder, $imgFile);
-               $member2->image = $imgFile;
+               $member5->image = $imgFile;
 
-               $member2->save();
+               $member5->save();
             }
          }
          $team['status'] = "pending";
@@ -225,9 +234,33 @@ class TeamController extends Controller
 
    public function uploadJawaban(Request $request, Team $team)
    {
-      $team->file_jawaban = $request->get('link_jawaban');
-      $team->save();
-      return redirect()->back('success',' Upload Link Google Docs Jawaban berhasil');
+      $imgFolder = "files";
+      $request->validate([
+         'file_jawaban' => ['mimes:pdf,jpg,png,jpeg', 'max:3072']
+      ]);
+
+      try {
+         if ($request->hasFile('file_jawaban')) {
+
+            $idteam = $request->get('idteam');
+            $team = Team::find($idteam);
+            $file = 'ICF2022COMPROGANSWER_' . "_" . $request->file('file_jawaban')->getClientOriginalName();
+            $request->file('file_jawaban')->move($imgFolder, $file);
+
+            $team->file_jawaban = $file;
+            $team->save();
+
+            // session()->flash();
+            return redirect()->back()->with("success", "File Jawaban berhasil diupload");
+         }
+      } catch (\Exception $e) {
+         //pesan gagal karena format file tidak sesuai
+         $message = 'Terjadi kesalahan saat upload file jawaban.
+                     Pastikan format file dalam bentuk PDF dengan maksimal ukuran file adalah 3 MB. 
+                     Pastikan format nama file adalah NamaTim_Nama';
+         // session()->flash("error", $message);
+         return redirect()->back()->with("error", $message);
+      }
    }
    /**
     * Show the form for creating a new resource.
@@ -281,7 +314,7 @@ class TeamController extends Controller
     */
    public function update(Request $request, Team $team)
    {
-      //
+
    }
 
    /**

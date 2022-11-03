@@ -72,6 +72,8 @@ class AdminController extends Controller
         // dd($pesertaMultiverse);
         return view('admin.daftarpeserta.seminar.seminararvr', ['data' => $pesertaMultiverse]);
     }
+
+    
     /**
      * Display a listing of the resource.
      *

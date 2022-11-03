@@ -132,6 +132,7 @@ Route::group(['middleware'=>'auth'], function() {
     Route::get('/updateteam/{team}', 'TeamController@updateKartuPeserta');
     Route::get('/historyevents','EventController@historyEvents');
     Route::put('/uploadjawabancomprog/{team}', 'TeamController@uploadJawaban');
+   //  Route::get('showjawabancomprog/{id}', 'TeamController@showFileJawaban');
 });
 // Route::get('/home', 'HomeController@index')->name('home');
 

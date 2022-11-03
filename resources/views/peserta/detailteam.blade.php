@@ -14,12 +14,20 @@
             <div class="row">
                 <h3 style="color: #fff !important;">Selamat Datang, Tim {{ $team->nama_tim }}</h3>
             </div>
-            <div class="row mt-3">
-                <div class="col-lg-12 text-center mb-3">
-                    <h3 style="color: #fff !important;">Anggota</h3>
-                </div>
-            </div>
+
             <div>
+                @php
+                    date_default_timezone_set('Asia/Jakarta');
+                    $startDate = $event->tanggal_start;
+                    $endDate = $event->tanggal_end;
+                    $endDateTimestamp = strtotime($endDate);
+                @endphp
+
+                <div class="row mt-3">
+                    <div class="col-lg-12 text-center mb-3">
+                        <h3 style="color: #fff !important;">Anggota</h3>
+                    </div>
+                </div>
                 @if (session()->has('success'))
                     <div class="alert alert-success alert-dismissible fade show" role="alert">
                         <strong>{{ session()->get('success') }}</strong>
@@ -94,43 +102,58 @@
                                 {{ $team->status }}</h4>
                         @endif
                         <br><br><br>
-                        @if ($team->events_id === 5)
-                            <a href="#upload_{{ $data->id }}" class="btn myBtn dark" data-toggle="modal">Upload Jawaban
-                                Competitive Programming</a>
-                            <!-- Modal -->
-                            <div class="modal fade" id="upload_{{ $data->id }}" tabindex="-1"
-                                aria-labelledby="modalPendaftaranLabel" aria-hidden="true">
-                                <link rel="stylesheet" href="{{ asset('assets/css/popup.css') }}">
-                                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title" id="modalPendaftaranLabel">Silahkan Kirim Link Google Docs Jawaban anda Disini
-                                             </h5>
-                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                                aria-label="Close"></button>
-                                        </div>
-                                        <div class="modal-body">
-                                            <div class="container">
-                                                <form method="POST" action="{{ url('uploadjawabancomprog/'.$team->id) }}">
-                                                   @csrf
-                                                   @method('PUT')
-                                                   <div class="form-group">
-                                                      <label class="form-control-label" for="txt-message">Input Message</label>
-                                                      <input type="text" class="form-control" name="link_jawaban" id="txt_message" placeholder="Upload link Google Docs Jawaban disini...." />
-                                                   </div>
-                                                   <div class="form-group">
-                                                      <input type="submit" class="btn myBtn dark" id="btn-submit" value="Submit Jawaban">
-                                                   </div>
-                                                </form>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        @endif
                     </div>
                 </div>
             </form>
+            @if ($team->events_id === 5)
+                <a href="#upload_{{ $team->id }}" class="btn myBtn dark d-grid gap-5" data-bs-toggle="modal"
+                    style="width: 80%; margin: 0 auto; color: #fff !important;">Upload
+                    File Jawaban</a>
+                <!-- Modal -->
+                <div class="modal fade" id="upload_{{ $team->id }}" tabindex="-1"
+                    aria-labelledby="modalPendaftaranLabel" aria-hidden="true">
+                    <link rel="stylesheet" href="{{ asset('assets/css/popup.css') }}">
+                    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modalPendaftaranLabel">Silahkan Kirim File Jawaban
+                                    Dalam Bentuk PDF Dengan Format NamaTim_JawabanComprog.pdf (Maksimal 3 MB)
+                                </h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <form role="form" method="POST" action="{{ url('uploadjawabancomprog/' . $team->id) }}"
+                                class="mt-5" enctype="multipart/form-data">
+                                @csrf
+                                @method('PUT')
+                                <div class="modal-body">
+                                    <div class="container">
+                                        <div class="form-group">
+                                            <label class="myLabel width-90" style="text-align:left;">Upload File
+                                                Jawaban</label>
+                                            <input type="file" accept="application/pdf" name="file_jawaban"
+                                                id="file soal formFileMultiple"
+                                                class="myInputFile width-90 @error('file_jawaban') is-invalid @enderror"
+                                                style="color:navy;">
+                                            <input type="hidden" name="idteam" value="{{ $team->id }}" />
+                                            @error('file_jawaban')
+                                                <div class="invalid-feedback text-center">
+                                                    {{ $message }}
+                                                </div>
+                                            @enderror
+                                        </div>
+                                        <div class="modal-footer p-0">
+                                            <input type="submit" class="btn myBtn width-90 mt-5 text-light"
+                                                style="background: red !important; color: white !important;"
+                                                id="btn-submit" value="Submit Jawaban">
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            @endif
         </div>
     </section>
 @endsection

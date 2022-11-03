@@ -33,27 +33,27 @@ ICF - About Us
         <div class="swiper overflow-visible">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
-              <figure class="rounded"><img src="{{ url('ddd/1.jpg') }}" alt="" /><a class="item-link" href="./assets/img/photos/cf1.jpg" data-glightbox data-gallery="gallery-group"><i class="uil uil-focus-add"></i></a></figure>
+              <figure class="rounded"><img src="{{ asset('ddd/1.JPG') }}" alt="" /><a class="item-link" href="#" data-glightbox data-gallery="gallery-group"><i class="uil uil-focus-add"></i></a></figure>
             </div>
             <!--/.swiper-slide -->
             <div class="swiper-slide">
-              <figure class="rounded"><img src="{{ url('ddd/2.jpg') }}" alt="" /><a class="item-link" href="./assets/img/photos/cf2.jpg" data-glightbox data-gallery="gallery-group"><i class="uil uil-focus-add"></i></a></figure>
+              <figure class="rounded"><img src="{{ asset('ddd/2.JPG') }}" alt="" /><a class="item-link" href="#" data-glightbox data-gallery="gallery-group"><i class="uil uil-focus-add"></i></a></figure>
             </div>
             <!--/.swiper-slide -->
             <div class="swiper-slide">
-              <figure class="rounded"><img src="{{ url('ddd/3.jpg') }}" alt="" /><a class="item-link" href="./assets/img/photos/cf3.jpg" data-glightbox data-gallery="gallery-group"><i class="uil uil-focus-add"></i></a></figure>
+              <figure class="rounded"><img src="{{ asset('ddd/3.JPG') }}" alt="" /><a class="item-link" href="#" data-glightbox data-gallery="gallery-group"><i class="uil uil-focus-add"></i></a></figure>
             </div>
             <!--/.swiper-slide -->
             <div class="swiper-slide">
-              <figure class="rounded"><img src="{{ url('ddd/4.jpg') }}" alt="" /><a class="item-link" href="./assets/img/photos/cf4.jpg" data-glightbox data-gallery="gallery-group"><i class="uil uil-focus-add"></i></a></figure>
+              <figure class="rounded"><img src="{{ asset('ddd/4.JPG') }}" alt="" /><a class="item-link" href="#" data-glightbox data-gallery="gallery-group"><i class="uil uil-focus-add"></i></a></figure>
             </div>
             <!--/.swiper-slide -->
             <div class="swiper-slide">
-              <figure class="rounded"><img src="{{ url('ddd/5.jpg') }}" alt="" /><a class="item-link" href="./assets/img/photos/cf5.jpg" data-glightbox data-gallery="gallery-group"><i class="uil uil-focus-add"></i></a></figure>
+              <figure class="rounded"><img src="{{ asset('ddd/5.JPG') }}" alt="" /><a class="item-link" href="#" data-glightbox data-gallery="gallery-group"><i class="uil uil-focus-add"></i></a></figure>
             </div>
             <!--/.swiper-slide -->
             <div class="swiper-slide">
-              <figure class="rounded"><img src="{{ url('ddd/6.jpg') }}" alt="" /><a class="item-link" href="./assets/img/photos/cf6.jpg" data-glightbox data-gallery="gallery-group"><i class="uil uil-focus-add"></i></a></figure>
+              <figure class="rounded"><img src="{{ asset('ddd/6.JPG') }}" alt="" /><a class="item-link" href="#" data-glightbox data-gallery="gallery-group"><i class="uil uil-focus-add"></i></a></figure>
             </div>
             <!--/.swiper-slide -->
           </div>
@@ -80,10 +80,10 @@ ICF - About Us
       <div class="grid grid-view projects-masonry">
         <div class="row gx-md-8 gy-10 gy-md-13 isotope">
           <div class="project item col-md-6 col-xl-4 product">
-            <figure class="lift rounded mb-6"><a href="#"> <img src="{{ asset('ddd/speaker5.jpg') }}" alt="" /></a></figure>
+            <figure class="lift rounded mb-6"><a href="#"> <img src="{{ asset('logo/pakVincent.JPG') }}" alt="" /></a></figure>
             <div class="project-details d-flex justify-content-center flex-column">
               <div class="post-header">
-                <div class="post-category mb-2 text-yellow">Utilizing Big Data to Address Global Issues</div>
+                <div class="post-category mb-2 text-yellow">Machine vs Human</div>
                 <h2 class="post-title h3">Vincentius Riandaru</h2>
               </div>
               <!-- /.post-header -->
@@ -92,10 +92,10 @@ ICF - About Us
           </div>
           <!-- /.project -->
           <div class="project item col-md-6 col-xl-4 workshop">
-            <figure class="lift rounded mb-6"><a href="#"> <img src="{{ asset('ddd/speaker5.jpg') }}" alt="" /></a></figure>
+            <figure class="lift rounded mb-6"><a href="#"> <img src="{{ asset('logo/pakDaniel.jpg') }}" alt="" /></a></figure>
             <div class="project-details d-flex justify-content-center flex-column">
               <div class="post-header">
-                <div class="post-category mb-2 text-red">Utilizing Big Data to Address Global Issues</div>
+                <div class="post-category mb-2 text-red">Data for Futures</div>
                 <h2 class="post-title h3">Daniel Soesanto</h2>
               </div>
               <!-- /.post-header -->
@@ -104,10 +104,33 @@ ICF - About Us
           </div>
           <!-- /.project -->
           <div class="project item col-md-6 col-xl-4 still-life">
-            <figure class="lift rounded mb-6"><a href="#"> <img src="{{ asset('ddd/speaker5.jpg') }}" alt="" /></a></figure>
+            <figure class="lift rounded mb-6"><a href="#"> <img src="{{ asset('logo/buTyrza.jpg') }}" alt="" /></a></figure>
             <div class="project-details d-flex justify-content-center flex-column">
               <div class="post-header">
-                <div class="post-category mb-2 text-orange">Accessible Multiverse for Everyone</div>
+                <div class="post-category mb-2 text-orange">Human Computer Interaction in Everyday Life</div>
+                <h2 class="post-title h3">Tyrza</h2>
+              </div>
+              <!-- /.post-header -->
+            </div>
+            <!-- /.project-details -->
+          </div>
+          <div class="project item col-md-6 col-xl-4 still-life">
+            <figure class="lift rounded mb-6"><a href="#"> <img src="{{ asset('logo/buLisana.jpeg') }}" alt="" /></a></figure>
+            <div class="project-details d-flex justify-content-center flex-column">
+              <div class="post-header">
+                <div class="post-category mb-2 text-orange">Human Computer Interaction in Everyday Life</div>
+                <h2 class="post-title h3">Lisana</h2>
+              </div>
+              <!-- /.post-header -->
+            </div>
+            <!-- /.project-details -->
+          </div>
+          <!-- /.project -->
+          <div class="project item col-md-6 col-xl-4 product">
+            <figure class="lift rounded mb-6"><a href="#"> <img src="{{ asset('logo/pakAndre.png') }}" alt="" /></a></figure>
+            <div class="project-details d-flex justify-content-center flex-column">
+              <div class="post-header">
+                <div class="post-category mb-2 text-purple">Toward Metaverse: Challenge and Opportunities</div>
                 <h2 class="post-title h3">Andre</h2>
               </div>
               <!-- /.post-header -->
@@ -116,35 +139,11 @@ ICF - About Us
           </div>
           <!-- /.project -->
           <div class="project item col-md-6 col-xl-4 product">
-            <figure class="lift rounded mb-6"><a href="#"> <img src="{{ asset('ddd/speaker5.jpg') }}" alt="" /></a></figure>
+            <figure class="lift rounded mb-6"><a href="#"> <img src="{{ asset('logo/koMing.jpg') }}" alt="" /></a></figure>
             <div class="project-details d-flex justify-content-center flex-column">
               <div class="post-header">
-                <div class="post-category mb-2 text-purple">Accessible Multiverse for Everyone</div>
+                <div class="post-category mb-2 text-leaf">Augmented Reality vs Virtual Reality</div>
                 <h2 class="post-title h3">Mikhael Ming Khosasih</h2>
-              </div>
-              <!-- /.post-header -->
-            </div>
-            <!-- /.project-details -->
-          </div>
-          <!-- /.project -->
-          <div class="project item col-md-6 col-xl-4 product">
-            <figure class="lift rounded mb-6"><a href="#"> <img src="{{ asset('ddd/speaker5.jpg') }}" alt="" /></a></figure>
-            <div class="project-details d-flex justify-content-center flex-column">
-              <div class="post-header">
-                <div class="post-category mb-2 text-leaf">What is Human Computer Interaction ?</div>
-                <h2 class="post-title h3">Tyrza</h2>
-              </div>
-              <!-- /.post-header -->
-            </div>
-            <!-- /.project-details -->
-          </div>
-          <!-- /.project -->
-          <div class="project item col-md-6 col-xl-4 workshop">
-            <figure class="lift rounded mb-6"><a href="#"> <img src="{{ asset('ddd/speaker5.jpg') }}" alt="" /></a></figure>
-            <div class="project-details d-flex justify-content-center flex-column">
-              <div class="post-header">
-                <div class="post-category mb-2 text-aqua">How to Make a Good UI</div>
-                <h2 class="post-title h3">Lisana</h2>
               </div>
               <!-- /.post-header -->
             </div>
@@ -172,7 +171,7 @@ ICF - About Us
     <!-- /.container -->
   </section>
 
-   <section style="background-image: url('{{ asset("ddd/footer.jpg") }}')">
+   <section style="background-image: url('{{ asset("logo/competitiveprog.jpg") }}')">
     <div class="container py-14 py-md-16">
       {{-- <figure class="rounded mt-md-n21 mt-lg-n23 mb-14" data-cue="slideInDown" data-delay="900"><img src="./assets/img/photos/about15.jpg" srcset="./assets/img/photos/about15@2x.jpg 2x" alt="" /></figure> --}}
       <div class="row">
@@ -185,7 +184,7 @@ ICF - About Us
     <!-- /.container -->
   </section>
 
-  <section style="background: #4174B1">
+  <section style="background: #4174B1;background-image: url('{{ asset("logo/mobileLegend.jpg") }}'); ">
     <div class="container py-14 py-md-16">
       {{-- <figure class="rounded mt-md-n21 mt-lg-n23 mb-14" data-cue="slideInDown" data-delay="900"><img src="./assets/img/photos/about15.jpg" srcset="./assets/img/photos/about15@2x.jpg 2x" alt="" /></figure> --}}
       <div class="row">
@@ -199,7 +198,7 @@ ICF - About Us
   </section>
 
 
-  <section style="background:#010C18; background-image: url('{{ asset("ddd/tiktok.jpg") }}')">
+  <section style="background:#010C18; background-image: url('{{ asset("logo/tiktokc.jpg") }}')">
     <div class="container py-14 py-md-16">
       {{-- <figure class="rounded mt-md-n21 mt-lg-n23 mb-14" data-cue="slideInDown" data-delay="900"><img src="./assets/img/photos/about15.jpg" srcset="./assets/img/photos/about15@2x.jpg 2x" alt="" /></figure> --}}
       <div class="row">
@@ -211,7 +210,7 @@ ICF - About Us
     </div>
     <!-- /.container -->
   </section>
-  <section style="background:#EFBB1F;">
+  <section style="background:#EFBB1F; background-image: url('{{ asset("logo/drawing.jpg") }}');">
     <div class="container py-14 py-md-16">
       {{-- <figure class="rounded mt-md-n21 mt-lg-n23 mb-14" data-cue="slideInDown" data-delay="900"><img src="./assets/img/photos/about15.jpg" srcset="./assets/img/photos/about15@2x.jpg 2x" alt="" /></figure> --}}
       <div class="row">

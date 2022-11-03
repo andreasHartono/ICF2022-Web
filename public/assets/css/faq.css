@@ -144,7 +144,7 @@ iframe{
   }
   
   .timeline-info small {
-    color: #5cc990;
+    color: #273242;
     font-size: 20px;
     font-weight: bold;
     display: inline-block;
@@ -164,7 +164,7 @@ iframe{
       line-height: 65px;
     }
     .timeline-yr {
-      background: #01934c;
+      background: #273242;
       border-radius: 100%;
       position: absolute;
       width: 65px;
@@ -174,7 +174,7 @@ iframe{
     }
     .timeline-wrapper:before {
       content: "";
-      background: #01934c;
+      background: #273242;
       width: 3px;
       height: 100%;
       position: absolute;

@@ -116,16 +116,10 @@ Route::group(['middleware'=>'auth'], function() {
     Route::get('/peserta/add-to-cart/{event}', 'EventController@addToCart');
     Route::get('/peserta/cart','EventController@cart');
     Route::get('/peserta/checkout','EventController@checkout');
-    Route::get('/registerlomba/5', function () {
-        return view('peserta.registerhackaton');
-    });
+    Route::get('/registerlomba/5', 'AccountController@registerPageComprog');
     Route::get('/registerlomba/6', 'AccountController@registerPageMLBB');
-    Route::get('/registerlomba/7', function () {
-        return view('peserta.registertiktok');
-    });
-    Route::get('/registerlomba/8', function () {
-        return view('peserta.registercomic');
-    });
+    Route::get('/registerlomba/7', 'AccountController@registerPageTiktok');
+    Route::get('/registerlomba/8', 'AccountController@registerPageComic');
 
     Route::get('/daftarlomba','EventController@front_lomba');
 
@@ -137,6 +131,7 @@ Route::group(['middleware'=>'auth'], function() {
     Route::get('/showteam/{iduser}/{idevent}', 'TeamController@TeamDisplay');
     Route::get('/updateteam/{team}', 'TeamController@updateKartuPeserta');
     Route::get('/historyevents','EventController@historyEvents');
+    Route::put('/uploadjawabancomprog/{team}', 'TeamController@uploadJawaban');
 });
 // Route::get('/home', 'HomeController@index')->name('home');
 

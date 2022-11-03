@@ -21,6 +21,12 @@ ICF 2022 - Daftar Competition
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
          </div>
       @endif
+      @if(session()->has('registerClosed'))
+      <div class="alert alert-danger alert-dismissible fade show" role="alert">
+         {{ session()->get('registerClosed') }}
+         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+      @endif
       @foreach ($lomba as $key => $comp)
          <div class="col-lg-4">
             <img class="img-circle" src="{{ url('/assets/img/poster.png')}}" alt="{{ $comp->url}}">
@@ -29,6 +35,9 @@ ICF 2022 - Daftar Competition
             @php
                $date1 = date_create($comp->tanggal_start);
                $date2 = date_create($comp->tanggal_end);
+               date_default_timezone_set("Asia/Jakarta");
+               $endDate = "02 November 2022";
+               $endDateTimestamp = strtotime($endDate);
             @endphp
             <h6>Tanggal Acara</h6>
             <p style="text-align: center;"> {{ date_format($date1, 'd F Y') }} - {{ date_format($date2, 'd F Y') }}<br>Pukul :
@@ -48,17 +57,28 @@ ICF 2022 - Daftar Competition
             </ul>
             @if($registered[$key] == 1)
                   <p class="disabled">
-                     <a class="btn btn-primary text-light " href="#" role="button" 
+                     <a class="btn btn-primary text-light d-grid gap-2" href="#" role="button" 
                      style="background-color: red !important;cursor: not-allowed !important;
                      opacity: 0.5 !important; color: #fff !important;" disabled="true">
-                     Registered
+                     Already Registered
                      </a>
                   </p>
             @else
-               <p>
-                  <a class="btn btn-soft-dark text-light" href="{{ url('registerlomba/'.$comp->id) }}" role="button" 
-                     style="background: red !important; color: white !important ">Register</a>
-               </p>
+
+               @if(time() > $endDateTimestamp) 
+                  <p class="disabled">
+                     <a class="btn btn-primary text-light d-grid gap-2" href="#" role="button" 
+                     style="background-color: red !important;cursor: not-allowed !important;
+                     opacity: 0.5 !important; color: #fff !important;" disabled="true">
+                     Close Registration
+                     </a>
+                  </p>
+               @else
+                  <p>
+                     <a class="btn btn-soft-dark text-light d-grid gap-2" href="{{ url('registerlomba/'.$comp->id) }}" role="button" 
+                        style="background: red !important; color: white !important ">Register</a>
+                  </p>
+               @endif
             @endif
 
          </div><!-- /.col-lg-4 -->

@@ -13,79 +13,79 @@ use Illuminate\Support\Facades\Auth;
 
 class TeamController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
-    {
-        //
-    }
+   /**
+    * Display a listing of the resource.
+    *
+    * @return \Illuminate\Http\Response
+    */
+   public function index()
+   {
+      //
+   }
 
-    public function showTimHackaton()
-    {
-        $result = Team::where('teams.events_id','=',5)->get();
-        // dd($result);
-        return view('admin.daftarpeserta.lomba.lombaHackaton',['data' => $result]);
-    }
-    public function showTimMlbb()
-    {
-        $result = Team::where('teams.events_id','=',6)->get();
-        // dd($result);
-        return view('admin.daftarpeserta.lomba.lombaMlbb',['data' => $result]);
-    }
-    public function showTimComic()
-    {
-        $result = Team::where('teams.events_id','=',8)->get();
-        // dd($result);
-        return view('admin.daftarpeserta.lomba.lombaComic',['data' => $result]);
-    }
+   public function showTimHackaton()
+   {
+      $result = Team::where('teams.events_id', '=', 5)->get();
+      // dd($result);
+      return view('admin.daftarpeserta.lomba.lombaHackaton', ['data' => $result]);
+   }
+   public function showTimMlbb()
+   {
+      $result = Team::where('teams.events_id', '=', 6)->get();
+      // dd($result);
+      return view('admin.daftarpeserta.lomba.lombaMlbb', ['data' => $result]);
+   }
+   public function showTimComic()
+   {
+      $result = Team::where('teams.events_id', '=', 8)->get();
+      // dd($result);
+      return view('admin.daftarpeserta.lomba.lombaComic', ['data' => $result]);
+   }
 
-    public function confirmation(Request $request, Team $team)
-    {
-        $team->status = $request->get('status');
-        $team->save();
-        return redirect()->back()->with('success', 'Verifikasi Accepted');
-    }
+   public function confirmation(Request $request, Team $team)
+   {
+      $team->status = $request->get('status');
+      $team->save();
+      return redirect()->back()->with('success', 'Verifikasi Accepted');
+   }
 
-    public function rejectConfirmation(Request $request, Team $team)
-    {
-        $team->status = $request->get('status');
-        $team->keterangan = $request->get('keterangan');
-        $team->save();
-        return redirect()->back()->with('success', 'Verifikasi Rejected');
-    }
+   public function rejectConfirmation(Request $request, Team $team)
+   {
+      $team->status = $request->get('status');
+      $team->keterangan = $request->get('keterangan');
+      $team->save();
+      return redirect()->back()->with('success', 'Verifikasi Rejected');
+   }
 
-    public function showPesertaLomba($id)
-    {
-        $result = Team::find($id);
-        // dd($result);
-        $nama = $result->nama_tim;
-        $teamdetail = $result->teamDetail;
-        // dd($teamdetail);
-        return View('admin.daftarpeserta.lomba.detailPesertaLomba', compact('nama','teamdetail'));
-    }
+   public function showPesertaLomba($id)
+   {
+      $result = Team::find($id);
+      // dd($result);
+      $nama = $result->nama_tim;
+      $teamdetail = $result->teamDetail;
+      // dd($teamdetail);
+      return View('admin.daftarpeserta.lomba.detailPesertaLomba', compact('nama', 'teamdetail'));
+   }
 
-    public function showPesertaTiktok()
-    {
-        $pesertaLombaTiktok = DB::table('user_event')
-        ->join('users','user_event.users_id','=','users.id')
-        ->join('events','user_event.events_id','=','events.id')
-        ->select('users.nama','users.email','users.no_hp','users.akun_tiktok','users.image')
-        ->where('user_event.events_id','=',7)
-        ->orderBy('users.id','asc')
-        ->get();
+   public function showPesertaTiktok()
+   {
+      $pesertaLombaTiktok = DB::table('user_event')
+         ->join('users', 'user_event.users_id', '=', 'users.id')
+         ->join('events', 'user_event.events_id', '=', 'events.id')
+         ->select('users.nama', 'users.email', 'users.no_hp', 'users.akun_tiktok', 'users.image')
+         ->where('user_event.events_id', '=', 7)
+         ->orderBy('users.id', 'asc')
+         ->get();
 
-        return view('admin.daftarpeserta.lomba.pesertaLombaTiktok', ['data' => $pesertaLombaTiktok]);
-    }
+      return view('admin.daftarpeserta.lomba.pesertaLombaTiktok', ['data' => $pesertaLombaTiktok]);
+   }
 
-   public function TeamDisplay($iduser,$idevent) 
+   public function TeamDisplay($iduser, $idevent)
    {
       if (Auth::user()->id != $iduser) {
          $team = Team::where('users_id', Auth::user()->id)
-               ->where('events_id', $idevent)
-               ->first();
+            ->where('events_id', $idevent)
+            ->first();
          // dd($team);
          return view('peserta.detailteam', compact('team'));
       } else {
@@ -212,7 +212,6 @@ class TeamController extends Controller
          //kasih pesan berhasil
          session()->flash("success", "File Gambar atau PDF Kartu Pelajar berhasil di ubah. Silahkan tunggu hingga panitia memvalidasi ulang data Anda");
          return redirect()->back();
-         
       } catch (\Exception $e) {
          //pesan gagal karena format file tidak sesuai
          $message = 'Terjadi kesalahan saat upload file Gambar atau PDF.
@@ -223,69 +222,76 @@ class TeamController extends Controller
       }
    }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
+   public function uploadJawaban(Request $request, Team $team)
+   {
+      $team->file_jawaban = $request->get('link_jawaban');
+      $team->save();
+      return redirect()->back('success',' Upload Link Google Docs Jawaban berhasil');
+   }
+   /**
+    * Show the form for creating a new resource.
+    *
+    * @return \Illuminate\Http\Response
+    */
+   public function create()
+   {
+      //
+   }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Team  $team
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Team $team)
-    {
-        //
-    }
+   /**
+    * Store a newly created resource in storage.
+    *
+    * @param  \Illuminate\Http\Request  $request
+    * @return \Illuminate\Http\Response
+    */
+   public function store(Request $request)
+   {
+      //
+   }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Team  $team
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Team $team)
-    {
-        //
-    }
+   /**
+    * Display the specified resource.
+    *
+    * @param  \App\Team  $team
+    * @return \Illuminate\Http\Response
+    */
+   public function show(Team $team)
+   {
+      //
+   }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Team  $team
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, Team $team)
-    {
-        //
-    }
+   /**
+    * Show the form for editing the specified resource.
+    *
+    * @param  \App\Team  $team
+    * @return \Illuminate\Http\Response
+    */
+   public function edit(Team $team)
+   {
+      //
+   }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Team  $team
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Team $team)
-    {
-        //
-    }
+   /**
+    * Update the specified resource in storage.
+    *
+    * @param  \Illuminate\Http\Request  $request
+    * @param  \App\Team  $team
+    * @return \Illuminate\Http\Response
+    */
+   public function update(Request $request, Team $team)
+   {
+      //
+   }
+
+   /**
+    * Remove the specified resource from storage.
+    *
+    * @param  \App\Team  $team
+    * @return \Illuminate\Http\Response
+    */
+   public function destroy(Team $team)
+   {
+      //
+   }
 }

@@ -48,18 +48,41 @@ class AccountController extends Controller
         // }
     }
 
-    public function registerPageMLBB()
+    public function registerPageTiktok()
     {
          date_default_timezone_set("Asia/Jakarta");
-         $endDate = "23 Oktober 2022";
+         $endDate = "02 November 2022";
          $endDateTimestamp = strtotime($endDate);
          if (time() >= $endDateTimestamp) {;
-               return redirect('/daftarlomba')->with('registerClosed', 'Pendaftaran telah ditutup, sampai jumpa di Lomba lainnya di ICF 2023');
+               return redirect('/daftarlomba')->with('registerClosed', 'Pendaftaran telah ditutup, silahkan pilih lomba lain yang masih tersedia');
          } else {
-            return view('peserta.registermlbb');
+            return view('peserta.registertiktok');
          }
     }
 
+   public function registerPageComprog()
+   {
+      date_default_timezone_set("Asia/Jakarta");
+      $endDate = "02 November 2022";
+      $endDateTimestamp = strtotime($endDate);
+      if (time() >= $endDateTimestamp) {;
+         return redirect('/daftarlomba')->with('registerClosed', 'Pendaftaran telah ditutup, silahkan pilih lomba lain yang masih tersedia');
+      } else {
+         return view('peserta.registerhackaton');
+      }
+   }
+
+   public function registerPageComic()
+   {
+      date_default_timezone_set("Asia/Jakarta");
+      $endDate = "02 November 2022";
+      $endDateTimestamp = strtotime($endDate);
+      if (time() >= $endDateTimestamp) {;
+         return redirect('/daftarlomba')->with('registerClosed', 'Pendaftaran telah ditutup, silahkan pilih lomba lain yang masih tersedia');
+      } else {
+         return view('peserta.registercomic');
+      }
+   }
     public function register(Request $request)
     {
         $request->validate([

@@ -15,7 +15,6 @@ class RegistrationController extends Controller
    public function storeHackaton(Request $request)
    {
       $currentTime = Carbon::now();
-      $currentTime = Carbon::now();
       date_default_timezone_set("Asia/Jakarta");
       $endDate = "02 November 2022";
       $endDateTimestamp = strtotime($endDate);
@@ -122,8 +121,6 @@ class RegistrationController extends Controller
 
    public function storeMlbb(Request $request)
    {
-      $currentTime = Carbon::now();
-
       $currentTime = Carbon::now();
       date_default_timezone_set("Asia/Jakarta");
       $endDate = "02 November 2022";

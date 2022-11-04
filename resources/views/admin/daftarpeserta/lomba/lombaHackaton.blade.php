@@ -48,9 +48,10 @@
                     <th class="text-center">#</th>
                   <th class="text-center">Nama Tim</th>
                   <th class="text-center">Nama Instansi</th>
-                  <th class="text-center">Tanggal Daftar</th>
+                  {{-- <th class="text-center">Tanggal Daftar</th> --}}
                   <th class="text-center">Status</th>
                   <th class="text-center">Link Jawaban Tim</th>
+                  <th class="text-center">Waktu Submission Jawaban Tim</th>
                   <th class="text-center">Detail</th>
                 </tr>
               </thead>
@@ -60,7 +61,7 @@
                     <td class="text-center">{{ $data[$i]->id }}</td>
                     <td class="text-center">{{ $data[$i]->nama_tim }}</td>
                     <td class="text-center">{{ $data[$i]->instansi }}</td>
-                    <td class="text-center">{{ $data[$i]->tanggal_daftar }}</td>
+                    {{-- <td class="text-center">{{ $data[$i]->tanggal_daftar }}</td> --}}
                     <td>
                         @if($data[$i]->status=="accepted")
                             <span class="badge bg-success text-white text-center">{{ $data[$i]->status }}</span>
@@ -71,6 +72,7 @@
                         @endif
                     </td>
                     <td><a href="files/{{ $data[$i]->file_jawaban}}" target="_blank" class="btn btn-info">File Jawaban Tim {{ $data[$i]->nama_tim }} Disini</a></td>
+                     <td class="text-center">{{ $data[$i]->tanggal_daftar }}</td>
                     <td>
                         <a href="{{ url('/showpeserta/'.$data[$i]->id) }}" class="btn bg-gradient-info">Show Detail Peserta</a><br>
                         <form method="POST" action="{{ url('/lomba/confirm/'.$data[$i]->id) }}">

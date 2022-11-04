@@ -106,7 +106,7 @@
                     </div>
                 </div>
             </form>
-            @if ($team->events_id == 5 && $team->status == 'accepted' && time() >= $startDateTimestamp && time() <= $endDateTimestamp)
+            @if ($team->events_id == 5 && $team->status == 'accepted')
                 <a href="#upload_{{ $team->id }}" class="btn myBtn dark d-grid gap-5" data-bs-toggle="modal"
                     style="width: 80%; margin: 0 auto; color: #fff !important;">Upload
                     File Jawaban</a>
